@@ -1,0 +1,3 @@
+@prefix mv: <http://purl.org/net/mobivoc/>
+
+mv:Car a mv:MeansOfTransport .
