@@ -30,16 +30,14 @@ mv:ChargingPoint
 	rdfs:label "Point de charge"@fr ;
 	rdfs:label "Punto de Recarga"@es ;
 	rdfs:label "Oplaadpunt"@nl ;
-	rdfs:label "Ponto de Carregamento"@pr .
-	
+	rdfs:label "Ponto de Carregamento"@pr .	
 	
 mv:ChargingPointOwner 
 	a rdfs:Class, owl:Class ;
 	rdfs:subClassOf	 foaf:Agent ;
 	rdfs:comment	"Defines an owner of changing point." ;
 	rdfs:label "Charging Point Owner " .
-               
-				  
+  				  
 mv:ChargingPointLocation 
 	a rdfs:Class, owl:Class ;
 	rdfs:subClassOf	 s:Place ;
@@ -50,11 +48,10 @@ mv:ChargingPointUsage
 	a rdfs:Class, owl:Class ;
 	rdfs:comment	"Captures information about the charging point usage." ;
 	rdfs:label "Charging Point Usage " .
-	
-	
+		
 mv:Payment 
 	a rdfs:Class, owl:Class ;
-	subClassOf gr:PaymentMethod ;
+	rdfs:subClassOf gr:PaymentMethod ;
 	rdfs:comment	"Defines  payment forms." ;
 	rdfs:label "Payment" .
 		
@@ -335,8 +332,4 @@ a	rdf:Property, owl:DatatypeProperty ;
 	rdfs:comment	" Indicates whether Three-phased current is available.  " ;
 	rdfs:domain	mv:PlugCharacteristics ;
 	rdfs:range	rdfs:Literal .
-
-
-	
-
 
