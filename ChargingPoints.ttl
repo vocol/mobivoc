@@ -30,7 +30,7 @@ mv:ChargingPoint
 	rdfs:label "Point de charge"@fr ;
 	rdfs:label "Punto de Recarga"@es ;
 	rdfs:label "Oplaadpunt"@nl ;
-	rdfs:label "Ponto de Carregamento"@pr .
+	rdfs:label "Ponto de Carregamento"@pt .
 	
 	
 mv:ChargingPointOwner 
