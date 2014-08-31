@@ -44,10 +44,16 @@ mobivoc.rdf: mobivoc.nt
 
 # generate HTML with Parrot; http://idi.fundacionctic.org/parrot/parrot
 # generate from Turtle, as Turtle is smallets
-$(HOMEPAGE)/mobivoc.parrot.html: mobivoc.ttl
+$(HOMEPAGE)/mobivoc.parrot.html: mobivoc.ttl $(HOMEPAGE)/index.html
 	curl -s -o - -F "file=@$<" -F "mimetypeFile=text/turtle" 'http://idi.fundacionctic.org/parrot/parrot?' \
 	| perl -ne 'print; print "<base href=\"http://idi.fundacionctic.org/parrot/parrot?\" />\n" if /<head/' \
 	> $@
+
+# Initialise the homepage
+$(HOMEPAGE)/index.html:
+	git clone https://github.com/mobivoc/mobivoc $(HOMEPAGE) ; \
+	cd $(HOMEPAGE) ; \
+	git checkout gh-pages
 
 # general file conversion
 %.nt: %.ttl
