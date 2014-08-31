@@ -7,20 +7,20 @@ HOMEPAGE = homepage
 
 # converting Turtle to N-Triples
 TTL2NT_DEF = ttl2nt() { \
-  rapper -i turtle -o ntriples $$1 > $$2 ; \
-}
+		rapper -i turtle -o ntriples $$1 > $$2 ; \
+	}
 TTL2NT = @$(TTL2NT_DEF); ttl2nt
 
 # converting N-Triples to Turtle
 NT2RDF_DEF = nt2rdf() { \
-  rapper -i ntriples -o rdfxml-abbrev $$1 > $$2 ; \
-}
+		rapper -i ntriples -o rdfxml-abbrev $$1 > $$2 ; \
+	}
 NT2RDF = @$(NT2RDF_DEF); nt2rdf
 
 # converting N-Triples to Turtle
 NT2TTL_DEF = nt2ttl() { \
-  rapper -i ntriples -o turtle $$1 > $$2 ; \
-}
+		rapper -i ntriples -o turtle $$1 > $$2 ; \
+	}
 NT2TTL = @$(NT2TTL_DEF); nt2ttl
 
 # the whole vocabulary
