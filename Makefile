@@ -56,7 +56,7 @@ $(HOMEPAGE)/mobivoc.parrot.html: mobivoc.ttl
 # cleaning
 .PHONY: clean
 clean:
-	rm -v *.nt *~
+	rm -v *.nt *~ $(addprefix mobivoc.,$(DEPLOY_FORMATS)) .sync
 
 # for testing some rules etc.
 .PHONY: test
