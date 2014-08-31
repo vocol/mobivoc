@@ -21,7 +21,7 @@
   * =Makefile=: run =make= to generate the all-in-one vocabulary and its HTML documentation ([[id:c5354e84-083b-4e6d-9272-19f8b5668d38][see below]]) from the sources.  Requirements:
     * curl
     * Perl
-    * rapper
+    * rapper (from [[http://librdf.org/raptor/rapper.html][Raptor]])
     * git (command-line version)
 * Homepage
   :PROPERTIES:
