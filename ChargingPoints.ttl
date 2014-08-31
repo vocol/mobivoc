@@ -13,10 +13,10 @@
 # VOCABULARY
 mv:
 	a owl:Ontology, voaf:Vocabulary ;
-        rdfs:label "Mobility Vocabulary (mv)" ;
-        rdfs:comment " " ;
+        rdfs:label "Mobility Vocabulary" ;
+        rdfs:comment "Mobility Vocabulary (mv)" ;
         dct:creator [ foaf:name "Natalja Friesen" ], [ foaf:name "Christoph Lange"; rdfs:seeAlso <http://purl.org/net/clange>; foaf:homepage <http://langec.wordpress.com/about/> ] ;
-        dct:modified "2014-08-28"^^xsd:date .
+        dct:modified "2014-08-31"^^xsd:date .
 
 		
 		
@@ -37,7 +37,7 @@ mv:ChargingPointOwner
 	a rdfs:Class, owl:Class ;
 	rdfs:subClassOf	 foaf:Agent ;
 	rdfs:comment	"Defines an owner of changing point." ;
-	rdfs:label "Charging Point Owner " .
+	rdfs:label "Charging Point Owner" .
                
 				  
 mv:ChargingPointLocation 
