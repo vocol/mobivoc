@@ -54,7 +54,7 @@ mv:ChargingPointUsage
 	
 mv:Payment 
 	a rdfs:Class, owl:Class ;
-	subClassOf gr:PaymentMethod ;
+	rdfs:subClassOf gr:PaymentMethod ;
 	rdfs:comment	"Defines  payment forms." ;
 	rdfs:label "Payment" .
 		
