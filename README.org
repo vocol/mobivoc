@@ -22,6 +22,7 @@
     * curl
     * Perl
     * rapper
+    * git (command-line version)
 * Homepage
   :PROPERTIES:
   :ID:       c5354e84-083b-4e6d-9272-19f8b5668d38
