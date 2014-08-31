@@ -1,0 +1,21 @@
+#+TITLE:  Mobility vocabulary
+#+DATE:   <2014-08-31 Sun>
+#+LANGUAGE:  en
+#+STARTUP:   hidestars
+#+OPTIONS:   H:1 num:t toc:t \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
+# #+INFOJS_OPT: view:showall toc:t ltoc:t mouse:underline buttons:t path:org-info.js
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+LINK_UP:
+#+LINK_HOME:
+#+XSLT:
+#+STYLE: <style type="text/css"> .timestamp { color: purple; font-weight: bold; } </style>
+# #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+
+* Files
+  * `*.ttl` (except `mobivoc.ttl`, which is generated): sources of the ontology modules, in Turtle.  `main.ttl` is the top-level module.
+  * `Makefile`: run `make` to generate the all-in-one vocabulary from the sources.  Requirements:
+    * curl
+    * Perl
+    * rapper
