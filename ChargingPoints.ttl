@@ -10,16 +10,6 @@
 @prefix gr:    			<http://purl.org/goodrelations/v1#>.
 
 
-# VOCABULARY
-mv:
-	a owl:Ontology, voaf:Vocabulary ;
-        rdfs:label "Mobility Vocabulary" ;
-        rdfs:comment "Mobility Vocabulary (mv)" ;
-        dct:creator [ foaf:name "Natalja Friesen" ], [ foaf:name "Christoph Lange"; rdfs:seeAlso <http://purl.org/net/clange>; foaf:homepage <http://langec.wordpress.com/about/> ] ;
-        dct:modified "2014-08-31"^^xsd:date .
-
-		
-		
 # CLASSES
 		
 mv:ChargingPoint 
