@@ -25,7 +25,7 @@ mv:ChargingPoint
 mv:ChargingPointOwner 
 	a rdfs:Class, owl:Class ;
 	rdfs:subClassOf	 foaf:Agent ;
-	rdfs:comment	"Defines an owner of changing point." ;
+	rdfs:comment	"Captures information about the owner of charging point." ;
 	rdfs:label "Charging Point Owner"@en .
 
 mv:ChargingPointLocation 
