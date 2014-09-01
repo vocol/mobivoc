@@ -1,6 +1,6 @@
 @prefix mv: <http://purl.org/net/mobivoc/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix owl:	 		<http://www.w3.org/2002/07/owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf:    		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd:     		<http://www.w3.org/2001/XMLSchema#> .
 @prefix voaf:    		<http://purl.org/vocommons/voaf#>.
@@ -26,7 +26,8 @@ mv:ChargingPointOwner
 	a rdfs:Class, owl:Class ;
 	rdfs:subClassOf	 foaf:Agent ;
 	rdfs:comment	"Captures information about the owner of charging point." ;
-	rdfs:label "Charging Point Owner"@en .
+	rdfs:label "Charging Point Owner"@en ;
+	rdfs:label "Besitzer der Ladestation"@de .
 
 mv:ChargingPointLocation 
 	a rdfs:Class, owl:Class ;
@@ -53,7 +54,7 @@ mv:ChargingPointAccess
 mv:AccessType 
 	a rdfs:Class, owl:Class ;
 	rdfs:comment	"Describes access type of the charging point." ;
-		rdfs:label "Access Type"@en .
+	rdfs:label "Access Type"@en .
 		
 mv:IdentificationSystem 
 	a rdfs:Class, owl:Class ;
@@ -63,17 +64,17 @@ mv:IdentificationSystem
 mv:BookingType
 	a rdfs:Class, owl:Class ;
 	rdfs:comment	"Describes booking type of the charging point." ;
-		rdfs:label "Booking Type"@en .
+	rdfs:label "Booking Type"@en .
 	
 mv:ChargingPointPlugs
 	a rdfs:Class, owl:Class ;
 	rdfs:comment	"Describes information about plugs of the charging point." ;
-		rdfs:label "Charging Point Plugs"@en .	
+	rdfs:label "Charging Point Plugs"@en .	
 		
 mv:Recharger
 	a rdfs:Class, owl:Class ;
 	rdfs:comment	"Describes charging point's loader." ;
-		rdfs:label "Recharger"@en .
+	rdfs:label "Recharger"@en .
 		
 		
 mv:Plug
