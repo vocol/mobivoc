@@ -49,7 +49,7 @@ mv:Payment
 mv:ChargingPointAccess 
 	a rdfs:Class, owl:Class ;
 	rdfs:comment	"Access information of the charging point." ;
-		rdfs:label "Charging Point Access"@en .
+	rdfs:label "Charging Point Access"@en .
 
 mv:AccessType 
 	a rdfs:Class, owl:Class ;
@@ -59,7 +59,7 @@ mv:AccessType
 mv:IdentificationSystem 
 	a rdfs:Class, owl:Class ;
 	rdfs:comment	"Describes identification system of the charging point." ;
-		rdfs:label "Identification System"@en .
+	rdfs:label "Identification System"@en .
 		
 mv:BookingType
 	a rdfs:Class, owl:Class ;
@@ -80,17 +80,17 @@ mv:Recharger
 mv:Plug
 	a rdfs:Class, owl:Class ;
 	rdfs:comment	"Describes  plug type." ;
-		rdfs:label "Plug Type"@en .
+	rdfs:label "Plug Type"@en .
 
 mv:VehicleType
 	a rdfs:Class, owl:Class ;
 	rdfs:comment	"Describes  types of vehicle tht can be loaded by charging point." ;
-		rdfs:label "Vehicle Type"@en .
+	rdfs:label "Vehicle Type"@en .
 		
 mv:PlugCharacteristic
 	a rdfs:Class, owl:Class ;
 	rdfs:comment	"Captures detailed characteristic of the plug." ;
-		rdfs:label "Plug Characteristics"@en .
+	rdfs:label "Plug Characteristics"@en .
 
 
 	
