@@ -70,7 +70,8 @@ mv:BookingType
 mv:ChargingPointPlugs
 	a rdfs:Class, owl:Class ;
 	rdfs:comment	"Describes information about plugs of the charging point." ;
-	rdfs:label "Charging Point Plugs"@en .	
+	rdfs:label "Charging Point Plugs"@en ;
+	rdfs:label "Anschlüsse"@de .
 		
 mv:Recharger
 	a rdfs:Class, owl:Class ;
