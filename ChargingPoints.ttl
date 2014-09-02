@@ -33,7 +33,8 @@ mv:ChargingPointLocation
 	a rdfs:Class, owl:Class ;
 	rdfs:subClassOf	 s:Place ;
 	rdfs:comment	"Describes the charging point location." ;
-	rdfs:label "Charging Point Location"@en .	
+	rdfs:label "Charging Point Location"@en ;
+	rdfs:label "Lokalisierung der Ladestation"@de .
 	
 mv:ChargingPointUsage 
 	a rdfs:Class, owl:Class ;
