@@ -22,6 +22,7 @@ mv:ChargingPoint
 	rdfs:label "Oplaadpunt"@nl ;
 	rdfs:label "Ponto de Carregamento"@pt .
 	
+	
 mv:ChargingPointOwner 
 	a rdfs:Class, owl:Class ;
 	rdfs:subClassOf	 foaf:Agent ;
@@ -39,7 +40,8 @@ mv:ChargingPointLocation
 mv:ChargingPointUsage 
 	a rdfs:Class, owl:Class ;
 	rdfs:comment	"Captures information about the charging point usage." ;
-	rdfs:label "Charging Point Usage"@en .
+	rdfs:label "Charging Point Usage"@en ;
+	rdfs:label "Ladestation Nutzung"@de .
 		
 mv:Payment 
 	a rdfs:Class, owl:Class ;
