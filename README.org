@@ -23,6 +23,8 @@
     * Perl
     * rapper (from [[http://librdf.org/raptor/rapper.html][Raptor]])
     * git (command-line version)
+* Development
+  The code that generates the mobivoc vocabulary documentation will, after some testing, be maintained as a vocabulary-independent collaboration tool called [[http://github.com/mobivoc/vocol][vocol]], which has [[http://github.com/mobivoc/vocol][its own GitHub project]].
 * Homepage
   :PROPERTIES:
   :ID:       c5354e84-083b-4e6d-9272-19f8b5668d38
