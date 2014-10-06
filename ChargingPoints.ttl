@@ -47,7 +47,15 @@ mv:Payment
 	a rdfs:Class, owl:Class ;
 	rdfs:subClassOf gr:PaymentMethod ;
 	rdfs:comment	"Defines  payment forms." ;
-	rdfs:label "Payment"@en .
+	rdfs:label "Payment"@en ;
+        rdfs:label "Zahlungsmittel"@de .
+
+# CL@NF: FYI: So eine Instanz einer Klasse nennt man in OWL auch "Individuum" (owl:NamedIndividual), aber extra zu sagen "mv:CreditCard a owl:NamedIndividual" ist nicht nötig.
+mv:CreditCard
+        a mv:Payment ;
+        rdfs:label
+                "Credit card"@en ,
+                "Kreditkarte"@de .
 		
 mv:ChargingPointAccess 
 	a rdfs:Class, owl:Class ;
