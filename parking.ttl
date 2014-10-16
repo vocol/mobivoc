@@ -1,5 +1,89 @@
 @prefix mv: <http://purl.org/net/mobivoc/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix s: <http://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 # CLASSES
+
+s:ParkingFacility
+	a rdfs:Class , owl:Class ; #kann man festlegen, dass das eine rdfs/owl-Class sein soll?
+	rdfs:comment "A parking lot or other parking facility with several parking spaces for vehicles." ;
+	rdfs:label "parking facility"@en , "Parkeinrichtung"@de 
+	skos:altLabel "Parkmöglichkeit"@de.
+
+mv:ParkingLot
+	a rdfs:Class , owl:Class ;
+	rdfs:subClassOf s:ParkingFacility ; 
+	rdfs:comment "Cleared area with several parking spaces for vehicles." ;
+	skos:prefLabel "parking lot"@en , "car park"@en-GB , "Parkplatz"@de ;
+	skos:altLabel "car lot"@en , "Parkfläche"@de .
+
+mv:ParkingBuilding
+a rdfs:Class , owl:Class ;
+	rdfs:subClassOf s:ParkingFacility ;
+	rdfs:comment "Building with one or more levels for parking vehicles." ;
+	skos:prefLabel "parking building"@en , "car park"@en-GB , "Parkhaus"@de ;
+	skos:altLabel "multi-storey car park"@en , "parking deck"@en, "Hochgarage"@de .
+
+mv:UndergroundParkingLot
+	a rdfs:Class , owl:Class ;
+	rdfs:subClassOf s:ParkingFacility ;
+	rdfs:comment "Underground parking facility for vehicles." ;
+	skos:prefLabel "underground parking lot"@en "Tiefgarage"@de ;
+
+mv:ParkingSpace
+	a rdfs:Class , owl:Class ;
+	rdfs:comment "Area for parking one vehicle." ;
+	skos:prefLabel "parking space"@en , "Stellplatz"@de ;
+	skos:hiddenLabel "Parkstand"@de , "Parklücke"@de , "Parkplatz"@de .
+
+mv:VehicleType
+	a rdfs:Class, owl:Class ;
+	rdfs:comment "Describes different types of vehicles." ;
+	rdfs:label "Vehicle Type"@en , "Fahrzeugtyp"@de .
+# zu charging points - eigentlich beschreibt diese classe nicht die eignung sondern nur die typen
+
+mv:ParkingFacilityStatus 
+	a rdfs:Class , owl:Class ;
+	rdfs:domain mv:ParkingFacility
+	rdfs:range mv:
+
+# PROPERTIES
+
+# Abstract Properties
+
+mv:isLocated
+	a rdf:Property, owl:ObjectProperty ;
+	rdfs:label "isLocated"@en ;
+	rdfs:comment "Indicates the location of the parking facility." ;
+	rdfs:domain mv:ParkingFacility ;
+	rdfs:range mv:ParkingFacilityLocation .
+
+mv:isOwnedBy
+	a rdf:Property, owl:ObjectProperty ;
+	rdfs:label "isOwnedBy"@en ;
+	rdfs:comment "Indicates information about the owner of the parking facility." ;
+	rdfs:domain mv:ParkingFacility ;
+	rdfs:range mv:ParkingFacilityOwner .
+
+mv:status
+	a rdf:Property, owl:DatatypeProperty ;
+	rdfs:label "status"@en ;
+	rdfs:comment "Indicates the status of a parking facility." ;
+	rdfs:domain mv:ParkingFacility ;
+	rdfs:range rdfs:ParkingFacilityStatus .
+
+# INSTANCES
+
+## PARKING FACILITY STATUS
+
+mv:Vacant
+	a mv:ParkingFacilityStatus .
+
+mv:Occupied
+	a mv:ParkingFacilityStatus .
+
+mv:Unknown
+	a mv:ParkingFacilityStatus .
