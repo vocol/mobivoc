@@ -21,7 +21,7 @@ mv:ParkingLot
 	skos:altLabel "car lot"@en , "Parkfläche"@de .
 
 mv:ParkingBuilding
-a rdfs:Class , owl:Class ;
+	a rdfs:Class , owl:Class ;
 	rdfs:subClassOf s:ParkingFacility ;
 	rdfs:comment "Building with one or more levels for parking vehicles." ;
 	skos:prefLabel "parking building"@en , "car park"@en-GB , "Parkhaus"@de ;
@@ -43,7 +43,7 @@ mv:VehicleType
 	a rdfs:Class, owl:Class ;
 	rdfs:comment "Describes different types of vehicles." ;
 	rdfs:label "Vehicle Type"@en , "Fahrzeugtyp"@de .
-# zu charging points - eigentlich beschreibt diese classe nicht die eignung sondern nur die typen
+	# zu charging points - eigentlich beschreibt diese classe nicht die eignung sondern nur die typen
 
 mv:ParkingFacilityStatus 
 	a rdfs:Class , owl:Class ;
