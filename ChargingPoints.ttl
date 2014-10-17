@@ -296,7 +296,7 @@ a	rdf:Property, owl:ObjectProperty ;
 	rdfs:label	"picture"@en ;
 	rdfs:comment	"Picture of charging point." ;
 	rdfs:domain	mv:ChargingPoint ;
-	rdfs:range	rdfs:Resourse .
+	rdfs:range	rdfs:Resource .
 	
 mv:access
 a	rdf:Property, owl:ObjectProperty ;
