@@ -324,7 +324,7 @@ a	rdf:Property, owl:ObjectProperty ;
 	rdfs:label	"Payment forms"@en ;
 	rdfs:comment	"Describes available forms of payment for recharging fees." ;
 	rdfs:domain	mv:ChargingPointFees ;
-	rdfs:range	mv:PaymentType .
+	rdfs:range	mv:Payment .
 	
 
 	
