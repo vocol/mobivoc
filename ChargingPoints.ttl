@@ -249,35 +249,35 @@ mv:Impossible
 mv:isLocated
 	a	rdf:Property, owl:ObjectProperty ;
 	rdfs:label	"isLocated"@en ;
-	rdfs:comment	"." ;
+	rdfs:comment	"Location of the charging point." ;
 	rdfs:domain	mv:ChargingPoint ;
 	rdfs:range	mv:ChargingPointLocation .	
 	
 mv:isOwnedBy
 	a	rdf:Property, owl:ObjectProperty ;
 	rdfs:label	"isOwnedBy"@en ;
-	rdfs:comment	"Captures the information about chraging point's owner." ;
+	rdfs:comment	"Charging point's owner." ;
 	rdfs:domain	mv:ChargingPoint ;
 	rdfs:range	mv:ChargingPointOwner .
 	
 mv:placeName
 a	rdf:Property, owl:DatatypeProperty ;
 	rdfs:label	"placeName"@en ;
-	rdfs:comment	"." ;
+	rdfs:comment	"Place name where charging point is located." ;
 	rdfs:domain	mv:ChargingPoint ;
 	rdfs:range	rdfs:Literal .
 	
 mv:placeType
 a	rdf:Property, owl:DatatypeProperty ;
 	rdfs:label	"placeType"@en ;
-	rdfs:comment	"." ;
+	rdfs:comment	"Place type where charging point is located, e.g. airport, restaurant." ;
 	rdfs:domain	mv:ChargingPoint ;
 	rdfs:range	rdfs:Literal .
 	
 mv:status
 a	rdf:Property, owl:DatatypeProperty ;
 	rdfs:label	"status"@en ;
-	rdfs:comment	"." ;
+	rdfs:comment	"Current status of the charging point, e.g. out-of-order or functional." ;
 	rdfs:domain	mv:ChargingPoint ;
 	rdfs:range	rdfs:Literal .
 
@@ -298,21 +298,21 @@ a	rdf:Property, owl:DatatypeProperty ;
 mv:hasPlug
 a	rdf:Property, owl:ObjectProperty ;
 	rdfs:label	"has plugs"@en ;
-	rdfs:comment	"describes plugs of charging point." ;
+	rdfs:comment	"Plugs available at the charging point." ;
 	rdfs:domain	mv:ChargingPoint ;
 	rdfs:range	mv:Plug .
 	
 mv:hasCharger
 a	rdf:Property, owl:ObjectProperty ;
 	rdfs:label	"has charger"@en ;
-	rdfs:comment	"describes charger of charging point." ;
+	rdfs:comment	"Charging point charger." ;
 	rdfs:domain	mv:ChargingPoint ;
 	rdfs:range	mv:Charger .
 	
 mv:accessible
 a	rdf:Property, owl:ObjectProperty ;
 	rdfs:label	"has charger"@en ;
-	rdfs:comment	"Captures access information." ;
+	rdfs:comment	"Access information of the charging point." ;
 	rdfs:domain	mv:ChargingPoint ;
 	rdfs:range	mv:AccessInformation .
 	
@@ -326,7 +326,7 @@ a	rdf:Property, owl:ObjectProperty ;
 mv:access
 a	rdf:Property, owl:ObjectProperty ;
 	rdfs:label	"access"@en ;
-	rdfs:comment	"Describes access type of charging point. " ;
+	rdfs:comment	"Access types of charging point. " ;
 	rdfs:domain	mv:AccessInformation ;
 	rdfs:range	mv:AccessType  .	
 
@@ -347,30 +347,28 @@ a	rdf:Property, owl:DatatypeProperty ;
 mv:payment
 a	rdf:Property, owl:ObjectProperty ;
 	rdfs:label	"Payment forms"@en ;
-	rdfs:comment	"Describes available forms of payment for recharging fees." ;
+	rdfs:comment	"Available payment forms for recharging fees." ;
 	rdfs:domain	mv:ChargingPointFees ;
 	rdfs:range	mv:Payment .
-	
-
-	
+		
 mv:booking
 a	rdf:Property, owl:ObjectProperty ;
 	rdfs:label	"Booking"@en ;
-	rdfs:comment	"Describes types of booking for charging point. " ;
+	rdfs:comment	Booking types for charging point. " ;
 	rdfs:domain	mv:AccessInformation ;
 	rdfs:range	mv:BookingType  .
 	
 mv:availableFromTime
 a	rdf:Property, owl:DatatypeProperty ;
 	rdfs:label	"availableFromTime"@en ;
-	rdfs:comment	"Contains intormation when the charging point will be available. " ;
+	rdfs:comment	"Intormation when the charging point will be available. " ;
 	rdfs:domain	mv:AccessInformation ;
 	rdfs:range	rdfs:Literal .
 	
 mv:coveredLocation
 a	rdf:Property, owl:DatatypeProperty ;
 	rdfs:label	"Covered Location"@en ;
-	rdfs:comment	"Indicates whether the location of the charging point is covered. " ;
+	rdfs:comment	"Indicates whether the location of the charging point is covered." ;
 	rdfs:domain	mv:AccessInformation ;
 	rdfs:range	rdfs:Literal .
 		
@@ -384,21 +382,21 @@ a	rdf:Property, owl:DatatypeProperty ;
 mv:numberOfParkingPlaces
 a	rdf:Property, owl:DatatypeProperty ;
 	rdfs:label	"number of parking places"@en ;
-	rdfs:comment	"number of parking places. " ;
+	rdfs:comment	"Number of parking places. " ;
 	rdfs:domain	mv:AccessInformation ;
 	rdfs:range	rdfs:Literal .
 		
 mv:identification
 a	rdf:Property, owl:ObjectProperty ;
 	rdfs:label	"identification"@en ;
-	rdfs:comment	"information about the identification system. " ;
+	rdfs:comment	"Identification system to assess charging point. " ;
 	rdfs:domain	mv:AccessInformation ;
 	rdfs:range	mv:IdentificationSystem .
 		
 mv:energyType
 a	rdf:Property, owl:DatatypeProperty ;
 	rdfs:label	"energy type"@en ;
-	rdfs:comment	"information about energy type. " ;
+	rdfs:comment	"Energy type of the charging point. " ;
 	rdfs:domain	mv:Charger ;
 	rdfs:range	rdfs:Literal .
 	
@@ -412,28 +410,28 @@ a	rdf:Property, owl:DatatypeProperty ;
 mv:model
 a	rdf:Property, owl:DatatypeProperty ;
 	rdfs:label	"Model"@en ;
-	rdfs:comment	"Defines the charger model. " ;
+	rdfs:comment	"Charger model of the charging point. " ;
 	rdfs:domain	mv:Charger ;
 	rdfs:range	rdfs:Literal .
 	
 mv:vehicleType
 a	rdf:Property, owl:ObjectProperty ;
 	rdfs:label	"vehicle type"@en ;
-	rdfs:comment	"Defines the vehicle type. " ;
+	rdfs:comment	"Vehicle type. " ;
 	rdfs:domain	mv:Plug ;
 	rdfs:range	mv:VehicleType .
 	
 mv:chargingSpeed
 a	rdf:Property, owl:DatatypeProperty ;
 	rdfs:label	"Charging Speed"@en ;
-	rdfs:comment	"Defines charging speed of plug. " ;
+	rdfs:comment	"Charging speed of plug. " ;
 	rdfs:domain	mv:Plug ;
 	rdfs:range	mv:ChargingSpeed .
 	
 mv:power
 a	rdf:Property, owl:DatatypeProperty ;
 	rdfs:label	"Power"@en ;
-	rdfs:comment	"Defines power of plug. " ;
+	rdfs:comment	"Plug power. " ;
 	rdfs:domain	mv:Plug ;
 	rdfs:range	rdfs:Literal .
 	
@@ -454,7 +452,7 @@ a	rdf:Property, owl:DatatypeProperty ;
 mv:plugCondition
 a	rdf:Property, owl:DatatypeProperty ;
 	rdfs:label	"Plug Condition"@en ;
-	rdfs:comment	"Describes condition of plug. " ;
+	rdfs:comment	"Plug condition. " ;
 	rdfs:domain	mv:Plug ;
 	rdfs:range	rdfs:Literal .
 	
@@ -483,7 +481,7 @@ a	rdf:Property, owl:DatatypeProperty ;
 mv:currentType
 a	rdf:Property, owl:DatatypeProperty ;
 	rdfs:label	"CurrentType"@en ;
-	rdfs:comment	"CurrentType.  " ;
+	rdfs:comment	"Current type.  " ;
 	rdfs:domain	mv:Plug ;
 	rdfs:range	rdfs:Literal .
 	
