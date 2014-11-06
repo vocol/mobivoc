@@ -111,7 +111,7 @@ mv:UnknownPlug
 	
 mv:SchukoPlug
 	a mv:PlugType ;
-	owl:sameAs "http://en.wikipedia.org/wiki/Schuko"s;
+	owl:sameAs "http://en.wikipedia.org/wiki/Schuko";
 	vcard:hasPhoto "http://en.wikipedia.org/wiki/File:Schuko_plug_and_socket.png";
 	rdfs:label "Schuko Plug"@en .
 	
@@ -354,7 +354,7 @@ a	rdf:Property, owl:ObjectProperty ;
 mv:booking
 a	rdf:Property, owl:ObjectProperty ;
 	rdfs:label	"Booking"@en ;
-	rdfs:comment	Booking types for charging point. " ;
+	rdfs:comment	"Booking types for charging point. " ;
 	rdfs:domain	mv:AccessInformation ;
 	rdfs:range	mv:BookingType  .
 	
