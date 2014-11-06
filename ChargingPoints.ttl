@@ -8,6 +8,8 @@
 @prefix foaf:    		<http://xmlns.com/foaf/0.1/>.
 @prefix s:    			<http://schema.org/>.
 @prefix gr:    			<http://purl.org/goodrelations/v1#>.
+@prefix vcard:		        <http://www.w3.org/2001/vcard-rdf/3.0#> .
+@prefix skos: 			<http://www.w3.org/2004/02/skos/core#> .
 
 
 # CLASSES
@@ -49,7 +51,7 @@ mv:AccessType
 mv:Plug
 	a rdfs:Class, owl:Class ;
 	rdfs:comment	"Describes  plug characteristics." ;
-	rdfs:label "Plug"@en, "Anschluss"@en .
+	rdfs:label "Plug"@en, "Anschluss"@de .
 	
 mv:Charger
 	a rdfs:Class, owl:Class ;
@@ -100,14 +102,17 @@ mv:ChargingSpeed
 
 mv:EUDomesticPlug
 	a mv:PlugType ;
+	owl:sameAs "http://en.wikipedia.org/wiki/Europlug"; 
 	rdfs:label "EU Domestic Plug"@en .	
-	
+
 mv:UnknownPlug
 	a mv:PlugType ;
-	rdfs:label "Unknown Plug"@en , "Unbekannte Anschlüss"@de .
+	rdfs:label "Unknown Plug"@en , "Unbekannter Anschluss"@de .
 	
 mv:SchukoPlug
 	a mv:PlugType ;
+	owl:sameAs "http://en.wikipedia.org/wiki/Schuko"s;
+	vcard:hasPhoto "http://en.wikipedia.org/wiki/File:Schuko_plug_and_socket.png";
 	rdfs:label "Schuko Plug"@en .
 	
 mv:ComboPlug
@@ -116,8 +121,28 @@ mv:ComboPlug
 	
 mv:CHAdeMOPlug
 	a mv:PlugType ;
-	rdfs:label "CHAdeMO"@en .
-	
+	rdfs:label "CHAdeMO"@en;
+	owl:sameAs "http://en.wikipedia.org/wiki/CHAdeMO";
+	vcard:hasPhoto "http://en.wikipedia.org/wiki/File:CHAdeMO_Plug_VacavilleDavisStDC2.jpg" .
+
+mv:Type1Plug
+	a mv:PlugType ;
+	rdfs:label "Type1 Plug"@en;
+	skos:altLabel "SAE J1772"; 
+	owl:sameAs "http://en.wikipedia.org/wiki/SAE_J1772";
+	vcard:hasPhoto "http://en.wikipedia.org/wiki/File:SAE_J1772_7058855567.jpg" .
+
+mv:Type2Plug
+	a mv:PlugType ;
+	rdfs:label "Type2 Plug"@en ;
+	skos:altLabel "EN 62196-2";
+	owl:sameAs "http://en.wikipedia.org/wiki/IEC_62196#Type_2:_VDE-AR-E_2623-2-2" ;
+	vcard:hasPhoto "http://en.wikipedia.org/wiki/File:VDE-AR-E_2623-2-2-plug.jpg" .
+
+mv:Type3Plug
+	a mv:PlugType ;
+	rdfs:label "Type3 Plug"@en ;
+	skos:altLabel "EV Plug" .
 	
 # Identification System Types
 

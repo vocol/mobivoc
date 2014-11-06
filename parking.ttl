@@ -10,8 +10,8 @@
 s:ParkingFacility
 	a rdfs:Class , owl:Class ; #kann man festlegen, dass das eine rdfs/owl-Class sein soll?
 	rdfs:comment "A parking lot or other parking facility with several parking spaces for vehicles." ;
-	rdfs:label "parking facility"@en , "Parkeinrichtung"@de 
-	skos:altLabel "Parkmöglichkeit"@de.
+	rdfs:label "parking facility"@en , "Parkeinrichtung"@de ;
+	skos:altLabel "Parkmöglichkeit"@de .
 
 mv:ParkingLot
 	a rdfs:Class , owl:Class ;
@@ -31,7 +31,7 @@ mv:UndergroundParkingLot
 	a rdfs:Class , owl:Class ;
 	rdfs:subClassOf s:ParkingFacility ;
 	rdfs:comment "Underground parking facility for vehicles." ;
-	skos:prefLabel "underground parking lot"@en "Tiefgarage"@de ;
+	skos:prefLabel "underground parking lot"@en, "Tiefgarage"@de .
 
 mv:ParkingSpace
 	a rdfs:Class , owl:Class ;
@@ -47,8 +47,8 @@ mv:VehicleType
 
 mv:ParkingFacilityStatus 
 	a rdfs:Class , owl:Class ;
-	rdfs:domain mv:ParkingFacility
-	rdfs:range mv:
+	rdfs:domain mv:ParkingFacility .
+	#rdfs:range mv:
 
 # PROPERTIES
 
