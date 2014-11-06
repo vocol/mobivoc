@@ -360,6 +360,13 @@ a	rdf:Property, owl:ObjectProperty ;
 	rdfs:domain	mv:AccessInformation ;
 	rdfs:range	mv:BookingType  .
 	
+mv:availableFromTime
+a	rdf:Property, owl:DatatypeProperty ;
+	rdfs:label	"availableFromTime"@en ;
+	rdfs:comment	"Contains intormation when the charging point will be available. " ;
+	rdfs:domain	mv:AccessInformation ;
+	rdfs:range	rdfs:Literal .
+	
 mv:coveredLocation
 a	rdf:Property, owl:DatatypeProperty ;
 	rdfs:label	"Covered Location"@en ;
@@ -380,8 +387,7 @@ a	rdf:Property, owl:DatatypeProperty ;
 	rdfs:comment	"number of parking places. " ;
 	rdfs:domain	mv:AccessInformation ;
 	rdfs:range	rdfs:Literal .
-	
-	
+		
 mv:identification
 a	rdf:Property, owl:ObjectProperty ;
 	rdfs:label	"identification"@en ;
@@ -389,8 +395,6 @@ a	rdf:Property, owl:ObjectProperty ;
 	rdfs:domain	mv:AccessInformation ;
 	rdfs:range	mv:IdentificationSystem .
 		
-
-	
 mv:energyType
 a	rdf:Property, owl:DatatypeProperty ;
 	rdfs:label	"energy type"@en ;
