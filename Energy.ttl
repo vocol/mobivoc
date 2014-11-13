@@ -2,8 +2,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 mv:ChargeColumn
-        rdfs:label "Ladesäule"@de ,
-		"Charge column"@en .
+        rdfs:label "Ladesäule"@de ; rdfs:label "Charge column"@en .
 
 
 	
