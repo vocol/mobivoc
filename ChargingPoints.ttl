@@ -102,7 +102,7 @@ mv:ChargingSpeed
 
 mv:EUDomesticPlug
 	a mv:PlugType ;
-	owl:sameAs "http://en.wikipedia.org/wiki/Europlug"; 
+	owl:sameAs dbpedia:Europlug ;
 	rdfs:label "EU Domestic Plug"@en .	
 
 mv:UnknownPlug
@@ -111,8 +111,8 @@ mv:UnknownPlug
 	
 mv:SchukoPlug
 	a mv:PlugType ;
-	owl:sameAs "http://en.wikipedia.org/wiki/Schuko";
-	vcard:hasPhoto "http://en.wikipedia.org/wiki/File:Schuko_plug_and_socket.png";
+	owl:sameAs dbpedia:Schuko ;
+	foaf:depiction <http://upload.wikimedia.org/wikipedia/commons/e/ef/Schuko_plug_and_socket.png> ;
 	rdfs:label "Schuko Plug"@en .
 	
 mv:ComboPlug
@@ -121,23 +121,23 @@ mv:ComboPlug
 	
 mv:CHAdeMOPlug
 	a mv:PlugType ;
-	rdfs:label "CHAdeMO"@en;
-	owl:sameAs "http://en.wikipedia.org/wiki/CHAdeMO";
-	vcard:hasPhoto "http://en.wikipedia.org/wiki/File:CHAdeMO_Plug_VacavilleDavisStDC2.jpg" .
+	rdfs:label "CHAdeMO"@en ;
+	owl:sameAs dbpedia:CHAdeMO ;
+	foaf:depiction <http://upload.wikimedia.org/wikipedia/commons/f/f3/VDE-AR-E_2623-2-2-plug.jpg> .
 
 mv:Type1Plug
 	a mv:PlugType ;
-	rdfs:label "Type1 Plug"@en;
-	skos:altLabel "SAE J1772"; 
-	owl:sameAs "http://en.wikipedia.org/wiki/SAE_J1772";
-	vcard:hasPhoto "http://en.wikipedia.org/wiki/File:SAE_J1772_7058855567.jpg" .
+	rdfs:label "Type1 Plug"@en ;
+	skos:altLabel "SAE J1772" ; 
+	owl:sameAs dbpedia:SAE_J1772 ;
+	foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/SAE_J1772_7058855567.jpg> .
 
 mv:Type2Plug
 	a mv:PlugType ;
 	rdfs:label "Type2 Plug"@en ;
-	skos:altLabel "EN 62196-2";
+	skos:altLabel "EN 62196-2" ;
 	owl:sameAs "http://en.wikipedia.org/wiki/IEC_62196#Type_2:_VDE-AR-E_2623-2-2" ;
-	vcard:hasPhoto "http://en.wikipedia.org/wiki/File:VDE-AR-E_2623-2-2-plug.jpg" .
+	foaf:depiction <http://upload.wikimedia.org/wikipedia/commons/f/f3/VDE-AR-E_2623-2-2-plug.jpg> .
 
 mv:Type3Plug
 	a mv:PlugType ;
