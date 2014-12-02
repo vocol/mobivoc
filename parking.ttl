@@ -76,13 +76,13 @@ mv:PayStation
 
 mv:ParkingBarrier
 	a mv:ParkingFacilityFeature ;
-	skos:preflabel "parking barrier"@en , "Parkschranke"@de.
-	skos:altlabel "park barrier"@en
+	skos:prefLabel "parking barrier"@en , "Parkschranke"@de ;
+	skos:altLabel "park barrier"@en .
 
 ## Parking Facility Services
 
 mv:ChargingPoint #welche konsequenzen hat hier die verwendung von charging point?-->als Property hasChargingPoints der ParkingFacility
-	a mv:ParkingFacilityService
+	a mv:ParkingFacilityService ;
 	# siehe ChargingPoint
 	rdfs:label "charging point"@en , "Ladestation"@de .
 
@@ -103,7 +103,7 @@ mv:hasParkingFacilityFeatures
 mv:offersServices
 	a rdf:Property , owl:ObjectProperty ;
 	rdfs:label "offers services" ;
-	rdfs:comment "Indicates which services are available at the parking facility." #at
+	rdfs:comment "Indicates which services are available at the parking facility." ; #at
 	rdfs:domain mv:ParkingFacility ;
 	rdfs:range mv:ParkingFacilityService .
 
