@@ -52,7 +52,7 @@ mv:ParkingSpaceForDisabledPerson #man könnte ja auch die Anzahl der Behinderten
 	a mv:ParkingFacilityFeature ;
 	rdfs:label "parking space for disabled persons"@en , "Behindertenparkplatz"@de.
 
-mv:LadiesParkingSpace
+mv:LadiesParkingSpace # wenn keine spezielleren Infos dran hängen, reicht eine property aus zb hasfrauenparkplätze und dann zahl.
 	a mv:ParkingFacilityFeature ;
 	rdfs:label "ladies' parking space" , "Frauenparkplatz"@de .
 
@@ -81,7 +81,7 @@ mv:ParkingBarrier
 
 ## Parking Facility Services
 
-mv:ChargingPoint #welche konsequenzen hat hier die verwendung von charging point?
+mv:ChargingPoint #welche konsequenzen hat hier die verwendung von charging point?-->als Property hasChargingPoints der ParkingFacility
 	a mv:ParkingFacilityService
 	# siehe ChargingPoint
 	rdfs:label "charging point"@en , "Ladestation"@de .
@@ -108,22 +108,22 @@ mv:offersServices
 	rdfs:range mv:ParkingFacilityService .
 
 mv:maximumNumberOfParkingSpaces
-	a rdf:Property , owl:ObjectProperty ;
+	a rdf:Property , owl:DatatypeProperty ;
 	rdfs:label "maximum number of parking spaces" ;
-	rdfs:comment "Indicates the maximum number of parking spaces of the parking facility."
+	rdfs:comment "Indicates the maximum number of parking spaces of the parking facility." ;
 	rdfs:domain mv:ParkingFacility ;
 	rdfs:range xsd:integer .
 
 mv:parkingSpacesOccupied
-	a rdf:Property , owl:ObjectProperty ;
+	a rdf:Property , owl:DatatypeProperty ;
 	rdfs:label "parking spaces occupied" ;
-	rdfs:comment "Indicates how many parking spaces of the parking facility are currently occupied."
+	rdfs:comment "Indicates how many parking spaces of the parking facility are currently occupied." ;
 	rdfs:domain mv:ParkingFacility ;
 	rdfs:range xsd:integer .
 	
 mv:parkingSpacesVacant
-	a rdf:Property , owl:ObjectProperty ;
+	a rdf:Property , owl:DatatypeProperty ;
 	rdfs:label "parking spaces vacant" ;
-	rdfs:comment "Indicates how many parking spaces of the parking facility are currently vacant."
+	rdfs:comment "Indicates how many parking spaces of the parking facility are currently vacant." ;
 	rdfs:domain mv:ParkingFacility ;
 	rdfs:range xsd:integer .
