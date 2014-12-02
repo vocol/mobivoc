@@ -3,6 +3,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+#@prefix xsd
 
 # CLASSES
 
@@ -20,6 +21,28 @@ mv:ParkingFacilityService
 	a rdfs:Class , owl:Class ;
 	rdfs:comment "Service available at the parking facility." #at
 	rdfs:label "services of parking facility"@en , "Serviceangebot der Parkeinrichtung"@de .
+
+mv:ParkingLot
+	a rdfs:Class, owl:Class ;
+	rdfs:subClassOf mv:ParkingFacility ;
+	rdfs:comment "Area used for parking vehicles with several parking spaces."
+	skos:prefLabel "parking lot"@en-US , "car park"@en-UK , "Parkplatz"@de ;
+	skos:hiddenLabel "car lot"@en , "Parkfläche"@de .
+
+mv:ParkingGarage
+	a rdfs:Class, owl:Class ;
+	rdfs:subClassOf mv:ParkingFacility ;
+	rdfs:comment "Building used for parking vehicles with one or several parking decks."
+	skos:prefLabel "parking garage"@en , "Parkhaus"@de ;
+	skos:hiddenLabel "multi-storey car park"@en , "parking structure"@en , "parking ramp"@en , "parkade"@en , 		"parking building"@en , "indoor parking"@en , "Hochgarage"@de .
+
+mv:UndergroundParkingGarage
+	a rdfs:Class, owl:Class ;
+	rdfs:subClassOf mv:ParkingFacility ;
+	rdfs:comment "Underground parking lot for parking vehicles with one or several parking decks."
+	skos:prefLabel "underground parking garage"@en , "Tiefgarage"@de ;
+	skos:hiddenLabel "Rampengarage"@de .
+
 
 #INSTANCES
 
@@ -83,3 +106,24 @@ mv:offersServices
 	rdfs:comment "Indicates which services are available at the parking facility." #at
 	rdfs:domain mv:ParkingFacility ;
 	rdfs:range mv:ParkingFacilityService .
+
+mv:maximumNumberOfParkingSpaces
+	a rdf:Property , owl:ObjectProperty ;
+	rdfs:label "maximum number of parking spaces" ;
+	rdfs:comment "Indicates the maximum number of parking spaces of the parking facility."
+	rdfs:domain mv:ParkingFacility ;
+	rdfs:range xsd:integer .
+
+mv:parkingSpacesOccupied
+	a rdf:Property , owl:ObjectProperty ;
+	rdfs:label "parking spaces occupied" ;
+	rdfs:comment "Indicates how many parking spaces of the parking facility are currently occupied."
+	rdfs:domain mv:ParkingFacility ;
+	rdfs:range xsd:integer .
+	
+mv:parkingSpacesVacant
+	a rdf:Property , owl:ObjectProperty ;
+	rdfs:label "parking spaces vacant" ;
+	rdfs:comment "Indicates how many parking spaces of the parking facility are currently vacant."
+	rdfs:domain mv:ParkingFacility ;
+	rdfs:range xsd:integer .
