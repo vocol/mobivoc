@@ -35,6 +35,10 @@ mobivoc.ttl: mobivoc.nt
 mobivoc.rdf: mobivoc.nt
 	$(NT2RDF) $< $@
 
+# test query for extracting some per-class information from the vocabulary
+# ChargingPoints_classes.csv: ChargingPoints.ttl
+# 	roqet -e 'PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> SELECT DISTINCT ?class ?label ?comment WHERE { ?class a rdfs:Class . OPTIONAL { ?class rdfs:label ?label; rdfs:comment ?comment; rdfs:subClassOf ?superClass } }' -D $< -r csv > $@
+
 # publish changes to homepage
 .sync: $(HOMEPAGE)/mobivoc.parrot.html
 	(cd $(HOMEPAGE) ; \
