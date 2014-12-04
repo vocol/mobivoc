@@ -10,6 +10,7 @@
 @prefix gr:    			<http://purl.org/goodrelations/v1#>.
 @prefix vcard:		        <http://www.w3.org/2001/vcard-rdf/3.0#> .
 @prefix skos: 			<http://www.w3.org/2004/02/skos/core#> .
+@prefix dbr: 			<http://dbpedia.org/resource/> .
 
 
 # CLASSES
@@ -102,7 +103,7 @@ mv:ChargingSpeed
 
 mv:EUDomesticPlug
 	a mv:PlugType ;
-	owl:sameAs dbpedia:Europlug ;
+	owl:sameAs dbr:Europlug ;
 	rdfs:label "EU Domestic Plug"@en .	
 
 mv:UnknownPlug
@@ -111,7 +112,7 @@ mv:UnknownPlug
 	
 mv:SchukoPlug
 	a mv:PlugType ;
-	owl:sameAs dbpedia:Schuko ;
+	owl:sameAs dbr:Schuko ;
 	foaf:depiction <http://upload.wikimedia.org/wikipedia/commons/e/ef/Schuko_plug_and_socket.png> ;
 	rdfs:label "Schuko Plug"@en .
 	
@@ -122,14 +123,14 @@ mv:ComboPlug
 mv:CHAdeMOPlug
 	a mv:PlugType ;
 	rdfs:label "CHAdeMO"@en ;
-	owl:sameAs dbpedia:CHAdeMO ;
+	owl:sameAs dbr:CHAdeMO ;
 	foaf:depiction <http://upload.wikimedia.org/wikipedia/commons/f/f3/VDE-AR-E_2623-2-2-plug.jpg> .
 
 mv:Type1Plug
 	a mv:PlugType ;
 	rdfs:label "Type1 Plug"@en ;
 	skos:altLabel "SAE J1772" ; 
-	owl:sameAs dbpedia:SAE_J1772 ;
+	owl:sameAs dbr:SAE_J1772 ;
 	foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/SAE_J1772_7058855567.jpg> .
 
 mv:Type2Plug
