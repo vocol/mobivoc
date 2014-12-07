@@ -26,7 +26,7 @@ NT2TTL = @$(NT2TTL_DEF); nt2ttl
 # the whole vocabulary
 all: $(addprefix mobivoc.,$(DEPLOY_FORMATS))
 
-mobivoc.nt: $(filter-out $@,$(subst .ttl,.nt,$(wildcard $(MODULES))))
+mobivoc.nt: $(filter-out mobivoc.nt,$(subst .ttl,.nt,$(wildcard $(MODULES))))
 	cat $^ > $@
 
 mobivoc.ttl: mobivoc.nt
