@@ -15,7 +15,7 @@ mv:ParkingFacility
 mv:ParkingFacilityFeature
 	a rdfs:Class , owl:Class ;
 	rdfs:comment "Features of the parking facility (e.g. parking for handicapped people)." ;
-	rdfs:label "parking facility feature"@en , "Ausstattung der Parkeinrichtung"@de .
+	rdfslabel "parking facility feature"@en , "Ausstattung der Parkeinrichtung"@de .
 
 mv:ParkingFacilityService
 	a rdfs:Class , owl:Class ;
