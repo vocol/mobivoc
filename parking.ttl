@@ -192,19 +192,19 @@ mv:ParkingBarrier
 mv:ParkAndRide
 	a mv:ParkingFacilityConnection ;
 	rdfs:label "Park & Ride"@en , "Parken und Reisen"@de ;
-	skos:altLabel "P+R" , "P&R"
+	skos:altLabel "P+R" , "P&R";
 	rdfs:comment "Connection to public transport." .
 
 mv:ParkAndFly
 	a mv:ParkingFacilityConnection ;
 	rdfs:label "Park & Fly" , "Parken und Fliegen"@de ;
-	skos:altLabel "P+F" , "P&F"
+	skos:altLabel "P+F" , "P&F";
 	rdfs:comment "Connection to airport." .
 
 mv:Carpooling
 	a mv:ParkingFacilityConnection ;
 	rdfs:label "Carpooling" , "Parken und Mitfahren"@de ;
-	skos:altLabel "Park & Drive" , "P+M" , "P&M" , Parken und Mitnehmen"@de ;
+	skos:altLabel "Park & Drive" , "P+M" , "P&M" , "Parken und Mitnehmen"@de ;
 	rdfs:comment "Parking facility used for carpooling or ridesharing." .
 
 mv:ParkAndRail
