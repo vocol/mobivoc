@@ -12,6 +12,7 @@
 @prefix skos: 			<http://www.w3.org/2004/02/skos/core#> .
 @prefix dbr: 			<http://dbpedia.org/resource/> .
 
+<http://purl.org/net/mobivoc/> a owl:Ontology .
 
 # CLASSES
 		
