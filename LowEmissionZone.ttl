@@ -23,7 +23,7 @@
 
 ###  http://purl.org/net/mobivoc/access
 
-mv:access rdf:type owl:ObjectProperty ;
+mvaccess rdf:type owl:ObjectProperty ;
           
           rdfs:label "access"@en ;
           
