@@ -238,9 +238,9 @@ mv:Caravan
 
 # PROPERTIES
 
-mv:status
+mv:statusParkingFacility
 	a rdf:Property , owl:ObjectProperty ;
-	rdfs:label "status"@en , "Status"@de ;
+	rdfs:label "status of parking facility"@en , "Status der Parkeinrichtung"@de ;
 	rdfs:comment "Indicates the current status of the parking facility." ;
 	rdfs:domain mv:ParkingFacility ;
 	rdfs:range mv:ParkingFacilityStatus .
@@ -266,7 +266,7 @@ mv:isLocated
 	rdfs:domain mv:ParkingFacility ;
 	rdfs:range mv:ParkingFacilityLocation .
 
-mv:name
+mv:placeName
 	a rdf:Property , owl:DatatypeProperty ;
 	rdfs:label "name"@en , "Name"@de ;
 	rdfs:comment "Name of the parking facility." ;
