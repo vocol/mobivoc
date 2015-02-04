@@ -14,6 +14,7 @@ mv:ParkingFacility
 	rdfs:label "parking facility"@en , "Parkeinrichtung"@de 
 	.
 
+
 mv:ParkingFacilityStatus
 	a rdfs:Class , owl:Class ;
 	rdfs:comment "Status information of a parking facility." ;
