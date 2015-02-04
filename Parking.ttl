@@ -23,18 +23,19 @@ mv:ParkingFacilityConfiguration
 	a rdfs:Class , owl:Class ;
 	rdfs:comment "Configuration or layout of a parking facility." ;
 	rdfs:label "Configuration"@en , "Typ"@de ;
-	rdfs:altLabel "Bauart"@de .
+	skos:altLabel "Bauart"@de .
 
+# subclass ev. nur Person?
 mv:ParkingFacilityOwner
 	a rdfs:Class, owl:Class ;
-	rdfs:subClassOf gr:BusinessEntity , s:organization ; #oder auch nur Person?
+	rdfs:subClassOf gr:BusinessEntity , s:Organization ;
 	rdfs:comment "Captures information about the owner of a parking facility." ;
 	rdfs:label "Parking Facility Owner"@en , "Besitzer der Parkeinrichtung" ;
 	rdfs:label "Besitzer der Ladestation"@de .
 
 mv:ParkingFacilityLocation
 	a rdfs:Class, owl:Class ;
-	rdfs:subClassOf s:Location ;
+	rdfs:subClassOf s:Place ;
 	rdfs:comment "Describes the parking facility location." ;
 	rdfs:label "Parking Facility Location"@en , "Ortsangabe der Parkeinrichtung"@de .
 
@@ -94,7 +95,7 @@ mv:Full
 	rdfs:comment "The parking facility is completely occupied." ;
 	rdfs:label "full"@en , "belegt"@de .
 
-mv:AllParkingFacilitiesFull ###brauchen wir das?
+mv:AllParkingFacilitiesFull
 	a mv:ParkingFacilityStatus ;
 	rdfs:comment "All parking facilities within a specified area are completely occupied." ;
 	rdfs:label "full"@en , "belegt"@de .
@@ -254,7 +255,7 @@ mv:configuration
 
 mv:isOwnedBy
 	a rdf:Property , owl:ObjectProperty ;
-	rdfs:label "is owned by"@en ; # schreib ich property-labels so?
+	rdfs:label "is owned by"@en ;
 	rdfs:comment "Parking Facility's owner." ;
 	rdfs:domain mv:ParkingFacility ;
 	rdfs:range mv:ParkingFacilityOwner .
