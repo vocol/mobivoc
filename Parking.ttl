@@ -8,6 +8,8 @@
 
 # CLASSES
 
+another error
+
 mv:ParkingFacility
 	a rdfs:Class , owl:Class ;
 	rdfs:comment "A parking lot or other parking facility with several parking spaces for vehicles." ;
