@@ -8,6 +8,7 @@
 		<project>xturtle.foaf</project>
 		<project>xturtle.gr</project>
 		<project>xturtle.schemaorg</project>
+		<project>xturtle.skos</project>
 		<project>xturtle.voidvann</project>
 	</projects>
 	<buildSpec>
