@@ -14,6 +14,8 @@
 <http://purl.org/net/mobivoc/> a owl:Ontology .
 
 # CLASSES
+
+asefasef
 		
 mv:ChargingPoint 
 	a rdfs:Class, owl:Class ;
