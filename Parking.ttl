@@ -9,6 +9,7 @@
 # CLASSES
 
 another error
+safsaefj
 
 mv:ParkingFacility
 	a rdfs:Class , owl:Class ;
