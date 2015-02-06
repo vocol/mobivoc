@@ -3,7 +3,7 @@
 
 mv:ChargeColumn
         rdfs:label "Ladesäule"@de ,
-                   "Charge column"@en ,
+                   "Charge column"@en 
                    "Station de recharge"@fr .
 
 
