@@ -15,6 +15,9 @@
 
 * Current vocabulary version
   HTML version: http://ok-mobivoc.iais.fraunhofer.de/docs/schemas.html
+  
+  Open Issues (generated):
+  https://github.com/mobivoc/mobivoc/labels/syntax%20error
 
 * Files
   :PROPERTIES:
