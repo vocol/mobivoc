@@ -13,6 +13,9 @@
 #+STYLE: <style type="text/css"> .timestamp { color: purple; font-weight: bold; } </style>
 # #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
 
+* Current vocabulary version
+  HTML version: http://ok-mobivoc.iais.fraunhofer.de/docs/schemas.html
+
 * Files
   :PROPERTIES:
   :ID:       fa74fc4a-2fd9-423a-bb31-bb135eedec3f
