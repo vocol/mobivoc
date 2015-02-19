@@ -7,11 +7,4 @@ mv:ChargeColumn
                    "Station de recharge"@fr .
 
 
-	
-	
-	 
-	
-
-
-
-	
+test
