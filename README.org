@@ -20,7 +20,8 @@
   https://github.com/mobivoc/mobivoc/labels/syntax%20error
 
 * Related initiatives
-  * OKFN OpenTransport - https://github.com/opentransport/vocabulary
+  * Open Knowledge Open Transport vocabulary - https://github.com/opentransport/vocabulary
+  * Linked GTFS: http://vocab.gtfs.org
   * Vehicles - https://www.w3.org/wiki/WebSchemas/Vehicles
   * DATEX - http://www.datex2.eu/
 
