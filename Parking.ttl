@@ -14,8 +14,6 @@ mv:ParkingFacility
 	rdfs:label "parking facility"@en , "Parkeinrichtung"@de 
 	.
 
-!!11!1
-
 mv:ParkingFacilityStatus
 	a rdfs:Class , owl:Class ;
 	rdfs:comment "Status information of a parking facility." ;
@@ -32,8 +30,7 @@ mv:ParkingFacilityOwner
 	a rdfs:Class, owl:Class ;
 	rdfs:subClassOf gr:BusinessEntity , s:Organization ;
 	rdfs:comment "Captures information about the owner of a parking facility." ;
-	rdfs:label "Parking Facility Owner"@en , "Besitzer der Parkeinrichtung" ;
-	rdfs:label "Besitzer der Ladestation"@de ..
+	rdfs:label "Parking Facility Owner"@en , "Besitzer der Parkeinrichtung"@de .
 
 mv:ParkingFacilityLocation
 	a rdfs:Class, owl:Class ;
