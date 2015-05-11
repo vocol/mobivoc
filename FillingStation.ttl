@@ -10,74 +10,8 @@ mv:FillingStation
 	rdfs:label "filling station"@en , "Tankstelle"@de ;
 	skos:altLabel "fuelling station"@en , "gas station"@en-US.
 
-mv:Fuel
-	a rdfs:Class , owl:Class ;
-	rdfs:comment "Material to produce energy for motor vehicles." ;
-	rdfs:label "fuel"@en , "Kraftstoff"@de .
-
-mv:DieselFuel
-	a rdfs:Class , owl:Class ;
-	rdfs:subClassOf mv:Fuel ;
-	rdfs:comment "Liquid fuel used in diesel engines." ;
-	rdfs:label "diesel fuel"@en , "Diesel@de ;
-	skos:altLabel "Dieselkraftstoff"@de ;
-	skos:hiddenLabel "Dieselöl"@de . #eigene Klasse 'Biodiesel?'
-
-mv:Petrol
-	a rdfs:Class , owl:Class ;
-	rdfs:subClassOf mv:Fuel ;
-	rdfs:comment "Transparent, petroleum-derived liquid that is used primarily as a fuel in internal combustion engines." ;
-	rdfs:label "petrol"@en , "Benzin"@de ;
-	skos:altLabel "gasoline"@en-US, "Motorenbenzin"@de .	
-
-mv:Autogas
-	a rdfs:Class , owl:Class ;
-	rdfs:subClassOf mv:Fuel ;
-	rdfs:comment "Common name for liquefied petroleum gas (LPG) when it is used as a fuel in internal combustion engines in vehicles. It is a mixture of propane and butane." ;
-	rdfs:label "autogas"@en , "Autogas"@de ;
-	skos:altLabel "LPG" , "liquified petroleum gas"@en .
-
-mv:CompressedNaturalGas
-	a rdfs:Class , owl:Class ;
-	rdfs:subClassOf mv:Fuel ;
-	rdfs:comment "Methane stored at high pressure which is used in place of gasoline (petrol)." ;
-	rdfs:label "CNG" , "Erdgas"@de ;
-	skos:altLabel "compressed natural gas" .
-
-
 
 # Properties
-
-mv:fillingStationNumber
-	a rdf:Property , owl:DatatypeProperty ;
-	rdfs:comment "Indicates the unique number of the filling station." ;
-	rdfs:label "filling station number"@en , "Tankstellennummer"@de ;
-	rdfs:domain mv:FillingStation ;
-	rdfs:range rdfs:Literal .
-
-mv:octaneNumber
-	a rdf:Property , owl:DatatypeProperty ;
-	rdfs:comment "Indicates the octane number of fuel." ; 
-	rdfs:label "octane number"@en , "Oktanzahl"@de ;
-	skos:altLabel "octane rating"@en ;
-	rdfs:domain mv:Petrol ; #aber auch CNG und LPG haben Oktanzahl (und Diesel theoretisch auch?), mehrere Oktanzahlarten
-	rdfs:range rdfs:Literal .
-
-mv:cetaneNumber
-	a rdf:Property , owl:DatatypeProperty ;
-	rdfs:comment "Indicates the combustion speed of diesel fuel." ; #It is an inverse of the similar octane rating for petrol.
-	rdfs:label "cetane number"@en , "Cetanzahl"@de ;
-	skos:altLabel "CN"@en , "CZ"@de ;
-	rdfs:domain mv:DieselFuel ;
-	rdfs:range rdfs:Literal .
-
-mv:methaneNumber
-	a rdf:Property , owl:DatatypeProperty ; #Unterschied bei den einzelnen nummern ist der Referenzkraftstoff
-	rdfs:comment "Indicates the methane number of fuel. It uses a reference fuel blend of methane, with a methane number of 100, and hydrogen, with a methane number of 0" ; 
-	rdfs:label "methane number"@en , "Methanzahl"@de ;
-	skos:altLabel "MN"@en , "MZ"@de ;
-	rdfs:domain mv:Fuel ;
-	rdfs:range rdfs:Literal .
 
 mv:hasOffer
 	a rdf:Property , owl:ObjectProperty ;
@@ -85,3 +19,10 @@ mv:hasOffer
 	rdfs:label "has offer"
 	rdfs:domain mv:FillingStation ;
 	rdfs:range mv:Fuel .
+
+mv:fillingStationNumber
+	a rdf:Property , owl:DatatypeProperty ;
+	rdfs:comment "Indicates the unique number of the filling station." ;
+	rdfs:label "filling station number"@en , "Tankstellennummer"@de ;
+	rdfs:domain mv:FillingStation ;
+	rdfs:range rdfs:Literal .
