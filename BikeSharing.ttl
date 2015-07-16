@@ -11,6 +11,8 @@ mv:BicycleDockingStation
   rdfs:comment "A docking station of a bicycle sharing system for picking up and returning bicycles." ;
   rdfs:label "bicycle docking station"@en , "Fahrradstation"@de .
   
+  as
+  
 
 #PROPERTIES
 
