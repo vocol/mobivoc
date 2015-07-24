@@ -7,6 +7,7 @@
 mv:MeansOfTransport a owl:Class;
   rdfs:label "Means of Transport".
 
-mv:Car a mv:MeansOfTransport .
-mv:Boat a mv:MeansOfTransport .
-mv:Plane  a mv:MeansOfTransport .
+mv:Car   a mv:MeansOfTransport .
+mv:Boat  a mv:MeansOfTransport .
+mv:Plane a mv:MeansOfTransport .
+mv:Bike  a mv:MeansOfTransport .
