@@ -10,7 +10,6 @@
 @prefix gr: <http://purl.org/goodrelations/v1#>.
 @prefix vcard: <http://www.w3.org/2001/vcard-rdf/3.0#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@base <http://www.w3.org/2002/07/owl#> .
 
 
 
