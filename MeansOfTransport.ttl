@@ -11,3 +11,4 @@ mv:Car   a mv:MeansOfTransport .
 mv:Boat  a mv:MeansOfTransport .
 mv:Plane a mv:MeansOfTransport .
 mv:Bike  a mv:MeansOfTransport .
+mv:Tram  a mv:MeansOfTransport .
