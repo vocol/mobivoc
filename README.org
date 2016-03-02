@@ -14,7 +14,7 @@
 # #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
 
 * Current vocabulary version
-  HTML version: http://ok-mobivoc.iais.fraunhofer.de/docs/schemas.html
+  HTML version: http://butterbur06.iai.uni-bonn.de/docs/Widoco/widocoGen/index.html
   
 * Open Issues (generated):
   https://github.com/mobivoc/mobivoc/labels/syntax%20error
