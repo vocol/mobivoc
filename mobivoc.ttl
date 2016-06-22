@@ -2,10 +2,29 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix s:    	 <http://schema.org/>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix voaf:    <http://purl.org/vocommons/voaf#>.
+@prefix dct:     <http://purl.org/dc/terms/>.
+@prefix foaf:    <http://xmlns.com/foaf/0.1/>.
+@prefix gr:    	 <http://purl.org/goodrelations/v1#>.
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix vann:    <http://purl.org/vocab/vann/> .
 
+mv:   
+     a owl:Ontology ;
+     dc:title "Mobivoc" ;
+     skos:definition "A vocabulary which represents the Mobility domain"@en ;
+     skos:prefLabel "mv"@en ;
+     dct:created "2015-05-23"^^xsd:date ;
+     dct:creator "Niklas Petersen" ;
+     dct:contributor "Christoph Lange", "Sören Auer" ;
+     vann:preferredNamespacePrefix "mv" ;
+     vann:preferredNamespaceUri "http://eccenca.com/mobivoc/mv#" ;
+     owl:versionInfo "SNAPSHOT" ;
+	.
 
 mv:FillingStation
 	a rdfs:Class , owl:Class ;
@@ -1394,7 +1413,7 @@ mv:ChargingPointP
 	mv:PlugType mv:Type2Plug ;
 	mv:openingHours "Open 24/24" .
 	
-v:ParkingFacility
+mv:ParkingFacility
 	a rdfs:Class , owl:Class ;
 	rdfs:comment "A parking lot or other parking facility with several parking spaces for vehicles." ;
 	rdfs:label "parking facility"@en , "Parkeinrichtung"@de 
