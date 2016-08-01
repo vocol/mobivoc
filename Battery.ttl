@@ -95,7 +95,7 @@ mv:petrolBatteryHybrid
 
 #Properties 
 
-mv:Ampere
+mv:ampere
 	a rdf:Property , owl:DatatypeProperty ;
 	rdfs:comment "Represents the flow rate of electric charge." ; 
 	rdfs:label "Ampere"@en , "Ampere"@de ;
@@ -166,28 +166,28 @@ mv:hasSpecificPower
 	rdfs:domain mv:Battery ; 
 	rdfs:range rdfs:Literal .
 	
-mv:Longevity
+mv:longevity
 	a rdf:Property , owl:DatatypeProperty ;
 	rdfs:comment "Indicates the period of time that a battery can still work ." ; 
 	rdfs:label "Longevity"@en , "Langlebigkeit"@de ;
 	rdfs:domain mv:Battery ; 
 	rdfs:range rdfs:Literal .
 
-mv:Performance
+mv:performance
 	a rdf:Property , owl:DatatypeProperty ;
 	rdfs:comment "It reflects the condition of the battery when driving the EV in blistering summer heat and freezing temperatures." ; 
 	rdfs:label "Performance"@en , "Leistung"@de ;
 	rdfs:domain mv:Battery ; 
 	rdfs:range rdfs:Literal .
 
-mv:Price
+mv:price
 	a rdf:Property , owl:DatatypeProperty ;
 	rdfs:comment "Indicates the price of the battery." ; 
 	rdfs:label "Price"@en , "Preis"@de ;
 	rdfs:domain mv:Battery ; 
 	rdfs:range rdfs:Literal .
 
-mv:Watt
+mv:watt
 	a rdf:Property , owl:DatatypeProperty ;
 	rdfs:comment "Expresses the rate of energy conversion or transfer with respect to time." ; 
 	rdfs:label "Watt"@en , "Watt"@de ;

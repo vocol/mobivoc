@@ -97,52 +97,57 @@ mv:VehicleType
 	rdfs:label "Vehicle Type"@en, "Fahrzeugstyp"@de .
 
 
+mv:ChargeColumn
+        rdfs:label "Ladesäule"@zzzzzzz ;
+                   "Charge column"@en ;
+                   "Station de recharge"@fr .
+
 # INSTANCES
 
 # Plug Types
 
 mv:ComboPlug
-	a mv:PlugType ;
+	rdfs:subClassOf mv:PlugType ;
 	rdfs:label "Combo Plug"@en .
 	
 mv:CHAdeMOPlug
-	a mv:PlugType ;
+	rdfs:subClassOf mv:PlugType ;
 	rdfs:label "CHAdeMO"@en ;
 	owl:sameAs <http://dbpedia.org/resource/CHAdeMO> ;
 	foaf:depiction <http://upload.wikimedia.org/wikipedia/commons/f/f3/VDE-AR-E_2623-2-2-plug.jpg> .
 	
 mv:EUDomesticPlug
-	a mv:PlugType ;
+	rdfs:subClassOf mv:PlugType ;
 	owl:sameAs <http://dbpedia.org/resource/Europlug> ;
 	rdfs:label "EU Domestic Plug"@en .	
 	
 mv:SchukoPlug
-	a mv:PlugType ;
+	rdfs:subClassOf mv:PlugType ;
 	owl:sameAs <http://dbpedia.org/resource/Schuko> ;
 	foaf:depiction <http://upload.wikimedia.org/wikipedia/commons/e/ef/Schuko_plug_and_socket.png> ;
 	rdfs:label "Schuko Plug"@en .
 	
 mv:Type1Plug
-	a mv:PlugType ;
+	rdfs:subClassOf mv:PlugType ;
 	rdfs:label "Type1 Plug"@en ;
 	skos:altLabel "SAE J1772" ; 
 	owl:sameAs <http://dbpedia.org/resource/SAE_J1772> ;
 	foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/SAE_J1772_7058855567.jpg> .
 
 mv:Type2Plug
-	a mv:PlugType ;
+	rdfs:subClassOf mv:PlugType ;
 	rdfs:label "Type2 Plug"@en ;
 	skos:altLabel "EN 62196-2" ;
 	owl:sameAs "http://en.wikipedia.org/wiki/IEC_62196#Type_2:_VDE-AR-E_2623-2-2" ;
 	foaf:depiction <http://upload.wikimedia.org/wikipedia/commons/f/f3/VDE-AR-E_2623-2-2-plug.jpg> .
 
 mv:Type3Plug
-	a mv:PlugType ;
+	rdfs:subClassOf mv:PlugType ;
 	rdfs:label "Type3 Plug"@en ;
 	skos:altLabel "EV Plug" .
 
 mv:UnknownPlug
-	a mv:PlugType ;
+	rdfs:subClassOf mv:PlugType ;
 	rdfs:label "Unknown Plug"@en , "Unbekannter Anschluss"@de .
 	
 # Identification System Types
@@ -539,350 +544,3 @@ a	rdf:Property, owl:DatatypeProperty ;
 	rdfs:comment	"Plug voltage.  " ;
 	rdfs:domain	mv:Plug ;
 	rdfs:range	rdfs:Literal .
-	
-#Individuals
-
-mv:ChargingPointA 
-	a mv:ChargingPoint ;
-	mv:ChargingPointName "Beethoven Tiefgarage" ;	
-	vcard:hasAddress [
-						vcard:country-name "Germany" ;
-						vcard:city "Bonn" ;
-						vcard:postal-code "53111" ;
-						vcard:region "North Rhine-Westphalia" ;
-						vcard:street-address "Engeltalstraße" 
-					 ];	
-	geo:long "7.103397" ;
-	geo:lat "50.738999" ;
-	mv:AccessType mv:OpenToAllUsers ;
-	mv:IdentificationSystem mv:None ;	
-	mv:ChargingPointFees mv:FreeCharging ;
-	mv:ChargingPointFees mv:PaidCharging ;	
-	mv:HasParkingFacility "2 parking spaces for electric vehicles only" ;
-	mv:BookingType mv:Impossible ;
-	mv:PlugType mv:SchukoPlug ;
-	mv:PlugType mv:Type2Plug ;
-	mv:openingHours "Monday/Tuesday/Wednesday/Thursday from 00:00 to 01:00 and from 07:00 to 23:59, Friday/Saturday from 00:00 to 02:30 and from 07:00 to 23:59, Sunday from 00:00 to 01:00 and from 09:00 to 23:59" .
-					 
-mv:ChargingPointB
-	a mv:ChargingPoint;
-	mv:ChargingPointName"Kameha Grand Bonn" ;	
-	vcard:hasAddress [
-						vcard:country-name "Germany" ;
-						vcard:city "Bonn" ;
-						vcard:postal-code "53227" ;
-						vcard:region "North Rhine-Westphalia" ;
-						vcard:street-address "Am Bonner Bogen" 
-					 ];
-	geo:long "7.151704" ;
-	geo:lat "50.718117" ;
-	mv:AccessType "OpenToAllUsers" ;
-	mv:IdentificationSystem mv:Key ;
-	mv:ChargingPointFees mv:FreeCharging ;
-	mv:HasParkingFacility "2 parking spaces for electric vehicles only" ;
-	mv:BookingType mv:Optional ;
-	mv:PlugType mv:Type2Plug ;
-	mv:openingHours "Open 24/24" .
-
-mv:ChargingPointC
-	a mv:ChargingPoint;
-	mv:ChargingPointName"OBI Markt Bonn-Nord" ;	
-	vcard:hasAddress [
-						vcard:country-name "Germany" ;
-						vcard:city "Bonn" ;
-						vcard:postal-code "53119" ;
-						vcard:region "North Rhine-Westphalia" ;
-						vcard:housenumber "166" ;
-						vcard:street-address "Bornheimer Straße" 
-					 ];
-	
-	vcard:website "http://www.obi.de/de/maerkte/Bonn-Nord/index.html" ;	
-	geo:long "7.080653" ;
-	geo:lat "50.738228" ;
-	mv:AccessType mv:OpenToAllUsers ;
-	mv:IdentificationSystem mv:None ;
-	mv:ChargingPointFees mv:FreeCharging ;
-	mv:HasParkingFacility "1 parking space for electric vehicles only" ;
-	mv:BookingType mv:Impossible ;
-	mv:PlugType mv:SchukoPlug ;
-	mv:openingHours "Monday to Saturday from 08:00 to 20:00" .
-	
-mv:ChargingPointD  
-	a mv:ChargingPoint ;
-	mv:ChargingPointName"Stadthaus Garage" ;
-	vcard:hasAddress [
-						vcard:country-name "Germany" ;
-						vcard:city "Bonn" ;
-						vcard:postal-code "53111" ;
-						vcard:region "North Rhine-Westphalia" ;
-						vcard:street-address "Weiherstraße" 
-					 ];
-	geo:long "7.093778" ;
-	geo:lat "50.737613" ;
-	mv:AccessType mv:OpenToAllUsers ;
-	mv:IdentificationSystem mv:None ;
-	mv:ChargingPointFees mv:FreeCharging ;
-	mv:HasParkingFacility "1 parking space for electric vehicles only" ;
-	mv:BookingType mv:Impossible ;
-	mv:PlugType mv:SchukoPlug ;
-	mv:openingHours "Open 24/24" .
-	
-mv:ChargingPointE  
-	a mv:ChargingPoint;
-	mv:ChargingPointName"Automobilgruppe Dirkes Bonn GmbH" ;
-	vcard:hasAddress [
-						vcard:country-name "Germany" ;
-						vcard:city "Bonn" ;
-						vcard:postal-code "53175" ;
-						vcard:region "North Rhine-Westphalia" ;
-						vcard:housenumber "60-80" ;
-						vcard:street-address "Godesberger Str." 
-					 ];
-	geo:long "7.140795" ;
-	geo:lat "50.695074" ;
-	mv:AccessType mv:OpenToAllUsers ;
-	mv:IdentificationSystem mv:Other ;
-	mv:hasPrice mv:PaidCharging ;
-	mv:PlugType mv:SchukoPlug .
-	
-mv:ChargingPointF  
-	a mv:ChargingPoint;
-	mv:ChargingPointName"Am Rathaus Alfter" ;
-	vcard:hasAddress [
-						vcard:country-name "Germany" ;
-						vcard:city "Alfter" ;
-						vcard:postal-code "53347" ;
-						vcard:region "North Rhine-Westphalia" ;
-						vcard:housenumber "7" ;
-						vcard:street-address "Am Rathaus" 
-					 ];
-	geo:long "7.026320" ;
-	geo:lat "50.721710" ;
-	mv:AccessType mv:IdentifiedPerson ;
-	mv:IdentificationSystem mv:TextMessage ;
-	mv:IdentificationSystem mv:PhoneCall ;
-	mv:IdentificationSystem mv:Other ; 
-	mv:IdentificationSystem mv:MobileApplication ;
-	mv:IdentificationSystem mv:Payment ;
-	mv:IdentificationSystem mv:TextMessage ;
-	mv:Payment mv:MobileApplication ;
-	mv:ChargingPointFees mv:PaidCharging ;
-	mv:PlugType mv:Type2Plug ;
-	vcard:operator "RWE" ;
-	mv:openingHours "Open 24/24" .
-	
-mv:ChargingPointG  
-	a mv:ChargingPoint;
-	mv:ChargingPointName"TankE - Bornheim" ;
-	vcard:hasAddress [
-						vcard:country-name "Germany" ;
-						vcard:city "Bornheim" ;
-						vcard:postal-code "53332" ;
-						vcard:region "North Rhine-Westphalia" ;
-						vcard:housenumber "2" ;
-						vcard:street-address "Rathausstraße" 
-					 ];
-	geo:long "7.004420" ;
-	geo:lat "50.757470" ;
-	vcard:website "http://www.rheinenergie.com/TankEn" ;
-	vcard:operator "Rheinenergie" ;
-	mv:IdentificationSystem mv:UndefinedIdentificationSystem ;
-	mv:ChargingPointFees mv:FreeCharging ;
-	mv:PlugType mv:SchukoPlug ;
-	mv:PlugType mv:Type2Plug ;
-	mv:openingHours "Open 24/24" .
-
-mv:ChargingPointH  
-	a mv:ChargingPoint;
-	mv:ChargingPointName"TankE RheinEnergie Ladestation" ;
-	vcard:hasAddress [
-						vcard:country-name "Germany" ;
-						vcard:city "Bornheim" ;
-						vcard:postal-code "53332" ;
-						vcard:region "North Rhine-Westphalia" ;
-						vcard:housenumber "15" ;
-						vcard:street-address "Donnerbachweg" 
-					 ];
-	geo:long "6.948360" ;
-	geo:lat "50.767600" ;
-	vcard:owner "TankE RheinEnergie" ;
-	vcard:website "http://www.rheinenergie.com/de/unternehmensportal/technik_zukunft/elektromobilitaet_1/ladestationen/ladestationen_1.php" ;
-	mv:AccessType mv:OpenToAllUsers ;
-	mv:IdentificationSystem mv:BadgeHasToBeOrdered ;
-	mv:ChargingPointFees mv:PaidCharging ;
-	mv:PlugType mv:SchukoPlug ;
-	mv:PlugType mv:Type2Plug ;
-	mv:openingHours "Open 24/24" .
-	
-mv:ChargingPointI  
-	a mv:ChargingPoint;
-	mv:ChargingPointName"3-5 Reichsstr. Bonn" ;
-	vcard:hasAddress [
-						vcard:country-name "Germany" ;
-						vcard:city "Bonn" ;
-						vcard:postal-code "53125" ;
-						vcard:region "North Rhine-Westphalia" ;
-						vcard:housenumber "3-5" ;
-						vcard:street-address "Reichstrasse" 
-					 ];
-	geo:long "7.075870" ;
-	geo:lat "50.683040" ;
-	vcard:operator "RWE" ;
-	mv:AccessType mv:IdentifiedPerson ;
-	mv:IdentificationSystem mv:TextMessage ;
-	mv:IdentificationSystem mv:PhoneCall ;
-	mv:IdentificationSystem mv:Other ;
-	mv:IdentificationSystem mv:MobileApplication ;
-	mv:Payment mv:TextMessage ;
-	mv:Payment mv:MobileApplication ;
-	mv:ChargingPointFees mv:PaidCharging ;
-	mv:PlugType mv:Type2Plug ;
-	mv:openingHours "Open 24/24" .
-	
-mv:ChargingPointK  
-	a mv:ChargingPoint;
-	mv:ChargingPointName"104 Zeithstraße Siegburg" ;
-	vcard:hasAddress [
-						vcard:country-name "Germany" ;
-						vcard:city "Siegburg" ;
-						vcard:postal-code "53721" ;
-						vcard:region "North Rhine-Westphalia" ;
-						vcard:housenumber "104" ;
-						vcard:street-address "Zeithstraße" 
-					 ];
-	geo:long "7.218302" ;
-	geo:lat "50.802184" ;
-	vcard:operator "RWE" ;
-	mv:AccessType mv:IdentifiedPerson ;
-	mv:IdentificationSystem mv:TextMessage ;
-	mv:IdentificationSystem mv:PhoneCall ;
-	mv:IdentificationSystem mv:Other ;
-	mv:IdentificationSystem mv:MobileApplication ;
-	mv:Payment mv:TextMessage ;
-	mv:Payment mv:MobileApplication ;
-	mv:ChargingPointFees mv:PaidCharging ;
-	mv:PlugType mv:Type2Plug ;
-	mv:openingHours "Open 24/24" .
-	
-mv:ChargingPointL 
-	a mv:ChargingPoint;
-	mv:ChargingPointName"Konrad-Adenauer-Allee Siegburg" ;
-	vcard:hasAddress [
-						vcard:country-name "Germany" ;
-						vcard:city "Siegburg" ;
-						vcard:postal-code "53721" ;
-						vcard:region "North Rhine-Westphalia" ;
-						vcard:street-address "Konrad-Adenauer-Allee" 
-					 ];
-	geo:long "7.203024" ;
-	geo:lat "50.793180" ;
-	vcard:operator "RWE" ;
-	mv:AccessType mv:IdentifiedPerson ;
-	mv:IdentificationSystem mv:TextMessage ;
-	mv:IdentificationSystem mv:PhoneCall ;
-	mv:IdentificationSystem mv:Other ;
-	mv:IdentificationSystem mv:MobileApplication ;
-	mv:Payment mv:TextMessage ;
-	mv:Payment mv:MobileApplication ;
-	mv:ChargingPointFees mv:PaidCharging ;
-	mv:PlugType mv:Type2Plug ;
-	mv:openingHours "Open 24/24" .
-	
-mv:ChargingPointM  
-	a mv:ChargingPoint;
-	mv:ChargingPointName"10 Wilhelmstr. Siegburg" ;
-	vcard:hasAddress [
-						vcard:country-name "Germany" ;
-						vcard:city "Siegburg" ;
-						vcard:postal-code "53721" ;
-						vcard:region "North Rhine-Westphalia" ;
-						vcard:housenumber "10" ;
-						vcard:street-address "Wilhelmstr." 
-					 ];
-	geo:long "7.205730" ;
-	geo:lat "50.793205" ;
-	vcard:operator "RWE" ;
-	mv:AccessType mv:IdentifiedPerson ;
-	mv:IdentificationSystem mv:TextMessage ;
-	mv:IdentificationSystem mv:PhoneCall ;
-	mv:IdentificationSystem mv:Other ;
-	mv:IdentificationSystem mv:MobileApplication ;
-	mv:Payment mv:TextMessage ;
-	mv:Payment mv:MobileApplication ;
-	mv:ChargingPointFees mv:PaidCharging ;
-	mv:PlugType mv:Type2Plug ;
-	mv:openingHours "Open 24/24" .
-	
-mv:ChargingPointN  
-	a mv:ChargingPoint;
-	mv:ChargingPointName"3 Bachstraße Siegburg" ;
-	vcard:hasAddress [
-						vcard:country-name "Germany" ;
-						vcard:city "Siegburg" ;
-						vcard:postal-code "53721" ;
-						vcard:region "North Rhine-Westphalia" ;
-						vcard:housenumber "3" ;
-						vcard:street-address "Bachstrasse" 
-					 ];
-	geo:long "7.203999" ;
-	geo:lat "50.798530" ;
-	vcard:operator "RWE" ;
-	mv:AccessType mv:IdentifiedPerson ;
-	mv:IdentificationSystem mv:TextMessage ;
-	mv:IdentificationSystem mv:PhoneCall ;
-	mv:IdentificationSystem mv:Other ;
-	mv:IdentificationSystem mv:MobileApplication ;
-	mv:Payment mv:TextMessage ;
-	mv:Payment mv:MobileApplication ;
-	mv:ChargingPointFees mv:PaidCharging ;
-	mv:PlugType mv:Type2Plug ;
-	mv:openingHours "Open 24/24" .
-	
-mv:ChargingPointO  
-	a mv:ChargingPoint;
-	mv:ChargingPointName" Ringstraße Siegburg" ;
-	vcard:hasAddress [
-						vcard:country-name "Germany" ;
-						vcard:city "Siegburg" ;
-						vcard:postal-code "53721" ;
-						vcard:region "North Rhine-Westphalia" ;
-						vcard:street-address "Ringstrasse" 
-					 ];
-	geo:long "7.205371" ;
-	geo:lat "50.797767" ;
-	vcard:operator "RWE" ;
-	mv:AccessType mv:IdentifiedPerson ;
-	mv:IdentificationSystem mv:TextMessage ;
-	mv:IdentificationSystem mv:PhoneCall ;
-	mv:IdentificationSystem mv:Other ;
-	mv:IdentificationSystem mv:MobileApplication ;
-	mv:Payment mv:TextMessage ;
-	mv:Payment mv:MobileApplication ;
-	mv:ChargingPointFees mv:PaidCharging ;
-	mv:PlugType mv:Type2Plug ;
-	mv:openingHours "Open 24/24" .
-	
-mv:ChargingPointP  
-	a mv:ChargingPoint;
-	mv:ChargingPointName" 1 Am Turm Siegburg" ;
-	vcard:hasAddress [
-						vcard:country-name "Germany" ;
-						vcard:city "Siegburg" ;
-						vcard:postal-code "53721" ;
-						vcard:region "North Rhine-Westphalia" ;
-						vcard:housenumber "1" ;
-						vcard:street-address "Am Turm" 
-					 ];
-	geo:long "7.223880" ;
-	geo:lat "50.792406" ;
-	vcard:operator "RWE" ;
-	mv:AccessType mv:IdentifiedPerson ;
-	mv:IdentificationSystem mv:TextMessage ;
-	mv:IdentificationSystem mv:PhoneCall ; 
-	mv:IdentificationSystem mv:Other ;
-	mv:IdentificationSystem mv:MobileApplication ;
-	mv:Payment mv:TextMessage ;
-	mv:Payment mv:MobileApplication ;
-	mv:ChargingPointFees mv:PaidCharging ;
-	mv:PlugType mv:Type2Plug ;
-	mv:openingHours "Open 24/24" .

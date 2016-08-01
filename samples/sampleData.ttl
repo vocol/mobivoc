@@ -1,3 +1,387 @@
+
+# Individuals
+
+mv:FuelStationA 
+	a mv:FuelStation ;
+	mv:fillingStationNumber "" ;
+	mv:fillingStationHeight "5.0m" ;
+	vcard:organization-name "Shell Tankstelle" ;	
+	vcard:hasAddress [
+						vcard:country-name "Germany" ;
+						vcard:locality "Bonn" ;
+						vcard:postal-code "53117" ;
+						vcard:region "North Rhine-Westphalia" ;
+						vcard:street-address "Kölnstraße 655" 
+					 ];
+	vcard:tel "0228 673966" ;
+	vcard:url "shell.de" ;
+	geo:long "7.057300" ;
+	geo:lat "50.761966" .
+
+
+mv:FuelStationB 
+	a mv:FuelStation ;
+	mv:fillingStationNumber "" ;
+	mv:fillingStationHeight "5.0m" ;
+	vcard:organization-name "Esso" ;
+	vcard:hasAddress [
+						vcard:country-name "Germany" ;
+						vcard:locality "Bonn" ;
+						vcard:postal-code "53225" ;
+						vcard:region "North Rhine-Westphalia" ;
+						vcard:street-address "St. Augustiner Str. 145" 
+					 ];
+	vcard:tel "0228 476790" ;
+	vcard:url "essofuelfinder.com" ;
+	geo:long "7.122874" ;
+	geo:lat "50.747196" .
+
+
+mv:FuelStationC 
+	a mv:FuelStation ;
+	mv:fillingStationNumber "" ;
+	mv:fillingStationHeight "5.0m" ;
+	vcard:organization-name "ED-Tankstelle Jürgen Metzling e.K." ;
+	vcard:hasAddress [
+						vcard:country-name "Germany" ;
+						vcard:locality "Bonn" ;
+						vcard:postal-code "53119" ;
+						vcard:region "North Rhine-Westphalia" ;
+						vcard:street-address "Lievelingsweg 10" 
+					 ];
+	vcard:tel "0228 676991" ;
+	vcard:url "essofuelfinder.com" ;
+	geo:long "7.084079" ;
+	geo:lat "50.745675" .
+
+
+mv:FuelStationD
+	a mv:FuelStation ;
+	mv:fillingStationNumber "" ;
+	mv:fillingStationHeight "5.0m" ;
+	vcard:organization-name "SVG-Tankstelle" ;
+	vcard:hasAddress [
+						vcard:country-name "Germany" ;
+						vcard:locality "Bonn" ;
+						vcard:postal-code "53119" ;
+						vcard:region "North Rhine-Westphalia" ;
+						vcard:street-address "Potsdamer Platz 7" 
+					 ];
+	vcard:tel "0228 654851" ;
+	vcard:url "svg-nordrhein.de" ;
+	geo:long "7.077556" ;
+	geo:lat "50.741982" .
+
+mv:ChargingStationA 
+	a mv:ChargingStation ;
+	mv:ChargingStationName "Beethoven Tiefgarage" ;	
+	vcard:hasAddress [
+						vcard:country-name "Germany" ;
+						vcard:city "Bonn" ;
+						vcard:postal-code "53111" ;
+						vcard:region "North Rhine-Westphalia" ;
+						vcard:street-address "Engeltalstraße" 
+					 ];	
+	geo:long "7.103397" ;
+	geo:lat "50.738999" ;
+	mv:offersAccess "Open to all users" ;
+	mv:hasIdentifications "None" ;	
+	mv:hasPrice "Free charging, Paid parking" ;	
+	mv:hasParking "2 parking spaces for electric vehicles only" ;
+	mv:offersBooking "Impossible" ;
+	mv:offersPlugTypes "Schuko plug, Plug Type 2" ;
+	mv:openingHours "Monday/Tuesday/Wednesday/Thursday from 00:00 to 01:00 and from 07:00 to 23:59, Friday/Saturday from 00:00 to 02:30 and from 07:00 to 23:59, Sunday from 00:00 to 01:00 and from 09:00 to 23:59" .
+					 
+mv:ChargingStationB
+	a mv:ChargingStation ;
+	mv:ChargingStationName"Kameha Grand Bonn" ;	
+	vcard:hasAddress [
+						vcard:country-name "Germany" ;
+						vcard:city "Bonn" ;
+						vcard:postal-code "53227" ;
+						vcard:region "North Rhine-Westphalia" ;
+						vcard:street-address "Am Bonner Bogen" 
+					 ];
+	geo:long "7.151704" ;
+	geo:lat "50.718117" ;
+	mv:offersAccess "Open to all users" ;
+	mv:hasIdentifications "Key" ;
+	mv:hasPrice "Free charging" ;
+	mv:hasParking "2 parking spaces for electric vehicles only" ;
+	mv:offersBooking "Optional" ;
+	mv:offersPlugTypes "Plug Type 2" ;
+	mv:openingHours "Open 24/24" .
+
+mv:ChargingStationC
+	a mv:ChargingStation ;
+	mv:ChargingStationName"OBI Markt Bonn-Nord" ;	
+	vcard:hasAddress [
+						vcard:country-name "Germany" ;
+						vcard:city "Bonn" ;
+						vcard:postal-code "53119" ;
+						vcard:region "North Rhine-Westphalia" ;
+						vcard:housenumber "166" ;
+						vcard:street-address "Bornheimer Straße" 
+					 ];
+	
+	vcard:website "http://www.obi.de/de/maerkte/Bonn-Nord/index.html" ;	
+	geo:long "7.080653" ;
+	geo:lat "50.738228" ;
+	mv:offersAccess "Open to all users" ;
+	mv:hasIdentifications "None" ;
+	mv:hasPrice "Free charging" ;
+	mv:hasParking "1 parking space for electric vehicles only" ;
+	mv:offersBooking "Impossible" ;
+	mv:offersPlugTypes "Schoko plug" ;
+	mv:openingHours "Monday to Saturday from 08:00 to 20:00" .
+	
+mv:ChargingStationD  
+	a mv:ChargingStation ;
+	mv:ChargingStationName"Stadthausgarage - Bonn" ;
+	vcard:hasAddress [
+						vcard:country-name "Germany" ;
+						vcard:city "Bonn" ;
+						vcard:postal-code "53111" ;
+						vcard:region "North Rhine-Westphalia" ;
+						vcard:street-address "Weiherstraße" 
+					 ];
+	geo:long "7.093778" ;
+	geo:lat "50.737613" ;
+	mv:offersAccess "Open to all users" ;
+	mv:hasIdentifications "None" ;
+	mv:hasPrice "Free charging" ;
+	mv:hasParking "1 parking space for electric vehicles only" ;
+	mv:offersBooking "Impossible" ;
+	mv:offersPlugTypes "Schoko plug" ;
+	mv:openingHours "Open 24/24" .
+	
+mv:ChargingStationE  
+	a mv:ChargingStation ;
+	mv:ChargingStationName"Automobilgruppe Dirkes Bonn GmbH" ;
+	vcard:hasAddress [
+						vcard:country-name "Germany" ;
+						vcard:city "Bonn" ;
+						vcard:postal-code "53175" ;
+						vcard:region "North Rhine-Westphalia" ;
+						vcard:housenumber "60-80" ;
+						vcard:street-address "Godesberger Str." 
+					 ];
+	geo:long "7.140795" ;
+	geo:lat "50.695074" ;
+	mv:offersAccess "Open to all users" ;
+	mv:hasIdentifications "Other" ;
+	mv:hasPrice "Paid charging" ;
+	mv:offersPlugTypes "Schoko plug" .
+	
+mv:ChargingStationF  
+	a mv:ChargingStation ;
+	mv:ChargingStationName"Am Rathaus Alfter" ;
+	vcard:hasAddress [
+						vcard:country-name "Germany" ;
+						vcard:city "Alfter" ;
+						vcard:postal-code "53347" ;
+						vcard:region "North Rhine-Westphalia" ;
+						vcard:housenumber "7" ;
+						vcard:street-address "Am Rathaus" 
+					 ];
+	geo:long "7.026320" ;
+	geo:lat "50.721710" ;
+	mv:offersAccess "For identified persons only" ;
+	mv:hasIdentifications "Text message, Phone call, Other, Mobile Application" ;
+	mv:PaymentMethod "Text message, Mobile Application" ;
+	mv:hasPrice "Paid charging" ;
+	mv:offersPlugTypes "Plug type 2" ;
+	vcard:operator "RWE" ;
+	mv:openingHours "Open 24/24" .
+	
+mv:ChargingStationG  
+	a mv:ChargingStation ;
+	mv:ChargingStationName"TankE - Bornheim" ;
+	vcard:hasAddress [
+						vcard:country-name "Germany" ;
+						vcard:city "Bornheim" ;
+						vcard:postal-code "53332" ;
+						vcard:region "North Rhine-Westphalia" ;
+						vcard:housenumber "2" ;
+						vcard:street-address "Rathausstraße" 
+					 ];
+	geo:long "7.004420" ;
+	geo:lat "50.757470" ;
+	vcard:website "http://www.rheinenergie.com/TankEn" ;
+	vcard:operator "Rheinenergie" ;
+	mv:hasIdentifications "Unknown" ;
+	mv:hasPrice "Free charging" ;
+	mv:offersPlugTypes "Schuko plug, Plug Type 2" ;
+	mv:openingHours "Open 24/24" .
+
+mv:ChargingStationH  
+	a mv:ChargingStation ;
+	mv:ChargingStationName"TankE RheinEnergie Ladestation - Stadtbetrieb Bornheim Anstalt des öffentlichen Rechts" ;
+	vcard:hasAddress [
+						vcard:country-name "Germany" ;
+						vcard:city "Bornheim" ;
+						vcard:postal-code "53332" ;
+						vcard:region "North Rhine-Westphalia" ;
+						vcard:housenumber "15" ;
+						vcard:street-address "Donnerbachweg" 
+					 ];
+	geo:long "6.948360" ;
+	geo:lat "50.767600" ;
+	vcard:owner "TankE RheinEnergie" ;
+	vcard:website "http://www.rheinenergie.com/de/unternehmensportal/technik_zukunft/elektromobilitaet_1/ladestationen/ladestationen_1.php" ;
+	mv:offersAccess "Open to all users" ;
+	mv:hasIdentifications "Badge has to be ordered" ;
+	mv:hasPrice "Paid charging" ;
+	mv:offersPlugTypes "Schoko plug, Plug type 2" ;
+	mv:openingHours "Open 24/24" .
+	
+mv:ChargingStationI  
+	a mv:ChargingStation ;
+	mv:ChargingStationName"3-5 Reichsstr. Bonn" ;
+	vcard:hasAddress [
+						vcard:country-name "Germany" ;
+						vcard:city "Bonn" ;
+						vcard:postal-code "53125" ;
+						vcard:region "North Rhine-Westphalia" ;
+						vcard:housenumber "3-5" ;
+						vcard:street-address "Reichstrasse" 
+					 ];
+	geo:long "7.075870" ;
+	geo:lat "50.683040" ;
+	vcard:operator "RWE" ;
+	mv:offersAccess "For identified persons only" ;
+	mv:hasIdentifications "Text message, Phone call, Other, Mobile Application" ;
+	mv:PaymentMethod "Text message, Mobile Application" ;
+	mv:hasPrice "Paid charging" ;
+	mv:offersPlugTypes "Plug type 2" ;
+	mv:openingHours "Open 24/24" .
+	
+mv:ChargingStationK  
+	a mv:ChargingStation ;
+	mv:ChargingStationName"104 Zeithstraße Siegburg" ;
+	vcard:hasAddress [
+						vcard:country-name "Germany" ;
+						vcard:city "Siegburg" ;
+						vcard:postal-code "53721" ;
+						vcard:region "North Rhine-Westphalia" ;
+						vcard:housenumber "104" ;
+						vcard:street-address "Zeithstraße" 
+					 ];
+	geo:long "7.218302" ;
+	geo:lat "50.802184" ;
+	vcard:operator "RWE" ;
+	mv:offersAccess "For identified persons only" ;
+	mv:hasIdentifications "Text message, Phone call, Other, Mobile Application" ;
+	mv:PaymentMethod "Text message, Mobile Application" ;
+	mv:hasPrice "Paid charging" ;
+	mv:offersPlugTypes "Plug type 2" ;
+	mv:openingHours "Open 24/24" .
+	
+mv:ChargingStationL 
+	a mv:ChargingStation ;
+	mv:ChargingStationName"Konrad-Adenauer-Allee Siegburg" ;
+	vcard:hasAddress [
+						vcard:country-name "Germany" ;
+						vcard:city "Siegburg" ;
+						vcard:postal-code "53721" ;
+						vcard:region "North Rhine-Westphalia" ;
+						vcard:street-address "Konrad-Adenauer-Allee" 
+					 ];
+	geo:long "7.203024" ;
+	geo:lat "50.793180" ;
+	vcard:operator "RWE" ;
+	mv:offersAccess "For identified persons only" ;
+	mv:hasIdentifications "Text message, Phone call, Other, Mobile Application" ;
+	mv:PaymentMethod "Text message, Mobile Application" ;
+	mv:hasPrice "Paid charging" ;
+	mv:offersPlugTypes "Plug type 2" ;
+	mv:openingHours "Open 24/24" .
+	
+mv:ChargingStationM  
+	a mv:ChargingStation ;
+	mv:ChargingStationName"10 Wilhelmstr. Siegburg" ;
+	vcard:hasAddress [
+						vcard:country-name "Germany" ;
+						vcard:city "Siegburg" ;
+						vcard:postal-code "53721" ;
+						vcard:region "North Rhine-Westphalia" ;
+						vcard:housenumber "10" ;
+						vcard:street-address "Wilhelmstr." 
+					 ];
+	geo:long "7.205730" ;
+	geo:lat "50.793205" ;
+	vcard:operator "RWE" ;
+	mv:offersAccess "For identified persons only" ;
+	mv:hasIdentifications "Text message, Phone call, Other, Mobile Application" ;
+	mv:PaymentMethod "Text message, Mobile Application" ;
+	mv:hasPrice "Paid charging" ;
+	mv:offersPlugTypes "Plug type 2" ;
+	mv:openingHours "Open 24/24" .
+	
+mv:ChargingStationN  
+	a mv:ChargingStation ;
+	mv:ChargingStationName"3 Bachstraße Siegburg" ;
+	vcard:hasAddress [
+						vcard:country-name "Germany" ;
+						vcard:city "Siegburg" ;
+						vcard:postal-code "53721" ;
+						vcard:region "North Rhine-Westphalia" ;
+						vcard:housenumber "3" ;
+						vcard:street-address "Bachstrasse" 
+					 ];
+	geo:long "7.203999" ;
+	geo:lat "50.798530" ;
+	vcard:operator "RWE" ;
+	mv:offersAccess "For identified persons only" ;
+	mv:hasIdentifications "Text message, Phone call, Other, Mobile Application" ;
+	mv:PaymentMethod "Text message, Mobile Application" ;
+	mv:hasPrice "Paid charging" ;
+	mv:offersPlugTypes "Plug type 2" ;
+	mv:openingHours "Open 24/24" .
+	
+mv:ChargingStationO  
+	a mv:ChargingStation ;
+	mv:ChargingStationName" Ringstraße Siegburg" ;
+	vcard:hasAddress [
+						vcard:country-name "Germany" ;
+						vcard:city "Siegburg" ;
+						vcard:postal-code "53721" ;
+						vcard:region "North Rhine-Westphalia" ;
+						vcard:street-address "Ringstrasse" 
+					 ];
+	geo:long "7.205371" ;
+	geo:lat "50.797767" ;
+	vcard:operator "RWE" ;
+	mv:offersAccess "For identified persons only" ;
+	mv:hasIdentifications "Text message, Phone call, Other, Mobile Application" ;
+	mv:PaymentMethod "Text message, Mobile Application" ;
+	mv:hasPrice "Paid charging" ;
+	mv:offersPlugTypes "Plug type 2" ;
+	mv:openingHours "Open 24/24" .
+	
+mv:ChargingStationP  
+	a mv:ChargingStation ;
+	mv:ChargingStationName" 1 Am Turm Siegburg" ;
+	vcard:hasAddress [
+						vcard:country-name "Germany" ;
+						vcard:city "Siegburg" ;
+						vcard:postal-code "53721" ;
+						vcard:region "North Rhine-Westphalia" ;
+						vcard:housenumber "1" ;
+						vcard:street-address "Am Turm" 
+					 ];
+	geo:long "7.223880" ;
+	geo:lat "50.792406" ;
+	vcard:operator "RWE" ;
+	mv:offersAccess "For identified persons only" ;
+	mv:hasIdentifications "Text message, Phone call, Other, Mobile Application" ;
+	mv:PaymentMethod "Text message, Mobile Application" ;
+	mv:hasPrice "Paid charging" ;
+	mv:offersPlugTypes "Plug type 2" ;
+	mv:openingHours "Open 24/24" .
+
+
+
 <http://linkedgeodata.org/triplify/way76246393>
       a       <http://eccenca.com/mobivoc/FuelStation> ;
       <http://www.w3.org/2000/01/rdf-schema#label>
@@ -1101,3 +1485,93 @@
               "Yes" ;
       <http://eccenca.com/mobivoc/hasWheelChairEnabled>
               "Yes" .
+
+@prefix mv:     <http://purl.org/net/mobivoc/> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix foaf:   <http://xmlns.com/foaf/spec/#> .
+
+
+mv:stationX1  a mv:FillingStation; 
+	     	rdfs:label "Aral Tankstelle";
+	     	mv:isLocated mv:location11 ;
+	     	mv:hasOpeningHours		"6:00 - 23:00";
+	     	mv:hasOffer mv:AralSuper95,
+	     				mv:AralSuper95E10,
+	     				mv:AralSuperPlus98,
+	     				mv:AralSuperPlus102 .
+
+
+mv:stationA2  a mv:FillingStation; 
+	     	rdfs:label "Shell Tankstelle";
+	     	mv:hasOpeningHours	"5:00 - 24:00";
+	     	mv:isLocated mv:location75 ;
+	     	mv:hasOffer mv:ShellFuelSave95,
+	     				mv:ShellFuelSaveE10,
+	     				mv:ShellDieselFuelSave .
+
+mv:location11 a mv:ChargingPointLocation;
+	     	schema:streetAddress	"Weihertstr. 20";
+	     	schema:postalCode		"53115";
+	     	schema:addressLocality	"Bonn".
+
+mv:location75 a mv:ChargingPointLocation;
+	     	schema:streetAddress	"Nordstr. 8";
+	     	schema:postalCode		"50441";
+	     	schema:addressLocality	"Köln".
+
+mv:UnknownPlug a mv:PlugType ;
+	rdfs:label "Unknown Plug"@en , "Unbekannter Anschluss"@de .
+
+mv:SchukoPlug a mv:PlugType ;
+	owl:sameAs <http://dbpedia.org/resource/Schuko> ;
+	foaf:depiction <http://upload.wikimedia.org/wikipedia/commons/e/ef/Schuko_plug_and_socket.png> ;
+	rdfs:label "Schuko Plug"@en .
+
+mv:CHAdeMOPlug a mv:PlugType ;
+	rdfs:label "CHAdeMO"@en ;
+	owl:sameAs <http://dbpedia.org/resource/CHAdeMO> ;
+	foaf:depiction <http://upload.wikimedia.org/wikipedia/commons/f/f3/VDE-AR-E_2623-2-2-plug.jpg> .
+
+
+mv:ShellFuelSave95 a mv:Fuel;
+		 	 rdfs:label "Shell Fuel Save 95";
+		 	 mv:hasPrice "1,55".
+
+
+mv:ShellFuelSaveE10 a mv:Fuel;
+		 	 rdfs:label "Shell Fuel Save E10";
+		 	 mv:hasPrice "1,58".
+
+
+mv:ShellDieselFuelSave a mv:Fuel;
+		 	 rdfs:label "Shell Diesel Fuel Save";
+		 	 mv:hasPrice "1,32".
+
+
+
+mv:AralSuper95 a mv:Fuel;
+		 	 rdfs:label "Aral Super 95";
+		 	 mv:hasPrice "1,57".
+	
+mv:AralSuper95E10 a mv:Fuel;
+		 	 rdfs:label "Aral Super 95 E10";
+		 	 mv:hasPrice "1,59".
+
+mv:AralSuperPlus98 a mv:Fuel;
+		 	 rdfs:label "Aral Super Plus 98";
+		 	 mv:hasPrice "1,63".
+
+mv:AralSuperPlus102 a mv:Fuel;
+		 	 rdfs:label "Aral Super Plus 92";
+		 	 mv:hasPrice "1,60".
+
+mv:AralDiesel a mv:DieselFuel;
+		 	 rdfs:label "Aral Diesel";
+		 	 mv:hasPrice "1,30".
+
+mv:AralUltimateDiesel a mv:DieselFuel;
+		 	 rdfs:label "Aral Ultimate Diesel";
+		 	 mv:hasPrice "1,32".
