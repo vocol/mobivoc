@@ -18,9 +18,8 @@ mv:
      dc:title "Mobivoc" ;
      skos:definition "A vocabulary which represents the Mobility domain"@en ;
      skos:prefLabel "mv"@en ;
-     dct:created "2015-05-23"^^xsd:date ;
      dct:creator "Niklas Petersen" ;
-     dct:contributor "Christoph Lange", "Sˆren Auer" ;
+     dct:contributor "Christoph Lange", "S√∂ren Auer" ;
      vann:preferredNamespacePrefix "mv" ;
      vann:preferredNamespaceUri "http://eccenca.com/mobivoc/mv#" ;
      owl:versionInfo "SNAPSHOT" ;
@@ -179,7 +178,7 @@ mv:BookingType
 mv:Charger
 	a rdfs:Class, owl:Class ;
 	rdfs:comment	"Describes characteristics of the charger." ;
-	rdfs:label "Charger"@en, "Laderger‰t"@de .
+	rdfs:label "Charger"@en, "Laderger√§t"@de .
 		
 mv:ChargingPoint 
 	a rdfs:Class, owl:Class ;
@@ -310,7 +309,7 @@ mv:CreditCard
 		
 mv:Key
 	a mv:IdentificationSystem ;
-	rdfs:label "Key"@en, "Schl¸ssel"@de .
+	rdfs:label "Key"@en, "Schl√ºssel"@de .
 		
 mv:MobileApplication
 	a mv:IdentificationSystem ;
@@ -695,7 +694,7 @@ mv:ChargingPointA
 						vcard:city "Bonn" ;
 						vcard:postal-code "53111" ;
 						vcard:region "North Rhine-Westphalia" ;
-						vcard:street-address "Engeltalstraﬂe" 
+						vcard:street-address "Engeltalstra√üe" 
 					 ];	
 	geo:long "7.103397" ;
 	geo:lat "50.738999" ;
@@ -738,7 +737,7 @@ mv:ChargingPointC
 						vcard:postal-code "53119" ;
 						vcard:region "North Rhine-Westphalia" ;
 						vcard:housenumber "166" ;
-						vcard:street-address "Bornheimer Straﬂe" 
+						vcard:street-address "Bornheimer Stra√üe" 
 					 ];
 	
 	vcard:website "http://www.obi.de/de/maerkte/Bonn-Nord/index.html" ;	
@@ -760,7 +759,7 @@ mv:ChargingPointD
 						vcard:city "Bonn" ;
 						vcard:postal-code "53111" ;
 						vcard:region "North Rhine-Westphalia" ;
-						vcard:street-address "Weiherstraﬂe" 
+						vcard:street-address "Weiherstra√üe" 
 					 ];
 	geo:long "7.093778" ;
 	geo:lat "50.737613" ;
@@ -825,7 +824,7 @@ mv:ChargingPointG
 						vcard:postal-code "53332" ;
 						vcard:region "North Rhine-Westphalia" ;
 						vcard:housenumber "2" ;
-						vcard:street-address "Rathausstraﬂe" 
+						vcard:street-address "Rathausstra√üe" 
 					 ];
 	geo:long "7.004420" ;
 	geo:lat "50.757470" ;
@@ -886,14 +885,14 @@ mv:ChargingPointI
 	
 mv:ChargingPointK  
 	a mv:ChargingPoint;
-	mv:ChargingPointName"104 Zeithstraﬂe Siegburg" ;
+	mv:ChargingPointName"104 Zeithstra√üe Siegburg" ;
 	vcard:hasAddress [
 						vcard:country-name "Germany" ;
 						vcard:city "Siegburg" ;
 						vcard:postal-code "53721" ;
 						vcard:region "North Rhine-Westphalia" ;
 						vcard:housenumber "104" ;
-						vcard:street-address "Zeithstraﬂe" 
+						vcard:street-address "Zeithstra√üe" 
 					 ];
 	geo:long "7.218302" ;
 	geo:lat "50.802184" ;
@@ -960,7 +959,7 @@ mv:ChargingPointM
 	
 mv:ChargingPointN  
 	a mv:ChargingPoint;
-	mv:ChargingPointName"3 Bachstraﬂe Siegburg" ;
+	mv:ChargingPointName"3 Bachstra√üe Siegburg" ;
 	vcard:hasAddress [
 						vcard:country-name "Germany" ;
 						vcard:city "Siegburg" ;
@@ -985,7 +984,7 @@ mv:ChargingPointN
 	
 mv:ChargingPointO  
 	a mv:ChargingPoint;
-	mv:ChargingPointName" Ringstraﬂe Siegburg" ;
+	mv:ChargingPointName" Ringstra√üe Siegburg" ;
 	vcard:hasAddress [
 						vcard:country-name "Germany" ;
 						vcard:city "Siegburg" ;
@@ -1070,7 +1069,7 @@ mv:ParkingFacilityFeature
 mv:ParkingFacilityConnection
 	a rdfs:Class , owl:Class ;
 	rdfs:comment "Transport connections available at the parking facility (e.g. Park & Ride)." ;
-	rdfs:label "Parking Facility Connections"@en , "Anschlussmˆglichkeiten der Parkeinrichtung"@de .
+	rdfs:label "Parking Facility Connections"@en , "Anschlussm√∂glichkeiten der Parkeinrichtung"@de .
 
 mv:VehicleType
 	a rdfs:Class, owl:Class ;
@@ -1080,7 +1079,7 @@ mv:VehicleType
 mv:ParkingFees
 	a rdfs:Class, owl:Class ;
 	rdfs:comment "Captures information about the parking fees." ;
-	rdfs:label "Parking Fees"@en , "Parkgeb¸hren" .
+	rdfs:label "Parking Fees"@en , "Parkgeb√ºhren" .
 
 
 # INSTANCES
@@ -1091,7 +1090,7 @@ mv:SingleLevel
 	a mv:ParkingFacilityConfiguration ;
 	rdfs:comment "Parking area on a single groundfloor level." ;
 	skos:prefLabel "Parking lot"@en-US , "Car park"@en-UK , "Parkplatz"@de ;
-	skos:hiddenLabel "car lot"@en , "Parkfl‰che"@de .
+	skos:hiddenLabel "car lot"@en , "Parkfl√§che"@de .
 
 mv:MultiStorey
 	a mv:ParkingFacilityConfiguration ;
@@ -1136,12 +1135,12 @@ mv:StatusUnknown
 mv:EnoughParkingSpacesAvailable
 	a mv:ParkingFacilityStatus ;
 	rdfs:comment "The parking facility has parking spaces available." ;
-	rdfs:label "enough parking spaces available"@en , "gen¸gend Stellpl‰tze frei"@de .
+	rdfs:label "enough parking spaces available"@en , "gen√ºgend Stellpl√§tze frei"@de .
 
 mv:OnlyAFewParkingSpacesAvailable
 	a mv:ParkingFacilityStatus ;
 	rdfs:comment "The parking facility has 95% or greater occupancy." ;
-	rdfs:label "only a few parking spaces available"@en , "nur noch wenige Stellpl‰tze frei"@de .
+	rdfs:label "only a few parking spaces available"@en , "nur noch wenige Stellpl√§tze frei"@de .
 
 mv:NoParkAndRideInformation
 	a mv:ParkingFacilityStatus ;
@@ -1156,17 +1155,17 @@ mv:NoParkingAllowed
 mv:NoParkingInformationAvailable
 	a mv:ParkingFacilityStatus ;
 	rdfs:comment "Parking information is not available until a specified time." ;
-	rdfs:label "no parking information available"@en , "Keine Parkinformationen verf¸gbar"@de .
+	rdfs:label "no parking information available"@en , "Keine Parkinformationen verf√ºgbar"@de .
 
 mv:NormalParkingRestrictionsLifted
 	a mv:ParkingFacilityStatus ;
 	rdfs:comment "The parking restrictions that normally apply in the specified location have been temporarily lifted." ;
-	rdfs:label "normal parking restrictions lifted"@en , "Normale Parkbeschr‰nkungen aufgehoben"@de .
+	rdfs:label "normal parking restrictions lifted"@en , "Normale Parkbeschr√§nkungen aufgehoben"@de .
 
 mv:SpecialParkingRestrictionsInForce
 	a mv:ParkingFacilityStatus ;
 	rdfs:comment "Parking restrictions, other than those that normally apply, are in force in a specified area." ;
-	rdfs:label "special parking restrictions in force"@en , "besondere Parkbeschr‰nkungen in Kraft"@de .
+	rdfs:label "special parking restrictions in force"@en , "besondere Parkbeschr√§nkungen in Kraft"@de .
 
 mv:ParkAndRideServiceNotOperating
 	a mv:ParkingFacilityStatus ;
@@ -1195,7 +1194,7 @@ mv:XXLParkingSpace
 
 mv:VideoSurveillance
 	a mv:ParkingFacilityFeature ;
-	rdfs:label "video surveillance"@en , "Video¸berwachung"@de .
+	rdfs:label "video surveillance"@en , "Video√ºberwachung"@de .
 
 mv:SurveillanceBySecurityGuards
 	a mv:ParkingFacilityFeature ;
@@ -1306,21 +1305,21 @@ mv:features
 
 mv:numberOfLadiesParkingSpaces
 	a rdf:Property , owl:DatatypeProperty ;
-	rdfs:label "Number of ladies' parking spaces"@en , "Anzahl Frauenparkpl‰tze"@de ;
+	rdfs:label "Number of ladies' parking spaces"@en , "Anzahl Frauenparkpl√§tze"@de ;
 	rdfs:comment "Indicates the number of ladies' parking spaces." ;
 	rdfs:domain mv:ParkingFacility ;
 	rdfs:range rdfs:Literal .
 
 mv:numberOfParkingSpacesForDisabledPersons
 	a rdf:Property , owl:DatatypeProperty ;
-	rdfs:label "Number of parking spaces for disabled persons"@en , "Anzahl Behindertenparkpl‰tze"@de ;
+	rdfs:label "Number of parking spaces for disabled persons"@en , "Anzahl Behindertenparkpl√§tze"@de ;
 	rdfs:comment "Indicates the number of parking spaces for disabled persons." ;
 	rdfs:domain mv:ParkingFacility ;
 	rdfs:range rdfs:Literal .
 
 mv:numberOfXXLParkingSpaces
 	a rdf:Property , owl:DatatypeProperty ;
-	rdfs:label "Number of XXL parking spaces"@en , "Anzahl XXL-Parkpl‰tze"@de ;
+	rdfs:label "Number of XXL parking spaces"@en , "Anzahl XXL-Parkpl√§tze"@de ;
 	rdfs:comment "Indicates the number of XXL parking spaces." ;
 	rdfs:domain mv:ParkingFacility ;
 	rdfs:range rdfs:Literal .
@@ -1341,21 +1340,21 @@ mv:occupancy
 
 mv:numberOfOccupiedParkingSpaces
 	a rdf:Property , owl:DatatypeProperty ;
-	rdfs:label "number of occupied parking spaces"@en , "Anzahl belegter Stellpl‰tze"@de ;
+	rdfs:label "number of occupied parking spaces"@en , "Anzahl belegter Stellpl√§tze"@de ;
 	rdfs:comment "Indicates the number of currently occupied parking spaces." ;
 	rdfs:domain mv:ParkingFacility ;
 	rdfs:range rdfs:Literal .
 
 mv:numberOfVacantParkingSpaces
 	a rdf:Property , owl:DatatypeProperty ;
-	rdfs:label "number of vacant"@en , "Anzahl freier Stellpl‰tze"@de ;
+	rdfs:label "number of vacant"@en , "Anzahl freier Stellpl√§tze"@de ;
 	rdfs:comment "Indicates the number of vacant parking spaces available." ;
 	rdfs:domain mv:ParkingFacility ;
 	rdfs:range rdfs:Literal .
 
 mv:totalCapacity
 	a rdf:Property , owl:DatatypeProperty ;
-	rdfs:label "Total capacity"@en , "Gesamtkapazit‰t"@de ;
+	rdfs:label "Total capacity"@en , "Gesamtkapazit√§t"@de ;
 	rdfs:comment "Indicates the total number of parking spaces." ;
 	rdfs:domain mv:ParkingFacility ;
 	rdfs:range rdfs:Literal .
@@ -1411,7 +1410,7 @@ mv:hasOpeningHours
 
 mv:hasParkingFees
 	a rdf:Property, owl:DatatypeProperty ;
-	rdfs:label "Has parking fees"@en , "hat Parkgeb¸hren"@de ;
+	rdfs:label "Has parking fees"@en , "hat Parkgeb√ºhren"@de ;
 	rdfs:comment "Indicates whether parking fees have to be paid." ;
 	rdfs:domain mv:ParkingFees ;
 	rdfs:range rdfs:Literal .
@@ -1425,21 +1424,21 @@ mv:feesDescription
 
 mv:payment
 	a rdf:Property, owl:ObjectProperty ;
-	rdfs:label "Payment forms"@en , "Bezahlmˆglichkeiten"@de ;
+	rdfs:label "Payment forms"@en , "Bezahlm√∂glichkeiten"@de ;
 	rdfs:comment "Available payment forms for parking fees." ;
 	rdfs:domain mv:ParkingFees ;
-	rdfs:range mv:Payment . # f¸rs Parken braucht man zus‰tzlich folgende Mˆglichkeiten: M¸nzen, Scheine, EC-Karte
+	rdfs:range mv:Payment . # f√ºrs Parken braucht man zus√§tzlich folgende M√∂glichkeiten: M√ºnzen, Scheine, EC-Karte
 
 mv:additionalInformation
 	a rdf:Property, owl:DatatypeProperty ;
-	rdfs:label "Additional Information"@en , "Zus‰tzliche Informationen" ;
+	rdfs:label "Additional Information"@en , "Zus√§tzliche Informationen" ;
 	rdfs:comment "Additional information about the parking facility." ;
 	rdfs:domain mv:ParkingFacility ;
 	rdfs:range rdfs:Literal .
 
 mv:hasHeightLimit
 	a rdf:Property, owl:DatatypeProperty ;
-	rdfs:label "Has height limit"@en , "Hat Hˆhenbegrenzung" ;
+	rdfs:label "Has height limit"@en , "Hat H√∂henbegrenzung" ;
 	rdfs:comment "Indicates the height limit for vehicles using the parking facility." ;
 	rdfs:domain mv:ParkingFacility ;
 	rdfs:range rdfs:Literal .
@@ -1489,7 +1488,7 @@ mv:ParkingFacilityFeature
 mv:ParkingFacilityConnection
 	a rdfs:Class , owl:Class ;
 	rdfs:comment "Transport connections available at the parking facility (e.g. Park & Ride)." ;
-	rdfs:label "Parking Facility Connections"@en , "Anschlussmˆglichkeiten der Parkeinrichtung"@de .
+	rdfs:label "Parking Facility Connections"@en , "Anschlussm√∂glichkeiten der Parkeinrichtung"@de .
 
 mv:VehicleType
 	a rdfs:Class, owl:Class ;
@@ -1499,7 +1498,7 @@ mv:VehicleType
 mv:ParkingFees
 	a rdfs:Class, owl:Class ;
 	rdfs:comment "Captures information about the parking fees." ;
-	rdfs:label "Parking Fees"@en , "Parkgeb¸hren" .
+	rdfs:label "Parking Fees"@en , "Parkgeb√ºhren" .
 
 
 # INSTANCES
@@ -1510,7 +1509,7 @@ mv:SingleLevel
 	a mv:ParkingFacilityConfiguration ;
 	rdfs:comment "Parking area on a single groundfloor level." ;
 	skos:prefLabel "Parking lot"@en-US , "Car park"@en-UK , "Parkplatz"@de ;
-	skos:hiddenLabel "car lot"@en , "Parkfl‰che"@de .
+	skos:hiddenLabel "car lot"@en , "Parkfl√§che"@de .
 
 mv:MultiStorey
 	a mv:ParkingFacilityConfiguration ;
@@ -1555,12 +1554,12 @@ mv:StatusUnknown
 mv:EnoughParkingSpacesAvailable
 	a mv:ParkingFacilityStatus ;
 	rdfs:comment "The parking facility has parking spaces available." ;
-	rdfs:label "enough parking spaces available"@en , "gen¸gend Stellpl‰tze frei"@de .
+	rdfs:label "enough parking spaces available"@en , "gen√ºgend Stellpl√§tze frei"@de .
 
 mv:OnlyAFewParkingSpacesAvailable
 	a mv:ParkingFacilityStatus ;
 	rdfs:comment "The parking facility has 95% or greater occupancy." ;
-	rdfs:label "only a few parking spaces available"@en , "nur noch wenige Stellpl‰tze frei"@de .
+	rdfs:label "only a few parking spaces available"@en , "nur noch wenige Stellpl√§tze frei"@de .
 
 mv:NoParkAndRideInformation
 	a mv:ParkingFacilityStatus ;
@@ -1575,17 +1574,17 @@ mv:NoParkingAllowed
 mv:NoParkingInformationAvailable
 	a mv:ParkingFacilityStatus ;
 	rdfs:comment "Parking information is not available until a specified time." ;
-	rdfs:label "no parking information available"@en , "Keine Parkinformationen verf¸gbar"@de .
+	rdfs:label "no parking information available"@en , "Keine Parkinformationen verf√ºgbar"@de .
 
 mv:NormalParkingRestrictionsLifted
 	a mv:ParkingFacilityStatus ;
 	rdfs:comment "The parking restrictions that normally apply in the specified location have been temporarily lifted." ;
-	rdfs:label "normal parking restrictions lifted"@en , "Normale Parkbeschr‰nkungen aufgehoben"@de .
+	rdfs:label "normal parking restrictions lifted"@en , "Normale Parkbeschr√§nkungen aufgehoben"@de .
 
 mv:SpecialParkingRestrictionsInForce
 	a mv:ParkingFacilityStatus ;
 	rdfs:comment "Parking restrictions, other than those that normally apply, are in force in a specified area." ;
-	rdfs:label "special parking restrictions in force"@en , "besondere Parkbeschr‰nkungen in Kraft"@de .
+	rdfs:label "special parking restrictions in force"@en , "besondere Parkbeschr√§nkungen in Kraft"@de .
 
 mv:ParkAndRideServiceNotOperating
 	a mv:ParkingFacilityStatus ;
@@ -1614,7 +1613,7 @@ mv:XXLParkingSpace
 
 mv:VideoSurveillance
 	a mv:ParkingFacilityFeature ;
-	rdfs:label "video surveillance"@en , "Video¸berwachung"@de .
+	rdfs:label "video surveillance"@en , "Video√ºberwachung"@de .
 
 mv:SurveillanceBySecurityGuards
 	a mv:ParkingFacilityFeature ;
@@ -1725,21 +1724,21 @@ mv:features
 
 mv:numberOfLadiesParkingSpaces
 	a rdf:Property , owl:DatatypeProperty ;
-	rdfs:label "Number of ladies' parking spaces"@en , "Anzahl Frauenparkpl‰tze"@de ;
+	rdfs:label "Number of ladies' parking spaces"@en , "Anzahl Frauenparkpl√§tze"@de ;
 	rdfs:comment "Indicates the number of ladies' parking spaces." ;
 	rdfs:domain mv:ParkingFacility ;
 	rdfs:range rdfs:Literal .
 
 mv:numberOfParkingSpacesForDisabledPersons
 	a rdf:Property , owl:DatatypeProperty ;
-	rdfs:label "Number of parking spaces for disabled persons"@en , "Anzahl Behindertenparkpl‰tze"@de ;
+	rdfs:label "Number of parking spaces for disabled persons"@en , "Anzahl Behindertenparkpl√§tze"@de ;
 	rdfs:comment "Indicates the number of parking spaces for disabled persons." ;
 	rdfs:domain mv:ParkingFacility ;
 	rdfs:range rdfs:Literal .
 
 mv:numberOfXXLParkingSpaces
 	a rdf:Property , owl:DatatypeProperty ;
-	rdfs:label "Number of XXL parking spaces"@en , "Anzahl XXL-Parkpl‰tze"@de ;
+	rdfs:label "Number of XXL parking spaces"@en , "Anzahl XXL-Parkpl√§tze"@de ;
 	rdfs:comment "Indicates the number of XXL parking spaces." ;
 	rdfs:domain mv:ParkingFacility ;
 	rdfs:range rdfs:Literal .
@@ -1760,21 +1759,21 @@ mv:occupancy
 
 mv:numberOfOccupiedParkingSpaces
 	a rdf:Property , owl:DatatypeProperty ;
-	rdfs:label "number of occupied parking spaces"@en , "Anzahl belegter Stellpl‰tze"@de ;
+	rdfs:label "number of occupied parking spaces"@en , "Anzahl belegter Stellpl√§tze"@de ;
 	rdfs:comment "Indicates the number of currently occupied parking spaces." ;
 	rdfs:domain mv:ParkingFacility ;
 	rdfs:range rdfs:Literal .
 
 mv:numberOfVacantParkingSpaces
 	a rdf:Property , owl:DatatypeProperty ;
-	rdfs:label "number of vacant"@en , "Anzahl freier Stellpl‰tze"@de ;
+	rdfs:label "number of vacant"@en , "Anzahl freier Stellpl√§tze"@de ;
 	rdfs:comment "Indicates the number of vacant parking spaces available." ;
 	rdfs:domain mv:ParkingFacility ;
 	rdfs:range rdfs:Literal .
 
 mv:totalCapacity
 	a rdf:Property , owl:DatatypeProperty ;
-	rdfs:label "Total capacity"@en , "Gesamtkapazit‰t"@de ;
+	rdfs:label "Total capacity"@en , "Gesamtkapazit√§t"@de ;
 	rdfs:comment "Indicates the total number of parking spaces." ;
 	rdfs:domain mv:ParkingFacility ;
 	rdfs:range rdfs:Literal .
@@ -1830,7 +1829,7 @@ mv:hasOpeningHours
 
 mv:hasParkingFees
 	a rdf:Property, owl:DatatypeProperty ;
-	rdfs:label "Has parking fees"@en , "hat Parkgeb¸hren"@de ;
+	rdfs:label "Has parking fees"@en , "hat Parkgeb√ºhren"@de ;
 	rdfs:comment "Indicates whether parking fees have to be paid." ;
 	rdfs:domain mv:ParkingFees ;
 	rdfs:range rdfs:Literal .
@@ -1844,21 +1843,21 @@ mv:feesDescription
 
 mv:payment
 	a rdf:Property, owl:ObjectProperty ;
-	rdfs:label "Payment forms"@en , "Bezahlmˆglichkeiten"@de ;
+	rdfs:label "Payment forms"@en , "Bezahlm√∂glichkeiten"@de ;
 	rdfs:comment "Available payment forms for parking fees." ;
 	rdfs:domain mv:ParkingFees ;
-	rdfs:range mv:Payment . # f¸rs Parken braucht man zus‰tzlich folgende Mˆglichkeiten: M¸nzen, Scheine, EC-Karte
+	rdfs:range mv:Payment . # f√ºrs Parken braucht man zus√§tzlich folgende M√∂glichkeiten: M√ºnzen, Scheine, EC-Karte
 
 mv:additionalInformation
 	a rdf:Property, owl:DatatypeProperty ;
-	rdfs:label "Additional Information"@en , "Zus‰tzliche Informationen" ;
+	rdfs:label "Additional Information"@en , "Zus√§tzliche Informationen" ;
 	rdfs:comment "Additional information about the parking facility." ;
 	rdfs:domain mv:ParkingFacility ;
 	rdfs:range rdfs:Literal .
 
 mv:hasHeightLimit
 	a rdf:Property, owl:DatatypeProperty ;
-	rdfs:label "Has height limit"@en , "Hat Hˆhenbegrenzung" ;
+	rdfs:label "Has height limit"@en , "Hat H√∂henbegrenzung" ;
 	rdfs:comment "Indicates the height limit for vehicles using the parking facility." ;
 	rdfs:domain mv:ParkingFacility ;
 	rdfs:range rdfs:Literal .
