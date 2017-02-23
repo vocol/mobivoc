@@ -19,7 +19,7 @@
 mv:AccessInformation 
 	a rdfs:Class, owl:Class ;
 	rdfs:comment	"Access information of the charging point." ;
-	rdfs:label "Access Information"@en, "Zugagsinformation"@de .
+	rdfs:label "Access Information"@en, "Zugangsinformation"@de .
 	
 mv:AccessType 
 	a rdfs:Class, owl:Class ;
@@ -56,7 +56,7 @@ mv:ChargingPointLocation
 	rdfs:subClassOf	 s:Place ;
 	rdfs:comment	"Describes the charging point location." ;
 	rdfs:label "Charging Point Location"@en ;
-	rdfs:label "Lokalisierung der Ladestation"@de .
+	rdfs:label "Ort der Ladestation"@de .
 		
 mv:ChargingPointOwner 
 	a rdfs:Class, owl:Class ;
@@ -67,7 +67,7 @@ mv:ChargingPointOwner
 
 mv:ChargingSpeed
 	a rdfs:Class, owl:Class ;
-	rdfs:comment	"Describes speed types available at the  types of vehicle the can be loaded by charging point." ;
+	rdfs:comment	"Describes speed types available at the types of vehicle that can be loaded by charging point." ;
 	rdfs:label "Charging Speed"@en .
 
 mv:IdentificationSystem 
@@ -78,7 +78,7 @@ mv:IdentificationSystem
 mv:Payment
 	a rdfs:Class, owl:Class ;
 	rdfs:subClassOf gr:PaymentMethod ;
-	rdfs:comment	"Defines  payment method." ;
+	rdfs:comment	"Defines payment method." ;
 	rdfs:label "Payment"@en, "Zahlung"@de .
 
 mv:Plug
@@ -93,12 +93,12 @@ mv:PlugType
 	
 mv:VehicleType
 	a rdfs:Class, owl:Class ;
-	rdfs:comment	"Describes  types of vehicle tht can be loaded by charging point." ;
-	rdfs:label "Vehicle Type"@en, "Fahrzeugstyp"@de .
+	rdfs:comment	"Describes types of vehicle that can be loaded by charging point." ;
+	rdfs:label "Vehicle Type"@en, "Fahrzeugtyp"@de .
 
 
 mv:ChargeColumn
-        rdfs:label "Ladesäule"@zzzzzzz ;
+        rdfs:label "Ladesäule"@de ;
                    "Charge column"@en ;
                    "Station de recharge"@fr .
 
@@ -166,7 +166,7 @@ mv:BadgeIsAvailable
 	
 mv:CreditCard
 	a mv:IdentificationSystem ;
-	rdfs:label "CreditCard"@en, "Kreditkarte"@de .
+	rdfs:label "Credit Card"@en, "Kreditkarte"@de .
 		
 mv:Key
 	a mv:IdentificationSystem ;
@@ -226,11 +226,11 @@ mv:UndefinedAccessType
 	a mv:AccessType ;
 	rdfs:label "Undefined"@en, "Undefiniert"@de .
 	
-#Chargin Speed types
+#Charging Speed types
 	
-mv:Acelerated
+mv:Accelerated
 	a mv:ChargingSpeed ;
-	rdfs:label "Acelerated"@en .
+	rdfs:label "Accelerated"@en .
 	
 mv:Fast
 	a mv:ChargingSpeed ;
@@ -335,10 +335,10 @@ a	rdf:Property, owl:DatatypeProperty ;
 	rdfs:domain	mv:Plug ;
 	rdfs:range	rdfs:Literal .
 	
-mv:ChargingPointName
+mv:chargingPointName
 	a rdf:Property , owl:DatatypeProperty ;
 	rdfs:comment "Indicates the name of the charging station" ;
-	rdfs:label "charging station name"@en , "Ladestationnnummer"@de ;
+	rdfs:label "charging station name"@en , "Ladestationsname"@de ;
 	rdfs:domain mv:ChargingPoint;
 	rdfs:range rdfs:Literal .
 		
@@ -373,7 +373,7 @@ a	rdf:Property, owl:DatatypeProperty ;
 mv:energyType
 a	rdf:Property, owl:DatatypeProperty ;
 	rdfs:label	"energy type"@en ;
-	rdfs:comment	"Energy type of the charging point. " ;
+	rdfs:comment	"Energy type of the charging point." ;
 	rdfs:domain	mv:Charger ;
 	rdfs:range	rdfs:Literal .
 
@@ -398,10 +398,10 @@ a	rdf:Property, owl:ObjectProperty ;
 	rdfs:domain	mv:ChargingPoint ;
 	rdfs:range	mv:Charger .
 	
-mv:HasParkingFacility
+mv:hasParkingFacility
 	a rdf:Property, owl:DatatypeProperty ;
-	rdfs:comment "Indicate whether Filling Station has Parking Facility or not" ;
-	rdfs:label "has parking facility"@en, "hat Parkmoglichkeit"@de ;
+	rdfs:comment "Indicates whether Filling Station has Parking Facility or not" ;
+	rdfs:label "has parking facility"@en, "hat Parkmöglichkeit"@de ;
 	rdfs:domain mv:ChargingPoint ;
 	rdfs:range rdfs:literal .
 		
@@ -415,7 +415,7 @@ a	rdf:Property, owl:ObjectProperty ;
 mv:intensity
 a	rdf:Property, owl:DatatypeProperty ;
 	rdfs:label	"Intensity"@en ;
-	rdfs:comment	"Plug intensity.  " ;
+	rdfs:comment	"Plug intensity." ;
 	rdfs:domain	mv:Plug ;
 	rdfs:range	rdfs:Literal .
 
@@ -464,7 +464,7 @@ a	rdf:Property, owl:DatatypeProperty ;
 mv:openingHours
 	a rdf:Property, owl:DatatypeProperty ;
 	rdfs:comment "Indicates the opening hours of the filling station." ;
-	rdfs:label "opening hours"@en, "offnungszeiten"@de ;
+	rdfs:label "opening hours"@en, "Öffnungszeiten"@de ;
 	rdfs:domain mv:ChargingPoint ;
 	rdfs:range rdfs:Literal .
 	
@@ -527,14 +527,14 @@ a	rdf:Property, owl:DatatypeProperty ;
 mv:threePhasedCurrentavailable
 a	rdf:Property, owl:DatatypeProperty ;
 	rdfs:label	"Three-phased current available"@en ;
-	rdfs:comment	"Indicates whether Three-phased current is available.  " ;
+	rdfs:comment	"Indicates whether three-phased current is available.  " ;
 	rdfs:domain	mv:Plug ;
 	rdfs:range	rdfs:Literal .
 	
 mv:vehicleType
 a	rdf:Property, owl:ObjectProperty ;
 	rdfs:label	"vehicle type"@en ;
-	rdfs:comment	"Vehicle type. " ;
+	rdfs:comment	"Vehicle type." ;
 	rdfs:domain	mv:Plug ;
 	rdfs:range	mv:VehicleType .
 	
