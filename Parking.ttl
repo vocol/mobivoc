@@ -408,7 +408,7 @@ mv:payment
 
 mv:additionalInformation
 	a rdf:Property, owl:DatatypeProperty ;
-	rdfs:label "Additional Information"@en , "Zusätzliche Informationen" ;
+	rdfs:label "Additional Information"@en , "Zusätzliche Informationen"@de ;
 	rdfs:comment "Additional information about the parking facility." ;
 	rdfs:domain mv:ParkingFacility ;
 	rdfs:range rdfs:Literal .
