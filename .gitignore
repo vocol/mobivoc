@@ -1,0 +1,14 @@
+.all.ttl
+.instances.ttl
+.manual.ttl
+.schema.ttl
+*.log
+yasgui-queries
+tests
+log
+results
+riot.log
+pellet.log
+widoco/
+widoco.properties
+owl2vowl_logs/

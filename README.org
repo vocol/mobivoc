@@ -27,3 +27,4 @@
 
 * Environment
   This vocabulary is validated & published automatically using VoCol. Find out more here :https://github.com/mobivoc/vocol
+
