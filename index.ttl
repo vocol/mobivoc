@@ -39,14 +39,6 @@ ecc:TODO a foaf:Person, dct:Agent ;
 
 <http://creativecommons.org/licenses/by/4.0/> rdfs:label "Creative Commons Attribution 4.0 International" .
 
-:Example a owl:Class ;
-  rdfs:label "Example Class"@en ;
-  rdfs:comment "Represents an Example Class"@en ;
-  rdfs:isDefinedBy : ;
-  dct:issued "2014-12-15"^^xsd:date ;
-  dct:modified "2014-12-30"^^xsd:date ;
-.
-
 #
 # External vocabulary usage
 #
