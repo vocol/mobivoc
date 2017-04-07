@@ -1,0 +1,95 @@
+digraph g {
+    fontname = "Roboto"
+    fontsize = 8
+    dpi = 300
+
+    node [
+            fontname = "Roboto"
+            fontsize = 8
+            shape = "Mrecord"
+            style=filled
+            fontcolor=black
+            fillcolor="#ffc984"
+            color="#706f6f"
+            rankdir="LR"
+    ]
+
+    edge [
+            fontname = "Roboto"
+            fontsize = 8
+    ]
+    "http://schema.mobivoc.org/ParkingFacility" [label ="{parking facility|Exit rate : string\lFill rate : string\lHas height limit : string\lHas width limit : string\lNumber of XXL parking spaces : string\lNumber of ladies' parking spaces : string\lNumber of parking spaces for disabled persons : string\lQueuing time : string\lTotal capacity : string\lnumber of occupied parking spaces : string\lnumber of vacant parking spaces : string\loccupancy : string\l}"]
+"http://schema.mobivoc.org/BookingType" [label ="{Booking Type|}"]
+"http://schema.mobivoc.org/UnknownPlug" [label ="{Unknown Plug|}"]
+"http://schema.mobivoc.org/ParkingFacilityConfiguration" [label ="{Configuration|}"]
+"http://schema.mobivoc.org/ChargingPointFees" [label ="{Charging Point Fees|Fees description : string\lIs paid charging point : string\l}"]
+"http://schema.org/Place" [label ="{schema:Place|latitude : string\llongitude : string\l}" fillcolor="#00c7ff"]
+"http://schema.mobivoc.org/Plug" [label ="{Plug|Cable available : string\lCharging Speed : http://schema.mobivoc.org/ChargingSpeed\lCurrentType : string\lIntensity : string\lLocker available : string\lPlug Condition : string\lPlug Information : string\lPower : string\lThree-phased current available : string\lVoltage : string\l}"]
+"http://schema.mobivoc.org/IdentificationSystem" [label ="{Identification System|}"]
+"http://schema.mobivoc.org/Type1Plug" [label ="{Type1 Plug|}"]
+"http://schema.org/PostalAddress" [label ="{schema:Postal address|}" fillcolor="#00c7ff"]
+"http://schema.mobivoc.org/PlugType" [label ="{Plug Type|}"]
+"http://schema.mobivoc.org/ChargingPointOwner" [label ="{Charging Point Owner|}"]
+"http://schema.mobivoc.org/Charger" [label ="{Charger|Brand : string\lModel : string\lenergy type : string\l}"]
+"http://schema.mobivoc.org/ParkingFees" [label ="{Parking Fees|Fees description : string\lHas parking fees : string\l}"]
+"http://schema.mobivoc.org/CHAdeMOPlug" [label ="{CHAdeMO|}"]
+"http://schema.mobivoc.org/Vehicle" [label ="{Vehicle|Height : http://schema.mobivoc.org/integer\luses Battery : http://schema.mobivoc.org/boolean\luses Fuel : http://schema.mobivoc.org/boolean\l}"]
+"http://schema.mobivoc.org/Vehicle" [label ="{vehicle|Height : http://schema.mobivoc.org/integer\luses Battery : http://schema.mobivoc.org/boolean\luses Fuel : http://schema.mobivoc.org/boolean\l}"]
+"http://schema.mobivoc.org/ParkingFacilityFeature" [label ="{Parking Facility Feature|}"]
+"http://schema.mobivoc.org/EUDomesticPlug" [label ="{EU Domestic Plug|}"]
+"http://schema.org/CivicStructure" [label ="{schema:Civic structure|Additional Information : string\lname : string\lopening hours : string\lpicture : string\l}" fillcolor="#00c7ff"]
+"http://schema.mobivoc.org/ParkingFacilityConnection" [label ="{Parking Facility Connections|}"]
+"http://schema.mobivoc.org/Type3Plug" [label ="{Type3 Plug|}"]
+"http://schema.mobivoc.org/ChargingSpeed" [label ="{Charging Speed|}"]
+"http://schema.mobivoc.org/ComboPlug" [label ="{Combo Plug|}"]
+"http://schema.mobivoc.org/AccessType" [label ="{Access Type|}"]
+"http://schema.mobivoc.org/ChargingPoint" [label ="{Charging Point|Description : string\lhas parking facility : string\lplaceType : string\lstatus : string\l}"]
+"http://schema.mobivoc.org/ParkingFacilityOwner" [label ="{Parking Facility Owner|}"]
+"http://schema.mobivoc.org/Type2Plug" [label ="{Type2 Plug|}"]
+"http://purl.org/goodrelations/v1#BusinessEntity" [label ="{gr:BusinessEntity|}" fillcolor="#93ffc3"]
+"http://schema.mobivoc.org/ChargeColumn" [label ="{Charge column|}"]
+"http://schema.mobivoc.org/ParkingFacilityStatus" [label ="{parking facility status|}"]
+"http://schema.mobivoc.org/AccessInformation" [label ="{Access Information|Access Time : string\lCovered Location : string\lavailableFromTime : string\lnumber of parking places : string\l}"]
+"http://schema.mobivoc.org/Payment" [label ="{Payment|}"]
+"http://schema.mobivoc.org/AccessInformation" -> "http://schema.mobivoc.org/IdentificationSystem" [label="identification"]
+"http://schema.mobivoc.org/ParkingFacility" -> "http://schema.mobivoc.org/ChargingPoint" [label="has charging point"]
+"http://schema.mobivoc.org/ChargingPoint" -> "http://schema.mobivoc.org/Charger" [label="has charger"]
+"http://schema.org/Place" -> "http://schema.org/PostalAddress" [label="address"]
+"http://schema.mobivoc.org/ChargingPointFees" -> "http://schema.mobivoc.org/Payment" [label="Payment forms"]
+"http://schema.mobivoc.org/ChargingPoint" -> "http://schema.mobivoc.org/Plug" [label="has plugs"]
+"http://schema.mobivoc.org/ParkingFacility" -> "http://schema.mobivoc.org/ParkingFacilityConnection" [label="is connected to"]
+"http://schema.mobivoc.org/ParkingFees" -> "http://schema.mobivoc.org/Payment" [label="Payment forms"]
+"http://schema.org/CivicStructure" -> "http://purl.org/goodrelations/v1#BusinessEntity" [label="is operated by
+is owned by"]
+"http://schema.mobivoc.org/AccessInformation" -> "http://schema.mobivoc.org/AccessType" [label="access"]
+"http://schema.mobivoc.org/ChargingPoint" -> "http://schema.mobivoc.org/AccessInformation" [label="has charger"]
+"http://schema.mobivoc.org/ParkingFacility" -> "http://schema.mobivoc.org/Vehicle" [label="vehicle"]
+"http://schema.mobivoc.org/ParkingFacility" -> "http://schema.mobivoc.org/ParkingFacilityStatus" [label="status of parking facility"]
+"http://schema.mobivoc.org/Plug" -> "http://schema.mobivoc.org/PlugType" [label="has plug type"]
+"http://schema.mobivoc.org/AccessInformation" -> "http://schema.mobivoc.org/BookingType" [label="Booking"]
+"http://schema.mobivoc.org/ParkingFacility" -> "http://schema.mobivoc.org/ParkingFacilityFeature" [label="features"]
+"http://schema.mobivoc.org/ParkingFacility" -> "http://schema.mobivoc.org/ParkingFacilityConfiguration" [label="configuration"]
+edge [
+        arrowhead = "empty"
+    ]"http://schema.mobivoc.org/BatteryElectricVehicle" -> "http://schema.mobivoc.org/Vehicle"
+"http://schema.mobivoc.org/Bicycle" -> "http://schema.mobivoc.org/Vehicle"
+"http://schema.mobivoc.org/CHAdeMOPlug" -> "http://schema.mobivoc.org/PlugType"
+"http://schema.mobivoc.org/Caravan" -> "http://schema.mobivoc.org/Vehicle"
+"http://schema.mobivoc.org/SchukoPlug" -> "http://schema.mobivoc.org/PlugType"
+"http://schema.mobivoc.org/ParkingFacility" -> "http://schema.org/CivicStructure"
+"http://schema.mobivoc.org/Car" -> "http://schema.mobivoc.org/Vehicle"
+"http://schema.mobivoc.org/Motorcycle" -> "http://schema.mobivoc.org/Vehicle"
+"http://schema.mobivoc.org/Payment" -> "http://purl.org/goodrelations/v1#PaymentMethod"
+"http://schema.mobivoc.org/ParkingFacilityOwner" -> "http://purl.org/goodrelations/v1#BusinessEntity"
+"http://schema.mobivoc.org/Type1Plug" -> "http://schema.mobivoc.org/PlugType"
+"http://schema.mobivoc.org/ChargingPoint" -> "http://schema.org/CivicStructure"
+"http://schema.mobivoc.org/ChargingPointOwner" -> "http://purl.org/goodrelations/v1#BusinessEntity"
+"http://schema.mobivoc.org/ComboPlug" -> "http://schema.mobivoc.org/PlugType"
+"http://schema.mobivoc.org/Type2Plug" -> "http://schema.mobivoc.org/PlugType"
+"http://schema.mobivoc.org/UnknownPlug" -> "http://schema.mobivoc.org/PlugType"
+"http://schema.mobivoc.org/PlugInHybridElectricVehicle" -> "http://schema.mobivoc.org/Vehicle"
+"http://schema.mobivoc.org/EUDomesticPlug" -> "http://schema.mobivoc.org/PlugType"
+"http://schema.org/CivicStructure" -> "http://schema.org/Place"
+"http://schema.mobivoc.org/Type3Plug" -> "http://schema.mobivoc.org/PlugType"
+"http://schema.mobivoc.org/FuelVehicle" -> "http://schema.mobivoc.org/Vehicle"
+}

@@ -7,7 +7,5 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 
 ### Added
 
-- add submodule `ontology-includes`
 - initial ontology metadata
-- add ontotest.mk and adopt need variables
 

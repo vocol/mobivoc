@@ -1,0 +1,89 @@
+@prefix mv: <http://schema.mobivoc.org/> .
+@prefix ecc: <https://ns.eccenca.com/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+
+# VOCABULARY
+mv:
+  a owl:Ontology, voaf:Vocabulary ;
+  rdfs:label "Mobility Vocabulary"@en ;
+  rdfs:comment "Mobility Vocabulary (mv)" ;
+  dct:creator <http://purl.org/net/clange> , ecc:aweilandt ;
+  dct:modified "2014-08-31"^^xsd:date ;
+  rdfs:isDefinedBy mv: ;
+  owl:versionInfo "0.1" ;
+  dct:publisher ecc:eccenca-GmbH ;
+  <http://creativecommons.org/ns#license> <http://creativecommons.org/licenses/by/4.0/> ;
+  void:vocabulary
+    <http://purl.org/dc/terms/> ,
+    <http://purl.org/vocab/vann/> ,
+    <http://xmlns.com/foaf/0.1/> ;
+  vann:preferredNamespacePrefix "mv" ;
+  vann:preferredNamespaceUri "http://schema.mobivoc.org/" ;
+.
+
+<http://purl.org/net/clange> a dct:Agent ;
+ foaf:name "Christoph Lange" ;
+ foaf:homepage <http://langec.wordpress.com/about/> ;
+.
+
+ecc:eccenca-GmbH a foaf:Organization, dct:Agent ;
+  foaf:name "eccenca GmbH" ;
+.
+
+ecc:aweilandt a foaf:Person, dct:Agent ;
+  foaf:name "Annette Weilandt" ;
+.
+
+<http://creativecommons.org/licenses/by/4.0/> rdfs:label "Creative Commons Attribution 4.0 International" .
+
+#
+# External vocabulary usage
+#
+# Importing the required ontologies leads to non-conformance with the OWL 2 DL
+# profile. Therefore, their classes and properties are declared with a reference
+# to the original ontology that defined them.
+#
+# Take a look at this question for a better overview on the topic: 
+# http://answers.semanticweb.com/questions/1105/owl-dl-compliance-why-redefining-existing-conceptspropeties-in-own-ontology
+#
+
+<http://creativecommons.org/ns#license>
+    a owl:AnnotationProperty ;
+    rdfs:isDefinedBy <http://creativecommons.org/ns> .
+
+dct:creator
+    a owl:AnnotationProperty ;
+    rdfs:isDefinedBy <http://purl.org/dc/terms/> .
+
+dct:issued
+    a owl:AnnotationProperty ;
+    rdfs:isDefinedBy <http://purl.org/dc/terms/> .
+
+dct:modified
+    a owl:AnnotationProperty ;
+    rdfs:isDefinedBy <http://purl.org/dc/terms/> .
+
+dct:rights
+    a owl:AnnotationProperty ;
+    rdfs:isDefinedBy <http://purl.org/dc/terms/> .
+
+dct:publisher
+    a owl:AnnotationProperty ;
+    rdfs:isDefinedBy <http://purl.org/dc/terms/> .
+
+vann:preferredNamespacePrefix
+    a owl:AnnotationProperty ;
+    rdfs:isDefinedBy <http://purl.org/vocab/vann/> .
+
+vann:preferredNamespaceUri
+    a owl:AnnotationProperty ;
+    rdfs:isDefinedBy <http://purl.org/vocab/vann/> .
+

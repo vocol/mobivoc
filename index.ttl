@@ -1,84 +1,108 @@
-@prefix mobivoc: <http://schema.mobivoc.org/> .
-@prefix ecc: <https://ns.eccenca.com/> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix dct: <http://purl.org/dc/terms/> .
-@prefix vann: <http://purl.org/vocab/vann/> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix void: <http://rdfs.org/ns/void#> .
-@prefix doap: <http://usefulinc.com/ns/doap#> .
-@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix mv:    <http://schema.mobivoc.org/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix voaf:    <http://purl.org/vocommons/voaf#>.
+@prefix dct:     <http://purl.org/dc/terms/>.
+@prefix foaf:    <http://xmlns.com/foaf/0.1/>.
+@prefix s: <http://schema.org/> . 
+@prefix gr:      <http://purl.org/goodrelations/v1#>.
+@prefix vcard:   <http://www.w3.org/2001/vcard-rdf/3.0#> .
+@prefix geo:   <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix wgs84: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 
-mobivoc: a owl:Ontology , voaf:Vocabulary ;
-  rdfs:label "Vocab: mobivoc"@en ;
-  rdfs:comment "A vocabulary for future-oriented mobility solutions and value-added services supporting them."@en ;
-  rdfs:isDefinedBy mobivoc: ;
-  dct:issued "TODO"^^xsd:date ;
-  dct:modified "TODO"^^xsd:date ;
-  owl:versionInfo "SNAPSHOT" ;
-  dct:rights "Copyright © 2016 eccenca GmbH" ;
-  dct:publisher ecc:eccenca-GmbH ;
-  <http://creativecommons.org/ns#license> <http://creativecommons.org/licenses/by/4.0/> ;
-  dct:creator ecc:TODO ;
-  void:vocabulary
-    <http://purl.org/dc/terms/> ,
-    <http://purl.org/vocab/vann/> ,
-    <http://xmlns.com/foaf/0.1/> ;
-  vann:preferredNamespacePrefix "TODO" ;
-  vann:preferredNamespaceUri "TODO" ;
+mv:openingHours
+  a rdf:Property, owl:DatatypeProperty ;
+  rdfs:comment "Indicates the opening hours of a civic structure, such as parking facilities, charging points and filling stations."@en ;
+  rdfs:label "opening hours"@en, "Öffnungszeiten"@de ;
+  rdfs:domain s:CivicStructure ;
+  rdfs:range xsd:string .
+
+mv:additionalInformation
+  a rdf:Property, owl:DatatypeProperty ;
+  rdfs:label  "Additional Information"@en ;
+  rdfs:comment  "Other information about the civic structure or facility."@en ;
+  rdfs:domain s:CivicStructure ;
+  rdfs:range  xsd:string ;
+  rdfs:isDefinedBy mv: .
+
+mv:name
+  a rdf:Property , owl:DatatypeProperty ;
+  rdfs:label "name"@en , "Name"@de ;
+  rdfs:comment  "Name of the civic structure or facility." ;
+  rdfs:domain s:CivicStructure ;
+  rdfs:range xsd:string ;
+  rdfs:isDefinedBy mv: .
+
+mv:isOwnedBy
+  a rdf:Property, owl:ObjectProperty ;
+  rdfs:label  "is owned by"@en ;
+  rdfs:comment  "The owner of a civic structure or facility."@en ;
+  rdfs:domain s:CivicStructure ;
+  rdfs:range  gr:BusinessEntity ;
+  rdfs:isDefinedBy mv: .  
+
+mv:isOperatedBy
+  a rdf:Property, owl:ObjectProperty ;
+  rdfs:label  "is operated by"@en ;
+  rdfs:comment  "The operator of a civic structure or facility."@en ;
+  rdfs:domain s:CivicStructure ;
+  rdfs:range  gr:BusinessEntity ;
+  rdfs:isDefinedBy mv: .  
+
+mv:picture
+  a rdf:Property, owl:DatatypeProperty ;
+  rdfs:label  "picture"@en ;
+  rdfs:comment  "URL of the picture of a civic structure or facility."@en ;
+  rdfs:domain s:CivicStructure ;
+  rdfs:range  xsd:string ;
+  rdfs:isDefinedBy mv: .
+
+s:CivicStructure
+  rdf:type owl:Class ;
+  rdfs:comment "A public structure, such as a town hall or concert hall."@en ;
+  rdfs:label "Civic structure"@en ;
+  rdfs:subClassOf s:Place ;
+  rdfs:isDefinedBy <http://schema.org/> ;
 .
 
-ecc:eccenca-GmbH a foaf:Organization, dct:Agent ;
-  foaf:name "eccenca GmbH" ;
+s:Place
+  rdf:type owl:Class ;
+  rdfs:comment "Entities that have a somewhat fixed, physical extension."@en ;
+  rdfs:label "Place"@en ;
+  rdfs:isDefinedBy <http://schema.org/> ;
 .
 
-ecc:TODO a foaf:Person, dct:Agent ;
-  foaf:name "TODO name author" ;
+wgs84:lat
+  a rdf:Property , owl:DatatypeProperty ;
+  rdfs:label "latitude"@en ;
+  rdfs:comment  "Geographic latitude of a place"@en ;
+  rdfs:domain s:Place ;
+  rdfs:range xsd:string ;
+  rdfs:isDefinedBy mv: .
+
+wgs84:long
+  a rdf:Property , owl:DatatypeProperty ;
+  rdfs:label "longitude"@en ;
+  rdfs:comment  "Geographic longitude of a place"@en ;
+  rdfs:domain s:Place ;
+  rdfs:range xsd:string ;
+  rdfs:isDefinedBy mv: .
+
+s:address
+  a owl:ObjectProperty ;
+  rdfs:comment "Physical address of the item."@en ;
+  rdfs:domain s:Place ;
+  rdfs:label "address"@en ;
+  rdfs:range s:PostalAddress ;
+  rdfs:isDefinedBy <http://schema.org/> ;
 .
 
-<http://creativecommons.org/licenses/by/4.0/> rdfs:label "Creative Commons Attribution 4.0 International" .
-
-#
-# External vocabulary usage
-#
-# Importing the required ontologies leads to non-conformance with the OWL 2 DL
-# profile. Therefore, their classes and properties are declared with a reference
-# to the original ontology that defined them.
-#
-# Take a look at this question for a better overview on the topic: 
-# http://answers.semanticweb.com/questions/1105/owl-dl-compliance-why-redefining-existing-conceptspropeties-in-own-ontology
-#
-
-<http://creativecommons.org/ns#license>
-    a owl:AnnotationProperty ;
-    rdfs:isDefinedBy <http://creativecommons.org/ns> .
-
-dct:creator
-    a owl:AnnotationProperty ;
-    rdfs:isDefinedBy <http://purl.org/dc/terms/> .
-
-dct:issued
-    a owl:AnnotationProperty ;
-    rdfs:isDefinedBy <http://purl.org/dc/terms/> .
-
-dct:modified
-    a owl:AnnotationProperty ;
-    rdfs:isDefinedBy <http://purl.org/dc/terms/> .
-
-dct:rights
-    a owl:AnnotationProperty ;
-    rdfs:isDefinedBy <http://purl.org/dc/terms/> .
-
-dct:publisher
-    a owl:AnnotationProperty ;
-    rdfs:isDefinedBy <http://purl.org/dc/terms/> .
-
-vann:preferredNamespacePrefix
-    a owl:AnnotationProperty ;
-    rdfs:isDefinedBy <http://purl.org/vocab/vann/> .
-
-vann:preferredNamespaceUri
-    a owl:AnnotationProperty ;
-    rdfs:isDefinedBy <http://purl.org/vocab/vann/> .
-
+s:PostalAddress
+  rdf:type owl:Class ;
+  rdfs:comment "The mailing address."@en ;
+  rdfs:label "Postal address"@en ;
+  rdfs:isDefinedBy <http://schema.org/> ;
+.

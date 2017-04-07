@@ -1,32 +1,36 @@
-@prefix mv: <http://eccenca.com/mobivoc/> .
+@prefix mv: <http://schema.mobivoc.org/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
 mv:Vehicle
 	a rdfs:Class , owl:Class ;
 	rdfs:comment "A vehicle is a mobile machine that transports people or cargo." ;
 	rdfs:seeAlso <https://en.wikipedia.org/wiki/Vehicle> ;
-	rdfs:label "vehicle"@en , "Auto"@de .
-	
+	rdfs:label "vehicle"@en , "Auto"@de ;
+	rdfs:isDefinedBy mv: .
+
 mv:FuelVehicle
 	rdfs:subClassOf mv:Vehicle ;
 	rdfs:comment "A vehicle which runs with fuel(gas)." ;
-	rdfs:label "Fuel Vehicle"@en , "KraftstoffAuto"@de .
-	
+	rdfs:label "Fuel Vehicle"@en , "KraftstoffAuto"@de ;
+	rdfs:isDefinedBy mv: .
+
 mv:BatteryElectricVehicle
 	rdfs:subClassOf mv:Vehicle ;
 	rdfs:comment "A type of electric vehicle that uses chemical energy stored in rechargeable battery packs." ;
 	rdfs:seeAlso <https://en.wikipedia.org/wiki/Battery_electric_vehicle> ;
-	rdfs:label "Battery Electric Vehicle"@en , "BatterieElektroAuto"@de .
+	rdfs:label "Battery Electric Vehicle"@en , "BatterieElektroAuto"@de ;
+	rdfs:isDefinedBy mv: .
 
 mv:PlugInHybridElectricVehicle
 	rdfs:subClassOf mv:Vehicle ;
 	rdfs:comment "A type of hybrid and electric vehicle that combines a conventional internal combustion engine (ICE) propulsion system with an electric propulsion system" ;
 	rdfs:seeAlso <https://en.wikipedia.org/wiki/Plug-in_hybrid> ;
-	rdfs:label "PlugIn Hybrid Electric Vehicle"@en , "PlugInHybridElektroAuto"@de .
-
+	rdfs:label "PlugIn Hybrid Electric Vehicle"@en , "PlugInHybridElektroAuto"@de ;
+	rdfs:isDefinedBy mv: .
 
 #Properties 
 
@@ -35,15 +39,15 @@ mv:hasHeight
 	rdfs:comment "Indicates the height of the vehicle." ;
 	rdfs:label "Height"@en , "Höhe"@de ;
 	rdfs:domain mv:Vehicle ;
-	rdfs:range mv:integer .
-	
+	rdfs:range mv:integer ;
+	rdfs:isDefinedBy mv: .	
 mv:usesFuel
 	a rdf:Property , owl:DatatypeProperty ;
 	rdfs:comment "Indicates if the specific vehicle uses fuel(gas)." ;
 	rdfs:label "uses Fuel"@en , "benutzt Gas"@de ;
 	rdfs:domain mv:Vehicle ;
-	rdfs:range mv:boolean .
-	
+	rdfs:range mv:boolean ;
+	rdfs:isDefinedBy mv: .	
 mv:usesBattery
 	a rdf:Property , owl:DatatypeProperty ;
 	rdfs:comment "Indicates if the specific vehicle uses battery." ;
