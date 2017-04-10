@@ -89,13 +89,13 @@ mv:Closed
 mv:Full
 	a mv:ParkingFacilityStatus ;
 	rdfs:comment "The parking facility is completely occupied." ;
-	rdfs:label "full"@en , "belegt"@de ;
+	rdfs:label "Full"@en , "Belegt"@de ;
 	rdfs:isDefinedBy mv: .
 
 mv:AllParkingFacilitiesFull
 	a mv:ParkingFacilityStatus ;
-	rdfs:comment "All parking facilities within a specified area are completely occupied." ;
-	rdfs:label "full"@en , "belegt"@de ;
+	rdfs:comment "All parking facilities within a specified area are completely occupied."@en ;
+	rdfs:label "All parking facilities full"@en , "Alle Parkmöglichkeiten belegt"@de ;
 	rdfs:isDefinedBy mv: .
 
 mv:Faulty
