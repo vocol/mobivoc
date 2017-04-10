@@ -47,12 +47,6 @@ mv:ParkingFacilityConnection
 	rdfs:label "Parking Facility Connections"@en , "Anschlussmöglichkeiten der Parkeinrichtung"@de ;
 	rdfs:isDefinedBy mv: .
 
-mv:Vehicle
-	a rdfs:Class, owl:Class ;
-	rdfs:comment "Describes types of vehicle that can use the parking facility" ;
-	rdfs:label "Vehicle"@en, "Fahrzeug"@de ;
-	rdfs:isDefinedBy mv: .
-
 mv:ParkingFees
 	a rdfs:Class, owl:Class ;
 	rdfs:comment "Captures information about the parking fees." ;
