@@ -65,15 +65,19 @@ s:CivicStructure
   rdfs:comment "A public structure, such as a town hall or concert hall."@en ;
   rdfs:label "Civic structure"@en ;
   rdfs:subClassOf s:Place ;
-  rdfs:isDefinedBy <http://schema.org/> ;
-.
+  rdfs:isDefinedBy <http://schema.org/> .
 
 s:Place
   rdf:type owl:Class ;
   rdfs:comment "Entities that have a somewhat fixed, physical extension."@en ;
   rdfs:label "Place"@en ;
-  rdfs:isDefinedBy <http://schema.org/> ;
-.
+  rdfs:isDefinedBy <http://schema.org/> .
+
+s:Vehicle
+  rdf:type owl:Class ;
+  rdfs:comment "A vehicle is a device that is designed or used to transport people or cargo over land, water, air, or through space."@en ;
+  rdfs:label "Vehicle"@en , "Fahrzeug"@de ;
+  rdfs:isDefinedBy <http://schema.org/> .
 
 wgs84:lat
   a rdf:Property , owl:DatatypeProperty ;
@@ -81,7 +85,7 @@ wgs84:lat
   rdfs:comment  "Geographic latitude of a place"@en ;
   rdfs:domain s:Place ;
   rdfs:range xsd:string ;
-  rdfs:isDefinedBy mv: .
+  rdfs:isDefinedBy <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 
 wgs84:long
   a rdf:Property , owl:DatatypeProperty ;
@@ -89,7 +93,7 @@ wgs84:long
   rdfs:comment  "Geographic longitude of a place"@en ;
   rdfs:domain s:Place ;
   rdfs:range xsd:string ;
-  rdfs:isDefinedBy mv: .
+  rdfs:isDefinedBy <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 
 s:address
   a owl:ObjectProperty ;
@@ -97,12 +101,10 @@ s:address
   rdfs:domain s:Place ;
   rdfs:label "address"@en ;
   rdfs:range s:PostalAddress ;
-  rdfs:isDefinedBy <http://schema.org/> ;
-.
+  rdfs:isDefinedBy <http://schema.org/> .
 
 s:PostalAddress
   rdf:type owl:Class ;
   rdfs:comment "The mailing address."@en ;
   rdfs:label "Postal address"@en ;
-  rdfs:isDefinedBy <http://schema.org/> ;
-.
+  rdfs:isDefinedBy <http://schema.org/> .
