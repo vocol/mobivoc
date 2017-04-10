@@ -234,28 +234,7 @@ mv:BikeAndRide
 	rdfs:label "Bike and Ride" ;
 	rdfs:comment "Parking facilities for bicycles with connection to public transport." ;
 	rdfs:isDefinedBy mv: .
-## VEHICLE
 
-mv:Bicycle
-	rdfs:subClassOf mv:Vehicle ;
-	rdfs:label "Bicycle"@en, "Fahrrad"@de ;
-	rdfs:isDefinedBy mv: .
-
-mv:Motorcycle
-	rdfs:subClassOf mv:Vehicle ;
-	rdfs:label "Motorcycle"@en, "Motorrad"@de ;
-	rdfs:isDefinedBy mv: .
-
-mv:Car
-	rdfs:subClassOf mv:Vehicle ;
-	rdfs:label "Car"@en, "Auto"@de ;
-	skos:altLabel "Pkw"@de ;
-	rdfs:isDefinedBy mv: .
-
-mv:Caravan
-	rdfs:subClassOf mv:Vehicle ;
-	rdfs:label "Caravan"@en, "Wohnmobil"@de ;
-	rdfs:isDefinedBy mv: .
 # PROPERTIES
 
 mv:statusParkingFacility
