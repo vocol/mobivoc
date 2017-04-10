@@ -34,7 +34,7 @@ mv:BookingType
 mv:Charger
 	a rdfs:Class, owl:Class ;
 	rdfs:comment	"Describes characteristics of the charger." ;
-	rdfs:label "Charger"@en, "Ladergerät"@de ;
+	rdfs:label "Charger"@en, "Ladegerät"@de ;
 	rdfs:isDefinedBy mv: .
 
 mv:ChargingPoint 
@@ -43,10 +43,6 @@ mv:ChargingPoint
 	rdfs:comment	"Defines the public or semi-public charging points for electric vehicles available worldwide. " ;
 	rdfs:label "Ladestation"@de ;
 	rdfs:label "Charging Point"@en ;
-	rdfs:label "Point de charge"@fr ;
-	rdfs:label "Punto de Recarga"@es ;
-	rdfs:label "Oplaadpunt"@nl ;
-	rdfs:label "Ponto de Carregamento"@pt ;
 	rdfs:isDefinedBy mv: .
 
 mv:ChargingPointFees 
@@ -305,7 +301,7 @@ a	rdf:Property, owl:ObjectProperty ;
 
 mv:accessible
 a	rdf:Property, owl:ObjectProperty ;
-	rdfs:label	"has charger"@en ;
+	rdfs:label	"is accessible"@en ;
 	rdfs:comment	"Access information of the charging point." ;
 	rdfs:domain	mv:ChargingPoint ;
 	rdfs:range	mv:AccessInformation ;
