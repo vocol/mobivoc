@@ -378,37 +378,6 @@ mv:isConnectedTo
 	rdfs:range mv:ParkingFacilityConnection ;
 	rdfs:isDefinedBy mv: .
 
-mv:vehicle
-	a rdf:Property, owl:ObjectProperty ;
-	rdfs:label "vehicle"@en ;
-	rdfs:comment "Vehicle type suitable for the parking facility. " ;
-	rdfs:domain mv:ParkingFacility ;
-	rdfs:range mv:Vehicle ;
-	rdfs:isDefinedBy mv: .
-
-mv:hasParkingFees
-	a rdf:Property, owl:DatatypeProperty ;
-	rdfs:label "Has parking fees"@en , "hat Parkgebühren"@de ;
-	rdfs:comment "Indicates whether parking fees have to be paid." ;
-	rdfs:domain mv:ParkingFees ;
-	rdfs:range xsd:string ;
-	rdfs:isDefinedBy mv: .
-
-mv:feesDescription
-	a rdf:Property, owl:DatatypeProperty ;
-	rdfs:label "Fees description"@en , "Tarife"@de;
-	rdfs:comment "Defines parking fees." ;
-	rdfs:domain mv:ParkingFees ;
-	rdfs:range xsd:string ;
-	rdfs:isDefinedBy mv: .
-
-mv:payment
-	a rdf:Property, owl:ObjectProperty ;
-	rdfs:label "Payment forms"@en , "Bezahlmöglichkeiten"@de ;
-	rdfs:comment "Available payment forms for parking fees." ;
-	rdfs:domain mv:ParkingFees ;
-	rdfs:range mv:Payment . # fürs Parken braucht man zusätzlich folgende Möglichkeiten: Münzen, Scheine, EC-Karte
-
 mv:hasHeightLimit
 	a rdf:Property, owl:DatatypeProperty ;
 	rdfs:label "Has height limit"@en , "Hat Höhenbegrenzung" ;
