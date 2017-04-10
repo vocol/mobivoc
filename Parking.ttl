@@ -11,14 +11,14 @@
 mv:ParkingFacility
 	a rdfs:Class , owl:Class ;
 	rdfs:subClassOf s:CivicStructure ;
-	rdfs:comment "A parking lot or other parking facility with several parking spaces for vehicles." ;
-	rdfs:label "parking facility"@en , "Parkeinrichtung"@de 
-	.
+	rdfs:comment "Any facility or area assigned for parking vehicles. A parking facility can provide one or more parking spaces."@en ;
+	rdfs:label "Parking facility"@en , "Parkeinrichtung"@de ;
+	rdfs:isDefinedBy mv: .
 
 mv:ParkingFacilityStatus
 	a rdfs:Class , owl:Class ;
 	rdfs:comment "Status information of a parking facility." ;
-	rdfs:label "parking facility status"@en , "Status der Parkeinrichtung"@de ;
+	rdfs:label "Parking facility status"@en , "Status der Parkeinrichtung"@de ;
 	rdfs:isDefinedBy mv: .
 
 mv:ParkingFacilityConfiguration
@@ -28,7 +28,6 @@ mv:ParkingFacilityConfiguration
 	skos:altLabel "Bauart"@de ;
 	rdfs:isDefinedBy mv: .
 
-# subclass ev. nur Person?
 mv:ParkingFacilityOwner
 	a rdfs:Class, owl:Class ;
 	rdfs:subClassOf gr:BusinessEntity ;
