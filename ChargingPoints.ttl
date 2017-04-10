@@ -262,17 +262,7 @@ mv:Standard
 	a mv:ChargingSpeed ;
 	rdfs:label "Standard"@en ;
 	rdfs:isDefinedBy mv: .
-# Payment method
 
-mv:MobileApplication
-	a mv:Payment ;
-	rdfs:label "Mobile Application"@en ;
-	rdfs:isDefinedBy mv: .
-
-mv:TextMessage
-	a mv:Payment ;
-	rdfs:label "Text message"@en ;
-	rdfs:isDefinedBy mv: .
 # Booking types
 
 mv:Impossible
@@ -479,13 +469,6 @@ a	rdf:Property, owl:DatatypeProperty ;
 	rdfs:domain	mv:AccessInformation ;
 	rdfs:range	xsd:string ;
 	rdfs:isDefinedBy mv: .
-
-mv:payment
-a	rdf:Property, owl:ObjectProperty ;
-	rdfs:label	"Payment forms"@en ;
-	rdfs:comment	"Available payment forms for recharging fees." ;
-	rdfs:domain	mv:ChargingPointFees ;
-	rdfs:range	mv:Payment .
 
 mv:placeType
 a	rdf:Property, owl:DatatypeProperty ;
