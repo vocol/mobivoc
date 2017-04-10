@@ -221,10 +221,6 @@ mv:TextMessage
 	rdfs:label "TextMessage"@en ;
 	rdfs:isDefinedBy mv: .
 
-mv:UndefinedIdentificationSystem
-	a mv:IdentificationSystem ;
-	rdfs:label "Undefined"@en, "Nicht bekannt"@de ;
-	rdfs:isDefinedBy mv: .
 #Access Types
 
 mv:BrandsCustomers
@@ -256,10 +252,7 @@ mv:OpenToAllUsers
 	a mv:AccessType ;
 	rdfs:label "Open to all"@en.
 
-mv:UndefinedAccessType
-	a mv:AccessType ;
-	rdfs:label "Undefined"@en, "Undefiniert"@de ;
-	rdfs:isDefinedBy mv: .
+
 #Charging Speed types
 
 mv:Accelerated
