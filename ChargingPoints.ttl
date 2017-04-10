@@ -75,13 +75,6 @@ mv:IdentificationSystem
 	rdfs:label "Identification System"@en ;
 	rdfs:isDefinedBy mv: .
 
-mv:Payment
-	a rdfs:Class, owl:Class ;
-	rdfs:subClassOf gr:PaymentMethod ;
-	rdfs:comment	"Defines payment method." ;
-	rdfs:label "Payment"@en, "Zahlung"@de ;
-	rdfs:isDefinedBy mv: .
-
 mv:Plug
 	a rdfs:Class, owl:Class ;
 	rdfs:comment	"Describes  plug characteristics." ;
