@@ -16,18 +16,18 @@ mv:Bicycle
 mv:Motorcycle
 	rdfs:subClassOf mv:Vehicle ;
 	rdfs:label "Motorcycle"@en, "Motorrad"@de ;
-	rdfs:comment "A two- or three-wheeled motor vehicle."@en
+	rdfs:comment "A two- or three-wheeled motor vehicle."@en ;
 	rdfs:isDefinedBy mv: .
 
 mv:Car
 	rdfs:subClassOf mv:Vehicle ;
 	rdfs:label "Car"@en, "Auto"@de ;
 	skos:altLabel "Pkw"@de ;
-	rdfs:comment "A wheeled, self-powered motor vehicle used for transportation."@en
+	rdfs:comment "A wheeled, self-powered motor vehicle used for transportation."@en ;
 	rdfs:isDefinedBy mv: .
 
 mv:RecreationalVehicle
 	rdfs:subClassOf mv:Vehicle ;
 	rdfs:label "Recreational vehicle"@en, "Wohnmobil"@de ;
-	rdfs:comment "A motor vehicle or trailer equipped with living space and amenities found in a home."@en
+	rdfs:comment "A motor vehicle or trailer equipped with living space and amenities found in a home."@en ;
 	rdfs:isDefinedBy mv: .

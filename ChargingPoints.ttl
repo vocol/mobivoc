@@ -13,13 +13,13 @@
 @prefix skos: 	 <http://www.w3.org/2004/02/skos/core#> .
 # CLASSES
 
-mv:AccessInformation 
+mv:AccessInformation
 	a rdfs:Class, owl:Class ;
 	rdfs:comment	"Access information of the charging point." ;
 	rdfs:label "Access Information"@en, "Zugangsinformation"@de ;
 	rdfs:isDefinedBy mv: .
 
-mv:AccessType 
+mv:AccessType
 	a rdfs:Class, owl:Class ;
 	rdfs:comment	"Describes access type of the charging point." ;
 	rdfs:label "Access Type"@en ;
@@ -37,7 +37,7 @@ mv:Charger
 	rdfs:label "Charger"@en, "Ladegerät"@de ;
 	rdfs:isDefinedBy mv: .
 
-mv:ChargingPoint 
+mv:ChargingPoint
 	a rdfs:Class, owl:Class ;
 	rdfs:subClassOf s:CivicStructure ;
 	rdfs:comment	"Defines the public or semi-public charging points for electric vehicles available worldwide. " ;
@@ -45,13 +45,13 @@ mv:ChargingPoint
 	rdfs:label "Charging Point"@en ;
 	rdfs:isDefinedBy mv: .
 
-mv:ChargingPointFees 
+mv:ChargingPointFees
 	a rdfs:Class, owl:Class ;
 	rdfs:comment	"Captures information about the charging point fees." ;
 	rdfs:label "Charging Point Fees"@en ;
 	rdfs:isDefinedBy mv: .
 
-mv:ChargingPointOwner 
+mv:ChargingPointOwner
 	a rdfs:Class, owl:Class ;
 	rdfs:subClassOf	gr:BusinessEntity ;
 	rdfs:comment	"Captures information about the owner of charging point." ;
@@ -131,7 +131,7 @@ mv:Type1Plug
 	a owl:Class ;
 	rdfs:subClassOf mv:PlugType ;
 	rdfs:label "Type1 Plug"@en ;
-	skos:altLabel "SAE J1772" ; 
+	skos:altLabel "SAE J1772" ;
 	owl:sameAs <http://dbpedia.org/resource/SAE_J1772> ;
 	foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/SAE_J1772_7058855567.jpg> ;
 	rdfs:isDefinedBy mv: .
