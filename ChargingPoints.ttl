@@ -298,7 +298,7 @@ mv:PaidCharging
 mv:access
 a	rdf:Property, owl:ObjectProperty ;
 	rdfs:label	"access"@en ;
-	rdfs:comment	"Access types of charging point. " ;
+	rdfs:comment	"Indicates the access types of charging point. " ;
 	rdfs:domain	mv:AccessInformation ;
 	rdfs:range	mv:AccessType  ;
 	rdfs:isDefinedBy mv: .
@@ -306,7 +306,7 @@ a	rdf:Property, owl:ObjectProperty ;
 mv:accessible
 a	rdf:Property, owl:ObjectProperty ;
 	rdfs:label	"is accessible"@en ;
-	rdfs:comment	"Access information of the charging point." ;
+	rdfs:comment	"Indicates the access information of the charging point." ;
 	rdfs:domain	mv:ChargingPoint ;
 	rdfs:range	mv:AccessInformation ;
 	rdfs:isDefinedBy mv: .
