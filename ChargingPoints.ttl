@@ -342,7 +342,7 @@ a	rdf:Property, owl:DatatypeProperty ;
 	rdfs:range	xsd:string ;
 	rdfs:isDefinedBy mv: .
 
-mv:chargingSpeed
+mv:hasChargingSpeed
 a	rdf:Property, owl:ObjectProperty ;
 	rdfs:label	"has Charging Speed"@en ;
 	rdfs:comment	"Indicates the charging speed of a plug. " ;
