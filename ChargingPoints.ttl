@@ -114,7 +114,8 @@ mv:EUDomesticPlug
 	rdfs:subClassOf mv:PlugType ;
 	owl:sameAs <http://dbpedia.org/resource/Europlug> ;
 	rdfs:label "EU Domestic Plug"@en ;
-	rdfs:comment "Plug with EU domestic plug connection." .
+	rdfs:comment "Plug with EU domestic plug connection." 
+	rdfs:isDefinedBy mv: .
 
 mv:SchukoPlug
 	rdfs:subClassOf mv:PlugType ;
