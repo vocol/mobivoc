@@ -18,7 +18,8 @@ mv:openingHours
   rdfs:comment "Indicates the opening hours of a civic structure, such as parking facilities, charging points and filling stations."@en ;
   rdfs:label "opening hours"@en, "Öffnungszeiten"@de ;
   rdfs:domain s:CivicStructure ;
-  rdfs:range xsd:string .
+  rdfs:range xsd:string ;
+  rdfs:isDefinedBy mv: .
 
 mv:additionalInformation
   a rdf:Property, owl:DatatypeProperty ;
