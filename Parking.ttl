@@ -55,25 +55,30 @@ mv:ParkingFees
 
 # INSTANCES
 
-## PARKING FACILITY CONFIGURATION
+## PARKING FACILITIES
 
-mv:SingleLevel
-	a mv:ParkingFacilityConfiguration ;
-	rdfs:comment "Parking area on a single groundfloor level." ;
-	skos:prefLabel "Parking lot"@en-US , "Car park"@en-UK , "Parkplatz"@de ;
+mv:ParkingLot
+	a rdfs:Class , owl:Class ;
+	rdfs:subClassOf mv:ParkingFacility ;
+	rdfs:comment "Parking area on a single groundfloor level that is usually located outdoor." ;
+	rdfs:label "Parking lot"@en , "Parkplatz"@de ;
+	skos:prefLabel "Parking lot"@en-US , "Car park"@en-UKd , "Parkplatz"@de ;
 	skos:hiddenLabel "car lot"@en , "Parkfläche"@de ;
 	rdfs:isDefinedBy mv: .
 
-mv:MultiStorey
-	a mv:ParkingFacilityConfiguration ;
-	rdfs:comment "Parking on multiple levels within a car park building." ;
-	skos:prefLabel "multi-storey car park"@en , "Parkhaus"@de ;
-	skos:hiddenLabel "parking garage"@en , "parking structure"@en , "parking building"@en , "indoor parking"@en , "Hochgarage"@de ;
+mv:ParkingGarage
+	a rdfs:Class , owl:Class ;
+	rdfs:subClassOf mv:ParkingFacility ;
+	rdfs:comment "A single level or multilevel parking building to park at." ;
+	rdfs:label "Parking garage"@en , "Parkhaus"@de ;
+	skos:prefLabel "Parking garage"@en , "Parkhaus"@de ;
+	skos:hiddenLabel "Car park"@en , "Parking structure"@en , "Parking building"@en , "Hochgarage"@de ;
 	rdfs:isDefinedBy mv: .
 
-mv:Underground
-	a mv:ParkingFacilityConfiguration ;
-	rdfs:comment "Parking is on one or more floors below ground level." ;
+mv:UndergroundParkingGarage
+	a rdfs:Class , owl:Class ;
+	rdfs:subClassOf mv:ParkingFacility ;
+	rdfs:comment "Parking on one or more floors below ground level." ;
 	skos:prefLabel "underground parking garage"@en , "Tiefgarage"@de ;
 	skos:hiddenLabel "Rampengarage"@de ;
 	rdfs:isDefinedBy mv: .
