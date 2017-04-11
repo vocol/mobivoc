@@ -8,18 +8,21 @@
 # VEHICLE
 
 mv:Bicycle
+	a owl:Class ;
 	rdfs:subClassOf mv:Vehicle ;
 	rdfs:label "Bicycle"@en, "Fahrrad"@de ;
 	rdfs:comment "A a human-or electric powered, pedal-driven, single-track vehicle, having two wheels attached to a frame, one behind the other."@en ;
 	rdfs:isDefinedBy mv: .
 
 mv:Motorcycle
+	a owl:Class ;
 	rdfs:subClassOf mv:Vehicle ;
 	rdfs:label "Motorcycle"@en, "Motorrad"@de ;
 	rdfs:comment "A two- or three-wheeled motor vehicle."@en ;
 	rdfs:isDefinedBy mv: .
 
 mv:Car
+	a owl:Class ;
 	rdfs:subClassOf mv:Vehicle ;
 	rdfs:label "Car"@en, "Auto"@de ;
 	skos:altLabel "Pkw"@de ;
@@ -27,6 +30,7 @@ mv:Car
 	rdfs:isDefinedBy mv: .
 
 mv:RecreationalVehicle
+	a owl:Class ;
 	rdfs:subClassOf mv:Vehicle ;
 	rdfs:label "Recreational vehicle"@en, "Wohnmobil"@de ;
 	rdfs:comment "A motor vehicle or trailer equipped with living space and amenities found in a home."@en ;
