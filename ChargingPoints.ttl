@@ -317,7 +317,8 @@ a	rdf:Property, owl:DatatypeProperty ;
 	rdfs:label	"Access Time"@en ;
 	rdfs:comment	"Defines access time of the charging point. " ;
 	rdfs:domain	mv:AccessInformation ;
-	rdfs:range	xsd:string .
+	rdfs:range	xsd:string 
+	rdfs:isDefinedBy mv: .
 
 mv:availableFromTime
 a	rdf:Property, owl:DatatypeProperty ;
