@@ -4,26 +4,27 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix s: <http://schema.org/> .
 
 # VEHICLE
 
 mv:Bicycle
 	a owl:Class ;
-	rdfs:subClassOf mv:Vehicle ;
+	rdfs:subClassOf s:Vehicle ;
 	rdfs:label "Bicycle"@en, "Fahrrad"@de ;
 	rdfs:comment "A a human-or electric powered, pedal-driven, single-track vehicle, having two wheels attached to a frame, one behind the other."@en ;
 	rdfs:isDefinedBy mv: .
 
 mv:Motorcycle
 	a owl:Class ;
-	rdfs:subClassOf mv:Vehicle ;
+	rdfs:subClassOf s:Vehicle ;
 	rdfs:label "Motorcycle"@en, "Motorrad"@de ;
 	rdfs:comment "A two- or three-wheeled motor vehicle."@en ;
 	rdfs:isDefinedBy mv: .
 
 mv:Car
 	a owl:Class ;
-	rdfs:subClassOf mv:Vehicle ;
+	rdfs:subClassOf s:Vehicle ;
 	rdfs:label "Car"@en, "Auto"@de ;
 	skos:altLabel "Pkw"@de ;
 	rdfs:comment "A wheeled, self-powered motor vehicle used for transportation."@en ;
@@ -31,7 +32,7 @@ mv:Car
 
 mv:RecreationalVehicle
 	a owl:Class ;
-	rdfs:subClassOf mv:Vehicle ;
+	rdfs:subClassOf s:Vehicle ;
 	rdfs:label "Recreational vehicle"@en, "Wohnmobil"@de ;
 	rdfs:comment "A motor vehicle or trailer equipped with living space and amenities found in a home."@en ;
 	rdfs:isDefinedBy mv: .
