@@ -7,5 +7,6 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 
 ### Added
 
+- first release incl. parking facilities and charging points
 - initial ontology metadata
 
