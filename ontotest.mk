@@ -5,7 +5,7 @@
 #INSTANCESRC=test-test-cases.ttl
 ##include files which should be used for widoco generation
 ##DOCSRC=test-test-cases.ttl
-SCHEMASRC=index.ttl index-head.ttl ChargingPoints.ttl Parking.ttl
+SCHEMASRC=index.ttl index-head.ttl ChargingPoints.ttl Parking.ttl vowl-viz.ttl
 
 #disable manual and/or automatic tests. default: don't skip tests (=false)
 #SKIPAUTOTESTS=true
