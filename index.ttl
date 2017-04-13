@@ -1,111 +1,111 @@
-@prefix mv:    <http://schema.mobivoc.org/> .
-@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
-@prefix voaf:    <http://purl.org/vocommons/voaf#>.
-@prefix dct:     <http://purl.org/dc/terms/>.
-@prefix foaf:    <http://xmlns.com/foaf/0.1/>.
-@prefix s: <http://schema.org/> . 
-@prefix gr:      <http://purl.org/goodrelations/v1#>.
-@prefix vcard:   <http://www.w3.org/2001/vcard-rdf/3.0#> .
-@prefix geo:   <http://www.w3.org/2003/01/geo/wgs84_pos#> .
-@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
-@prefix wgs84: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
-
-mv:openingHours
-  a rdf:Property, owl:DatatypeProperty ;
-  rdfs:comment "Indicates the opening hours of a civic structure, such as parking facilities, charging points and filling stations."@en ;
-  rdfs:label "opening hours"@en, "Öffnungszeiten"@de ;
-  rdfs:domain s:CivicStructure ;
-  rdfs:range xsd:string ;
-  rdfs:isDefinedBy mv: .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix mv: <http://schema.mobivoc.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix s: <http://schema.org/> .
+@prefix gr: <http://purl.org/goodrelations/v1#> .
+@prefix vcard: <http://www.w3.org/2001/vcard-rdf/3.0#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 mv:additionalInformation
-  a rdf:Property, owl:DatatypeProperty ;
-  rdfs:label  "Additional Information"@en ;
-  rdfs:comment  "Other information about the civic structure or facility."@en ;
-  rdfs:domain s:CivicStructure ;
-  rdfs:range  xsd:string ;
-  rdfs:isDefinedBy mv: .
-
-mv:name
-  a rdf:Property , owl:DatatypeProperty ;
-  rdfs:label "name"@en , "Name"@de ;
-  rdfs:comment  "Name of the civic structure or facility." ;
-  rdfs:domain s:CivicStructure ;
-  rdfs:range xsd:string ;
-  rdfs:isDefinedBy mv: .
-
-mv:isOwnedBy
-  a rdf:Property, owl:ObjectProperty ;
-  rdfs:label  "is owned by"@en ;
-  rdfs:comment  "The owner of a civic structure or facility."@en ;
-  rdfs:domain s:CivicStructure ;
-  rdfs:range  gr:BusinessEntity ;
-  rdfs:isDefinedBy mv: .  
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "Other information about the civic structure or facility."@en ;
+    rdfs:domain s:CivicStructure ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Additional Information"@en ;
+    rdfs:range xsd:string .
 
 mv:isOperatedBy
-  a rdf:Property, owl:ObjectProperty ;
-  rdfs:label  "is operated by"@en ;
-  rdfs:comment  "The operator of a civic structure or facility."@en ;
-  rdfs:domain s:CivicStructure ;
-  rdfs:range  gr:BusinessEntity ;
-  rdfs:isDefinedBy mv: .  
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "The operator of a civic structure or facility."@en ;
+    rdfs:domain s:CivicStructure ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "is operated by"@en ;
+    rdfs:range gr:BusinessEntity .
+
+mv:isOwnedBy
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "The owner of a civic structure or facility."@en ;
+    rdfs:domain s:CivicStructure ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "is owned by"@en ;
+    rdfs:range gr:BusinessEntity .
+
+mv:name
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "Name of the civic structure or facility." ;
+    rdfs:domain s:CivicStructure ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Name"@de, "name"@en ;
+    rdfs:range xsd:string .
+
+mv:openingHours
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "Indicates the opening hours of a civic structure, such as parking facilities, charging points and filling stations."@en ;
+    rdfs:domain s:CivicStructure ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "opening hours"@en, "Öffnungszeiten"@de ;
+    rdfs:range xsd:string .
 
 mv:picture
-  a rdf:Property, owl:DatatypeProperty ;
-  rdfs:label  "picture"@en ;
-  rdfs:comment  "URL of the picture of a civic structure or facility."@en ;
-  rdfs:domain s:CivicStructure ;
-  rdfs:range  xsd:string ;
-  rdfs:isDefinedBy mv: .
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "URL of the picture of a civic structure or facility."@en ;
+    rdfs:domain s:CivicStructure ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "picture"@en ;
+    rdfs:range xsd:string .
 
 s:CivicStructure
-  rdf:type owl:Class ;
-  rdfs:comment "A public structure, such as a town hall or concert hall."@en ;
-  rdfs:label "Civic structure"@en ;
-  rdfs:subClassOf s:Place ;
-  rdfs:isDefinedBy <http://schema.org/> .
+    a owl:Class ;
+    rdfs:comment "A public structure, such as a town hall or concert hall."@en ;
+    rdfs:isDefinedBy <http://schema.org/> ;
+    rdfs:label "Civic structure"@en ;
+    rdfs:subClassOf s:Place .
 
 s:Place
-  rdf:type owl:Class ;
-  rdfs:comment "Entities that have a somewhat fixed, physical extension."@en ;
-  rdfs:label "Place"@en ;
-  rdfs:isDefinedBy <http://schema.org/> .
-
-s:Vehicle
-  rdf:type owl:Class ;
-  rdfs:comment "A vehicle is a device that is designed or used to transport people or cargo over land, water, air, or through space."@en ;
-  rdfs:label "Vehicle"@en , "Fahrzeug"@de ;
-  rdfs:isDefinedBy <http://schema.org/> .
-
-wgs84:lat
-  a rdf:Property , owl:DatatypeProperty ;
-  rdfs:label "latitude"@en ;
-  rdfs:comment  "Geographic latitude of a place"@en ;
-  rdfs:domain s:Place ;
-  rdfs:range xsd:string ;
-  rdfs:isDefinedBy <http://www.w3.org/2003/01/geo/wgs84_pos#> .
-
-wgs84:long
-  a rdf:Property , owl:DatatypeProperty ;
-  rdfs:label "longitude"@en ;
-  rdfs:comment  "Geographic longitude of a place"@en ;
-  rdfs:domain s:Place ;
-  rdfs:range xsd:string ;
-  rdfs:isDefinedBy <http://www.w3.org/2003/01/geo/wgs84_pos#> .
-
-s:address
-  a owl:ObjectProperty ;
-  rdfs:comment "Physical address of the item."@en ;
-  rdfs:domain s:Place ;
-  rdfs:label "address"@en ;
-  rdfs:range s:PostalAddress ;
-  rdfs:isDefinedBy <http://schema.org/> .
+    a owl:Class ;
+    rdfs:comment "Entities that have a somewhat fixed, physical extension."@en ;
+    rdfs:isDefinedBy <http://schema.org/> ;
+    rdfs:label "Place"@en .
 
 s:PostalAddress
-  rdf:type owl:Class ;
-  rdfs:comment "The mailing address."@en ;
-  rdfs:label "Postal address"@en ;
-  rdfs:isDefinedBy <http://schema.org/> .
+    a owl:Class ;
+    rdfs:comment "The mailing address."@en ;
+    rdfs:isDefinedBy <http://schema.org/> ;
+    rdfs:label "Postal address"@en .
+
+s:Vehicle
+    a owl:Class ;
+    rdfs:comment "A vehicle is a device that is designed or used to transport people or cargo over land, water, air, or through space."@en ;
+    rdfs:isDefinedBy <http://schema.org/> ;
+    rdfs:label "Fahrzeug"@de, "Vehicle"@en .
+
+s:address
+    a owl:ObjectProperty ;
+    rdfs:comment "Physical address of the item."@en ;
+    rdfs:domain s:Place ;
+    rdfs:isDefinedBy <http://schema.org/> ;
+    rdfs:label "address"@en ;
+    rdfs:range s:PostalAddress .
+
+geo:lat
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "Geographic latitude of a place"@en ;
+    rdfs:domain s:Place ;
+    rdfs:isDefinedBy <http://www.w3.org/2003/01/geo/wgs84_pos#> ;
+    rdfs:label "latitude"@en ;
+    rdfs:range xsd:string .
+
+geo:long
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "Geographic longitude of a place"@en ;
+    rdfs:domain s:Place ;
+    rdfs:isDefinedBy <http://www.w3.org/2003/01/geo/wgs84_pos#> ;
+    rdfs:label "longitude"@en ;
+    rdfs:range xsd:string .
+

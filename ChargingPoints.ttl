@@ -1,514 +1,500 @@
-@prefix mv: 	 <http://schema.mobivoc.org/> .
-@prefix rdfs: 	 <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix owl: 	 <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
-@prefix voaf:    <http://purl.org/vocommons/voaf#>.
-@prefix dct:     <http://purl.org/dc/terms/>.
-@prefix foaf:    <http://xmlns.com/foaf/0.1/>.
-@prefix s:    	 <http://schema.org/>.
-@prefix gr:    	 <http://purl.org/goodrelations/v1#>.
-@prefix vcard:	 <http://www.w3.org/2001/vcard-rdf/3.0#> .
-@prefix geo: 	 <http://www.w3.org/2003/01/geo/wgs84_pos#> .
-@prefix skos: 	 <http://www.w3.org/2004/02/skos/core#> .
-# CLASSES
-
-mv:AccessInformation
-	a rdfs:Class, owl:Class ;
-	rdfs:comment	"Access information of the charging point." ;
-	rdfs:label "Access Information"@en, "Zugangsinformation"@de ;
-	rdfs:isDefinedBy mv: .
-
-mv:AccessType
-	a rdfs:Class, owl:Class ;
-	rdfs:comment	"Describes access type of the charging point." ;
-	rdfs:label "Access Type"@en ;
-	rdfs:isDefinedBy mv: .
-
-mv:Charger
-	a rdfs:Class, owl:Class ;
-	rdfs:comment	"Describes characteristics of the charger." ;
-	rdfs:label "Charger"@en, "Ladegerät"@de ;
-	rdfs:isDefinedBy mv: .
-
-mv:ChargingPoint
-	a rdfs:Class, owl:Class ;
-	rdfs:subClassOf s:CivicStructure ;
-	rdfs:comment	"Defines the public or semi-public charging points for electric vehicles available worldwide. " ;
-	rdfs:label "Charging Point"@en , "Ladestation"@de ;
-	rdfs:isDefinedBy mv: .
-
-mv:ChargingPointFees
-	a rdfs:Class, owl:Class ;
-	rdfs:comment	"Captures information about the charging point fees." ;
-	rdfs:label "Charging Point Fees"@en ;
-	rdfs:isDefinedBy mv: .
-
-mv:ChargingPointOwner
-	a rdfs:Class, owl:Class ;
-	rdfs:subClassOf	gr:BusinessEntity ;
-	rdfs:comment	"Captures information about the owner of charging point." ;
-	rdfs:label "Charging Point Owner"@en , "Besitzer der Ladestation"@de ;
-	rdfs:isDefinedBy mv: .
-
-mv:ChargingSpeed
-	a rdfs:Class, owl:Class ;
-	rdfs:comment	"Describes speed types available at the types of vehicle that can be loaded by charging point." ;
-	rdfs:label "Charging Speed"@en ;
-	rdfs:isDefinedBy mv: .
-
-mv:IdentificationSystem
-	a rdfs:Class, owl:Class ;
-	rdfs:comment	"Describes identification system of the charging point." ;
-	rdfs:label "Identification System"@en ;
-	rdfs:isDefinedBy mv: .
-
-mv:Plug
-	a rdfs:Class, owl:Class ;
-	rdfs:comment	"Describes  plug characteristics." ;
-	rdfs:label "Plug"@en, "Anschluss"@de ;
-	rdfs:isDefinedBy mv: .
-
-mv:hasPlugType
-a	rdf:Property, owl:ObjectProperty ;
-	rdfs:label	"has plug type"@en ;
-	rdfs:comment	"Relates the plug to its plugtype" ;
-	rdfs:domain	mv:Plug ;
-	rdfs:range	mv:PlugType  ;
-	rdfs:isDefinedBy mv: .
-
-mv:PlugType
-	a rdfs:Class, owl:Class ;
-	rdfs:comment	"Describes the type of available plug." ;
-	rdfs:label "Plug Type"@en, "Steckertyp"@de ;
-	rdfs:isDefinedBy mv: .
-
-mv:ChargeColumn
-	a owl:Class ;
-	rdfs:comment "Describes a charge column" ;
-	rdfs:label "Ladesäule"@de ,"Charge column"@en ;
-	rdfs:isDefinedBy mv: .
-
-# INSTANCES
-
-# Plug Types
-
-mv:ComboPlug
-	a owl:Class ;
-	rdfs:subClassOf mv:PlugType ;
-	rdfs:comment "Plug with combo connection." ;
-	rdfs:label "Combo Plug"@en ;
-	rdfs:isDefinedBy mv: .
-
-mv:CHAdeMOPlug
-	a owl:Class ;
-	rdfs:subClassOf mv:PlugType ;
-	rdfs:label "CHAdeMO"@en ;
-	rdfs:comment "Plug with CHAdeMO connection." ;	
-	owl:sameAs <http://dbpedia.org/resource/CHAdeMO> ;
-	foaf:depiction <http://upload.wikimedia.org/wikipedia/commons/f/f3/VDE-AR-E_2623-2-2-plug.jpg> ;
-	rdfs:isDefinedBy mv: .
-
-mv:EUDomesticPlug
-	a owl:Class ;
-	rdfs:subClassOf mv:PlugType ;
-	owl:sameAs <http://dbpedia.org/resource/Europlug> ;
-	rdfs:label "EU Domestic Plug"@en ;
-	rdfs:comment "Plug with EU domestic plug connection." ;
-	rdfs:isDefinedBy mv: .
-
-mv:SchukoPlug
-	a owl:Class ;
-	rdfs:subClassOf mv:PlugType ;
-	owl:sameAs <http://dbpedia.org/resource/Schuko> ;
-	foaf:depiction <http://upload.wikimedia.org/wikipedia/commons/e/ef/Schuko_plug_and_socket.png> ;
-	rdfs:label "Schuko Plug"@en ;
-	rdfs:comment "Plug with Schuko plug connection." ;
-	rdfs:isDefinedBy mv: .
-
-mv:Type1Plug
-	a owl:Class ;
-	rdfs:subClassOf mv:PlugType ;
-	rdfs:label "Type1 Plug"@en ;
-	rdfs:comment "Plug with Type 1 plug connection." ;
-	owl:sameAs <http://dbpedia.org/resource/SAE_J1772> ;
-	foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/SAE_J1772_7058855567.jpg> ;
-	rdfs:isDefinedBy mv: .
-
-mv:Type2Plug
-	a owl:Class ;
-	rdfs:subClassOf mv:PlugType ;
-	rdfs:label "Type2 Plug"@en ;
-	rdfs:comment "Plug with Type 2 plug connection." ;
-	owl:sameAs "http://en.wikipedia.org/wiki/IEC_62196#Type_2:_VDE-AR-E_2623-2-2" ;
-	foaf:depiction <http://upload.wikimedia.org/wikipedia/commons/f/f3/VDE-AR-E_2623-2-2-plug.jpg> ;
-	rdfs:isDefinedBy mv: .
-
-mv:Type3Plug
-	a owl:Class ;
-	rdfs:subClassOf mv:PlugType ;
-	rdfs:label "Type3 Plug"@en ;
-	rdfs:comment "Plug with Typ 3 plug connection." ;
-	skos:altLabel "EV Plug" ;
-	rdfs:isDefinedBy mv: .
-
-mv:UnknownPlug
-	a owl:Class ;
-	rdfs:subClassOf mv:PlugType ;
-	rdfs:label "Unknown Plug"@en , "Unbekannter Anschluss"@de ;
-	rdfs:comment "Plug with unknown connection." ;
-	rdfs:isDefinedBy mv: .
-
-# Identification System Types
-
-mv:AccessCode
-	a mv:IdentificationSystem ;
-	rdfs:label "Access Code"@en, "Zugangscode"@en ;
-	rdfs:comment "Code to get access to the identification system." ;
-	rdfs:isDefinedBy mv: .
-
-mv:BadgeHasToBeOrdered
-	a mv:IdentificationSystem ;
-	rdfs:label "Badge Has To Be Ordered"@en ;
-	rdfs:comment "To get access a badge has to be ordered." ;
-	rdfs:isDefinedBy mv: .
-
-mv:BadgeIsAvailable
-	a mv:IdentificationSystem ;
-	rdfs:label "Badge Is Available"@en ;
-	rdfs:comment "A badge is available to enable access." ;
-	rdfs:isDefinedBy mv: .
-
-mv:CreditCard
-	a mv:IdentificationSystem ;
-	rdfs:label "Credit Card"@en, "Kreditkarte"@de ;
-	rdfs:comment "Access by credit card." ;
-	rdfs:isDefinedBy mv: .
-
-mv:Key
-	a mv:IdentificationSystem ;
-	rdfs:label "Key"@en, "Schlüssel"@de ;
-	rdfs:comment "Access by key." ;
-	rdfs:isDefinedBy mv: .
-
-mv:MobileApplication
-	a mv:IdentificationSystem ;
-	rdfs:label "MobileApplication"@en ;
-	rdfs:comment "Access by mobile application." ;
-	rdfs:isDefinedBy mv: .
-
-mv:None
-	a mv:IdentificationSystem ;
-	rdfs:label "None"@en, "Keine"@en ;
-	rdfs:comment "No identification necessary." ;
-	rdfs:isDefinedBy mv: .
-
-mv:Other
-	a mv:IdentificationSystem ;
-	rdfs:label "Other"@en ;
-	rdfs:comment "Another identification system is necessary." ;
-	rdfs:isDefinedBy mv: .
-
-mv:PhoneCall
-	a mv:IdentificationSystem ;
-	rdfs:label "PhoneCall"@en ;
-	rdfs:comment "Access by phone call." ;
-	rdfs:isDefinedBy mv: .
-
-mv:TextMessage
-	a mv:IdentificationSystem ;
-	rdfs:label "TextMessage"@en ;
-	rdfs:comment "Access by text message." ;
-	rdfs:isDefinedBy mv: .
-
-#Access Types
-
-mv:BrandsCustomers
-	a mv:AccessType ;
-	rdfs:label "Brands Customers"@en ;
-	rdfs:comment "Access only for brands customers." ;
-	rdfs:isDefinedBy mv: .
-
-mv:CustomerOfPremise
-	a mv:AccessType ;
-	rdfs:label "Customer Of Premise"@en ;
-	rdfs:comment "Access only for customers of the premise." ;
-	rdfs:isDefinedBy mv: .
-
-mv:EmployeesOnly
-	a mv:AccessType ;
-	rdfs:label "Employees Only"@en, "Nur Angestellte"@de ;
-	rdfs:comment "Access only for employees." ;
-	rdfs:isDefinedBy mv: .
-
-mv:IdentifiedPerson
-	a mv:AccessType ;
-	rdfs:label "Identified Person"@en, "Autorisierte Person"@de ;
-	rdfs:comment "Access only for an identified person." ;
-	rdfs:isDefinedBy mv: .
-
-mv:InhabitantsOnly
-	a mv:AccessType ;
-	rdfs:label "Inhabitants Only"@en, "Nur Einwohner"@de ;
-	rdfs:comment "Access only for inhabitants." ;
-	rdfs:isDefinedBy mv: .
-
-mv:OpenToAllUsers
-	a mv:AccessType ;
-	rdfs:label "Open to all"@en ;
-	rdfs:comment "Access open to all." ;
-	rdfs:isDefinedBy mv: .
-
-#Charging Speed types
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dbpedia: <http://dbpedia.org/resource/> .
+@prefix dbo: <http://dbpedia.org/> .
+@prefix mv: <http://schema.mobivoc.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix s: <http://schema.org/> .
+@prefix gr: <http://purl.org/goodrelations/v1#> .
+@prefix vcard: <http://www.w3.org/2001/vcard-rdf/3.0#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 mv:Accelerated
-	a mv:ChargingSpeed ;
-	rdfs:label "Accelerated"@en ;
-	rdfs:comment "Electric vehicle is charged with accelerated charging speed." ;
-	rdfs:isDefinedBy mv: .
+    a mv:ChargingSpeed ;
+    rdfs:comment "Electric vehicle is charged with accelerated charging speed." ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Accelerated"@en .
+
+mv:AccessCode
+    a mv:IdentificationSystem ;
+    rdfs:comment "Code to get access to the identification system." ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Access Code"@en, "Zugangscode"@en .
+
+mv:AccessInformation
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "Access information of the charging point." ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Access Information"@en, "Zugangsinformation"@de .
+
+mv:AccessType
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "Describes access type of the charging point." ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Access Type"@en .
+
+mv:BadgeHasToBeOrdered
+    a mv:IdentificationSystem ;
+    rdfs:comment "To get access a badge has to be ordered." ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Badge Has To Be Ordered"@en .
+
+mv:BadgeIsAvailable
+    a mv:IdentificationSystem ;
+    rdfs:comment "A badge is available to enable access." ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Badge Is Available"@en .
+
+mv:BrandsCustomers
+    a mv:AccessType ;
+    rdfs:comment "Access only for brands customers." ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Brands Customers"@en .
+
+mv:CHAdeMOPlug
+    a owl:Class ;
+    rdfs:comment "Plug with CHAdeMO connection." ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "CHAdeMO"@en ;
+    rdfs:subClassOf mv:PlugType ;
+    owl:sameAs dbpedia:CHAdeMO ;
+    foaf:depiction <http://upload.wikimedia.org/wikipedia/commons/f/f3/VDE-AR-E_2623-2-2-plug.jpg> .
+
+mv:ChargeColumn
+    a owl:Class ;
+    rdfs:comment "Describes a charge column" ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Charge column"@en, "Ladesäule"@de .
+
+mv:Charger
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "Describes characteristics of the charger." ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Charger"@en, "Ladegerät"@de .
+
+mv:ChargingPoint
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "Defines the public or semi-public charging points for electric vehicles available worldwide. " ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Charging Point"@en, "Ladestation"@de ;
+    rdfs:subClassOf s:CivicStructure .
+
+mv:ChargingPointFees
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "Captures information about the charging point fees." ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Charging Point Fees"@en .
+
+mv:ChargingPointOwner
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "Captures information about the owner of charging point." ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Besitzer der Ladestation"@de, "Charging Point Owner"@en ;
+    rdfs:subClassOf gr:BusinessEntity .
+
+mv:ChargingSpeed
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "Describes speed types available at the types of vehicle that can be loaded by charging point." ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Charging Speed"@en .
+
+mv:ComboPlug
+    a owl:Class ;
+    rdfs:comment "Plug with combo connection." ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Combo Plug"@en ;
+    rdfs:subClassOf mv:PlugType .
+
+mv:CreditCard
+    a mv:IdentificationSystem ;
+    rdfs:comment "Access by credit card." ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Credit Card"@en, "Kreditkarte"@de .
+
+mv:CustomerOfPremise
+    a mv:AccessType ;
+    rdfs:comment "Access only for customers of the premise." ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Customer Of Premise"@en .
+
+mv:EUDomesticPlug
+    a owl:Class ;
+    rdfs:comment "Plug with EU domestic plug connection." ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "EU Domestic Plug"@en ;
+    rdfs:subClassOf mv:PlugType ;
+    owl:sameAs dbpedia:Europlug .
+
+mv:EmployeesOnly
+    a mv:AccessType ;
+    rdfs:comment "Access only for employees." ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Employees Only"@en, "Nur Angestellte"@de .
 
 mv:Fast
-	a mv:ChargingSpeed ;
-	rdfs:label "Fast"@en ;
-	rdfs:comment "Electric vehicle is charged with fast charging speed." ;
-	rdfs:isDefinedBy mv: .
-
-mv:Standard
-	a mv:ChargingSpeed ;
-	rdfs:label "Standard"@en ;
-	rdfs:comment "Electric vehicle is charged with standard charging speed." ;
-	rdfs:isDefinedBy mv: .
-
-# Charging point fees
+    a mv:ChargingSpeed ;
+    rdfs:comment "Electric vehicle is charged with fast charging speed." ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Fast"@en .
 
 mv:FreeCharging
-	a mv:ChargingPointFees;
-	rdfs:label "Free Charging"@en ;
-	rdfs:comment "The charging point offers free charging." ;
-	rdfs:isDefinedBy mv: .
+    a mv:ChargingPointFees ;
+    rdfs:comment "The charging point offers free charging." ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Free Charging"@en .
+
+mv:IdentificationSystem
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "Describes identification system of the charging point." ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Identification System"@en .
+
+mv:IdentifiedPerson
+    a mv:AccessType ;
+    rdfs:comment "Access only for an identified person." ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Autorisierte Person"@de, "Identified Person"@en .
+
+mv:InhabitantsOnly
+    a mv:AccessType ;
+    rdfs:comment "Access only for inhabitants." ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Inhabitants Only"@en, "Nur Einwohner"@de .
+
+mv:Key
+    a mv:IdentificationSystem ;
+    rdfs:comment "Access by key." ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Key"@en, "Schlüssel"@de .
+
+mv:MobileApplication
+    a mv:IdentificationSystem ;
+    rdfs:comment "Access by mobile application." ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "MobileApplication"@en .
+
+mv:None
+    a mv:IdentificationSystem ;
+    rdfs:comment "No identification necessary." ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Keine"@en, "None"@en .
+
+mv:OpenToAllUsers
+    a mv:AccessType ;
+    rdfs:comment "Access open to all." ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Open to all"@en .
+
+mv:Other
+    a mv:IdentificationSystem ;
+    rdfs:comment "Another identification system is necessary." ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Other"@en .
 
 mv:PaidCharging
-	a mv:ChargingPointFees;
-	rdfs:label "Paid Charging"@en ;
-	rdfs:comment "The charging has to be paid." ;
-	rdfs:isDefinedBy mv: .
+    a mv:ChargingPointFees ;
+    rdfs:comment "The charging has to be paid." ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Paid Charging"@en .
 
-# PROPERTIES
+mv:PhoneCall
+    a mv:IdentificationSystem ;
+    rdfs:comment "Access by phone call." ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "PhoneCall"@en .
 
-# Abstract Properties
+mv:Plug
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "Describes  plug characteristics." ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Anschluss"@de, "Plug"@en .
+
+mv:PlugType
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "Describes the type of available plug." ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Plug Type"@en, "Steckertyp"@de .
+
+mv:SchukoPlug
+    a owl:Class ;
+    rdfs:comment "Plug with Schuko plug connection." ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Schuko Plug"@en ;
+    rdfs:subClassOf mv:PlugType ;
+    owl:sameAs dbpedia:Schuko ;
+    foaf:depiction <http://upload.wikimedia.org/wikipedia/commons/e/ef/Schuko_plug_and_socket.png> .
+
+mv:Standard
+    a mv:ChargingSpeed ;
+    rdfs:comment "Electric vehicle is charged with standard charging speed." ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Standard"@en .
+
+mv:TextMessage
+    a mv:IdentificationSystem ;
+    rdfs:comment "Access by text message." ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "TextMessage"@en .
+
+mv:Type1Plug
+    a owl:Class ;
+    rdfs:comment "Plug with Type 1 plug connection." ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Type1 Plug"@en ;
+    rdfs:subClassOf mv:PlugType ;
+    owl:sameAs dbpedia:SAE_J1772 ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/SAE_J1772_7058855567.jpg> .
+
+mv:Type2Plug
+    a owl:Class ;
+    rdfs:comment "Plug with Type 2 plug connection." ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Type2 Plug"@en ;
+    rdfs:subClassOf mv:PlugType ;
+    owl:sameAs "http://en.wikipedia.org/wiki/IEC_62196#Type_2:_VDE-AR-E_2623-2-2" ;
+    foaf:depiction <http://upload.wikimedia.org/wikipedia/commons/f/f3/VDE-AR-E_2623-2-2-plug.jpg> .
+
+mv:Type3Plug
+    a owl:Class ;
+    rdfs:comment "Plug with Typ 3 plug connection." ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Type3 Plug"@en ;
+    rdfs:subClassOf mv:PlugType ;
+    skos:altLabel "EV Plug" .
+
+mv:UnknownPlug
+    a owl:Class ;
+    rdfs:comment "Plug with unknown connection." ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Unbekannter Anschluss"@de, "Unknown Plug"@en ;
+    rdfs:subClassOf mv:PlugType .
 
 mv:access
-a	rdf:Property, owl:ObjectProperty ;
-	rdfs:label	"access"@en ;
-	rdfs:comment	"Indicates the access types of charging point. " ;
-	rdfs:domain	mv:AccessInformation ;
-	rdfs:range	mv:AccessType  ;
-	rdfs:isDefinedBy mv: .
-
-mv:accessible
-a	rdf:Property, owl:ObjectProperty ;
-	rdfs:label	"is accessible"@en ;
-	rdfs:comment	"Indicates the access information of the charging point." ;
-	rdfs:domain	mv:ChargingPoint ;
-	rdfs:range	mv:AccessInformation ;
-	rdfs:isDefinedBy mv: .
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "Indicates the access types of charging point. " ;
+    rdfs:domain mv:AccessInformation ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "access"@en ;
+    rdfs:range mv:AccessType .
 
 mv:accessTimes
-a	rdf:Property, owl:DatatypeProperty ;
-	rdfs:label	"Access Time"@en ;
-	rdfs:comment	"Defines access time of the charging point. " ;
-	rdfs:domain	mv:AccessInformation ;
-	rdfs:range	xsd:string ;
-	rdfs:isDefinedBy mv: .
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "Defines access time of the charging point. " ;
+    rdfs:domain mv:AccessInformation ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Access Time"@en ;
+    rdfs:range xsd:string .
+
+mv:accessible
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "Indicates the access information of the charging point." ;
+    rdfs:domain mv:ChargingPoint ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "is accessible"@en ;
+    rdfs:range mv:AccessInformation .
 
 mv:availableFromTime
-a	rdf:Property, owl:DatatypeProperty ;
-	rdfs:label	"available From Time"@en ;
-	rdfs:comment	"Information when the charging point will be available." ;
-	rdfs:domain	mv:AccessInformation ;
-	rdfs:range	xsd:string ;
-	rdfs:isDefinedBy mv: .
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "Information when the charging point will be available." ;
+    rdfs:domain mv:AccessInformation ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "available From Time"@en ;
+    rdfs:range xsd:string .
 
 mv:brand
-a	rdf:Property, owl:DatatypeProperty ;
-	rdfs:label	"Brand"@en ;
-	rdfs:comment	"Defines the charger brand. " ;
-	rdfs:domain	mv:Charger ;
-	rdfs:range	xsd:string ;
-	rdfs:isDefinedBy mv: .
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "Defines the charger brand. " ;
+    rdfs:domain mv:Charger ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Brand"@en ;
+    rdfs:range xsd:string .
 
 mv:cableAvailable
-a	rdf:Property, owl:DatatypeProperty ;
-	rdfs:label	"Cable available"@en ;
-	rdfs:comment	"Indicates whether the plug has a cable. " ;
-	rdfs:domain	mv:Plug ;
-	rdfs:range	xsd:string ;
-	rdfs:isDefinedBy mv: .
-
-mv:hasChargingSpeed
-a	rdf:Property, owl:ObjectProperty ;
-	rdfs:label	"has Charging Speed"@en ;
-	rdfs:comment	"Indicates the charging speed of a plug. " ;
-	rdfs:domain	mv:Plug ;
-	rdfs:range	mv:ChargingSpeed ;
-	rdfs:isDefinedBy mv: .
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "Indicates whether the plug has a cable. " ;
+    rdfs:domain mv:Plug ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Cable available"@en ;
+    rdfs:range xsd:string .
 
 mv:coveredLocation
-a	rdf:Property, owl:DatatypeProperty ;
-	rdfs:label	"is Covered Location"@en ;
-	rdfs:comment	"Indicates whether the location of the charging point is covered." ;
-	rdfs:domain	mv:AccessInformation ;
-	rdfs:range	xsd:string ;
-	rdfs:isDefinedBy mv: .
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "Indicates whether the location of the charging point is covered." ;
+    rdfs:domain mv:AccessInformation ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "is Covered Location"@en ;
+    rdfs:range xsd:string .
 
 mv:currentType
-a	rdf:Property, owl:DatatypeProperty ;
-	rdfs:label	"Current Type"@en ;
-	rdfs:comment	"Indicates the current type of the plug.  " ;
-	rdfs:domain	mv:Plug ;
-	rdfs:range	xsd:string ;
-	rdfs:isDefinedBy mv: .
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "Indicates the current type of the plug.  " ;
+    rdfs:domain mv:Plug ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Current Type"@en ;
+    rdfs:range xsd:string .
 
 mv:description
-a	rdf:Property, owl:DatatypeProperty ;
-	rdfs:label	"Description"@en ;
-	rdfs:comment	"Description of charging point." ;
-	rdfs:domain	mv:ChargingPoint ;
-	rdfs:range	xsd:string ;
-	rdfs:isDefinedBy mv: .
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "Description of charging point." ;
+    rdfs:domain mv:ChargingPoint ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Description"@en ;
+    rdfs:range xsd:string .
 
 mv:energyType
-a	rdf:Property, owl:DatatypeProperty ;
-	rdfs:label	"energy type"@en ;
-	rdfs:comment	"Indicates the energy type of the charging point." ;
-	rdfs:domain	mv:Charger ;
-	rdfs:range	xsd:string ;
-	rdfs:isDefinedBy mv: .
-
-mv:hasPlug
-a	rdf:Property, owl:ObjectProperty ;
-	rdfs:label	"has plug"@en ;
-	rdfs:comment	"Plugs available at the charging point." ;
-	rdfs:domain	mv:ChargingPoint ;
-	rdfs:range	mv:Plug ;
-	rdfs:isDefinedBy mv: .
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "Indicates the energy type of the charging point." ;
+    rdfs:domain mv:Charger ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "energy type"@en ;
+    rdfs:range xsd:string .
 
 mv:feesDescription
-a	rdf:Property, owl:DatatypeProperty ;
-	rdfs:label	"Fees description"@en ;
-	rdfs:comment	"Defines recharging fees." ;
-	rdfs:domain	mv:ChargingPointFees ;
-	rdfs:range	xsd:string ;
-	rdfs:isDefinedBy mv: .
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "Defines recharging fees." ;
+    rdfs:domain mv:ChargingPointFees ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Fees description"@en ;
+    rdfs:range xsd:string .
 
 mv:hasCharger
-a	rdf:Property, owl:ObjectProperty ;
-	rdfs:label	"has charger"@en ;
-	rdfs:comment	"Charging point charger." ;
-	rdfs:domain	mv:ChargingPoint ;
-	rdfs:range	mv:Charger ;
-	rdfs:isDefinedBy mv: .
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "Charging point charger." ;
+    rdfs:domain mv:ChargingPoint ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "has charger"@en ;
+    rdfs:range mv:Charger .
+
+mv:hasChargingSpeed
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "Indicates the charging speed of a plug. " ;
+    rdfs:domain mv:Plug ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "has Charging Speed"@en ;
+    rdfs:range mv:ChargingSpeed .
 
 mv:hasParkingFacility
-	a rdf:Property, owl:DatatypeProperty ;
-	rdfs:comment "Indicates whether the charging station has a parking facility or not." ;
-	rdfs:label "has parking facility"@en, "hat Parkmöglichkeit"@de ;
-	rdfs:domain mv:ChargingPoint ;
-	rdfs:range	xsd:string ;
-	rdfs:isDefinedBy mv: .
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "Indicates whether the charging station has a parking facility or not." ;
+    rdfs:domain mv:ChargingPoint ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "has parking facility"@en, "hat Parkmöglichkeit"@de ;
+    rdfs:range xsd:string .
+
+mv:hasPlug
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "Plugs available at the charging point." ;
+    rdfs:domain mv:ChargingPoint ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "has plug"@en ;
+    rdfs:range mv:Plug .
+
+mv:hasPlugType
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "Relates the plug to its plugtype" ;
+    rdfs:domain mv:Plug ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "has plug type"@en ;
+    rdfs:range mv:PlugType .
 
 mv:identification
-a	rdf:Property, owl:ObjectProperty ;
-	rdfs:label	"identification"@en ;
-	rdfs:comment	"Identification system to access charging point." ;
-	rdfs:domain	mv:AccessInformation ;
-	rdfs:range	mv:IdentificationSystem ;
-	rdfs:isDefinedBy mv: .
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "Identification system to access charging point." ;
+    rdfs:domain mv:AccessInformation ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "identification"@en ;
+    rdfs:range mv:IdentificationSystem .
 
 mv:intensity
-a	rdf:Property, owl:DatatypeProperty ;
-	rdfs:label	"Intensity"@en ;
-	rdfs:comment	"Indicates plug intensity." ;
-	rdfs:domain	mv:Plug ;
-	rdfs:range	xsd:string ;
-	rdfs:isDefinedBy mv: .
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "Indicates plug intensity." ;
+    rdfs:domain mv:Plug ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Intensity"@en ;
+    rdfs:range xsd:string .
 
 mv:isPaidChargingPoint
-a	rdf:Property, owl:DatatypeProperty ;
-	rdfs:label	"Is paid charging point"@en ;
-	rdfs:comment	"Indicates whether it is a paid charging point." ;
-	rdfs:domain	mv:ChargingPointFees ;
-	rdfs:range	xsd:string ;
-	rdfs:isDefinedBy mv: .
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "Indicates whether it is a paid charging point." ;
+    rdfs:domain mv:ChargingPointFees ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Is paid charging point"@en ;
+    rdfs:range xsd:string .
 
 mv:lockerAvailable
-a	rdf:Property, owl:DatatypeProperty ;
-	rdfs:label	"Locker available"@en ;
-	rdfs:comment	"Indicates whether the plug has a locker. " ;
-	rdfs:domain	mv:Plug ;
-	rdfs:range	xsd:string ;
-	rdfs:isDefinedBy mv: .
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "Indicates whether the plug has a locker. " ;
+    rdfs:domain mv:Plug ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Locker available"@en ;
+    rdfs:range xsd:string .
 
 mv:model
-a	rdf:Property, owl:DatatypeProperty ;
-	rdfs:label	"Model"@en ;
-	rdfs:comment	"Charger model of the charging point. " ;
-	rdfs:domain	mv:Charger ;
-	rdfs:range	xsd:string ;
-	rdfs:isDefinedBy mv: .
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "Charger model of the charging point. " ;
+    rdfs:domain mv:Charger ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Model"@en ;
+    rdfs:range xsd:string .
 
 mv:placeType
-a	rdf:Property, owl:DatatypeProperty ;
-	rdfs:label	"place type"@en ;
-	rdfs:comment	"Place type where charging point is located, e.g. airport, restaurant." ;
-	rdfs:domain	mv:ChargingPoint ;
-	rdfs:range	xsd:string ;
-	rdfs:isDefinedBy mv: .
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "Place type where charging point is located, e.g. airport, restaurant." ;
+    rdfs:domain mv:ChargingPoint ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "place type"@en ;
+    rdfs:range xsd:string .
 
 mv:plugCondition
-a	rdf:Property, owl:DatatypeProperty ;
-	rdfs:label	"Plug Condition"@en ;
-	rdfs:comment	"Indicates the condition of the plug. " ;
-	rdfs:domain	mv:Plug ;
-	rdfs:range	xsd:string ;
-	rdfs:isDefinedBy mv: .
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "Indicates the condition of the plug. " ;
+    rdfs:domain mv:Plug ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Plug Condition"@en ;
+    rdfs:range xsd:string .
 
 mv:plugInformation
-a	rdf:Property, owl:DatatypeProperty ;
-	rdfs:label	"Plug Information"@en ;
-	rdfs:comment	"Captures information about the plug. " ;
-	rdfs:domain	mv:Plug ;
-	rdfs:range	xsd:string ;
-	rdfs:isDefinedBy mv: .
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "Captures information about the plug. " ;
+    rdfs:domain mv:Plug ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Plug Information"@en ;
+    rdfs:range xsd:string .
 
 mv:power
-a	rdf:Property, owl:DatatypeProperty ;
-	rdfs:label	"Power"@en ;
-	rdfs:comment	"Indicates the plug power. " ;
-	rdfs:domain	mv:Plug ;
-	rdfs:range	xsd:string ;
-	rdfs:isDefinedBy mv: .
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "Indicates the plug power. " ;
+    rdfs:domain mv:Plug ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Power"@en ;
+    rdfs:range xsd:string .
 
 mv:status
-a	rdf:Property, owl:DatatypeProperty ;
-	rdfs:label	"status"@en ;
-	rdfs:comment	"Current status of the charging point, e.g. out-of-order or functional." ;
-	rdfs:domain	mv:ChargingPoint ;
-	rdfs:range	xsd:string ;
-	rdfs:isDefinedBy mv: .
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "Current status of the charging point, e.g. out-of-order or functional." ;
+    rdfs:domain mv:ChargingPoint ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "status"@en ;
+    rdfs:range xsd:string .
 
 mv:threePhasedCurrentavailable
-a	rdf:Property, owl:DatatypeProperty ;
-	rdfs:label	"Three-phased current available"@en ;
-	rdfs:comment	"Indicates whether three-phased current is available.  " ;
-	rdfs:domain	mv:Plug ;
-	rdfs:range	xsd:string ;
-	rdfs:isDefinedBy mv: .
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "Indicates whether three-phased current is available.  " ;
+    rdfs:domain mv:Plug ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Three-phased current available"@en ;
+    rdfs:range xsd:string .
 
 mv:voltage
-a	rdf:Property, owl:DatatypeProperty ;
-	rdfs:label	"Voltage"@en ;
-	rdfs:comment	"Indicates the plug voltage.  " ;
-	rdfs:domain	mv:Plug ;
-	rdfs:range	xsd:string ;
-	rdfs:isDefinedBy mv: .
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "Indicates the plug voltage.  " ;
+    rdfs:domain mv:Plug ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Voltage"@en ;
+    rdfs:range xsd:string .
+
