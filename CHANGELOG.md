@@ -8,6 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 ### Changed
 - forward ontology-includes
 - adjust DOCSRC variable
+- add REPOSITORY_NAME for widoco files upload
 
 ## [0.2.0] 2017-04-13
 
