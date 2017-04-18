@@ -6,6 +6,8 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 ## [Unreleased]
 
 TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security section
+### Changed
+- forward ontology-includes
 
 ## [0.2.0] 2017-04-13 
 
