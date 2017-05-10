@@ -13,6 +13,14 @@ mv:AllParkingFacilitiesFull
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "All parking facilities full"@en, "Alle Parkmöglichkeiten belegt"@de .
 
+mv:BicycleParkingStation
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "Building or structure designed for use as a bicycle parking facility."@en ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Bicycle parking station"@en, "Fahrradparkstation"@de ;
+    rdfs:subClassOf mv:ParkingFacility .
+
+
 mv:AutomatedParkingGarage
     a rdfs:Class, owl:Class ;
     rdfs:comment "Parking garage with an automated parking system that automatically moves cars to the available parking space somewhere in the garage."@en ;
@@ -21,7 +29,7 @@ mv:AutomatedParkingGarage
     rdfs:subClassOf mv:ParkingFacility .
 
 mv:BikeAndRide
-    a mv:ParkingFacilityConnection ;
+    a mv:ParkingFacilityConnection ; 
     rdfs:comment "Parking facilities for bicycles with connection to public transport." ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "Bike and Ride" .
@@ -30,20 +38,20 @@ mv:Carpooling
     a mv:ParkingFacilityConnection ;
     rdfs:comment "Parking facility used for carpooling or ridesharing." ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "Carpooling", "Parken und Mitfahren"@de ;
-    skos:altLabel "P&M", "P+M", "Park & Drive", "Parken und Mitnehmen"@de .
+    rdfs:label "Carpooling" , "Parken und Mitfahren"@de ;
+    skos:altLabel "P&M" , "P+M" , "Park & Drive" , "Parken und Mitnehmen"@de .
 
 mv:Closed
     a mv:ParkingFacilityStatus ;
     rdfs:comment "The parking facility is closed." ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "Closed"@en, "Geschlossen"@de .
+    rdfs:label "Closed"@en , "Geschlossen"@de .
 
 mv:EnoughParkingSpacesAvailable
     a mv:ParkingFacilityStatus ;
     rdfs:comment "The parking facility has parking spaces available." ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "Enough parking spaces available"@en, "Genügend Stellplätze frei"@de .
+    rdfs:label "Enough parking spaces available"@en , "Genügend Stellplätze frei"@de .
 
 mv:Faulty
     a mv:ParkingFacilityStatus ;
@@ -56,12 +64,6 @@ mv:Full
     rdfs:comment "The parking facility is completely occupied." ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "Belegt"@de, "Full"@en .
-
-mv:LadiesParkingSpace
-    a mv:ParkingFacilityFeature ;
-    rdfs:comment "The parking facility provides special parking spaces for women."@en ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "Frauenparkplatz"@de, "Ladies' parking space" .
 
 mv:NoParkAndRideInformation
     a mv:ParkingFacilityStatus ;
@@ -146,16 +148,9 @@ mv:ParkingFacilityConnection
 
 mv:ParkingFacilityFeature
     a rdfs:Class, owl:Class ;
-    rdfs:comment "Features of the parking facility (e.g. parking for handicapped people)." ;
+    rdfs:comment "Features of the parking facility (e.g. parking for disabled people)." ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "Ausstattung der Parkeinrichtung"@de, "Parking Facility Feature"@en .
-
-mv:ParkingFacilityOwner
-    a rdfs:Class, owl:Class ;
-    rdfs:comment "Captures information about the owner of a parking facility." ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "Besitzer der Parkeinrichtung"@de, "Parking Facility Owner"@en ;
-    rdfs:subClassOf gr:BusinessEntity .
 
 mv:ParkingFacilityStatus
     a rdfs:Class, owl:Class ;
@@ -179,13 +174,7 @@ mv:ParkingLot
     rdfs:label "Parking lot"@en, "Parkplatz"@de ;
     rdfs:subClassOf mv:ParkingFacility ;
     skos:altLabel "Parkfläche"@de, "car lot"@en ;
-    skos:prefLabel "Car park"@en-UKd, "Parking lot"@en-US, "Parkplatz"@de .
-
-mv:ParkingSpaceForDisabledPersons
-    a mv:ParkingFacilityFeature ;
-    rdfs:comment "The parking facility provides special parking spaces for disabled people."@en ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "Behindertenparkplatz"@de, "Parking space for disabled persons"@en .
+    skos:prefLabel "Car park"@en-UK, "Parking lot"@en-US, "Parkplatz"@de .
 
 mv:PayStation
     a mv:ParkingFacilityFeature ;
@@ -226,12 +215,6 @@ mv:VideoSurveillance
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "Video surveillance"@en, "Videoüberwachung"@de .
 
-mv:XXLParkingSpace
-    a mv:ParkingFacilityFeature ;
-    rdfs:comment "The parking facility provides special parking spaces with more space."@en ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "XXL parking space", "XXL-Parkplatz"@de .
-
 mv:hasChargingPoint
     a rdf:Property, owl:ObjectProperty ;
     rdfs:comment "Indicates whether charging points are available." ;
@@ -248,12 +231,12 @@ mv:hasExitRate
     rdfs:label "has exit rate"@en ;
     rdfs:range xsd:string .
 
-mv:hasFeatures
+mv:hasFeature
     a rdf:Property, owl:ObjectProperty ;
-    rdfs:comment "Indicates which features the parking facility provides." ;
+    rdfs:comment "Indicates which feature the parking facility provides." ;
     rdfs:domain mv:ParkingFacility ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "has Features"@en ;
+    rdfs:label "has Feature"@en ;
     rdfs:range mv:ParkingFacilityFeature .
 
 mv:hasFillRate
@@ -264,28 +247,36 @@ mv:hasFillRate
     rdfs:label "has fill rate"@en ;
     rdfs:range xsd:string .
 
-mv:hasHeightLimit
+mv:hasNumberOfCarsharingParkingSpaces ## reicht für diese speziellen Parkplätze die Anzahl allg. oder will man (sofern Daten das hergeben) auch noch die aktuelle Belegung, müsste man es dann anders modellieren in Richtung total capacity?
     a rdf:Property, owl:DatatypeProperty ;
-    rdfs:comment "Indicates the height limit in meter for vehicles using the parking facility." ;
+    rdfs:comment "Indicates the number of parking spaces that are reserved for carsharing." ;
     rdfs:domain mv:ParkingFacility ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "has height limit"@en, "hat Höhenbegrenzung" ;
-    rdfs:range xsd:string .
+    rdfs:label "has number of carsharing spaces"@en, "hat Anzahl Carsharing-Parkplätze"@de ;
+    rdfs:range xsd:integer .    
 
-mv:hasLengthLimit
+mv:hasNumberOfWomensParkingSpaces
     a rdf:Property, owl:DatatypeProperty ;
-    rdfs:comment "Indicates the length limit in meter for vehicles using the parking facility." ;
+    rdfs:comment "Indicates the number of women's parking spaces." ;
     rdfs:domain mv:ParkingFacility ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "has length limit"@en, "hat Längenbegrenzung" ;
-    rdfs:range xsd:string .
+    rdfs:label "has number of women's parking spaces"@en, "hat Anzahl Frauenparkplätze"@de ;
+    rdfs:range xsd:integer .
 
-mv:hasNumberOfLadiesParkingSpaces
+mv:hasNumberOfMotorbikeParkingSpaces
     a rdf:Property, owl:DatatypeProperty ;
-    rdfs:comment "Indicates the number of ladies' parking spaces." ;
+    rdfs:comment "Indicates the number of parking spaces for motorbikes." ;
     rdfs:domain mv:ParkingFacility ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "has number of ladies' parking spaces"@en, "hat Anzahl Frauenparkplätze"@de ;
+    rdfs:label "has number of parking spaces for motorbikes"@en, "hat Anzahl Motorradparkplätze"@de ;
+    rdfs:range xsd:integer .
+
+mv:hasNumberOfBicycleParkingSpaces 
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "Indicates the number of parking spaces for bicycles." ;
+    rdfs:domain mv:ParkingFacility ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "has number of parking spaces for bicycles"@en, "hat Anzahl Fahrradparkplätze"@de ;
     rdfs:range xsd:integer .
 
 mv:hasNumberOfOccupiedParkingSpaces
@@ -325,7 +316,7 @@ mv:hasParkingFacilityStatus
     rdfs:comment "Indicates the current status of the parking facility." ;
     rdfs:domain mv:ParkingFacility ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "has parking facility status"@en, "hat Parkeinrichtungstatus"@de ;
+    rdfs:label "has parking facility status"@en, "hat Parkeinrichtungsstatus"@de ;
     rdfs:range mv:ParkingFacilityStatus .
 
 mv:hasQueuingTime
@@ -338,7 +329,7 @@ mv:hasQueuingTime
 
 mv:hasRateOfOccupancy
     a rdf:Property, owl:DatatypeProperty ;
-    rdfs:comment "Indicates the percentage value of parking spaces occupied." ;
+    rdfs:comment "Indicates the percentage value of parking spaces occupied in a parking facility." ;
     rdfs:domain mv:ParkingFacility ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "has rate of occupancy"@en, "hat Belegungsrate"@de ;
@@ -346,19 +337,11 @@ mv:hasRateOfOccupancy
 
 mv:hasTotalCapacity
     a rdf:Property, owl:DatatypeProperty ;
-    rdfs:comment "Indicates the total number of parking spaces." ;
+    rdfs:comment "Indicates the total number of parking spaces of a parking facility." ;
     rdfs:domain mv:ParkingFacility ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "has total capacity"@en, "hat Gesamtkapazität"@de ;
     rdfs:range xsd:integer .
-
-mv:hasWidthLimit
-    a rdf:Property, owl:DatatypeProperty ;
-    rdfs:comment "Indicates the width limit in meter for vehicles using the parking facility." ;
-    rdfs:domain mv:ParkingFacility ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "has width limit"@en, "hat Breitenbegrenzung" ;
-    rdfs:range xsd:string .
 
 mv:isConnectedTo
     a rdf:Property, owl:ObjectProperty ;
@@ -367,4 +350,144 @@ mv:isConnectedTo
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "is connected to" ;
     rdfs:range mv:ParkingFacilityConnection .
+
+mv:ParkingSpace
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "A parking space is a location that is designated for parking a vehicle. A parking space has a certain size, is sometimes marked and can be located at roadside or inside a parking facility. Depending on the location of the parking space, there can be regulations regarding the time allowed to park and a fee paid to use the parking space."@en ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Stellplatz"@de, "Parking space"@en ;
+    skos:prefLabel "Stellplatz"@de, "Parking space"@en ;
+    skos:hiddenLabel "Parkplatz"@de ;
+    rdfs:subClassOf s:CivicStructure . 
+
+mv:CarsharingParkingSpace
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "Specially designated and identified parking space reserved for carsharing vehicles."en ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Carsharing-Stellplatz"@de , "Carsharing parking space"@en , "Place de stationnement pour l'autopartage"@fr ; 
+    rdfs:subClassOf mv:ParkingSpace .
+
+mv:DisabledParkingSpace 
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "Specially designated and identified parking space reserved for persons with disabilities, or in some situations, permission to park in a time-limited space for longer time, or to park at a meter without payment."en ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Behindertenstellplatz"@de , "Disabled parking space"@en ;
+    rdfs:subClassOf mv:ParkingSpace .
+
+mv:MotorbikeParkingSpace
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "Parking space where motorbikes can park."en ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Motorradstellplatz"@de , "Motorbike parking space"@en ;
+    rdfs:subClassOf mv:ParkingSpace .
+
+mv:BicylceParkingSpace
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "Parking space where bicycles can park."en ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Fahrradstellplatz"@de , "Bicycle parking space"@en ;
+    rdfs:subClassOf mv:ParkingSpace .
+
+mv:CarParkingSpace
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "Parking space where cars can park."en ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Pkw-Stellplatz"@de , "Car parking space"@en ;
+    rdfs:subClassOf mv:ParkingSpace .
+
+mv:CoachParkingSpace
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "Parking space where coaches or buses can park."en ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Busstellplatz"@de , "Coach parking space"@en ;
+    rdfs:subClassOf mv:ParkingSpace .
+
+mv:TruckParkingSpace
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "Parking space where trucks can park."en ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Lkw-Stellplatz"@de , "Truck parking space"@en ;
+    rdfs:subClassOf mv:ParkingSpace .
+
+mv:XXLParkingSpace
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "A special parking space having larger dimensions than usual parking spaces."en ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "XXL parking space"@en , "Extra großer Stellplatz"@de ;
+    rdfs:subClassOf mv:ParkingSpace .
+
+mv:WomensParkingSpace
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "Specially designated and identified parking space to be used by women."@en , "Gekennzeichneter und ausgewiesener Stellplatz für die Nutzung durch Frauen."@de ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Women's parking space"@en , "Frauenparkplatz"@de "Damenparkplatz"@de-AT;
+    skos:prefLabel "Women's parking space"@en ;
+    skos:altLabel "Ladies' parking space"@en .
+    rdfs:subClassOf mv:ParkingSpace .
+
+mv:hasArrangement
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "Indicates in which pattern a parking space is arranged." ;
+    rdfs:domain mv:ParkingSpace , mv:ParkingFacility ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "has arrangement pattern"@en, "ist angeordnet"@de ;
+    rdfs:range mv:ArrangementPattern .
+
+mv:ArrangementPattern
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "Pattern how parking spaces are arranged in a parking facility or at roadside."@en , "Art und Weise, wie ein Fahrzeug auf einer Parkfläche aufgestellt wird."@de ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Arrangement pattern"@en, "Aufstellart"@de . 
+
+mv:ParallelParking
+    a mv:ArrangementPattern ;
+    rdfs:comment "With parallel parking, vehicles are arranged in a line, with the front of one vehicle facing the back of an adjacent one. This is done parallel to a curb, when one is provided. Parallel parking is the most common mode of roadside parking for vehicles."@en , "Bei der Längsaufstellung wird das Fahrzeug (gemäß § 12 StVO) parallel zur Fahrbahn geparkt. Diese Fahrzeugaufstellung ist die gängigste Aufstellungsart an Straßen."@de ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Parallel parking"@en , "Längsaufstellung"@de ;
+    skos:prefLabel "Parallel parking"@en , "Längsaufstellung"@de ;
+    skos:altLabel "Parallelaufstellung"@de .
+
+mv:PerpendicularParking
+    a mv:ArrangementPattern ;
+    rdfs:comment "With perpendicular parking, vehicles are parked side to side, perpendicular to an aisle, curb, or wall. This type of parking is commonly used in parking lots and parking facilities."@en , "Bei der Senkrechtaufstellung wird das Fahrzeug mit einem Aufstellwinkel von von 100 gon (90°) geparkt."@de ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Perpendicular parking"@en , "Senkrechtaufstellung"@de ;
+    skos:prefLabel "Perpendicular parking"@en ;
+    skos:altLabel "Bay parking"@en .
+
+mv:AngleParking
+    a mv:ArrangementPattern ;
+    rdfs:comment "Parking where the parking spaces are arranged at an acute angle to the direction of approach, allowing the driver to enter a space easily and later reverse back out."@en , "Bei der Schrägaufstellung wird das Fahrzeug mit einem Aufstellwinkel zwischen 50 und 90 gon (45° und ca. 81°) geparkt. Das Fahrzeug kann vorwärts in den Parkstand einfahren, muss zum Ausparken jedoch wieder rückwärts herausfahren. Diese Aufstellung wird oft bei Parkplätzen verwendet, da sie schmalere Fahrwege als die Senkrechtaufstellung und bessere Platzausnutzung als Parallelaufstellung ermöglicht."@de ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Angle parking"@en-us , "Echelon parking"@en-uk , "Senkrechtaufstellung"@de .
+
+mv:ParkingFacilityExit
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "Exit of a parking facility where vehicles can leave the parking facility."@en ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Ausfahrt"@de, "Exit"@en ;
+    rdfs:subClassOf s:CivicStructure . 
+
+mv:hasExit
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "Describes the exit of a parking facility." ;
+    rdfs:domain mv:ParkingFacility ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "has exit"@en, "hat Ausfahrt"@de ;
+    rdfs:range mv:ParkingFacilityExit .
+
+mv:ParkingFacilityEntrance
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "Entrance of a parking facility where vehicles can enter the parking facility."@en ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Einfahrt"@de, "Entrance"@en ;
+    rdfs:subClassOf s:CivicStructure .
+
+mv:hasEntrance
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "Describes the entrance of a parking facility." ;
+    rdfs:domain mv:ParkingFacility ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "has entrance"@en, "hat Einfahrt"@de ;
+    rdfs:range mv:ParkingFacilityEntrance .
 

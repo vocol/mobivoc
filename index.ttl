@@ -12,28 +12,31 @@
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
+
 mv:additionalInformation
     a rdf:Property, owl:DatatypeProperty ;
-    rdfs:comment "Other information about the civic structure or facility."@en ;
+    rdfs:comment "Further information about the civic structure or facility."@en ;
     rdfs:domain s:CivicStructure ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "Additional Information"@en ;
+    rdfs:label "additional information"@en , "zusätzliche Information"@de ;
     rdfs:range xsd:string .
 
 mv:isOperatedBy
     a rdf:Property, owl:ObjectProperty ;
-    rdfs:comment "The operator of a civic structure or facility."@en ;
+    rdfs:comment "The operator of a civic structure or facility. Operator and owner can be different business entitites."@en ;
     rdfs:domain s:CivicStructure ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "is operated by"@en ;
+    rdfs:label "is operated by"@en , "wird betrieben von"@de ;
     rdfs:range gr:BusinessEntity .
+
+# add gr:BusinessEntity explicitly as class as below? Does it include private persons? Do they then act as a business entitiy? 
 
 mv:isOwnedBy
     a rdf:Property, owl:ObjectProperty ;
-    rdfs:comment "The owner of a civic structure or facility."@en ;
+    rdfs:comment "The owner of a civic structure or facility. Owner and operator can be different business entities."@en ;
     rdfs:domain s:CivicStructure ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "is owned by"@en ;
+    rdfs:label "is owned by"@en , "ist in Besitz von"@de ;
     rdfs:range gr:BusinessEntity .
 
 mv:name
@@ -41,15 +44,15 @@ mv:name
     rdfs:comment "Name of the civic structure or facility." ;
     rdfs:domain s:CivicStructure ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "Name"@de, "name"@en ;
+    rdfs:label "Name"@de , "name"@en ;
     rdfs:range xsd:string .
 
 mv:openingHours
     a rdf:Property, owl:DatatypeProperty ;
-    rdfs:comment "Indicates the opening hours of a civic structure, such as parking facilities, charging points and filling stations."@en ;
+    rdfs:comment "Indicates the opening hours of a civic structure, such as parking facilities, charging points or filling stations."@en ;
     rdfs:domain s:CivicStructure ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "opening hours"@en, "Öffnungszeiten"@de ;
+    rdfs:label "opening hours"@en , "Öffnungszeiten"@de ;
     rdfs:range xsd:string .
 
 mv:picture
@@ -57,8 +60,32 @@ mv:picture
     rdfs:comment "URL of the picture of a civic structure or facility."@en ;
     rdfs:domain s:CivicStructure ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "picture"@en ;
+    rdfs:label "picture"@en , "Bild"@de ;
     rdfs:range xsd:string .
+
+mv:hasVehicleWidthLimitInM
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "Indicates the width limit in meter for vehicles using the parking facility." ;
+    rdfs:domain s:CivicStructure ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "has vehicle width limit"@en, "hat Breitenbegrenzung für Fahrzeuge"@de ;
+    rdfs:range xsd:decimal .
+
+mv:hasVehicleHeightLimitInM
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "Indicates the height limit in meter for vehicles using the parking facility." ;
+    rdfs:domain s:CivicStructure ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "has vechicle height limit"@en, "hat Höhenbegrenzung für Fahrzeuge"@de ;
+    rdfs:range xsd:decimal .
+
+mv:hasVehicleLengthLimitInM
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "Indicates the length limit in meter for vehicles using the parking facility." ;
+    rdfs:domain s:CivicStructure ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "has vehicle length limit"@en, "hat Längenbegrenzung für Fahrzeuge"@de ;
+    rdfs:range xsd:decimal .
 
 s:CivicStructure
     a owl:Class ;
@@ -95,7 +122,7 @@ s:address
 
 geo:lat
     a rdf:Property, owl:DatatypeProperty ;
-    rdfs:comment "Geographic latitude of a place"@en ;
+    rdfs:comment "Geographic latitude of a place."@en ;
     rdfs:domain s:Place ;
     rdfs:isDefinedBy <http://www.w3.org/2003/01/geo/wgs84_pos#> ;
     rdfs:label "latitude"@en ;
@@ -103,9 +130,14 @@ geo:lat
 
 geo:long
     a rdf:Property, owl:DatatypeProperty ;
-    rdfs:comment "Geographic longitude of a place"@en ;
+    rdfs:comment "Geographic longitude of a place."@en ;
     rdfs:domain s:Place ;
     rdfs:isDefinedBy <http://www.w3.org/2003/01/geo/wgs84_pos#> ;
     rdfs:label "longitude"@en ;
     rdfs:range xsd:string .
 
+gr:BusinessEntity
+   a owl:class ;
+   rdfs:comment "An instance of this class represents the legal agent making (or seeking) a particular offering. This can be a legal body or a person. A business entity has at least a primary mailing address and contact details. For this, typical address standards (vCard) and location data (geo, WGS84) can be attached. Note that the location of the business entity is not necessarily the location from which the product or service is being available."@en ;
+   rdfs:isDefinedBy <http://purl.org/goodrelations/v1#> ;
+   rdfs:label "Business entity"@en , "Juristische Person"@de .
