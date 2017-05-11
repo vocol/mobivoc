@@ -31,6 +31,14 @@ mv:isOperatedBy
 
 # add gr:BusinessEntity explicitly as class as below? Does it include private persons? Do they then act as a business entitiy? 
 
+mv:hasID
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "ID the civic structure or facility." ;
+    rdfs:domain s:CivicStructure ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "ID"@de , "ID"@en ;
+    rdfs:range xsd:string .
+
 mv:isOwnedBy
     a rdf:Property, owl:ObjectProperty ;
     rdfs:comment "The owner of a civic structure or facility. Owner and operator can be different business entities."@en ;
