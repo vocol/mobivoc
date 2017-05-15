@@ -57,11 +57,10 @@ mv:BrandsCustomers
     rdfs:label "Brands Customers"@en .
 
 mv:CHAdeMOPlug
-    a owl:Class ;
     rdfs:comment "Plug with CHAdeMO connection." ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "CHAdeMO"@en ;
-    rdfs:subClassOf mv:PlugType ;
+    a mv:PlugType ;
     owl:sameAs dbpedia:CHAdeMO ;
     foaf:depiction <http://upload.wikimedia.org/wikipedia/commons/f/f3/VDE-AR-E_2623-2-2-plug.jpg> .
 
@@ -104,11 +103,10 @@ mv:ChargingSpeed
     rdfs:label "Charging Speed"@en .
 
 mv:ComboPlug
-    a owl:Class ;
     rdfs:comment "Plug with combo connection." ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "Combo Plug"@en ;
-    rdfs:subClassOf mv:PlugType .
+    a mv:PlugType .
 
 mv:CreditCard
     a mv:IdentificationSystem ;
@@ -123,11 +121,10 @@ mv:CustomerOfPremise
     rdfs:label "Customer Of Premise"@en .
 
 mv:EUDomesticPlug
-    a owl:Class ;
     rdfs:comment "Plug with EU domestic plug connection." ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "EU Domestic Plug"@en ;
-    rdfs:subClassOf mv:PlugType ;
+    a mv:PlugType ;
     owl:sameAs dbpedia:Europlug .
 
 mv:EmployeesOnly
@@ -221,11 +218,10 @@ mv:PlugType
     rdfs:label "Plug Type"@en, "Steckertyp"@de .
 
 mv:SchukoPlug
-    a owl:Class ;
     rdfs:comment "Plug with Schuko plug connection." ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "Schuko Plug"@en ;
-    rdfs:subClassOf mv:PlugType ;
+    a mv:PlugType ;
     owl:sameAs dbpedia:Schuko ;
     foaf:depiction <http://upload.wikimedia.org/wikipedia/commons/e/ef/Schuko_plug_and_socket.png> .
 
@@ -242,37 +238,33 @@ mv:TextMessage
     rdfs:label "TextMessage"@en .
 
 mv:Type1Plug
-    a owl:Class ;
     rdfs:comment "Plug with Type 1 plug connection." ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "Type1 Plug"@en ;
-    rdfs:subClassOf mv:PlugType ;
+    a mv:PlugType ;
     owl:sameAs dbpedia:SAE_J1772 ;
     foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/SAE_J1772_7058855567.jpg> .
 
 mv:Type2Plug
-    a owl:Class ;
     rdfs:comment "Plug with Type 2 plug connection." ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "Type2 Plug"@en ;
-    rdfs:subClassOf mv:PlugType ;
+    a mv:PlugType ;
     owl:sameAs "http://en.wikipedia.org/wiki/IEC_62196#Type_2:_VDE-AR-E_2623-2-2" ;
     foaf:depiction <http://upload.wikimedia.org/wikipedia/commons/f/f3/VDE-AR-E_2623-2-2-plug.jpg> .
 
 mv:Type3Plug
-    a owl:Class ;
     rdfs:comment "Plug with Typ 3 plug connection." ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "Type3 Plug"@en ;
-    rdfs:subClassOf mv:PlugType ;
+    a mv:PlugType ;
     skos:altLabel "EV Plug" .
 
 mv:UnknownPlug
-    a owl:Class ;
     rdfs:comment "Plug with unknown connection." ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "Unbekannter Anschluss"@de, "Unknown Plug"@en ;
-    rdfs:subClassOf mv:PlugType .
+    a mv:PlugType .
 
 mv:access
     a rdf:Property, owl:ObjectProperty ;
