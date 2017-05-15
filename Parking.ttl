@@ -509,7 +509,7 @@ mv:hasEntrance
 
 mv:hasParkingUsageType
     a rdf:Property, owl:ObjectProperty ;
-    rdfs:comment "Relates the capacity to a specific designated usage type."@en ;
+    rdfs:comment "Relates the capacity of a parking facility to a specific designated usage type."@en ;
     rdfs:domain mv:Capacity ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "has parking usage type"@en, "hat Nutzungsart"@de ;
@@ -532,7 +532,7 @@ mv:Capacity
 
 mv:intendedForVehicle
     a rdf:Property, owl:ObjectProperty ;
-    rdfs:comment "The capacity is intended for specific types of vehicles."@en ;
+    rdfs:comment "Indicates that the given capacity is intended for a specific type of vehicle."@en ;
     rdfs:domain mv:Capacity ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "intended for vehicle"@en, "vorgesehen für Fahrzeugtyp"@de ;
@@ -568,7 +568,7 @@ mv:RecreationalVehicle
 
 mv:hasCapacity
     a rdf:Property, owl:ObjectProperty ;
-    rdfs:comment "Relates the parking facility or parking space to their capacity."@en ;
+    rdfs:comment "Relates the parking facility or parking space to its capacity."@en ;
     rdfs:domain [
           a owl:Class ;
           owl:unionOf (mv:ParkingFacility mv:ParkingSpace)
@@ -580,14 +580,14 @@ mv:hasCapacity
 mv:RealTimeCapacity
     a rdfs:Class, owl:Class ;
     rdfs:subClassOf mv:Capacity;
-    rdfs:comment "Real time capacity of a parking facility or a parking space."@en ;
+    rdfs:comment "Real-time capacity of a parking facility or parking space."@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "Echtzeit Kapazität"@de, "Real time capacity"@en ;
     .
 
 mv:hasMaximumValue
     a rdf:Property, owl:DatatypeProperty ;
-    rdfs:comment "The maximum value of the capacity."@en ;
+    rdfs:comment "Indicates the maximum value of the capacity."@en ;
     rdfs:domain mv:Capacity ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "has maximum value"@en ;
@@ -595,7 +595,7 @@ mv:hasMaximumValue
 
 mv:hasCurrentValue
     a rdf:Property, owl:DatatypeProperty ;
-    rdfs:comment "The current value of the real time capacity."@en ;
+    rdfs:comment "Indicates the current value of the real-time capacity."@en ;
     rdfs:domain mv:RealTimeCapacity ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "has current value"@en ;
@@ -604,7 +604,7 @@ mv:hasCurrentValue
 dct:date
     a rdf:Property, owl:DatatypeProperty ;
     rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
-    rdfs:comment "The date of the real time capacity."@en ;
+    rdfs:comment "The date of the given real-time capacity."@en ;
     rdfs:label "date"@en ;
     rdfs:domain mv:RealTimeCapacity ;
     rdfs:range xsd:datetime ;
