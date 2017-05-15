@@ -369,70 +369,60 @@ mv:ParkingUsageType
     .
 
 mv:CarsharingParkingSpace
-    a rdfs:Class, owl:Class ;
     rdfs:comment "Specially designated and identified parking space reserved for carsharing vehicles."@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "Carsharing-Stellplatz"@de , "Carsharing parking space"@en , "Place de stationnement pour l'autopartage"@fr ; 
     a mv:ParkingUsageType .
 
 mv:DisabledParkingSpace 
-    a rdfs:Class, owl:Class ;
     rdfs:comment "Specially designated and identified parking space reserved for persons with disabilities, or in some situations, permission to park in a time-limited space for longer time, or to park at a meter without payment."@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "Behindertenstellplatz"@de , "Disabled parking space"@en ;
     a mv:ParkingUsageType .
 
 mv:MotorbikeParkingSpace
-    a rdfs:Class, owl:Class ;
     rdfs:comment "Parking space where motorbikes can park."@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "Motorradstellplatz"@de , "Motorbike parking space"@en ;
     a mv:ParkingUsageType .
 
 mv:BicylceParkingSpace
-    a rdfs:Class, owl:Class ;
     rdfs:comment "Parking space where bicycles can park."@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "Fahrradstellplatz"@de , "Bicycle parking space"@en ;
     a mv:ParkingUsageType .
 
 mv:CarParkingSpace
-    a rdfs:Class, owl:Class ;
     rdfs:comment "Parking space where cars can park."@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "Pkw-Stellplatz"@de , "Car parking space"@en ;
     a mv:ParkingUsageType .
 
 mv:CoachParkingSpace
-    a rdfs:Class, owl:Class ;
     rdfs:comment "Parking space where coaches or buses can park."@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "Busstellplatz"@de , "Coach parking space"@en ;
     a mv:ParkingUsageType .
 
 mv:TruckParkingSpace
-    a rdfs:Class, owl:Class ;
     rdfs:comment "Parking space where trucks can park."@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "Lkw-Stellplatz"@de , "Truck parking space"@en ;
     a mv:ParkingUsageType .
 
 mv:TaxiParkingSpace
-    a rdfs:Class, owl:Class ;
     rdfs:comment "Parking space where only taxis are allowed to."@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "Taxi-Stellplatz"@de , "Taxi parking space"@en ;
     a mv:ParkingUsageType .
 
 mv:XXLParkingSpace
-    a rdfs:Class, owl:Class ;
     rdfs:comment "A special parking space having larger dimensions than usual parking spaces."@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "XXL parking space"@en , "Extra großer Stellplatz"@de ;
     a mv:ParkingUsageType .
 
 mv:WomensParkingSpace
-    a rdfs:Class, owl:Class ;
     rdfs:comment "Specially designated and identified parking space to be used by women."@en , "Gekennzeichneter und ausgewiesener Stellplatz für die Nutzung durch Frauen."@de ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "Women's parking space"@en , "Frauenparkplatz"@de , "Damenparkplatz"@de-AT;
