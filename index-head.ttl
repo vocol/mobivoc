@@ -60,7 +60,7 @@ vann:preferredNamespaceUri
     dct:publisher ecc:eccenca-GmbH ;
     vann:preferredNamespacePrefix "mv" ;
     vann:preferredNamespaceUri "http://schema.mobivoc.org/" ;
-    void:vocabulary <http://purl.org/dc/terms/>, <http://purl.org/vocab/vann/>, <http://xmlns.com/foaf/0.1/> ;
+    void:vocabulary <http://purl.org/vocab/vann/>, <http://xmlns.com/foaf/0.1/> ;
     a voaf:Vocabulary, owl:Ontology ;
     rdfs:comment "Our goal is to significantly improve the data mobility between all stakeholders by providing a standardized vocabulary using Semantic Web technologies and ontologies. For the open vocabulary covering various mobility aspects we use RDF (Resource Description Framework) - a recommended specification of the World Wide Web Consortium (W3C) and the so-called lingua franca for the integration of data and web. We invite everyone who is interested to join our MobiVoc initiative and to participate in the development of the Open Mobility Vocabulary." ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
