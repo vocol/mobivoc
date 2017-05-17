@@ -3,7 +3,7 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Changelog's Format](http://keepachangelog.com/).
 
-## [0.3.0] 2017-05-15
+## [Unreleased]
 
 ### Added
 - capacity class
@@ -15,6 +15,7 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 ### Changed
 - subclasses of plug type and parking facility to instances of those classes
 - updated diagrams
+- forward ontology-includes
 
 ## [0.2.1] 2017-04-18
 
