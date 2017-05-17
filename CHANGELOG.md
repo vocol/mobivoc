@@ -5,7 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 
 ## [Unreleased]
 
-TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security section
+### Changed
+- fix problem with dcterms import
 
 ## [0.3.0] 2017-05-17
 
