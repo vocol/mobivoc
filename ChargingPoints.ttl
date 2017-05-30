@@ -24,7 +24,7 @@ mv:AccessCode
     a mv:IdentificationSystem ;
     rdfs:comment "Code to get access to the identification system." ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "Access Code"@en, "Zugangscode"@en .
+    rdfs:label "Access Code"@en, "Zugangscode"@de .
 
 mv:AccessInformation
     a rdfs:Class, owl:Class ;
@@ -179,7 +179,7 @@ mv:None
     a mv:IdentificationSystem ;
     rdfs:comment "No identification necessary." ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "Keine"@en, "None"@en .
+    rdfs:label "Keine"@de, "None"@en .
 
 mv:OpenToAllUsers
     a mv:AccessType ;

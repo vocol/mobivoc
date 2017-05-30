@@ -55,14 +55,6 @@ mv:name
     rdfs:label "Name"@de , "name"@en ;
     rdfs:range xsd:string .
 
-mv:openingHours
-    a rdf:Property, owl:DatatypeProperty ;
-    rdfs:comment "Indicates the opening hours of a civic structure, such as parking facilities, charging points or filling stations."@en ;
-    rdfs:domain s:CivicStructure ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "opening hours"@en , "Öffnungszeiten"@de ;
-    rdfs:range xsd:string .
-
 mv:picture
     a rdf:Property, owl:DatatypeProperty ;
     rdfs:comment "URL of the picture of a civic structure or facility."@en ;

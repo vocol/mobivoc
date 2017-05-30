@@ -175,7 +175,7 @@ mv:ParkingLot
     rdfs:label "Parking lot"@en, "Parkplatz"@de ;
     rdfs:subClassOf mv:ParkingFacility ;
     skos:altLabel "Parkfläche"@de, "car lot"@en ;
-    skos:prefLabel "Car park"@en-UK, "Parking lot"@en-US, "Parkplatz"@de .
+    skos:prefLabel "Car park"@en-uk, "Parking lot"@en-us, "Parkplatz"@de .
 
 mv:PayStation
     a mv:ParkingFacilityFeature ;
@@ -425,9 +425,9 @@ mv:XXLParkingSpace
 mv:WomensParkingSpace
     rdfs:comment "Specially designated and identified parking space to be used by women."@en , "Gekennzeichneter und ausgewiesener Stellplatz für die Nutzung durch Frauen."@de ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "Women's parking space"@en , "Frauenparkplatz"@de , "Damenparkplatz"@de-AT;
+    rdfs:label "Women's parking space"@en , "Frauenparkplatz"@de ;
     skos:prefLabel "Women's parking space"@en ;
-    skos:altLabel "Ladies' parking space"@en ;
+    skos:altLabel "Ladies' parking space"@en, "Damenparkplatz"@de-at ;
     a mv:ParkingUsageType .
 
 mv:hasArrangement
@@ -464,7 +464,9 @@ mv:AngleParking
     a mv:ArrangementPattern ;
     rdfs:comment "Parking where the parking spaces are arranged at an acute angle to the direction of approach, allowing the driver to enter a space easily and later reverse back out."@en , "Bei der Schrägaufstellung wird das Fahrzeug mit einem Aufstellwinkel zwischen 50 und 90 gon (45° und ca. 81°) geparkt. Das Fahrzeug kann vorwärts in den Parkstand einfahren, muss zum Ausparken jedoch wieder rückwärts herausfahren. Diese Aufstellung wird oft bei Parkplätzen verwendet, da sie schmalere Fahrwege als die Senkrechtaufstellung und bessere Platzausnutzung als Parallelaufstellung ermöglicht."@de ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "Angle parking"@en-us , "Echelon parking"@en-uk , "Schrägaufstellung"@de .
+    rdfs:label "Angle parking"@en , "Schrägaufstellung"@de ;
+    skos:altLabel "Echelon parking"@en-uk ;
+    .
 
 mv:ParkingFacilityExit
     a rdfs:Class, owl:Class ;
