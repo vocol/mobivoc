@@ -363,7 +363,7 @@ mv:ParkingSpace
 
 mv:ParkingUsageType
     a rdfs:Class, owl:Class ;
-    rdfs:comment "A type of special purpose a parking space is designated for, like womens parking spaces."@en ;
+    rdfs:comment "A type of special purpose a parking space is designated for, like women's parking spaces."@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "Stellplatz Nutzungsart"@de, "Parking usage type"@en ;
     .
@@ -380,46 +380,10 @@ mv:DisabledParkingSpace
     rdfs:label "Behindertenstellplatz"@de , "Disabled parking space"@en ;
     a mv:ParkingUsageType .
 
-mv:MotorbikeParkingSpace
-    rdfs:comment "Parking space where motorbikes can park."@en ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "Motorradstellplatz"@de , "Motorbike parking space"@en ;
-    a mv:ParkingUsageType .
-
-mv:BicylceParkingSpace
-    rdfs:comment "Parking space where bicycles can park."@en ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "Fahrradstellplatz"@de , "Bicycle parking space"@en ;
-    a mv:ParkingUsageType .
-
-mv:CarParkingSpace
-    rdfs:comment "Parking space where cars can park."@en ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "Pkw-Stellplatz"@de , "Car parking space"@en ;
-    a mv:ParkingUsageType .
-
-mv:CoachParkingSpace
-    rdfs:comment "Parking space where coaches or buses can park."@en ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "Busstellplatz"@de , "Coach parking space"@en ;
-    a mv:ParkingUsageType .
-
-mv:TruckParkingSpace
-    rdfs:comment "Parking space where trucks can park."@en ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "Lkw-Stellplatz"@de , "Truck parking space"@en ;
-    a mv:ParkingUsageType .
-
 mv:TaxiParkingSpace
     rdfs:comment "Parking space where only taxis are allowed to."@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "Taxi-Stellplatz"@de , "Taxi parking space"@en ;
-    a mv:ParkingUsageType .
-
-mv:XXLParkingSpace
-    rdfs:comment "A special parking space having larger dimensions than usual parking spaces."@en ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "XXL parking space"@en , "Extra großer Stellplatz"@de ;
     a mv:ParkingUsageType .
 
 mv:WomensParkingSpace
@@ -544,8 +508,22 @@ mv:Car
     a s:Vehicle ;
     skos:altLabel "Pkw"@de .
 
+mv:BusOrCoach
+    rdfs:comment "A bus is a road vehicle designed to carry passengers. Coaches are luxury busses, usually in service for long distance travel."@en ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Coach"@en, "Bus"@de ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    a s:Vehicle .
+
+mv:Truck
+    rdfs:comment "A motor vehicle designed to transport cargo."@en ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Truck"@en, "Lkw"@de ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    a s:Vehicle .
+
 mv:Motorbike
-    rdfs:comment "A two- or three-wheeled motor vehicle."@en ;
+    rdfs:comment "A single-track, two-wheeled motor vehicle."@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "Motorbike"@en, "Motorrad"@de ;
     skos:prefLabel "Motorbike"@en, "Motorrad"@de, "Moto"@fr ;
