@@ -10,6 +10,7 @@
 @prefix : <http://example.org/parking/> .
 
 # a parking facility with 100 places for cars and 5 places specifically for women
+
 :exampleParkingFacility a mv:ParkingFacility ;
   s:name "example parking facility" ;
   mv:hasCapacity [
@@ -27,6 +28,7 @@
 
 # a parking space with one place and real time capacity
 # RealTimeCapacity is a subclass of Capacity, so it inherits its properties
+
 :exampleRealTimeParkingSpace a mv:ParkingSpace ;
   s:name "example parking space" ;
   mv:hasCapacity [
