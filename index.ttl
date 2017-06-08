@@ -151,7 +151,7 @@ mv:access
 mv:AccessCondition
     a owl:Class ;
     rdfs:comment "A condition that has to be fullfilled to get access to a civic structure."@en ;
-    rdfs:isDefinedBy <http://schema.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "Access condition"@en , "Zugangsbedingung"@de .
 
 mv:restrictedToVehicle
@@ -173,7 +173,7 @@ mv:restrictedToGroup
 mv:UserGroup
     a owl:Class ;
     rdfs:comment "A group of users having a common characteristic."@en ;
-    rdfs:isDefinedBy <http://schema.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "User group"@en , "Nutzergruppe"@de .
 
 mv:validForGroup
@@ -306,12 +306,13 @@ mv:Restrict
     rdfs:comment "An action is restricted."@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "Restrict"@en, "Beschränken"@de ;
-    a mv:Action 
+    a mv:Action ;
+    .
 
 s:openingHoursSpecification
     a rdf:Property, owl:ObjectProperty ;
     rdfs:comment "Indicates the general opening hours for a business or civic structure."@en ;
-    rdfs:domain mv:CivicStructure ;
+    rdfs:domain s:CivicStructure ;
     rdfs:isDefinedBy <http://schema.org/> ;
     rdfs:label "opening hours specification"@en ;
     rdfs:range s:OpeningHoursSpecification .
