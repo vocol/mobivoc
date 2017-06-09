@@ -309,7 +309,7 @@ mv:parkingFacilityStatus
     rdfs:comment "Indicates the current status of the parking facility." ;
     rdfs:domain mv:ParkingFacility ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "parking facility status"@en, "Status der Parkeinrichtung"@de ;
+    rdfs:label "parking facility status"@en, "hat Status der Parkeinrichtung"@de ;
     rdfs:range mv:ParkingFacilityStatus .
 
 mv:queuingTime
@@ -436,7 +436,7 @@ mv:exit
     rdfs:comment "Describes the exit of a parking facility." ;
     rdfs:domain mv:ParkingFacility ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "exit"@en, "Ausfahrt"@de ;
+    rdfs:label "exit"@en, "hat Ausfahrt"@de ;
     rdfs:range mv:ParkingFacilityExit .
 
 mv:ParkingFacilityEntrance
@@ -451,7 +451,7 @@ mv:entrance
     rdfs:comment "Describes the entrance of a parking facility."@en ;
     rdfs:domain mv:ParkingFacility ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "entrance"@en, "Einfahrt"@de ;
+    rdfs:label "entrance"@en, "hat Einfahrt"@de ;
     rdfs:range mv:ParkingFacilityEntrance .
 
 
@@ -468,7 +468,7 @@ mv:parkingSpace
     rdfs:comment "Relates the parking facility to a contained parking space."@en ;
     rdfs:domain mv:ParkingFacility ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "parking space"@en, "Stellplatz"@de ;
+    rdfs:label "parking space"@en, "hat Stellplatz"@de ;
     rdfs:range mv:ParkingSpace .
 
 mv:Capacity
