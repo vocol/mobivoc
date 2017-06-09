@@ -3,6 +3,11 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Changelog's Format](http://keepachangelog.com/).
 
+## [0.4.2] 2017-06-09
+
+### Changed
+- forward ontology-includes (widoco version fix)
+
 ## [0.4.1] 2017-06-09
 
 ### Changed
