@@ -14,6 +14,7 @@ TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security se
 - user groups
 - time, price, opening hours specification
 - example parking facility description
+- additional diagrams for sub-topics
 
 ### Changed
 - change naming schema of properties to be more consistent
