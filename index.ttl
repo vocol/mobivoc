@@ -154,12 +154,12 @@ mv:AccessCondition
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "Access condition"@en , "Zugangsbedingung"@de .
 
-mv:restrictedToVehicle
+mv:restrictedToVehicleType
     a rdf:Property, owl:ObjectProperty ;
     rdfs:comment "Indicates that a civic structure like a parking facility or charging station can only be accessed with a specific type of vehicle."@en ;
     rdfs:domain mv:AccessCondition ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "Access condition"@en , "Zugangsbeschränkung"@de ;
+    rdfs:label "restricted to vehicle type"@en , "beschränkt auf Fahrzeugtyp"@de ;
     rdfs:range s:Vehicle .
 
 mv:restrictedToGroup
@@ -204,7 +204,7 @@ s:PriceSpecification
     a owl:Class ;
     rdfs:comment "A structured value representing a price or price range for an item."@en ;
     rdfs:isDefinedBy <http://schema.org/> ;
-    rdfs:label "Price Specification"@en, "Preisspezifikation"@de .
+    rdfs:label "Price specification"@en, "Preisspezifikation"@de .
 
 mv:freeOfCharge
     a rdf:Property, owl:DatatypeProperty ;
@@ -228,13 +228,13 @@ mv:dueForTime
     rdfs:domain s:PriceSpecification ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "due for time"@en , "fällig für Zeitdauer"@de ;
-    rdfs:range s:TimeSpecification .
+    rdfs:range mv:TimeSpecification .
 
 mv:TimeSpecification
     a owl:Class ;
     rdfs:comment "Specific time a price specification is due for."@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "Time Specification"@en, "Zeitspezifikation"@de .
+    rdfs:label "Time specification"@en, "Zeitspezifikation"@de .
 
 mv:overnight
     a rdf:Property, owl:DatatypeProperty ;
@@ -321,7 +321,7 @@ s:OpeningHoursSpecification
     a owl:Class ;
     rdfs:comment "A structured value providing information about the opening hours of a place or a certain service inside a place."@en ;
     rdfs:isDefinedBy <http://schema.org/> ;
-    rdfs:label "Opening Hours Specification"@en, "Öffnungszeiten"@de .
+    rdfs:label "Opening hours specification"@en, "Öffnungszeiten"@de .
 
 mv:customerOf
     a rdf:Property, owl:ObjectProperty ;

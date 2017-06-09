@@ -1,0 +1,52 @@
+digraph "http://schema.mobivoc.org/" {
+        fontname = "Roboto"
+        fontsize = 8
+        dpi = 300
+        overlap=false
+        forcelabels=true
+        nodesep=0.3
+        ratio = fill
+        margin=0
+
+        node [
+                fontname = "Roboto"
+                fontsize = 8
+                shape = "Mrecord"
+                style=filled
+                fontcolor=black
+                fillcolor="#CECECE"
+                color="#706f6f"
+        ]
+
+        edge [
+                fontname = "Roboto"
+                fontsize = 8
+        ]
+"http://schema.org/PostalAddress" [label ="{s:Postal address|The mailing address.\l}" fillcolor="0.0 0.4 1"]
+"http://schema.org/CivicStructure" [label ="{s:Civic structure|ID : string\ladditional information : string\lname : string\lpicture : string\lvechicle height limit : decimal\lvehicle length limit : decimal\lvehicle width limit : decimal\l| A public structure, such as a town\lhall or concert hall.\l}" fillcolor="0.0 0.4 1"]
+"http://schema.org/Vehicle" [label ="{s:Vehicle|A vehicle is a\ldevice that is\ldesigned or used\lto transport people\lor cargo over land,\lwater, air, or\lthrough space.\l}" fillcolor="0.0 0.4 1"]
+"http://schema.mobivoc.org/AccessCondition" [label ="{Access condition|A condition that\lhas to be fullfilled\lto get access to\la civic structure.\l}" fillcolor="#E7BD5A"]
+"http://schema.mobivoc.org/Action" [label ="{Action|Action that is\ldone.\l}" fillcolor="#E7BD5A"]
+"http://schema.mobivoc.org/UserGroup" [label ="{User group|A group of users\lhaving a common\lcharacteristic.\l}" fillcolor="#E7BD5A"]
+"http://schema.org/PaymentMethod" [label ="{s:Payment method|A payment method\lis a standardized\lprocedure for transferring\lthe monetary amount\lfor a purchase.\lPayment methods\lare characterized\lby the legal and\ltechnical structures\lused, and by the\lorganization or\lgroup carrying out\lthe transaction.\l}" fillcolor="0.0 0.4 1"]
+"http://schema.org/PriceSpecification" [label ="{s:Price specification|free of charge : boolean\lunspecified charge : boolean\l| A structured value representing\la price or price range for an\litem.\l}" fillcolor="0.0 0.4 1"]
+"http://schema.org/OpeningHoursSpecification" [label ="{s:Opening hours specification|A structured value providing\linformation about the opening\lhours of a place or a certain\lservice inside a place.\l}" fillcolor="0.0 0.4 1"]
+"http://schema.mobivoc.org/TimeSpecification" [label ="{Time specification|overnight : boolean\ltime end value : float\ltime start value : float\ltime unit : string\l| Specific time a price specification\lis due for.\l}" fillcolor="#E7BD5A"]
+"http://schema.org/Place" [label ="{s:Place|geo:latitude : string\lgeo:longitude : string\l| Entities that have a somewhat\lfixed, physical extension.\l}" fillcolor="0.0 0.4 1"]
+"http://schema.org/Place" -> "http://schema.org/PostalAddress" [label="s:address"]
+"http://schema.org/PriceSpecification" -> "http://schema.mobivoc.org/UserGroup" [label="valid for user group"]
+"http://schema.org/CivicStructure" -> "http://purl.org/goodrelations/v1#BusinessEntity" [label="operated by
+owned by"]
+"http://schema.mobivoc.org/AccessCondition" -> "http://schema.mobivoc.org/Action" [label="action"]
+"http://schema.mobivoc.org/AccessCondition" -> "http://schema.org/Vehicle" [label="restricted to vehicle type"]
+"http://schema.org/PriceSpecification" -> "http://schema.org/Vehicle" [label="valid for vehicle"]
+"http://schema.org/CivicStructure" -> "http://schema.mobivoc.org/AccessCondition" [label="access"]
+"http://schema.org/CivicStructure" -> "http://schema.org/PriceSpecification" [label="price"]
+"http://schema.mobivoc.org/UserGroup" -> "http://purl.org/goodrelations/v1#BusinessEntity" [label="customer of
+employee of"]
+"http://schema.org/CivicStructure" -> "http://schema.org/PaymentMethod" [label="s:accepted payment method"]
+"http://schema.mobivoc.org/AccessCondition" -> "http://schema.mobivoc.org/UserGroup" [label="restricted to user group"]
+"http://schema.org/CivicStructure" -> "http://schema.org/OpeningHoursSpecification" [label="s:opening hours specification"]
+"http://schema.org/PriceSpecification" -> "http://schema.mobivoc.org/TimeSpecification" [label="due for time"]
+"http://schema.org/CivicStructure" -> "http://schema.org/Place" [arrowhead = "empty"]
+}

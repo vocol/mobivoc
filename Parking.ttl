@@ -145,19 +145,19 @@ mv:ParkingFacilityConnection
     a rdfs:Class, owl:Class ;
     rdfs:comment "Transport connections available at the parking facility (e.g. Park & Ride)." ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "Anschlussmöglichkeiten der Parkeinrichtung"@de, "Parking Facility Connections"@en .
+    rdfs:label "Anschlussmöglichkeiten der Parkeinrichtung"@de, "Parking facility connections"@en .
 
 mv:ParkingFacilityFeature
     a rdfs:Class, owl:Class ;
     rdfs:comment "Features of the parking facility (e.g. parking for disabled people)." ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "Ausstattung der Parkeinrichtung"@de, "Parking Facility Feature"@en .
+    rdfs:label "Ausstattung der Parkeinrichtung"@de, "Parking facility feature"@en .
 
 mv:ParkingFacilityStatus
     a rdfs:Class, owl:Class ;
     rdfs:comment "Status information of a parking facility." ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "Parking Facility Status"@en, "Status der Parkeinrichtung"@de .
+    rdfs:label "Parking facility status"@en, "Status der Parkeinrichtung"@de .
 
 mv:ParkingGarage
     a rdfs:Class, owl:Class ;

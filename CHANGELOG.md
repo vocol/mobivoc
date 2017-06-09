@@ -7,6 +7,21 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 
 TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security section
 
+## [0.4.0] 2017-06-09
+
+### Added
+- access conditions & actions
+- user groups
+- time, price, opening hours specification
+- example parking facility description
+
+### Changed
+- change naming schema of properties to be more consistent
+- update diagrams
+
+### Remove
+- access type (replaced by access conditions)
+
 ## [0.3.1] 2017-05-17
 
 ### Changed
