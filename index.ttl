@@ -21,30 +21,28 @@ mv:additionalInformation
     rdfs:label "additional information"@en , "zusätzliche Information"@de ;
     rdfs:range xsd:string .
 
-mv:isOperatedBy
+mv:operatedBy
     a rdf:Property, owl:ObjectProperty ;
     rdfs:comment "The operator of a civic structure or facility. Operator and owner can be different business entitites."@en ;
     rdfs:domain s:CivicStructure ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "is operated by"@en , "wird betrieben von"@de ;
+    rdfs:label "operated by"@en , "betrieben von"@de ;
     rdfs:range gr:BusinessEntity .
 
-# add gr:BusinessEntity explicitly as class as below? Does it include private persons? Do they then act as a business entitiy? 
-
-mv:hasID
+mv:id
     a rdf:Property, owl:DatatypeProperty ;
-    rdfs:comment "ID the civic structure or facility." ;
+    rdfs:comment "ID of the civic structure or facility." ;
     rdfs:domain s:CivicStructure ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "ID"@de , "ID"@en ;
     rdfs:range xsd:string .
 
-mv:isOwnedBy
+mv:ownedBy
     a rdf:Property, owl:ObjectProperty ;
     rdfs:comment "The owner of a civic structure or facility. Owner and operator can be different business entities."@en ;
     rdfs:domain s:CivicStructure ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "is owned by"@en , "ist in Besitz von"@de ;
+    rdfs:label "owned by"@en , "in Besitz von"@de ;
     rdfs:range gr:BusinessEntity .
 
 mv:name
@@ -55,14 +53,6 @@ mv:name
     rdfs:label "Name"@de , "name"@en ;
     rdfs:range xsd:string .
 
-mv:openingHours
-    a rdf:Property, owl:DatatypeProperty ;
-    rdfs:comment "Indicates the opening hours of a civic structure, such as parking facilities, charging points or filling stations."@en ;
-    rdfs:domain s:CivicStructure ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "opening hours"@en , "Öffnungszeiten"@de ;
-    rdfs:range xsd:string .
-
 mv:picture
     a rdf:Property, owl:DatatypeProperty ;
     rdfs:comment "URL of the picture of a civic structure or facility."@en ;
@@ -71,28 +61,28 @@ mv:picture
     rdfs:label "picture"@en , "Bild"@de ;
     rdfs:range xsd:string .
 
-mv:hasVehicleWidthLimitInM
+mv:vehicleWidthLimitInM
     a rdf:Property, owl:DatatypeProperty ;
     rdfs:comment "Indicates the width limit in meter for vehicles using the parking facility." ;
     rdfs:domain s:CivicStructure ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "has vehicle width limit"@en, "hat Breitenbegrenzung für Fahrzeuge"@de ;
+    rdfs:label "vehicle width limit"@en, "Breitenbegrenzung für Fahrzeuge"@de ;
     rdfs:range xsd:decimal .
 
-mv:hasVehicleHeightLimitInM
+mv:vehicleHeightLimitInM
     a rdf:Property, owl:DatatypeProperty ;
     rdfs:comment "Indicates the height limit in meter for vehicles using the parking facility." ;
     rdfs:domain s:CivicStructure ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "has vechicle height limit"@en, "hat Höhenbegrenzung für Fahrzeuge"@de ;
+    rdfs:label "vechicle height limit"@en, "Höhenbegrenzung für Fahrzeuge"@de ;
     rdfs:range xsd:decimal .
 
-mv:hasVehicleLengthLimitInM
+mv:vehicleLengthLimitInM
     a rdf:Property, owl:DatatypeProperty ;
     rdfs:comment "Indicates the length limit in meter for vehicles using the parking facility." ;
     rdfs:domain s:CivicStructure ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "has vehicle length limit"@en, "hat Längenbegrenzung für Fahrzeuge"@de ;
+    rdfs:label "vehicle length limit"@en, "Längenbegrenzung für Fahrzeuge"@de ;
     rdfs:range xsd:decimal .
 
 s:CivicStructure
@@ -149,3 +139,202 @@ gr:BusinessEntity
    rdfs:comment "An instance of this class represents the legal agent making (or seeking) a particular offering. This can be a legal body or a person. A business entity has at least a primary mailing address and contact details. For this, typical address standards (vCard) and location data (geo, WGS84) can be attached. Note that the location of the business entity is not necessarily the location from which the product or service is being available."@en ;
    rdfs:isDefinedBy <http://purl.org/goodrelations/v1#> ;
    rdfs:label "Business entity"@en , "Juristische Person"@de .
+
+mv:access
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "Indicates that a civic structure can only be accessed when certain conditions are fullfilled."@en ;
+    rdfs:domain s:CivicStructure ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "access"@en ;
+    rdfs:range mv:AccessCondition .
+
+mv:AccessCondition
+    a owl:Class ;
+    rdfs:comment "A condition that has to be fullfilled to get access to a civic structure."@en ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Access condition"@en , "Zugangsbedingung"@de .
+
+mv:restrictedToVehicleType
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "Indicates that a civic structure like a parking facility or charging station can only be accessed with a specific type of vehicle."@en ;
+    rdfs:domain mv:AccessCondition ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "restricted to vehicle type"@en , "beschränkt auf Fahrzeugtyp"@de ;
+    rdfs:range s:Vehicle .
+
+mv:restrictedToGroup
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "Indicates that a civic structure like a parking facility or charging station can only be accessed by a specific group of users."@en ;
+    rdfs:domain mv:AccessCondition ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "restricted to user group"@en , "beschränkt auf Nutzergruppe"@de ;
+    rdfs:range mv:UserGroup .
+
+mv:UserGroup
+    a owl:Class ;
+    rdfs:comment "A group of users having a common characteristic."@en ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "User group"@en , "Nutzergruppe"@de .
+
+mv:validForGroup
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "Indicates that a price specification is valid for a specific group of users."@en ;
+    rdfs:domain s:PriceSpecification ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "valid for user group"@en , "gültig für Nutzergruppe"@de ;
+    rdfs:range mv:UserGroup .
+
+mv:validForVehicle
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "Indicates that a price specification is valid for a specific type of vehicle."@en ;
+    rdfs:domain s:PriceSpecification ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "valid for vehicle"@en , "gültig für Fahrzeugtyp"@de ;
+    rdfs:range s:Vehicle .
+
+mv:price
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "Indicates that a civic structure can be used for a specific price."@en ;
+    rdfs:domain s:CivicStructure ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "price"@en , "Preis"@de ;
+    rdfs:range s:PriceSpecification .
+
+s:PriceSpecification
+    a owl:Class ;
+    rdfs:comment "A structured value representing a price or price range for an item."@en ;
+    rdfs:isDefinedBy <http://schema.org/> ;
+    rdfs:label "Price specification"@en, "Preisspezifikation"@de .
+
+mv:freeOfCharge
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "Indicates that the usage of the civic structure is for free." ;
+    rdfs:domain s:PriceSpecification ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "free of charge"@en, "kostenlos"@de ;
+    rdfs:range xsd:boolean .
+
+mv:unspecifiedCharge
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "Indicates that a charge has to be paid for the usage of the civic structure." ;
+    rdfs:domain s:PriceSpecification ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "unspecified charge"@en, "kostenpflichtig"@de ;
+    rdfs:range xsd:boolean .
+
+mv:dueForTime
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "Indicates that a price specification is due for a certain time specification."@en ;
+    rdfs:domain s:PriceSpecification ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "due for time"@en , "fällig für Zeitdauer"@de ;
+    rdfs:range mv:TimeSpecification .
+
+mv:TimeSpecification
+    a owl:Class ;
+    rdfs:comment "Specific time a price specification is due for."@en ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Time specification"@en, "Zeitspezifikation"@de .
+
+mv:overnight
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "Indicates that a time period overnight is possible." ;
+    rdfs:domain mv:TimeSpecification ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "overnight"@en, "über Nacht"@de ;
+    rdfs:range xsd:boolean .
+
+mv:timeUnit
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "Indicates the time unit a value is specified for." ;
+    rdfs:domain mv:TimeSpecification ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "time unit"@en, "Zeiteinheit"@de ;
+    rdfs:range xsd:string .
+
+mv:timeStartValue
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "Indicates the start value of a time period." ;
+    rdfs:domain mv:TimeSpecification ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "time start value"@en, "Anfangszeit"@de ;
+    rdfs:range xsd:float .
+
+mv:timeEndValue
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "Indicates the end value of a time period." ;
+    rdfs:domain mv:TimeSpecification ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "time end value"@en, "Endzeit"@de ;
+    rdfs:range xsd:float .
+
+s:acceptedPaymentMethod
+    a owl:ObjectProperty ;
+    rdfs:comment "The payment method(s) accepted by seller for this offer."@en ;
+    rdfs:domain s:CivicStructure ;
+    rdfs:isDefinedBy <http://schema.org/> ;
+    rdfs:label "accepted payment method"@en ;
+    rdfs:range s:PaymentMethod .
+
+s:PaymentMethod
+    a owl:Class ;
+    rdfs:comment "A payment method is a standardized procedure for transferring the monetary amount for a purchase. Payment methods are characterized by the legal and technical structures used, and by the organization or group carrying out the transaction."@en ;
+    rdfs:isDefinedBy <http://schema.org/> ;
+    rdfs:label "Payment method"@en, "Zahlungsart"@de .
+
+mv:action
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "Indicates which action is applied."@en ;
+    rdfs:domain mv:AccessCondition ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "action"@en ;
+    rdfs:range mv:Action .
+
+mv:Action
+    a owl:Class ;
+    rdfs:comment "Action that is done."@en ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Action"@en, "Aktion"@de .
+
+mv:Allow
+    rdfs:comment "Allow to do an action."@en ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Allow"@en, "Erlauben"@de ;
+    a mv:Action .
+
+mv:Restrict
+    rdfs:comment "An action is restricted."@en ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Restrict"@en, "Beschränken"@de ;
+    a mv:Action ;
+    .
+
+s:openingHoursSpecification
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "Indicates the general opening hours for a business or civic structure."@en ;
+    rdfs:domain s:CivicStructure ;
+    rdfs:isDefinedBy <http://schema.org/> ;
+    rdfs:label "opening hours specification"@en ;
+    rdfs:range s:OpeningHoursSpecification .
+
+s:OpeningHoursSpecification
+    a owl:Class ;
+    rdfs:comment "A structured value providing information about the opening hours of a place or a certain service inside a place."@en ;
+    rdfs:isDefinedBy <http://schema.org/> ;
+    rdfs:label "Opening hours specification"@en, "Öffnungszeiten"@de .
+
+mv:customerOf
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "Indicates that a group is customer of a specific business entity."@en ;
+    rdfs:domain mv:UserGroup ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "customer of"@en , "Kunde von"@de ;
+    rdfs:range gr:BusinessEntity .
+
+mv:employeeOf
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "Indicates that a group is employee of a specific business entity."@en ;
+    rdfs:domain mv:UserGroup ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "employee of"@en , "Mitarbeiter von"@de ;
+    rdfs:range gr:BusinessEntity .

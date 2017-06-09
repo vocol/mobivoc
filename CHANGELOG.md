@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Changelog's Format](http://keepachangelog.com/).
 
+## [0.4.0] 2017-06-09
+
+### Added
+- access conditions & actions
+- user groups
+- time, price, opening hours specification
+- example parking facility description
+- additional diagrams for sub-topics
+
+### Changed
+- change naming schema of properties to be more consistent
+- update diagrams
+
+### Remove
+- access type (replaced by access conditions)
+
 ## [0.3.1] 2017-05-17
 
 ### Changed
