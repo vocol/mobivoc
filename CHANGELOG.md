@@ -5,10 +5,6 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 
 ## [Unreleased]
 
-TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security section
-
-## [0.4.0] 2017-06-09
-
 ### Added
 - access conditions & actions
 - user groups
