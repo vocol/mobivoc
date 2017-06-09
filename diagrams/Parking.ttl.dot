@@ -1,0 +1,64 @@
+digraph "http://schema.mobivoc.org/" {
+        fontname = "Roboto"
+        fontsize = 8
+        dpi = 300
+        overlap=false
+        forcelabels=true
+        nodesep=0.3
+        ratio = fill
+        margin=0
+
+        node [
+                fontname = "Roboto"
+                fontsize = 8
+                shape = "Mrecord"
+                style=filled
+                fontcolor=black
+                fillcolor="#CECECE"
+                color="#706f6f"
+        ]
+
+        edge [
+                fontname = "Roboto"
+                fontsize = 8
+        ]
+"http://schema.mobivoc.org/ParkingFacilityExit" [label ="{Exit|Exit of a parking\lfacility where\lvehicles can leave\lthe parking facility.\l}" fillcolor="#E7BD5A"]
+"http://schema.mobivoc.org/ParkingSpace" [label ="{Parking space|A parking space\lis a location that\lis designated for\lparking a vehicle.\lA parking space\lhas a certain size,\lis sometimes marked\land can be located\lat roadside or\linside a parking\lfacility. Depending\lon the location\lof the parking\lspace, there can\lbe regulations\lregarding the time\lallowed to park\land a fee paid\lto use the parking\lspace.\l}" fillcolor="#E7BD5A"]
+"http://schema.mobivoc.org/ArrangementPattern" [label ="{Arrangement pattern|Pattern how parking\lspaces are arranged\lin a parking facility\lor at roadside.\l}" fillcolor="#E7BD5A"]
+"http://schema.mobivoc.org/ParkingGarage" [label ="{Parking garage|A single level\lor multilevel parking\lbuilding to park\lat.\l}" fillcolor="#E7BD5A"]
+"http://schema.mobivoc.org/AutomatedParkingGarage" [label ="{Automated parking garage|Parking garage with an automated\lparking system that automatically\lmoves cars to the available\lparking space somewhere\lin the garage.\l}" fillcolor="#E7BD5A"]
+"http://schema.mobivoc.org/ParkingFacility" [label ="{Parking facility|exit rate : string\lfill rate : string\lnumber of carsharing spaces : integer\lnumber of occupied parking spaces : integer\lnumber of parking spaces for bicycles : integer\lnumber of parking spaces for disabled persons : integer\lnumber of parking spaces for motorbikes : integer\lnumber of vacant parking spaces : integer\lnumber of women's parking spaces : integer\lqueuing time : string\lrate of occupancy : string\ltotal capacity : integer\l| Any facility or area assigned for parking vehicles. A parking\lfacility can provide one or more parking spaces.\l}" fillcolor="#E7BD5A"]
+"http://schema.mobivoc.org/ParkingFacilityEntrance" [label ="{Entrance|Entrance of a parking\lfacility where\lvehicles can enter\lthe parking facility.\l}" fillcolor="#E7BD5A"]
+"http://schema.mobivoc.org/BicycleParkingStation" [label ="{Bicycle parking station|Building or structure designed\lfor use as a bicycle parking\lfacility.\l}" fillcolor="#E7BD5A"]
+"http://schema.mobivoc.org/ParkingUsageType" [label ="{Parking usage type|A type of special\lpurpose a parking\lspace is designated\lfor, like women's\lparking spaces.\l}" fillcolor="#E7BD5A"]
+"http://schema.mobivoc.org/RealTimeCapacity" [label ="{Real time capacity|current value : integer\ldct:date : datetime\l| Real-time capacity of a\lparking facility or parking\lspace.\l}" fillcolor="#E7BD5A"]
+"http://schema.mobivoc.org/ParkingFacilityStatus" [label ="{Parking facility status|Status information of a\lparking facility.\l}" fillcolor="#E7BD5A"]
+"http://schema.mobivoc.org/ParkingLot" [label ="{Parking lot|Parking area on\la single groundfloor\llevel that is usually\llocated outdoor.\l}" fillcolor="#E7BD5A"]
+"http://schema.mobivoc.org/ParkingFacilityConnection" [label ="{Parking facility connections|Transport connections available\lat the parking facility (e.g.\lPark & Ride).\l}" fillcolor="#E7BD5A"]
+"http://schema.mobivoc.org/ParkingFacilityFeature" [label ="{Parking facility feature|Features of the parking\lfacility (e.g. parking for\ldisabled people).\l}" fillcolor="#E7BD5A"]
+"http://schema.mobivoc.org/UndergroundParkingGarage" [label ="{Underground parking garage|Parking facility with one\lor more levels below the surface\land none above ground.\l}" fillcolor="#E7BD5A"]
+"http://schema.mobivoc.org/Capacity" [label ="{Capacity|maximum value : integer\l| Capacity of a parking facility\lor a parking space.\l}" fillcolor="#E7BD5A"]
+"http://schema.mobivoc.org/Capacity" -> "http://schema.org/Vehicle" [label="intended for vehicle"]
+"http://schema.mobivoc.org/ParkingFacility" -> "http://schema.mobivoc.org/ParkingSpace" [label="parking space"]
+"http://schema.mobivoc.org/ParkingFacility" -> "http://schema.mobivoc.org/ParkingFacilityStatus" [label="parking facility status"]
+"http://schema.mobivoc.org/ParkingFacility" -> "http://schema.mobivoc.org/ArrangementPattern" [label="arrangement pattern"]
+"http://schema.mobivoc.org/ParkingSpace" -> "http://schema.mobivoc.org/ArrangementPattern" [label="arrangement pattern"]
+"http://schema.mobivoc.org/ParkingFacility" -> "http://schema.mobivoc.org/ParkingFacilityConnection" [label="connected to"]
+"http://schema.mobivoc.org/ParkingFacility" -> "http://schema.mobivoc.org/ParkingFacilityEntrance" [label="entrance"]
+"http://schema.mobivoc.org/Capacity" -> "http://schema.mobivoc.org/ParkingUsageType" [label="parking usage type"]
+"http://schema.mobivoc.org/ParkingFacility" -> "http://schema.mobivoc.org/ParkingFacilityExit" [label="exit"]
+"http://schema.mobivoc.org/ParkingFacility" -> "http://schema.mobivoc.org/ChargingPoint" [label="has charging point"]
+"http://schema.mobivoc.org/ParkingSpace" -> "http://schema.mobivoc.org/Capacity" [label="has capacity"]
+"http://schema.mobivoc.org/ParkingFacility" -> "http://schema.mobivoc.org/Capacity" [label="has capacity"]
+"http://schema.mobivoc.org/ParkingFacility" -> "http://schema.mobivoc.org/ParkingFacilityFeature" [label="feature"]
+"http://schema.mobivoc.org/UndergroundParkingGarage" -> "http://schema.mobivoc.org/ParkingFacility" [arrowhead = "empty"]
+"http://schema.mobivoc.org/BicycleParkingStation" -> "http://schema.mobivoc.org/ParkingFacility" [arrowhead = "empty"]
+"http://schema.mobivoc.org/RealTimeCapacity" -> "http://schema.mobivoc.org/Capacity" [arrowhead = "empty"]
+"http://schema.mobivoc.org/AutomatedParkingGarage" -> "http://schema.mobivoc.org/ParkingFacility" [arrowhead = "empty"]
+"http://schema.mobivoc.org/ParkingFacility" -> "http://schema.org/CivicStructure" [arrowhead = "empty"]
+"http://schema.mobivoc.org/ParkingSpace" -> "http://schema.org/CivicStructure" [arrowhead = "empty"]
+"http://schema.mobivoc.org/ParkingLot" -> "http://schema.mobivoc.org/ParkingFacility" [arrowhead = "empty"]
+"http://schema.mobivoc.org/ParkingFacilityExit" -> "http://schema.org/CivicStructure" [arrowhead = "empty"]
+"http://schema.mobivoc.org/ParkingFacilityEntrance" -> "http://schema.org/CivicStructure" [arrowhead = "empty"]
+"http://schema.mobivoc.org/ParkingGarage" -> "http://schema.mobivoc.org/ParkingFacility" [arrowhead = "empty"]
+}

@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix mv: <http://schema.mobivoc.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix gr: <http://purl.org/goodrelations/v1#> .
+@prefix s: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix : <http://example.org/parking/> .
+
+# a parking facility with 100 places for cars and 5 places specifically for women
+
+:exampleParkingFacility a mv:ParkingFacility ;
+  s:name "example parking facility" ;
+  mv:hasCapacity [
+    a mv:Capacity ;
+    mv:maximumCapacity "100"^^xsd:integer ;
+    mv:intendedForVehicle mv:Car ;
+  ] ,
+  [
+    a mv:Capacity ;
+    mv:maximumCapacity "5"^^xsd:integer ;
+    mv:intendedForVehicle mv:Car ;
+    mv:hasParkingUsageType mv:WomensParkingSpace ;
+  ]
+.
+
+# a parking space with one place and real time capacity
+# RealTimeCapacity is a subclass of Capacity, so it inherits its properties
+
+:exampleRealTimeParkingSpace a mv:ParkingSpace ;
+  s:name "example parking space" ;
+  mv:hasCapacity [
+    a mv:RealTimeCapacity ;
+    mv:maximumCapacity "1"^^xsd:integer ;
+    mv:currentCapacity "0"^^xsd:integer ;
+    mv:date "2017-30-05T14:08:00"^^xsd:datetime ;
+    mv:intendedForVehicle mv:Car ;
+  ]
+.
