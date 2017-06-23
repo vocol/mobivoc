@@ -117,7 +117,7 @@ mv:cableAvailable
 mv:energySource
     a rdf:Property, owl:DatatypeProperty ;
     rdfs:comment "Indicates the energy source of the charger point i.e. renewable etc." ;
-    rdfs:domain mv:ChargerPoint ;
+    rdfs:domain mv:ChargingPoint ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "energy source"@en ;
     rdfs:range xsd:string .
@@ -182,7 +182,10 @@ mv:currentInA
 mv:powerInKW
     a rdf:Property, owl:DatatypeProperty ;
     rdfs:comment "Indicates the power of a charger or plug in kilowatts." ;
-    rdfs:domain mv:Plug ;
+    rdfs:domain [
+          a owl:Class ;
+          owl:unionOf (mv:Plug mv:Charger)
+        ];
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "power in kW"@en ;
     rdfs:range xsd:decimal .
