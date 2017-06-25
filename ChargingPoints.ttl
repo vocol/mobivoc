@@ -16,26 +16,26 @@
 
 mv:Charger
     a rdfs:Class, owl:Class ;
-    rdfs:comment "Describes characteristics of the charger." ;
+    rdfs:comment "Component of a charging point used to charge electric vehicles. A charging point can have one or more chargers." ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "Charger"@en, "Ladegerät"@de .
 
 mv:ChargingPoint
     a rdfs:Class, owl:Class ;
-    rdfs:comment "Defines charging points for electric vehicles." ;
+    rdfs:comment "Civic structure that supplies electric energy for the recharging of electric vehicles." ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "Charging point"@en, "Ladestation"@de ;
     rdfs:subClassOf s:CivicStructure .
 
 mv:Plug
     a rdfs:Class, owl:Class ;
-    rdfs:comment "Describes plug characteristics." ;
+    rdfs:comment "Component of a charger to connect an electric vehicle. There are different plug types used for charging electric vehicles." ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "Anschluss"@de, "Plug"@en .
 
 mv:plugType
     a rdf:Property, owl:ObjectProperty ;
-    rdfs:comment "Relates the plug to its plug type." ;
+    rdfs:comment "Indicates the type of a plug." ;
     rdfs:domain mv:Plug ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "plug type"@en ;
@@ -43,7 +43,7 @@ mv:plugType
 
 mv:PlugType
     a rdfs:Class, owl:Class ;
-    rdfs:comment "Describes the type of available plug." ;
+    rdfs:comment "Type of a plug that is used to connect electric vehicles." ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "Plug type"@en, "Steckertyp"@de .
 
@@ -91,7 +91,7 @@ mv:ComboPlug
     rdfs:label "Combo Plug"@en ;
     a mv:PlugType .
 
-mv:EUDomesticPlug ### check plug types
+mv:EUDomesticPlug 
     rdfs:comment "Plug with EU domestic plug connection." ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "EU Domestic Plug"@en ;
@@ -100,7 +100,7 @@ mv:EUDomesticPlug ### check plug types
 
 mv:brand
     a rdf:Property, owl:DatatypeProperty ;
-    rdfs:comment "Indicates the charger brand." ;
+    rdfs:comment "Indicates the brand of a charger." ;
     rdfs:domain mv:Charger ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "brand"@en , "Marke"@de;
@@ -116,15 +116,15 @@ mv:cableAvailable
 
 mv:energySource
     a rdf:Property, owl:DatatypeProperty ;
-    rdfs:comment "Indicates the energy source of the charger point i.e. renewable etc." ;
+    rdfs:comment "Indicates the energy source used for the charging point i.e. renewable etc." ;
     rdfs:domain mv:ChargingPoint ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "energy source"@en ;
     rdfs:range xsd:string .
 
-mv:charger ### better definition!
+mv:charger 
     a rdf:Property, owl:ObjectProperty ;
-    rdfs:comment "Charging point charger." ;
+    rdfs:comment "Describes the charger available at a charging point. A charging point can have more than one charger." ;
     rdfs:domain mv:ChargingPoint ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "charger"@en ;
@@ -132,7 +132,7 @@ mv:charger ### better definition!
 
 mv:plug
     a rdf:Property, owl:ObjectProperty ;
-    rdfs:comment "Plugs available at the charging point." ;
+    rdfs:comment "Indicates the plugs available at a charger." ;
     rdfs:domain mv:Charger ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "plug"@en ;
@@ -140,13 +140,13 @@ mv:plug
 
 mv:model
     a rdf:Property, owl:DatatypeProperty ;
-    rdfs:comment "Charger model of the charging point." ;
+    rdfs:comment "Indicates the charger model of the charging point." ;
     rdfs:domain mv:Charger ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "model"@en , "Modell"@de;
     rdfs:range xsd:string .
 
-mv:threePhasedCurrentAvailable ###still needed and relevant?
+mv:threePhasedCurrentAvailable 
     a rdf:Property, owl:DatatypeProperty ;
     rdfs:comment "Indicates whether three-phased current is available." ;
     rdfs:domain [
