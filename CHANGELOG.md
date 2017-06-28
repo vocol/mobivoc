@@ -5,8 +5,6 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 
 ## Unreleased
 
-### Added
-
 ### Changed
 
 - add units to power, current, voltage
@@ -14,8 +12,8 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 
 ### Remove
 
-- access and identification properties and classes from charging points
-- charging speed
+- access and identification properties and classes from charging points. They are already modelled on CivicStructures
+- charging speed, as it is a function of physical properties of the Charger
 
 ## [0.4.2] 2017-06-09
 
