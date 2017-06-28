@@ -87,9 +87,9 @@ mv:vehicleLengthLimitInM
 
 s:CivicStructure
     a owl:Class ;
-    rdfs:comment "A public structure, such as a town hall or concert hall."@en ;
+    rdfs:comment "A public structure, such as a town hall or concert hall, parking facility or charging point."@en ;
     rdfs:isDefinedBy <http://schema.org/> ;
-    rdfs:label "Civic structure"@en ;
+    rdfs:label "Civic structure"@en, "Zivile Struktur"@de ;
     rdfs:subClassOf s:Place .
 
 s:Place
@@ -338,3 +338,101 @@ mv:employeeOf
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "employee of"@en , "Mitarbeiter von"@de ;
     rdfs:range gr:BusinessEntity .
+
+mv:civicStructureStatus
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "Indicates the current status of the civil structure." ;
+    rdfs:domain s:CivicStructure ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "civic structure status"@en, "hat Status der zivilen Struktur"@de ;
+    rdfs:range mv:CivicStructureStatus .
+
+mv:CivicStructureStatus
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "Status information of a civic structure." ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Civic structure status"@en, "Status der Parkeinrichtung"@de .
+
+mv:AllParkingFacilitiesFull
+    a mv:CivicStructureStatus ;
+    rdfs:comment "All parking facilities within a specified area are completely occupied."@en ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "All parking facilities full"@en, "Alle Parkmöglichkeiten belegt"@de .
+
+mv:Closed
+    a mv:CivicStructureStatus ;
+    rdfs:comment "The parking facility is closed." ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Closed"@en , "Geschlossen"@de .
+
+mv:EnoughParkingSpacesAvailable
+    a mv:CivicStructureStatus ;
+    rdfs:comment "The parking facility has parking spaces available." ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Enough parking spaces available"@en , "Genügend Stellplätze frei"@de .
+
+mv:Faulty
+    a mv:CivicStructureStatus ;
+    rdfs:comment "The parking facility is not operating normally." ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Defekt"@de, "Faulty"@en .
+
+mv:Full
+    a mv:CivicStructureStatus ;
+    rdfs:comment "The parking facility is completely occupied." ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Belegt"@de, "Full"@en .
+
+mv:NoParkAndRideInformation
+    a mv:CivicStructureStatus ;
+    rdfs:comment "No park and ride information will be available until the specified time." ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Keine P+R-Informationen"@de, "No park and ride information"@en .
+
+mv:NoParkingAllowed
+    a mv:CivicStructureStatus ;
+    rdfs:comment "No parking allowed until the specified time." ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "No parking allowed"@en, "Parken verboten"@de .
+
+mv:NoParkingInformationAvailable
+    a mv:CivicStructureStatus ;
+    rdfs:comment "Parking information is not available until a specified time." ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Keine Parkinformationen verfügbar"@de, "No parking information available"@en .
+
+mv:NormalParkingRestrictionsLifted
+    a mv:CivicStructureStatus ;
+    rdfs:comment "The parking restrictions that normally apply in the specified location have been temporarily lifted." ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Normal parking restrictions lifted"@en, "Normale Parkbeschränkungen aufgehoben"@de .
+
+mv:OnlyAFewParkingSpacesAvailable
+    a mv:CivicStructureStatus ;
+    rdfs:comment "The parking facility has 95% or greater occupancy." ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Nur noch wenige Stellplätze frei"@de, "Only a few parking spaces available"@en .
+
+mv:ParkAndRideServiceNotOperating
+    a mv:CivicStructureStatus ;
+    rdfs:comment "Park and ride services are not operating until the specified time." ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Kein P+R-Service"@de, "Park and ride service not operating"@en .
+
+mv:ParkAndRideServiceOperating
+    a mv:CivicStructureStatus ;
+    rdfs:comment "Park and ride services are operating until the specified time." ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "P+R-Service vorhanden"@de, "Park and ride service operating"@en .
+
+mv:SpecialParkingRestrictionsInForce
+    a mv:CivicStructureStatus ;
+    rdfs:comment "Parking restrictions, other than those that normally apply, are in force in a specified area." ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Besondere Parkbeschränkungen in Kraft"@de, "Special parking restrictions in force"@en .
+
+mv:StatusUnknown
+    a mv:CivicStructureStatus ;
+    rdfs:comment "The status of the parking facility is unknown." ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Status unbekannt"@de, "Status unknown"@en .

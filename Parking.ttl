@@ -8,19 +8,12 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 
-mv:AllParkingFacilitiesFull
-    a mv:ParkingFacilityStatus ;
-    rdfs:comment "All parking facilities within a specified area are completely occupied."@en ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "All parking facilities full"@en, "Alle Parkmöglichkeiten belegt"@de .
-
 mv:BicycleParkingStation
     a rdfs:Class, owl:Class ;
     rdfs:comment "Building or structure designed for use as a bicycle parking facility."@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "Bicycle parking station"@en, "Fahrradparkstation"@de ;
     rdfs:subClassOf mv:ParkingFacility .
-
 
 mv:AutomatedParkingGarage
     a rdfs:Class, owl:Class ;
@@ -42,60 +35,6 @@ mv:Carpooling
     rdfs:label "Carpooling" , "Parken und Mitfahren"@de ;
     skos:altLabel "P&M" , "P+M" , "Park & Drive" , "Parken und Mitnehmen"@de .
 
-mv:Closed
-    a mv:ParkingFacilityStatus ;
-    rdfs:comment "The parking facility is closed." ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "Closed"@en , "Geschlossen"@de .
-
-mv:EnoughParkingSpacesAvailable
-    a mv:ParkingFacilityStatus ;
-    rdfs:comment "The parking facility has parking spaces available." ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "Enough parking spaces available"@en , "Genügend Stellplätze frei"@de .
-
-mv:Faulty
-    a mv:ParkingFacilityStatus ;
-    rdfs:comment "The parking facility is not operating normally." ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "Defekt"@de, "Faulty"@en .
-
-mv:Full
-    a mv:ParkingFacilityStatus ;
-    rdfs:comment "The parking facility is completely occupied." ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "Belegt"@de, "Full"@en .
-
-mv:NoParkAndRideInformation
-    a mv:ParkingFacilityStatus ;
-    rdfs:comment "No park and ride information will be available until the specified time." ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "Keine P+R-Informationen"@de, "No park and ride information"@en .
-
-mv:NoParkingAllowed
-    a mv:ParkingFacilityStatus ;
-    rdfs:comment "No parking allowed until the specified time." ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "No parking allowed"@en, "Parken verboten"@de .
-
-mv:NoParkingInformationAvailable
-    a mv:ParkingFacilityStatus ;
-    rdfs:comment "Parking information is not available until a specified time." ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "Keine Parkinformationen verfügbar"@de, "No parking information available"@en .
-
-mv:NormalParkingRestrictionsLifted
-    a mv:ParkingFacilityStatus ;
-    rdfs:comment "The parking restrictions that normally apply in the specified location have been temporarily lifted." ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "Normal parking restrictions lifted"@en, "Normale Parkbeschränkungen aufgehoben"@de .
-
-mv:OnlyAFewParkingSpacesAvailable
-    a mv:ParkingFacilityStatus ;
-    rdfs:comment "The parking facility has 95% or greater occupancy." ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "Nur noch wenige Stellplätze frei"@de, "Only a few parking spaces available"@en .
-
 mv:ParkAndFly
     a mv:ParkingFacilityConnection ;
     rdfs:comment "Connection to airport." ;
@@ -115,18 +54,6 @@ mv:ParkAndRide
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "Park & Ride"@en, "Parken und Reisen"@de ;
     skos:altLabel "P&R", "P+R" .
-
-mv:ParkAndRideServiceNotOperating
-    a mv:ParkingFacilityStatus ;
-    rdfs:comment "Park and ride services are not operating until the specified time." ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "Kein P+R-Service"@de, "Park and ride service not operating"@en .
-
-mv:ParkAndRideServiceOperating
-    a mv:ParkingFacilityStatus ;
-    rdfs:comment "Park and ride services are operating until the specified time." ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "P+R-Service vorhanden"@de, "Park and ride service operating"@en .
 
 mv:ParkingBarrier
     a mv:ParkingFacilityFeature ;
@@ -153,12 +80,6 @@ mv:ParkingFacilityFeature
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "Ausstattung der Parkeinrichtung"@de, "Parking facility feature"@en .
 
-mv:ParkingFacilityStatus
-    a rdfs:Class, owl:Class ;
-    rdfs:comment "Status information of a parking facility." ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "Parking facility status"@en, "Status der Parkeinrichtung"@de .
-
 mv:ParkingGarage
     a rdfs:Class, owl:Class ;
     rdfs:comment "A single level or multilevel parking building to park at." ;
@@ -182,18 +103,6 @@ mv:PayStation
     rdfs:comment "The parking facility has a pay station."@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "Kassenautomat"@de, "Pay station"@en .
-
-mv:SpecialParkingRestrictionsInForce
-    a mv:ParkingFacilityStatus ;
-    rdfs:comment "Parking restrictions, other than those that normally apply, are in force in a specified area." ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "Besondere Parkbeschränkungen in Kraft"@de, "Special parking restrictions in force"@en .
-
-mv:StatusUnknown
-    a mv:ParkingFacilityStatus ;
-    rdfs:comment "The status of the parking facility is unknown." ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "Status unbekannt"@de, "Status unknown"@en .
 
 mv:SurveillanceBySecurityGuards
     a mv:ParkingFacilityFeature ;
@@ -219,7 +128,10 @@ mv:VideoSurveillance
 mv:chargingPoint
     a rdf:Property, owl:ObjectProperty ;
     rdfs:comment "Indicates whether charging points are available." ;
-    rdfs:domain mv:ParkingFacility ;
+    rdfs:domain [
+          a owl:Class ;
+          owl:unionOf (mv:ParkingFacility mv:ParkingSpace)
+        ];
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "has charging point"@en, "hat Ladestation"@de ;
     rdfs:range mv:ChargingPoint .
@@ -303,14 +215,6 @@ mv:numberOfVacantParkingSpaces
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "number of vacant parking spaces"@en, "Anzahl freier Stellplätze"@de ;
     rdfs:range xsd:integer .
-
-mv:parkingFacilityStatus
-    a rdf:Property, owl:ObjectProperty ;
-    rdfs:comment "Indicates the current status of the parking facility." ;
-    rdfs:domain mv:ParkingFacility ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "parking facility status"@en, "hat Status der Parkeinrichtung"@de ;
-    rdfs:range mv:ParkingFacilityStatus .
 
 mv:queuingTime
     a rdf:Property, owl:DatatypeProperty ;

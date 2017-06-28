@@ -3,9 +3,15 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Changelog's Format](http://keepachangelog.com/).
 
-## [Unreleased]
+## Unreleased
 
-TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security section
+### Changed
+- add units to power, current, voltage
+- move ParkingFacilityStatus to CivicStructureStatus
+
+### Remove
+- access and identification properties and classes from charging points. They are already modelled on CivicStructures
+- charging speed, as it is a function of physical properties of the Charger
 
 ## [0.4.2] 2017-06-09
 
