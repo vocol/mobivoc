@@ -6,12 +6,10 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 ## Unreleased
 
 ### Changed
-
 - add units to power, current, voltage
 - move ParkingFacilityStatus to CivicStructureStatus
 
 ### Remove
-
 - access and identification properties and classes from charging points. They are already modelled on CivicStructures
 - charging speed, as it is a function of physical properties of the Charger
 
