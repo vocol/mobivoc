@@ -1,0 +1,35 @@
+digraph "http://schema.mobivoc.org/" {
+rankdir=TB
+
+        fontname = "Roboto"
+        fontsize = 8
+        dpi = 150
+        overlap=false
+        forcelabels=true
+        nodesep=0.3
+        ratio = fill
+        margin=0
+
+        node [
+                fontname = "Roboto"
+                fontsize = 8
+                shape = "rect"
+                style=filled
+                fontcolor=black
+                fillcolor="#CECECE"
+                color="#706f6f"
+        ]
+
+        edge [
+                fontname = "Roboto"
+                fontsize = 8
+        ]
+"http://schema.mobivoc.org/PlugType" [fillcolor="#FFD180" fontcolor= "#000000", label=<<TABLE border="0"><TR><TD ALIGN="CENTER" HREF="http://schema.mobivoc.org/PlugType">Plug type</TD></TR><HR/><TR><TD ALIGN="LEFT">Type of a plug that is used</TD></TR><TR><TD ALIGN="LEFT">to connect electric vehicles.</TD></TR></TABLE>>]
+"http://schema.mobivoc.org/Plug" [fillcolor="#FFD180" fontcolor= "#000000", label=<<TABLE border="0"><TR><TD ALIGN="CENTER" HREF="http://schema.mobivoc.org/Plug">Plug</TD></TR><HR/><TR><TD ALIGN="LEFT" HREF="http://schema.mobivoc.org/voltageInV">voltage in V : decimal</TD></TR><TR><TD ALIGN="LEFT" HREF="http://schema.mobivoc.org/powerInKW">power in kW : decimal</TD></TR><TR><TD ALIGN="LEFT" HREF="http://schema.mobivoc.org/currentType">current type : string</TD></TR><TR><TD ALIGN="LEFT" HREF="http://schema.mobivoc.org/cableAvailable">cable available : boolean</TD></TR><TR><TD ALIGN="LEFT" HREF="http://schema.mobivoc.org/threePhasedCurrentAvailable">three-phased current available : boolean</TD></TR><TR><TD ALIGN="LEFT" HREF="http://schema.mobivoc.org/currentInA">current in A : decimal</TD></TR><HR/><TR><TD ALIGN="LEFT">Component of a charger to connect an electric</TD></TR><TR><TD ALIGN="LEFT">vehicle. There are different plug types</TD></TR><TR><TD ALIGN="LEFT">used for charging electric vehicles.</TD></TR></TABLE>>]
+"http://schema.mobivoc.org/ChargingPoint" [fillcolor="#FFD180" fontcolor= "#000000", label=<<TABLE border="0"><TR><TD ALIGN="CENTER" HREF="http://schema.mobivoc.org/ChargingPoint">Charging point</TD></TR><HR/><TR><TD ALIGN="LEFT" HREF="http://schema.mobivoc.org/energySource">energy source : string</TD></TR><HR/><TR><TD ALIGN="LEFT">Civic structure that supplies</TD></TR><TR><TD ALIGN="LEFT">electric energy for the recharging</TD></TR><TR><TD ALIGN="LEFT">of electric vehicles.</TD></TR></TABLE>>]
+"http://schema.mobivoc.org/Charger" [fillcolor="#FFD180" fontcolor= "#000000", label=<<TABLE border="0"><TR><TD ALIGN="CENTER" HREF="http://schema.mobivoc.org/Charger">Charger</TD></TR><HR/><TR><TD ALIGN="LEFT" HREF="http://schema.mobivoc.org/voltageInV">voltage in V : decimal</TD></TR><TR><TD ALIGN="LEFT" HREF="http://schema.mobivoc.org/powerInKW">power in kW : decimal</TD></TR><TR><TD ALIGN="LEFT" HREF="http://schema.mobivoc.org/currentType">current type : string</TD></TR><TR><TD ALIGN="LEFT" HREF="http://schema.mobivoc.org/model">model : string</TD></TR><TR><TD ALIGN="LEFT" HREF="http://schema.mobivoc.org/brand">brand : string</TD></TR><TR><TD ALIGN="LEFT" HREF="http://schema.mobivoc.org/threePhasedCurrentAvailable">three-phased current available : boolean</TD></TR><TR><TD ALIGN="LEFT" HREF="http://schema.mobivoc.org/currentInA">current in A : decimal</TD></TR><HR/><TR><TD ALIGN="LEFT">Component of a charging point used to charge</TD></TR><TR><TD ALIGN="LEFT">electric vehicles. A charging point can</TD></TR><TR><TD ALIGN="LEFT">have one or more chargers.</TD></TR></TABLE>>]
+"http://schema.mobivoc.org/Charger" -> "http://schema.mobivoc.org/Plug" [href="http://schema.mobivoc.org/plug", label="plug"]
+"http://schema.mobivoc.org/ChargingPoint" -> "http://schema.mobivoc.org/Charger" [href="http://schema.mobivoc.org/charger", label="charger"]
+"http://schema.mobivoc.org/Plug" -> "http://schema.mobivoc.org/PlugType" [href="http://schema.mobivoc.org/plugType", label="plug type"]
+"http://schema.mobivoc.org/ChargingPoint" -> "http://schema.org/CivicStructure" [arrowhead = "empty"]
+}

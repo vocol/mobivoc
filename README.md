@@ -14,6 +14,8 @@ We invite everyone who is interested to join our MobiVoc initiative and to parti
 
 ![Class diagram](https://github.com/vocol/mobivoc/raw/develop/diagrams/mobivoc.png "Mobivoc class diagram")
 
+Further diagrams can be found in the diagrams folder.
+
 Further links:
 
 * homepage: [http://mobivoc.org](http://mobivoc.org)
