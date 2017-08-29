@@ -415,7 +415,6 @@ mv:Truck
     rdfs:comment "A motor vehicle designed to transport cargo."@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "Truck"@en, "Lkw"@de ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     a s:Vehicle .
 
 mv:Motorbike

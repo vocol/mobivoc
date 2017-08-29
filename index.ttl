@@ -176,6 +176,34 @@ mv:UserGroup
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "User group"@en , "Nutzergruppe"@de .
 
+mv:PersonsWithDisabledParkingPermit
+    rdfs:comment "Persons with disabilities having a special parking permit that gives the right to use parking spaces reserved for disabled people."@en ;
+    rdfs:label "Persons with disabled parking permit"@en , "Personen mit Behindertenparkausweis"@de ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    a mv:UserGroup .
+
+mv:Women
+    rdfs:comment "Female persons."@en ;
+    rdfs:label "Women"@en , "Frauen"@de ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    a mv:UserGroup .
+
+mv:Taxis
+    rdfs:comment "Vehicle for hire with a driver, used by a single passenger or small group of passengers, often for a non-shared ride. It conveys passengers between locations of their choice."@en ;
+    rdfs:label "Taxis"@en , "Taxis"@de ;
+    skos:prefLabel "Taxis"@en , "Taxis"@de ;
+    skos:altLabel "Taxicab"@en , "Cab"@en ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    a mv:UserGroup .
+
+mv:Carsharing
+    rdfs:comment "Model of car rental where people rent cars for short periods of time."@en ;
+    rdfs:label "Carsharing"@en-us , "Carsharing"@de , "Autopartage"@fr , "Car clubs"@en-uk ;
+    skos:prefLabel "Carsharing"@en-us , "Carsharing"@de ;
+    skos:hiddenLabel "Car sharing" , "Car-sharing" ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    a mv:UserGroup .
+
 mv:validForGroup
     a rdf:Property, owl:ObjectProperty ;
     rdfs:comment "Indicates that a price specification is valid for a specific group of users."@en ;
