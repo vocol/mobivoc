@@ -5,6 +5,11 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 
 ## Unreleased
 
+### Added
+- add instances of UserGroups: Taxis, Women, PersonsWithDisabledParkingPermit, Carsharing
+
+## [0.6.0] 2017-06-29
+
 ### Changed
 - add units to power, current, voltage
 - move ParkingFacilityStatus to CivicStructureStatus
