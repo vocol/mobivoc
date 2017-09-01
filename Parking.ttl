@@ -162,6 +162,8 @@ mv:fillRate
 
 mv:numberOfCarsharingParkingSpaces 
     a rdf:Property, owl:DatatypeProperty ;
+    owl:deprecated "true"^^xsd:boolean ;
+    skos:note "Deprecated, use value of Capacity resource instead." ;
     rdfs:comment "Indicates the number of parking spaces that are reserved for carsharing." ;
     rdfs:domain mv:ParkingFacility ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
@@ -170,6 +172,8 @@ mv:numberOfCarsharingParkingSpaces
 
 mv:numberOfWomensParkingSpaces
     a rdf:Property, owl:DatatypeProperty ;
+    owl:deprecated "true"^^xsd:boolean ;
+    skos:note "Deprecated, use value of Capacity resource instead." ;
     rdfs:comment "Indicates the number of women's parking spaces." ;
     rdfs:domain mv:ParkingFacility ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
@@ -178,6 +182,8 @@ mv:numberOfWomensParkingSpaces
 
 mv:numberOfMotorbikeParkingSpaces
     a rdf:Property, owl:DatatypeProperty ;
+    owl:deprecated "true"^^xsd:boolean ;
+    skos:note "Deprecated, use value of Capacity resource instead." ;
     rdfs:comment "Indicates the number of parking spaces for motorbikes." ;
     rdfs:domain mv:ParkingFacility ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
@@ -186,6 +192,8 @@ mv:numberOfMotorbikeParkingSpaces
 
 mv:numberOfBicycleParkingSpaces 
     a rdf:Property, owl:DatatypeProperty ;
+    owl:deprecated "true"^^xsd:boolean ;
+    skos:note "Deprecated, use value of Capacity resource instead." ;
     rdfs:comment "Indicates the number of parking spaces for bicycles." ;
     rdfs:domain mv:ParkingFacility ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
@@ -194,6 +202,8 @@ mv:numberOfBicycleParkingSpaces
 
 mv:numberOfOccupiedParkingSpaces
     a rdf:Property, owl:DatatypeProperty ;
+    owl:deprecated "true"^^xsd:boolean ;
+    skos:note "Deprecated, use value of Capacity resource instead." ;
     rdfs:comment "Indicates the number of currently occupied parking spaces." ;
     rdfs:domain mv:ParkingFacility ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
@@ -202,6 +212,8 @@ mv:numberOfOccupiedParkingSpaces
 
 mv:numberOfParkingSpacesForDisabledPersons
     a rdf:Property, owl:DatatypeProperty ;
+    owl:deprecated "true"^^xsd:boolean ;
+    skos:note "Deprecated, use value of Capacity resource instead." ;
     rdfs:comment "Indicates the number of parking spaces for disabled persons." ;
     rdfs:domain mv:ParkingFacility ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
@@ -210,7 +222,9 @@ mv:numberOfParkingSpacesForDisabledPersons
 
 mv:numberOfVacantParkingSpaces
     a rdf:Property, owl:DatatypeProperty ;
+    owl:deprecated "true"^^xsd:boolean ;
     rdfs:comment "Indicates the number of vacant parking spaces available." ;
+    skos:note "Deprecated, use value of Capacity resource instead." ;
     rdfs:domain mv:ParkingFacility ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "number of vacant parking spaces"@en, "Anzahl freier Stellplätze"@de ;
@@ -259,6 +273,8 @@ mv:ParkingSpace
 
 mv:ParkingUsageType
     a rdfs:Class, owl:Class ;
+    owl:deprecated "true"^^xsd:boolean ;
+    skos:note "Deprecated, use intendedForUserGroup [a UserGroup] instead." ;
     rdfs:comment "A type of special purpose a parking space is designated for, like women's parking spaces."@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "Stellplatz Nutzungsart"@de, "Parking usage type"@en ;
@@ -266,24 +282,32 @@ mv:ParkingUsageType
 
 mv:CarsharingParkingSpace
     rdfs:comment "Specially designated and identified parking space reserved for carsharing vehicles."@en ;
+    owl:deprecated "true"^^xsd:boolean ;
+    skos:note "Deprecated, use intendedForUserGroup [a UserGroup] instead." ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "Carsharing-Stellplatz"@de , "Carsharing parking space"@en , "Place de stationnement pour l'autopartage"@fr ; 
     a mv:ParkingUsageType .
 
 mv:DisabledParkingSpace 
     rdfs:comment "Specially designated and identified parking space reserved for persons with disabilities, or in some situations, permission to park in a time-limited space for longer time, or to park at a meter without payment."@en ;
+    owl:deprecated "true"^^xsd:boolean ;
+    skos:note "Deprecated, use intendedForUserGroup [a UserGroup] instead." ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "Behindertenstellplatz"@de , "Disabled parking space"@en ;
     a mv:ParkingUsageType .
 
 mv:TaxiParkingSpace
     rdfs:comment "Parking space where only taxis are allowed to."@en ;
+    owl:deprecated "true"^^xsd:boolean ;
+    skos:note "Deprecated, use intendedForUserGroup [a UserGroup] instead." ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "Taxi-Stellplatz"@de , "Taxi parking space"@en ;
     a mv:ParkingUsageType .
 
 mv:WomensParkingSpace
     rdfs:comment "Specially designated and identified parking space to be used by women."@en , "Gekennzeichneter und ausgewiesener Stellplatz für die Nutzung durch Frauen."@de ;
+    owl:deprecated "true"^^xsd:boolean ;
+    skos:note "Deprecated, use intendedForUserGroup [a UserGroup] instead." ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "Women's parking space"@en , "Frauenparkplatz"@de ;
     skos:prefLabel "Women's parking space"@en ;
@@ -362,10 +386,20 @@ mv:entrance
 mv:parkingUsageType
     a rdf:Property, owl:ObjectProperty ;
     rdfs:comment "Relates the capacity of a parking facility to a specific designated usage type."@en ;
+    owl:deprecated "true"^^xsd:boolean ;
+    skos:note "Deprecated, use intendedForUserGroup instead." ;
     rdfs:domain mv:Capacity ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "parking usage type"@en, "Nutzungsart"@de ;
     rdfs:range mv:ParkingUsageType .
+
+mv:intendedForUserGroup
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "Relates the capacity of a parking facility to a specific designated user group."@en ;
+    rdfs:domain mv:Capacity ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "intended for user group"@en, "vorgesehen für Nutzergruppe"@de ;
+    rdfs:range mv:UserGroup .
 
 mv:parkingSpace
     a rdf:Property, owl:ObjectProperty ;

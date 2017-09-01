@@ -6,7 +6,12 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 ## Unreleased
 
 ### Added
-- add instances of UserGroups: Taxis, Women, PersonsWithDisabledParkingPermit, Carsharing
+- add instances of UserGroups: TaxiDrivers, Women, PersonsWithDisabledParkingPermit, CarsharingUsers, Families
+
+### Changed
+- deprecate ParkingUsageType class and instances
+- deprecate parkingUsageType property
+- deprecate specific numberOfParkingSpaces properties
 
 ## [0.6.0] 2017-06-29
 

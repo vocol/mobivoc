@@ -188,19 +188,25 @@ mv:Women
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     a mv:UserGroup .
 
-mv:Taxis
-    rdfs:comment "Vehicle for hire with a driver, used by a single passenger or small group of passengers, often for a non-shared ride. It conveys passengers between locations of their choice."@en ;
-    rdfs:label "Taxis"@en , "Taxis"@de ;
-    skos:prefLabel "Taxis"@en , "Taxis"@de ;
-    skos:altLabel "Taxicab"@en , "Cab"@en ;
+mv:Families
+    rdfs:comment "Parents with children."@en ;
+    rdfs:label "Families"@en , "Familien"@de ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     a mv:UserGroup .
 
-mv:Carsharing
-    rdfs:comment "Model of car rental where people rent cars for short periods of time."@en ;
-    rdfs:label "Carsharing"@en-us , "Carsharing"@de , "Autopartage"@fr , "Car clubs"@en-uk ;
-    skos:prefLabel "Carsharing"@en-us , "Carsharing"@de ;
-    skos:hiddenLabel "Car sharing" , "Car-sharing" ;
+mv:TaxiDrivers
+    rdfs:comment "Drivers of a vehicle for hire, used by a single passenger or small group of passengers, often for a non-shared ride. Taxi drivers convey passengers between locations of their choice."@en ;
+    rdfs:label "Taxi drivers"@en , "Taxifahrer"@de ;
+    skos:prefLabel "Taxi drivers"@en , "Taxifahrer"@de ;
+    skos:altLabel "Taxicab drivers"@en , "Cab drivers"@en , "Cabbies"@en-uk ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    a mv:UserGroup .
+
+mv:CarsharingUsers
+    rdfs:comment "User of a car rental model where people rent cars for short periods of time."@en ;
+    rdfs:label "Carsharing users"@en-us , "Carsharing-Nutzer"@de , "Utilisateurs de l'autopartage"@fr , "Car club users"@en-uk ;
+    skos:prefLabel "Carsharing users"@en-us , "Carsharing-Nutzer"@de ;
+    skos:hiddenLabel "Car sharing users" , "Car-sharing users" ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     a mv:UserGroup .
 
