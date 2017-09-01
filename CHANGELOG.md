@@ -9,6 +9,16 @@ TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security se
 
 ## [0.6.0] 2017-06-29
 
+### Added
+- add instances of UserGroups: TaxiDrivers, Women, PersonsWithDisabledParkingPermit, CarsharingUsers, Families
+
+### Changed
+- deprecate ParkingUsageType class and instances
+- deprecate parkingUsageType property
+- deprecate specific numberOfParkingSpaces properties
+
+## [0.6.0] 2017-06-29
+
 ### Changed
 - add units to power, current, voltage
 - move ParkingFacilityStatus to CivicStructureStatus
