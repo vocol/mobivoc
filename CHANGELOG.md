@@ -5,10 +5,6 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 
 ## [Unreleased]
 
-TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security section
-
-## [0.6.0] 2017-06-29
-
 ### Added
 - add instances of UserGroups: TaxiDrivers, Women, PersonsWithDisabledParkingPermit, CarsharingUsers, Families
 
@@ -16,6 +12,7 @@ TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security se
 - deprecate ParkingUsageType class and instances
 - deprecate parkingUsageType property
 - deprecate specific numberOfParkingSpaces properties
+- add working policy to CONTRIBUTING.md
 
 ## [0.6.0] 2017-06-29
 
