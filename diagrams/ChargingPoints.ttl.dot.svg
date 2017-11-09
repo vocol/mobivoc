@@ -106,14 +106,14 @@ viewBox="0.00 0.00 658.00 692.12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink
 <polygon fill="#706f6f" stroke="#706f6f" points="190.1826,-255.375 190.1826,-255.375 358.1826,-255.375 358.1826,-255.375 190.1826,-255.375"/>
 </g>
 <!-- http://schema.mobivoc.org/Charger&#45;&gt;http://schema.mobivoc.org/Plug -->
-<g id="edge1" class="edge">
+<g id="edge3" class="edge">
 <title>http://schema.mobivoc.org/Charger&#45;&gt;http://schema.mobivoc.org/Plug</title>
-<g id="a_edge1"><a xlink:href="http://schema.mobivoc.org/plug" xlink:title="plug">
+<g id="a_edge3"><a xlink:href="http://schema.mobivoc.org/plug" xlink:title="plug">
 <path fill="none" stroke="#000000" d="M274.1826,-398.7437C274.1826,-387.1925 274.1826,-375.2424 274.1826,-363.5961"/>
 <polygon fill="#000000" stroke="#000000" points="277.6827,-363.4572 274.1826,-353.4573 270.6827,-363.4573 277.6827,-363.4572"/>
 </a>
 </g>
-<g id="a_edge1&#45;label"><a xlink:href="http://schema.mobivoc.org/plug" xlink:title="plug">
+<g id="a_edge3&#45;label"><a xlink:href="http://schema.mobivoc.org/plug" xlink:title="plug">
 <text text-anchor="middle" x="281.8467" y="-374.35" font-family="Roboto" font-size="8.00" fill="#000000">plug</text>
 </a>
 </g>
@@ -131,14 +131,14 @@ viewBox="0.00 0.00 658.00 692.12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink
 <polygon fill="#706f6f" stroke="#706f6f" points="223.1826,-145.5 223.1826,-145.5 325.1826,-145.5 325.1826,-145.5 223.1826,-145.5"/>
 </g>
 <!-- http://schema.mobivoc.org/Plug&#45;&gt;http://schema.mobivoc.org/PlugType -->
-<g id="edge3" class="edge">
+<g id="edge1" class="edge">
 <title>http://schema.mobivoc.org/Plug&#45;&gt;http://schema.mobivoc.org/PlugType</title>
-<g id="a_edge3"><a xlink:href="http://schema.mobivoc.org/plugType" xlink:title="plug type">
+<g id="a_edge1"><a xlink:href="http://schema.mobivoc.org/plugType" xlink:title="plug type">
 <path fill="none" stroke="#000000" d="M274.1826,-211.3561C274.1826,-199.2751 274.1826,-187.1782 274.1826,-176.4474"/>
 <polygon fill="#000000" stroke="#000000" points="277.6827,-176.2231 274.1826,-166.2231 270.6827,-176.2231 277.6827,-176.2231"/>
 </a>
 </g>
-<g id="a_edge3&#45;label"><a xlink:href="http://schema.mobivoc.org/plugType" xlink:title="plug type">
+<g id="a_edge1&#45;label"><a xlink:href="http://schema.mobivoc.org/plugType" xlink:title="plug type">
 <text text-anchor="middle" x="290.3994" y="-186.975" font-family="Roboto" font-size="8.00" fill="#000000">plug type</text>
 </a>
 </g>
