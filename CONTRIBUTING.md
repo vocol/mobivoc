@@ -4,6 +4,12 @@
 - esp. use [Semantic Versioning](http://semver.org/)
 - use [Keep A Changelog's Format](http://keepachangelog.com/)
 
+# Guidelines for ontology creation
+
+## Do not use construction with auxiliary verbs to form properties
+
+* Wrong: `mv:hasCapacity`
+* Correct: `mv:capacity`
 
 # Git Working Policy
 
