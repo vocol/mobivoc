@@ -39,7 +39,7 @@ mv:CCS_Type2
     a mv:PlugType ;
     rdfs:comment "The Combined Charging System is a quick charging method for battery electric vehicles delivering high-voltage direct current via a special electrical connector derived from the  IEC Type 2 connector. As the plug is a combination of an AC connector with a DC option the resulting connector is also called Combo Coupler and the variant with Type 2 is abbreviated as Combo2." ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "SAE Combo (DC Fast Charge J1772)"@en ;
+    rdfs:label "CCS Type2"@en ;
     rdfs:seeAlso <https://en.wikipedia.org/wiki/Combined_Charging_System> ;
     skos:altLabel "Combo2" ;
     foaf:depiction <https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/CCSCombo2.svg/1052px-CCSCombo2.svg.png> .
@@ -162,7 +162,7 @@ mv:Mennekes_Type_2
 mv:NEMA_14-30
     mv:ocmConnectionID "10" ;
     a mv:PlugType ;
-    rdfs:comment "NEMA connectors are power plugs and receptacles used for AC mains electricity in North America and other countries that use the standards set by the US National Electrical Manufacturers Association. The NEMA 14 devices are four-wire grounding devices (hot-hot-neutral-ground) available in ratings from 15 to 60 A. The voltage rating is 250 V." ;
+    rdfs:comment "NEMA connectors are power plugs and receptacles used for AC mains electricity in North America and other countries that use the standards set by the US National Electrical Manufacturers Association. The NEMA 14 devices are four-wire grounding devices (hot-hot-neutral-ground) available in ratings from 15 to 60 A. The voltage rating is 250 V. Rated for 30A." ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "NEMA 14-30"@en ;
     rdfs:seeAlso <https://en.wikipedia.org/wiki/NEMA_connector#NEMA_14> ;
@@ -171,7 +171,7 @@ mv:NEMA_14-30
 mv:NEMA_14-50
     mv:ocmConnectionID "11" ;
     a mv:PlugType ;
-    rdfs:comment "NEMA connectors are power plugs and receptacles used for AC mains electricity in North America and other countries that use the standards set by the US National Electrical Manufacturers Association. The NEMA 14 devices are four-wire grounding devices (hot-hot-neutral-ground) available in ratings from 15 to 60 A. The voltage rating is 250 V." ;
+    rdfs:comment "NEMA connectors are power plugs and receptacles used for AC mains electricity in North America and other countries that use the standards set by the US National Electrical Manufacturers Association. The NEMA 14 devices are four-wire grounding devices (hot-hot-neutral-ground) available in ratings from 15 to 60 A. The voltage rating is 250 V. Rated for 60A." ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "NEMA 14-50"@en ;
     rdfs:seeAlso <https://en.wikipedia.org/wiki/NEMA_connector#NEMA_14> ;
@@ -310,7 +310,7 @@ mv:charger
 mv:chargerQuantity
     a rdf:Property, owl:DatatypeProperty ;
     rdfs:comment "Indicates the amount of chargers available at the charging point." ;
-    rdfs:domain mv:ChargingPoint ;
+    rdfs:domain mv:Charger ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "Anzahl Ladepunkte"@de, "charger quantity"@en ;
     rdfs:range xsd:integer .

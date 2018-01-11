@@ -159,8 +159,7 @@
 
 <http://example.org/charging/DDD4E6D6-FBE1-4CDD-84B6-5A349D12B4A4/charger107637>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -188,8 +187,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95320>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -327,8 +325,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95333>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -444,8 +441,7 @@
 
 <http://example.org/charging/E53FB3B5-46A8-4299-A7B1-6DC3EA1EED79/charger57084>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 1.6E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -472,8 +468,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95346>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -522,8 +517,7 @@
 
 <http://example.org/charging/27C44292-F191-4EC2-9C56-EF9E964A090C/charger88896>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -573,8 +567,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95359>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -593,8 +586,7 @@
 
 <http://example.org/charging/DC11DBDA-936B-4F0E-8D07-1356CE9BEB18/charger34632>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -803,8 +795,7 @@
 
 <http://example.org/charging/9730ABDA-11A2-4CE8-B809-688E3127B5DC/charger79792>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -949,8 +940,7 @@
 
 <http://example.org/charging/5BB54C25-60CF-4230-9636-FB0CB89853E5/charger51487>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -1002,8 +992,7 @@
 
 <http://example.org/charging/DDD4E6D6-FBE1-4CDD-84B6-5A349D12B4A4/charger107632>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -1033,8 +1022,7 @@
 
 <http://example.org/charging/27C44292-F191-4EC2-9C56-EF9E964A090C/charger86518>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -1107,8 +1095,7 @@
 
 <http://example.org/charging/DDD4E6D6-FBE1-4CDD-84B6-5A349D12B4A4/charger107645>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -1196,8 +1183,7 @@
 
 <http://example.org/charging/A2B8B607-81EB-40D3-A37A-7F6ABCA138F8/charger35807>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Three-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -1220,8 +1206,7 @@
 
 <http://example.org/charging/DDD4E6D6-FBE1-4CDD-84B6-5A349D12B4A4/charger107658>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -1242,8 +1227,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95341>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -1309,8 +1293,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95354>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -1359,8 +1342,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95367>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -1432,8 +1414,7 @@
 
 <http://example.org/charging/2E72E7B7-FD3B-43EF-BAB2-75779F9C03F1/charger86505>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 1.6E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -1559,8 +1540,7 @@
 
 <http://example.org/charging/9EC518CE-1133-41EB-B6B7-7F82A06B1B19/charger88917>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 1.6E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -1585,8 +1565,7 @@
 
 <http://example.org/charging/7C0009ED-DE8A-41DE-837A-D76AFCEE10BD/charger95380>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -1699,8 +1678,7 @@
 
 <http://example.org/charging/DDD4E6D6-FBE1-4CDD-84B6-5A349D12B4A4/charger107640>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -1736,8 +1714,7 @@
 
 <http://example.org/charging/2E72E7B7-FD3B-43EF-BAB2-75779F9C03F1/charger88891>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 1.6E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -1855,8 +1832,7 @@
 
 <http://example.org/charging/DDD4E6D6-FBE1-4CDD-84B6-5A349D12B4A4/charger107653>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -2089,8 +2065,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95362>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -2218,8 +2193,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95375>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -2249,8 +2223,7 @@
 
 <http://example.org/charging/CA30873F-0035-436C-9D4B-0A492010EB0A/charger120722>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/plug>
                 <http://example.org/charging/CA30873F-0035-436C-9D4B-0A492010EB0A/charger120722/plug1036> .
 
@@ -2289,8 +2262,7 @@
 
 <http://example.org/charging/793EA12A-AE87-4B3A-87FF-DAF4F188D4BF/charger62266>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -2424,8 +2396,7 @@
 
 <http://example.org/charging/CFC26A6A-1AE4-468A-96A9-590BAA709015/charger45492>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -2475,8 +2446,7 @@
 
 <http://example.org/charging/27C44292-F191-4EC2-9C56-EF9E964A090C/charger86521>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -2728,8 +2698,7 @@
 
 <http://example.org/charging/14B5EB37-1ADA-4E30-B179-AE3A64DAC766/charger35882>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -2774,8 +2743,7 @@
 
 <http://example.org/charging/C0D52036-54AF-43A5-8A57-CE5D13DB063F/charger86487>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -2950,8 +2918,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95370>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -3011,8 +2978,7 @@
 
 <http://example.org/charging/04D9879D-7A39-4E93-9540-FA1A63DA7F5A/charger109539>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 1.6E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -3184,8 +3150,7 @@
 
 <http://example.org/charging/BCA8C569-5069-447D-B0A8-43AD628F779E/charger124538>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -3719,8 +3684,7 @@
 
 <http://example.org/charging/E6F3F339-9C84-426B-A9C6-FFB2E4EC6769/charger128749>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -3973,8 +3937,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95329>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -4207,8 +4170,7 @@
 
 <http://example.org/charging/C0D52036-54AF-43A5-8A57-CE5D13DB063F/charger86490>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -4252,8 +4214,7 @@
 
 <http://example.org/charging/9730ABDA-11A2-4CE8-B809-688E3127B5DC/charger79788>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -4390,8 +4351,7 @@
 
 <http://example.org/charging/E6F3F339-9C84-426B-A9C6-FFB2E4EC6769/charger128744>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -4495,8 +4455,7 @@
 
 <http://example.org/charging/C2142E26-F06F-40D2-820A-4565059C7A22/charger101219>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/plug>
                 <http://example.org/charging/C2142E26-F06F-40D2-820A-4565059C7A22/charger101219/plug25> .
 
@@ -4536,8 +4495,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95324>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -4643,8 +4601,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95337>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -5067,8 +5024,7 @@
 
 <http://example.org/charging/3783C6CC-15CF-4067-A5A2-BADCC3D1700E/charger78197>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -5167,8 +5123,7 @@
 
 <http://example.org/charging/CF5C2341-C63F-4E33-8219-3AC91C27978F/charger109537>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 1.6E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -5332,8 +5287,7 @@
 
 <http://example.org/charging/3ECACFCC-76B4-42FD-937A-F70B77CC4978/charger88952>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 1.6E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -5367,8 +5321,7 @@
 
 <http://example.org/charging/DDD4E6D6-FBE1-4CDD-84B6-5A349D12B4A4/charger107636>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -5561,8 +5514,7 @@
 
 <http://example.org/charging/DDD4E6D6-FBE1-4CDD-84B6-5A349D12B4A4/charger107649>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -5578,8 +5530,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95332>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -5833,8 +5784,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95345>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -5935,8 +5885,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95358>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -6071,8 +6020,7 @@
 
 <http://example.org/charging/8A635A6F-F4FC-45BF-9CAC-76AADBA62984/charger88884>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -6095,8 +6043,7 @@
 
 <http://example.org/charging/9730ABDA-11A2-4CE8-B809-688E3127B5DC/charger79791>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -6148,8 +6095,7 @@
 
 <http://example.org/charging/1CCA3CA3-F21C-42F7-BA8E-CC8D1BA9C014/charger34048>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 1.6E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -6395,8 +6341,7 @@
 
 <http://example.org/charging/5BB54C25-60CF-4230-9636-FB0CB89853E5/charger51486>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "DC" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -6450,8 +6395,7 @@
 
 <http://example.org/charging/DDD4E6D6-FBE1-4CDD-84B6-5A349D12B4A4/charger107631>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -6543,8 +6487,7 @@
 
 <http://example.org/charging/DDD4E6D6-FBE1-4CDD-84B6-5A349D12B4A4/charger107644>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -6660,8 +6603,7 @@
 
 <http://example.org/charging/DDD4E6D6-FBE1-4CDD-84B6-5A349D12B4A4/charger107657>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -6683,8 +6625,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95340>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -6734,8 +6675,7 @@
 
 <http://example.org/charging/D54F4CAF-3986-4E6C-B53D-99E4ECDC7E1B/charger88953>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 1.6E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -6854,8 +6794,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95353>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -6921,8 +6860,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95366>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -6940,8 +6878,7 @@
 
 <http://example.org/charging/3AC9E5E1-F9A7-47AD-B1BF-D987F94E2E76/charger94439>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "DC" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -6953,8 +6890,7 @@
 
 <http://example.org/charging/003A8428-F9A2-4015-B79D-7D63A5F07E34/charger73062>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/plug>
                 <http://example.org/charging/003A8428-F9A2-4015-B79D-7D63A5F07E34/charger73062/plug25> ;
         <http://schema.mobivoc.org/powerInKW>
@@ -6982,8 +6918,7 @@
 
 <http://example.org/charging/2E72E7B7-FD3B-43EF-BAB2-75779F9C03F1/charger86504>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 1.6E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -7095,8 +7030,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95379>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -7503,8 +7437,7 @@
 
 <http://example.org/charging/DDD4E6D6-FBE1-4CDD-84B6-5A349D12B4A4/charger107652>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -7650,8 +7583,7 @@
 
 <http://example.org/charging/9870D51C-2087-450C-B5D5-2E796309B644/charger94442>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -7863,8 +7795,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95361>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -7941,8 +7872,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95374>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -8003,8 +7933,7 @@
 
 <http://example.org/charging/CA30873F-0035-436C-9D4B-0A492010EB0A/charger120721>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/plug>
                 <http://example.org/charging/CA30873F-0035-436C-9D4B-0A492010EB0A/charger120721/plug1036> .
 
@@ -8065,8 +7994,7 @@
 
 <http://example.org/charging/0FB3DC35-0E6A-43B6-8D53-8212BE84A660/charger66835>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -8182,8 +8110,7 @@
 
 <http://example.org/charging/27C44292-F191-4EC2-9C56-EF9E964A090C/charger86520>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -8337,8 +8264,7 @@
 
 <http://example.org/charging/E9AC2F31-6CE4-4329-A888-1B2D75FE3E57/charger100408>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -8437,8 +8363,7 @@
 
 <http://example.org/charging/DDD4E6D6-FBE1-4CDD-84B6-5A349D12B4A4/charger107660>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -8707,8 +8632,7 @@
 
 <http://example.org/charging/30B18841-8CB1-46DD-A750-CE0ADEA19675/charger73061>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/plug>
                 <http://example.org/charging/30B18841-8CB1-46DD-A750-CE0ADEA19675/charger73061/plug25> ;
         <http://schema.mobivoc.org/powerInKW>
@@ -8751,8 +8675,7 @@
 
 <http://example.org/charging/04D9879D-7A39-4E93-9540-FA1A63DA7F5A/charger109538>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 1.6E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -9004,8 +8927,7 @@
 
 <http://example.org/charging/BCA8C569-5069-447D-B0A8-43AD628F779E/charger124537>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -9279,8 +9201,7 @@
 
 <http://example.org/charging/C0D52036-54AF-43A5-8A57-CE5D13DB063F/charger88877>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -9351,8 +9272,7 @@
 
 <http://example.org/charging/C0D52036-54AF-43A5-8A57-CE5D13DB063F/charger86494>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -9492,8 +9412,7 @@
 
 <http://example.org/charging/E6F3F339-9C84-426B-A9C6-FFB2E4EC6769/charger128748>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -9539,8 +9458,7 @@
 
 <http://example.org/charging/2E72E7B7-FD3B-43EF-BAB2-75779F9C03F1/charger8583>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 1.6E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -9565,8 +9483,7 @@
 
 <http://example.org/charging/1F432917-958E-44FD-923F-7A2F271561DF/charger100409>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -9580,8 +9497,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95328>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -9927,8 +9843,7 @@
 
 <http://example.org/charging/F4BC39EA-009E-4D04-8F4D-C95E839EAA09/charger26980>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -9942,8 +9857,7 @@
 
 <http://example.org/charging/E6F3F339-9C84-426B-A9C6-FFB2E4EC6769/charger128743>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -10084,8 +9998,7 @@
 
 <http://example.org/charging/C2142E26-F06F-40D2-820A-4565059C7A22/charger101218>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/plug>
                 <http://example.org/charging/C2142E26-F06F-40D2-820A-4565059C7A22/charger101218/plug25> .
 
@@ -10137,8 +10050,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95323>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -10304,8 +10216,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95336>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -10408,8 +10319,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95349>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -10559,8 +10469,7 @@
 
 <http://example.org/charging/CF5C2341-C63F-4E33-8219-3AC91C27978F/charger109536>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 1.6E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -10614,8 +10523,7 @@
 
 <http://example.org/charging/69C5B1AA-E0FD-4A26-BB18-B95178D15D6F/charger79763>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -10755,8 +10663,7 @@
 
 <http://example.org/charging/DDD4E6D6-FBE1-4CDD-84B6-5A349D12B4A4/charger107635>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -10813,8 +10720,7 @@
 
 <http://example.org/charging/DDD4E6D6-FBE1-4CDD-84B6-5A349D12B4A4/charger107648>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -10850,8 +10756,7 @@
 
 <http://example.org/charging/1F432917-958E-44FD-923F-7A2F271561DF/charger100412>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -10865,8 +10770,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95331>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -10985,8 +10889,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95344>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -11062,8 +10965,7 @@
 
 <http://example.org/charging/A2B8B607-81EB-40D3-A37A-7F6ABCA138F8/charger63798>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "DC" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -11073,8 +10975,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95357>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -11206,8 +11107,7 @@
 
 <http://example.org/charging/9730ABDA-11A2-4CE8-B809-688E3127B5DC/charger79790>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -11446,8 +11346,7 @@
 
 <http://example.org/charging/5BB54C25-60CF-4230-9636-FB0CB89853E5/charger51485>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "DC" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -11571,8 +11470,7 @@
 
 <http://example.org/charging/DDD4E6D6-FBE1-4CDD-84B6-5A349D12B4A4/charger107630>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -11684,8 +11582,7 @@
 
 <http://example.org/charging/DDD4E6D6-FBE1-4CDD-84B6-5A349D12B4A4/charger107643>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -11801,8 +11698,7 @@
 
 <http://example.org/charging/DDD4E6D6-FBE1-4CDD-84B6-5A349D12B4A4/charger107656>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -11933,8 +11829,7 @@
 
 <http://example.org/charging/68281032-8D0B-479D-BFC2-211CF27249F9/charger46332>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -11990,8 +11885,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95352>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -12054,8 +11948,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95365>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -12095,8 +11988,7 @@
 
 <http://example.org/charging/2E72E7B7-FD3B-43EF-BAB2-75779F9C03F1/charger86503>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 1.6E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -12116,8 +12008,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95378>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -12389,8 +12280,7 @@
 
 <http://example.org/charging/7C0009ED-DE8A-41DE-837A-D76AFCEE10BD/charger90099>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -12510,8 +12400,7 @@
 
 <http://example.org/charging/8A635A6F-F4FC-45BF-9CAC-76AADBA62984/charger86500>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -12560,8 +12449,7 @@
 
 <http://example.org/charging/DDD4E6D6-FBE1-4CDD-84B6-5A349D12B4A4/charger107651>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -12744,8 +12632,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95360>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -12821,8 +12708,7 @@
 
 <http://example.org/charging/064B5505-3874-4EC5-9CEB-80A9DDC61AF6/charger88915>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 6.3E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -12858,8 +12744,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95373>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -13072,8 +12957,7 @@
 
 <http://example.org/charging/0FB3DC35-0E6A-43B6-8D53-8212BE84A660/charger66834>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -13247,8 +13131,7 @@
 
 <http://example.org/charging/E9AC2F31-6CE4-4329-A888-1B2D75FE3E57/charger100407>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -13299,8 +13182,7 @@
 
 <http://example.org/charging/C1FA281B-5334-415F-B8A4-B201A4C296BB/charger35716>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -13608,8 +13490,7 @@
 
 <http://example.org/charging/8A635A6F-F4FC-45BF-9CAC-76AADBA62984/charger71504>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -14124,8 +14005,7 @@
 
 <http://example.org/charging/289A2474-D53A-4198-917A-F674C6CB7A6C/charger52329>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 1.6E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -14294,8 +14174,7 @@
 
 <http://example.org/charging/C0D52036-54AF-43A5-8A57-CE5D13DB063F/charger86493>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -14365,8 +14244,7 @@
 
 <http://example.org/charging/E6F3F339-9C84-426B-A9C6-FFB2E4EC6769/charger128747>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -14397,8 +14275,7 @@
 
 <http://example.org/charging/1115EAFB-F0C2-4404-8216-D763C071A6CF/charger92147>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/plug>
                 <http://example.org/charging/1115EAFB-F0C2-4404-8216-D763C071A6CF/charger92147/plug25> .
 
@@ -14673,8 +14550,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95327>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -15099,8 +14975,7 @@
 
 <http://example.org/charging/68281032-8D0B-479D-BFC2-211CF27249F9/charger35812>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -15295,8 +15170,7 @@
 
 <http://example.org/charging/1115EAFB-F0C2-4404-8216-D763C071A6CF/charger92142>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/plug>
                 <http://example.org/charging/1115EAFB-F0C2-4404-8216-D763C071A6CF/charger92142/plug2> .
 
@@ -15392,8 +15266,7 @@
 
 <http://example.org/charging/C2142E26-F06F-40D2-820A-4565059C7A22/charger101217>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/plug>
                 <http://example.org/charging/C2142E26-F06F-40D2-820A-4565059C7A22/charger101217/plug25> .
 
@@ -15586,8 +15459,7 @@
 
 <http://example.org/charging/DDD4E6D6-FBE1-4CDD-84B6-5A349D12B4A4/charger107639>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -15616,8 +15488,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95322>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -15706,8 +15577,7 @@
 
 <http://example.org/charging/E53FB3B5-46A8-4299-A7B1-6DC3EA1EED79/charger88889>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 1.6E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -15739,8 +15609,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95335>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -15796,8 +15665,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95348>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -15967,8 +15835,7 @@
 
 <http://example.org/charging/D811B4A5-E006-4DCB-9982-A402C4664BCA/charger62265>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -16167,8 +16034,7 @@
 
 <http://example.org/charging/E6F3F339-9C84-426B-A9C6-FFB2E4EC6769/charger128750>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -16281,8 +16147,7 @@
 
 <http://example.org/charging/DDD4E6D6-FBE1-4CDD-84B6-5A349D12B4A4/charger107634>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -16379,8 +16244,7 @@
 
 <http://example.org/charging/DDD4E6D6-FBE1-4CDD-84B6-5A349D12B4A4/charger107647>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -16396,8 +16260,7 @@
 
 <http://example.org/charging/1F432917-958E-44FD-923F-7A2F271561DF/charger100411>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -16425,8 +16288,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95330>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -16471,8 +16333,7 @@
 
 <http://example.org/charging/9EC518CE-1133-41EB-B6B7-7F82A06B1B19/charger66651>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 1.6E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -16500,8 +16361,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95343>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -16616,8 +16476,7 @@
 
 <http://example.org/charging/A2B8B607-81EB-40D3-A37A-7F6ABCA138F8/charger63797>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "DC" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -16627,8 +16486,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95356>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -16682,8 +16540,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95369>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -16760,8 +16617,7 @@
 
 <http://example.org/charging/CD748EEC-EBC0-4604-91B8-D879B8C77CFC/charger78198>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -16845,8 +16701,7 @@
 
 <http://example.org/charging/ED471B6A-F092-406E-95AB-73FA977F6C98/charger26513>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "DC" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -17100,8 +16955,7 @@
 
 <http://example.org/charging/DDD4E6D6-FBE1-4CDD-84B6-5A349D12B4A4/charger107642>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -17117,8 +16971,7 @@
 
 <http://example.org/charging/C0D52036-54AF-43A5-8A57-CE5D13DB063F/charger78195>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -17241,8 +17094,7 @@
 
 <http://example.org/charging/DDD4E6D6-FBE1-4CDD-84B6-5A349D12B4A4/charger107655>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -17314,8 +17166,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95351>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -17389,8 +17240,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95364>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -17482,8 +17332,7 @@
 
 <http://example.org/charging/2E72E7B7-FD3B-43EF-BAB2-75779F9C03F1/charger86502>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 1.6E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -17543,8 +17392,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95377>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -17759,8 +17607,7 @@
 
 <http://example.org/charging/27C44292-F191-4EC2-9C56-EF9E964A090C/charger78196>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -17919,8 +17766,7 @@
 
 <http://example.org/charging/DDD4E6D6-FBE1-4CDD-84B6-5A349D12B4A4/charger107650>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -17979,8 +17825,7 @@
 
 <http://example.org/charging/3ECACFCC-76B4-42FD-937A-F70B77CC4978/charger52330>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 1.6E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -18050,8 +17895,7 @@
 
 <http://example.org/charging/2DD3BB55-6663-4D13-B623-E942F67A6992/charger79780>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "DC" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -18068,8 +17912,7 @@
 
 <http://example.org/charging/C0D52036-54AF-43A5-8A57-CE5D13DB063F/charger86489>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -18131,8 +17974,7 @@
 
 <http://example.org/charging/289A2474-D53A-4198-917A-F674C6CB7A6C/charger88876>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 1.6E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -18146,8 +17988,7 @@
 
 <http://example.org/charging/1D5B52A7-8FB6-4442-9758-6C72B9D835D8/charger94440>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -18217,8 +18058,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95372>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -18519,8 +18359,7 @@
 
 <http://example.org/charging/E9AC2F31-6CE4-4329-A888-1B2D75FE3E57/charger100406>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -19060,8 +18899,7 @@
 
 <http://example.org/charging/D54F4CAF-3986-4E6C-B53D-99E4ECDC7E1B/charger52331>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 1.6E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -19649,8 +19487,7 @@
 
 <http://example.org/charging/C0D52036-54AF-43A5-8A57-CE5D13DB063F/charger86492>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -19759,8 +19596,7 @@
 
 <http://example.org/charging/E6F3F339-9C84-426B-A9C6-FFB2E4EC6769/charger128746>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -19944,8 +19780,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95326>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -20037,8 +19872,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95339>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -20187,8 +20021,7 @@
 
 <http://example.org/charging/78B07C85-0785-438E-89A1-FD492C07755C/charger79823>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -20709,8 +20542,7 @@
 
 <http://example.org/charging/DDD4E6D6-FBE1-4CDD-84B6-5A349D12B4A4/charger107638>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -20751,8 +20583,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95321>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -20853,8 +20684,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95334>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -20957,8 +20787,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95347>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -21040,8 +20869,7 @@
 
 <http://example.org/charging/DC11DBDA-936B-4F0E-8D07-1356CE9BEB18/charger34633>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -21133,8 +20961,7 @@
 
 <http://example.org/charging/D811B4A5-E006-4DCB-9982-A402C4664BCA/charger62264>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -21183,8 +21010,7 @@
 
 <http://example.org/charging/9730ABDA-11A2-4CE8-B809-688E3127B5DC/charger79793>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -21309,8 +21135,7 @@
 
 <http://example.org/charging/699246B8-151A-444C-829C-D66C6D9E603D/charger52328>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 1.6E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -21324,8 +21149,7 @@
 
 <http://example.org/charging/064B5505-3874-4EC5-9CEB-80A9DDC61AF6/charger73302>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 1.0E2 ;
         <http://schema.mobivoc.org/currentType>
@@ -21463,8 +21287,7 @@
 
 <http://example.org/charging/DDD4E6D6-FBE1-4CDD-84B6-5A349D12B4A4/charger107633>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -21480,8 +21303,7 @@
 
 <http://example.org/charging/27C44292-F191-4EC2-9C56-EF9E964A090C/charger86519>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -21554,8 +21376,7 @@
 
 <http://example.org/charging/DDD4E6D6-FBE1-4CDD-84B6-5A349D12B4A4/charger107646>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -21571,8 +21392,7 @@
 
 <http://example.org/charging/1F432917-958E-44FD-923F-7A2F271561DF/charger100410>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -21608,8 +21428,7 @@
 
 <http://example.org/charging/DDD4E6D6-FBE1-4CDD-84B6-5A349D12B4A4/charger107659>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -21632,8 +21451,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95342>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -21701,8 +21519,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95355>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -21888,8 +21705,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95368>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -21948,8 +21764,7 @@
 
 <http://example.org/charging/2E72E7B7-FD3B-43EF-BAB2-75779F9C03F1/charger86506>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 1.6E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -22248,8 +22063,7 @@
 
 <http://example.org/charging/DDD4E6D6-FBE1-4CDD-84B6-5A349D12B4A4/charger107641>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -22314,8 +22128,7 @@
 
 <http://example.org/charging/DDD4E6D6-FBE1-4CDD-84B6-5A349D12B4A4/charger107654>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -22427,8 +22240,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95350>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -22565,8 +22377,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95363>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -22690,8 +22501,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95376>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -22818,8 +22628,7 @@
 
 <http://example.org/charging/793EA12A-AE87-4B3A-87FF-DAF4F188D4BF/charger62267>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -23144,8 +22953,7 @@
 
 <http://example.org/charging/27C44292-F191-4EC2-9C56-EF9E964A090C/charger86522>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -23311,8 +23119,7 @@
 
 <http://example.org/charging/C0D52036-54AF-43A5-8A57-CE5D13DB063F/charger86488>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -23594,8 +23401,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95371>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -23851,8 +23657,7 @@
 
 <http://example.org/charging/BCA8C569-5069-447D-B0A8-43AD628F779E/charger124539>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -24024,8 +23829,7 @@
 
 <http://example.org/charging/E9AC2F31-6CE4-4329-A888-1B2D75FE3E57/charger100405>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -24250,8 +24054,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger35855>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -25163,8 +24966,7 @@
 
 <http://example.org/charging/C0D52036-54AF-43A5-8A57-CE5D13DB063F/charger86491>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -25206,8 +25008,7 @@
 
 <http://example.org/charging/9730ABDA-11A2-4CE8-B809-688E3127B5DC/charger79789>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -25255,8 +25056,7 @@
 
 <http://example.org/charging/8A635A6F-F4FC-45BF-9CAC-76AADBA62984/charger86499>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -25372,8 +25172,7 @@
 
 <http://example.org/charging/E6F3F339-9C84-426B-A9C6-FFB2E4EC6769/charger128745>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -25505,8 +25304,7 @@
 
 <http://example.org/charging/91B6DC7E-0EE9-4C33-8369-E4D229C505B6/charger79777>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -25524,8 +25322,7 @@
 
 <http://example.org/charging/DDD4E6D6-FBE1-4CDD-84B6-5A349D12B4A4/charger107629>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentInA>
                 3.2E1 ;
         <http://schema.mobivoc.org/currentType>
@@ -25684,8 +25481,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95325>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -25807,8 +25603,7 @@
 
 <http://example.org/charging/DD700A9B-365E-4EC9-B927-23312AD1887B/charger95338>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -25899,8 +25694,7 @@
 
 <http://example.org/charging/ED7E3BD5-F06F-4A46-AF0B-3DE7A3E54343/charger90073>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
@@ -25955,8 +25749,7 @@
 
 <http://example.org/charging/78B07C85-0785-438E-89A1-FD492C07755C/charger79822>
         a       <http://schema.mobivoc.org/Charger> ;
-        <http://schema.mobivoc.org/chargerQuantity>
-                "" ;
+
         <http://schema.mobivoc.org/currentType>
                 "AC (Single-Phase)" ;
         <http://schema.mobivoc.org/isFastChargeCapable>
