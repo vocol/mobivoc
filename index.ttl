@@ -31,8 +31,7 @@ mv:operatedBy
 
 mv:id
     a rdf:Property, owl:DatatypeProperty ;
-    rdfs:comment "ID of the civic structure or facility." ;
-    rdfs:domain s:CivicStructure ;
+    rdfs:comment "ID of the entity." ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "ID"@de , "ID"@en ;
     rdfs:range xsd:string .
@@ -154,20 +153,26 @@ mv:AccessCondition
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "Access condition"@en , "Zugangsbedingung"@de .
 
-mv:restrictedToVehicleType
+mv:validForVehicle
     a rdf:Property, owl:ObjectProperty ;
-    rdfs:comment "Indicates that a civic structure like a parking facility or charging station can only be accessed with a specific type of vehicle."@en ;
-    rdfs:domain mv:AccessCondition ;
+    rdfs:comment "Indicates that an entity for a specific type of vehicle."@en ;
+    rdfs:domain [
+          a owl:Class ;
+          owl:unionOf (mv:AccessCondition s:PriceSpecification mv:Capacity)
+        ];
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "restricted to vehicle type"@en , "beschränkt auf Fahrzeugtyp"@de ;
+    rdfs:label "valid for vehicle"@en, "gültig für Fahrzeug"@de ;
     rdfs:range s:Vehicle .
 
-mv:restrictedToGroup
+mv:validForUserGroup
     a rdf:Property, owl:ObjectProperty ;
-    rdfs:comment "Indicates that a civic structure like a parking facility or charging station can only be accessed by a specific group of users."@en ;
-    rdfs:domain mv:AccessCondition ;
+    rdfs:comment "Indicates that an entity is valid for a specific group of users."@en ;
+    rdfs:domain [
+          a owl:Class ;
+          owl:unionOf (mv:AccessCondition s:PriceSpecification mv:Capacity)
+        ];
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "restricted to user group"@en , "beschränkt auf Nutzergruppe"@de ;
+    rdfs:label "valid for user group"@en , "gültig für Nutzergruppe"@de ;
     rdfs:range mv:UserGroup .
 
 mv:UserGroup
@@ -194,6 +199,12 @@ mv:Families
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     a mv:UserGroup .
 
+mv:Inhabitants
+    rdfs:comment "People living on the premises."@en ;
+    rdfs:label "Inhabitants"@en , "Anwohner"@de ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    a mv:UserGroup .
+
 mv:TaxiDrivers
     rdfs:comment "Drivers of a vehicle for hire, used by a single passenger or small group of passengers, often for a non-shared ride. Taxi drivers convey passengers between locations of their choice."@en ;
     rdfs:label "Taxi drivers"@en , "Taxifahrer"@de ;
@@ -209,22 +220,6 @@ mv:CarsharingUsers
     skos:hiddenLabel "Car sharing users" , "Car-sharing users" ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     a mv:UserGroup .
-
-mv:validForGroup
-    a rdf:Property, owl:ObjectProperty ;
-    rdfs:comment "Indicates that a price specification is valid for a specific group of users."@en ;
-    rdfs:domain s:PriceSpecification ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "valid for user group"@en , "gültig für Nutzergruppe"@de ;
-    rdfs:range mv:UserGroup .
-
-mv:validForVehicle
-    a rdf:Property, owl:ObjectProperty ;
-    rdfs:comment "Indicates that a price specification is valid for a specific type of vehicle."@en ;
-    rdfs:domain s:PriceSpecification ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "valid for vehicle"@en , "gültig für Fahrzeugtyp"@de ;
-    rdfs:range s:Vehicle .
 
 mv:price
     a rdf:Property, owl:ObjectProperty ;

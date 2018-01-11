@@ -7,7 +7,7 @@
 ##DOCSRC=test-test-cases.ttl
 DOCSRC=index.ttl index-head.ttl ChargingPoints.ttl Parking.ttl
 SCHEMASRC=index.ttl index-head.ttl ChargingPoints.ttl Parking.ttl
-
+INSTANCESRC=OpenChargeMap_Mobivoc.ttl
 #disable manual and/or automatic tests. default: don't skip tests (=false)
 #SKIPAUTOTESTS=true
 #SKIPMANUALTESTS=true

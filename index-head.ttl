@@ -54,8 +54,8 @@ vann:preferredNamespaceUri
 
 <http://schema.mobivoc.org/>
     cc:license <http://creativecommons.org/licenses/by/4.0/> ;
-    dct:creator <http://purl.org/net/clange>, ecc:aweilandt ;
-    dct:contributor ecc:mbruemmer ;
+    dct:creator ecc:aweilandt, ecc:mbruemmer ;
+    dct:contributor <http://purl.org/net/clange> ;
     dct:modified "2017-05-15"^^xsd:date ;
     dct:publisher ecc:eccenca-GmbH ;
     vann:preferredNamespacePrefix "mv" ;
@@ -65,7 +65,7 @@ vann:preferredNamespaceUri
     rdfs:comment "Our goal is to significantly improve the data mobility between all stakeholders by providing a standardized vocabulary using Semantic Web technologies and ontologies. For the open vocabulary covering various mobility aspects we use RDF (Resource Description Framework) - a recommended specification of the World Wide Web Consortium (W3C) and the so-called lingua franca for the integration of data and web. We invite everyone who is interested to join our MobiVoc initiative and to participate in the development of the Open Mobility Vocabulary." ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "MobiVoc: Open Mobility Vocabulary"@en ;
-    owl:versionInfo "0.6.0" .
+    owl:versionInfo "1.0.0" .
 
 ecc:aweilandt
     a dct:Agent, foaf:Person ;

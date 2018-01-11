@@ -7,12 +7,18 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 
 ### Added
 - add instances of UserGroups: TaxiDrivers, Women, PersonsWithDisabledParkingPermit, CarsharingUsers, Families
+- add common plug types
+- add example OpenChargeMap dataset
+- Inhabitants user group
 
 ### Changed
 - deprecate ParkingUsageType class and instances
 - deprecate parkingUsageType property
 - deprecate specific numberOfParkingSpaces properties
+- unify UserGroup properties to mv:validForUserGroup
+- unify Vehicle restriction properties to mv:validForVehicle
 - add working policy to CONTRIBUTING.md
+- make ParkingFacility equivalent to schema.org ParkingFacility
 
 ## [0.6.0] 2017-06-29
 

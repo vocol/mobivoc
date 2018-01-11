@@ -65,6 +65,7 @@ mv:ParkingFacility
     a rdfs:Class, owl:Class ;
     rdfs:comment "Any facility or area assigned for parking vehicles. A parking facility can provide one or more parking spaces."@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    owl:equivalentClass s:ParkingFacility ;
     rdfs:label "Parkeinrichtung"@de, "Parking facility"@en ;
     rdfs:subClassOf s:CivicStructure .
 
@@ -274,7 +275,7 @@ mv:ParkingSpace
 mv:ParkingUsageType
     a rdfs:Class, owl:Class ;
     owl:deprecated "true"^^xsd:boolean ;
-    skos:note "Deprecated, use intendedForUserGroup [a UserGroup] instead." ;
+    skos:note "Deprecated, use validForUserGroup [a UserGroup] instead." ;
     rdfs:comment "A type of special purpose a parking space is designated for, like women's parking spaces."@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "Stellplatz Nutzungsart"@de, "Parking usage type"@en ;
@@ -283,7 +284,7 @@ mv:ParkingUsageType
 mv:CarsharingParkingSpace
     rdfs:comment "Specially designated and identified parking space reserved for carsharing vehicles."@en ;
     owl:deprecated "true"^^xsd:boolean ;
-    skos:note "Deprecated, use intendedForUserGroup [a UserGroup] instead." ;
+    skos:note "Deprecated, use validForUserGroup [a UserGroup] instead." ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "Carsharing-Stellplatz"@de , "Carsharing parking space"@en , "Place de stationnement pour l'autopartage"@fr ; 
     a mv:ParkingUsageType .
@@ -291,7 +292,7 @@ mv:CarsharingParkingSpace
 mv:DisabledParkingSpace 
     rdfs:comment "Specially designated and identified parking space reserved for persons with disabilities, or in some situations, permission to park in a time-limited space for longer time, or to park at a meter without payment."@en ;
     owl:deprecated "true"^^xsd:boolean ;
-    skos:note "Deprecated, use intendedForUserGroup [a UserGroup] instead." ;
+    skos:note "Deprecated, use validForUserGroup [a UserGroup] instead." ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "Behindertenstellplatz"@de , "Disabled parking space"@en ;
     a mv:ParkingUsageType .
@@ -299,7 +300,7 @@ mv:DisabledParkingSpace
 mv:TaxiParkingSpace
     rdfs:comment "Parking space where only taxis are allowed to."@en ;
     owl:deprecated "true"^^xsd:boolean ;
-    skos:note "Deprecated, use intendedForUserGroup [a UserGroup] instead." ;
+    skos:note "Deprecated, use validForUserGroup [a UserGroup] instead." ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "Taxi-Stellplatz"@de , "Taxi parking space"@en ;
     a mv:ParkingUsageType .
@@ -307,7 +308,7 @@ mv:TaxiParkingSpace
 mv:WomensParkingSpace
     rdfs:comment "Specially designated and identified parking space to be used by women."@en , "Gekennzeichneter und ausgewiesener Stellplatz für die Nutzung durch Frauen."@de ;
     owl:deprecated "true"^^xsd:boolean ;
-    skos:note "Deprecated, use intendedForUserGroup [a UserGroup] instead." ;
+    skos:note "Deprecated, use validForUserGroup [a UserGroup] instead." ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "Women's parking space"@en , "Frauenparkplatz"@de ;
     skos:prefLabel "Women's parking space"@en ;
@@ -387,19 +388,11 @@ mv:parkingUsageType
     a rdf:Property, owl:ObjectProperty ;
     rdfs:comment "Relates the capacity of a parking facility to a specific designated usage type."@en ;
     owl:deprecated "true"^^xsd:boolean ;
-    skos:note "Deprecated, use intendedForUserGroup instead." ;
+    skos:note "Deprecated, use validForUserGroup instead." ;
     rdfs:domain mv:Capacity ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "parking usage type"@en, "Nutzungsart"@de ;
     rdfs:range mv:ParkingUsageType .
-
-mv:intendedForUserGroup
-    a rdf:Property, owl:ObjectProperty ;
-    rdfs:comment "Relates the capacity of a parking facility to a specific designated user group."@en ;
-    rdfs:domain mv:Capacity ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "intended for user group"@en, "vorgesehen für Nutzergruppe"@de ;
-    rdfs:range mv:UserGroup .
 
 mv:parkingSpace
     a rdf:Property, owl:ObjectProperty ;
@@ -415,14 +408,6 @@ mv:Capacity
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "Kapazität"@de, "Capacity"@en ;
     .
-
-mv:intendedForVehicle
-    a rdf:Property, owl:ObjectProperty ;
-    rdfs:comment "Indicates that the given capacity is intended for a specific type of vehicle."@en ;
-    rdfs:domain mv:Capacity ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "intended for vehicle"@en, "vorgesehen für Fahrzeugtyp"@de ;
-    rdfs:range s:Vehicle .
 
 mv:Bicycle
     rdfs:comment "A human-or electric powered, pedal-driven, single-track vehicle, having two wheels attached to a frame, one behind the other."@en ;
@@ -483,6 +468,22 @@ mv:RealTimeCapacity
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "Echtzeit Kapazität"@de, "Real time capacity"@en ;
     .
+
+mv:level
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "Indicates the level of a parking facility the parking space is located in."@en ;
+    rdfs:domain mv:ParkingSpace ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "level"@en, "Ebene"@de ;
+    rdfs:range xsd:integer .
+
+mv:numberOfLevels
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "Indicates the total number of levels a parking facility has."@en ;
+    rdfs:domain mv:ParkingFacility ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "number of levels"@en, "Anzahl Ebenen"@de ;
+    rdfs:range xsd:integer .
 
 mv:maximumValue
     a rdf:Property, owl:DatatypeProperty ;

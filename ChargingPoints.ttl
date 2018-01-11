@@ -166,7 +166,7 @@ mv:voltageInV
         ];
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "voltage in V"@en ;
-    rdfs:range xsd:decimal .
+    rdfs:range xsd:double .
 
 mv:currentInA
     a rdf:Property, owl:DatatypeProperty ;
@@ -177,7 +177,7 @@ mv:currentInA
         ];
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "current in A"@en ;
-    rdfs:range xsd:decimal .
+    rdfs:range xsd:double .
 
 mv:powerInKW
     a rdf:Property, owl:DatatypeProperty ;
@@ -188,7 +188,7 @@ mv:powerInKW
         ];
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "power in kW"@en ;
-    rdfs:range xsd:decimal .
+    rdfs:range xsd:double .
 
 mv:currentType
     a rdf:Property, owl:DatatypeProperty ;
