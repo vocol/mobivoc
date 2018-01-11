@@ -1,0 +1,1092 @@
+@prefix cc:    <http://creativecommons.org/ns#> .
+@prefix void:  <http://rdfs.org/ns/void#> .
+@prefix ecc:   <https://ns.eccenca.com/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix voaf:  <http://purl.org/vocommons/voaf#> .
+@prefix mv:    <http://schema.mobivoc.org/> .
+@prefix dbpedia: <http://dbpedia.org/resource/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/2001/vcard-rdf/3.0#> .
+@prefix gr:    <http://purl.org/goodrelations/v1#> .
+@prefix dbo:   <http://dbpedia.org/> .
+@prefix geo:   <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix s:     <http://schema.org/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix doap:  <http://usefulinc.com/ns/doap#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix vann:  <http://purl.org/vocab/vann/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+mv:entrance  a            owl:ObjectProperty , rdf:Property ;
+        rdfs:comment      "Describes the entrance of a parking facility."@en ;
+        rdfs:domain       mv:ParkingFacility ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "hat Einfahrt"@de , "entrance"@en ;
+        rdfs:range        mv:ParkingFacilityEntrance .
+
+mv:ComboPlug  a           mv:PlugType ;
+        rdfs:comment      "Plug with combo connection." ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Combo Plug"@en .
+
+mv:chargingPoint  a       owl:ObjectProperty , rdf:Property ;
+        rdfs:comment      "Indicates whether charging points are available." ;
+        rdfs:domain       [ a            owl:Class ;
+                            owl:unionOf  ( mv:ParkingFacility mv:ParkingSpace )
+                          ] ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "hat Ladestation"@de , "has charging point"@en ;
+        rdfs:range        mv:ChargingPoint .
+
+mv:UndergroundParkingGarage
+        a                 rdfs:Class , owl:Class ;
+        rdfs:comment      "Parking facility with one or more levels below the surface and none above ground." ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Tiefgarage"@de , "Underground parking garage"@en ;
+        rdfs:subClassOf   mv:ParkingFacility ;
+        skos:altLabel     "Rampengarage"@de ;
+        skos:prefLabel    "Tiefgarage"@de , "Underground parking garage"@en .
+
+s:Place  a                owl:Class ;
+        rdfs:comment      "Entities that have a somewhat fixed, physical extension."@en ;
+        rdfs:isDefinedBy  s: ;
+        rdfs:label        "Place"@en .
+
+mv:level  a               owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Indicates the level of a parking facility the parking space is located in."@en ;
+        rdfs:domain       mv:ParkingSpace ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Ebene"@de , "level"@en ;
+        rdfs:range        xsd:integer .
+
+mv:Faulty  a              mv:CivicStructureStatus ;
+        rdfs:comment      "The parking facility is not operating normally." ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Faulty"@en , "Defekt"@de .
+
+mv:RecreationalVehicle
+        a                 s:Vehicle ;
+        rdfs:comment      "A motor vehicle or trailer equipped with living space and amenities found in a home."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Wohnmobil"@de , "Recreational vehicle"@en .
+
+ecc:aweilandt  a   foaf:Person , dct:Agent ;
+        foaf:name  "Annette Weilandt" .
+
+mv:Type1Plug  a           mv:PlugType ;
+        rdfs:comment      "Plug with Type 1 plug connection." ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Type 1 plug"@en ;
+        foaf:depiction    <http://commons.wikimedia.org/wiki/Special:FilePath/SAE_J1772_7058855567.jpg> .
+
+s:address  a              owl:ObjectProperty ;
+        rdfs:comment      "Physical address of the item."@en ;
+        rdfs:domain       s:Place ;
+        rdfs:isDefinedBy  s: ;
+        rdfs:label        "address"@en ;
+        rdfs:range        s:PostalAddress .
+
+cc:license  a             owl:AnnotationProperty ;
+        rdfs:isDefinedBy  <http://creativecommons.org/ns> .
+
+mv:operatedBy  a          owl:ObjectProperty , rdf:Property ;
+        rdfs:comment      "The operator of a civic structure or facility. Operator and owner can be different business entitites."@en ;
+        rdfs:domain       s:CivicStructure ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "betrieben von"@de , "operated by"@en ;
+        rdfs:range        gr:BusinessEntity .
+
+mv:ParkAndRide  a         mv:ParkingFacilityConnection ;
+        rdfs:comment      "Connection to public transport." ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Parken und Reisen"@de , "Park & Ride"@en ;
+        skos:altLabel     "P+R" , "P&R" .
+
+mv:dueForTime  a          owl:ObjectProperty , rdf:Property ;
+        rdfs:comment      "Indicates that a price specification is due for a certain time specification."@en ;
+        rdfs:domain       s:PriceSpecification ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "fällig für Zeitdauer"@de , "due for time"@en ;
+        rdfs:range        mv:TimeSpecification .
+
+mv:ParkAndRideServiceOperating
+        a                 mv:CivicStructureStatus ;
+        rdfs:comment      "Park and ride services are operating until the specified time." ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Park and ride service operating"@en , "P+R-Service vorhanden"@de .
+
+mv:vehicleWidthLimitInM
+        a                 owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Indicates the width limit in meter for vehicles using the parking facility." ;
+        rdfs:domain       s:CivicStructure ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Breitenbegrenzung für Fahrzeuge"@de , "vehicle width limit"@en ;
+        rdfs:range        xsd:decimal .
+
+mv:price  a               owl:ObjectProperty , rdf:Property ;
+        rdfs:comment      "Indicates that a civic structure can be used for a specific price."@en ;
+        rdfs:domain       s:CivicStructure ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Preis"@de , "price"@en ;
+        rdfs:range        s:PriceSpecification .
+
+ecc:eccenca-GmbH  a  foaf:Organization , dct:Agent ;
+        foaf:name  "eccenca GmbH" .
+
+mv:Carpooling  a          mv:ParkingFacilityConnection ;
+        rdfs:comment      "Parking facility used for carpooling or ridesharing." ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Parken und Mitfahren"@de , "Carpooling" ;
+        skos:altLabel     "Parken und Mitnehmen"@de , "Park & Drive" , "P+M" , "P&M" .
+
+mv:access  a              owl:ObjectProperty , rdf:Property ;
+        rdfs:comment      "Indicates that a civic structure can only be accessed when certain conditions are fullfilled."@en ;
+        rdfs:domain       s:CivicStructure ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "access"@en ;
+        rdfs:range        mv:AccessCondition .
+
+mv:currentValue  a        owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Indicates the current value of the real-time capacity."@en ;
+        rdfs:domain       mv:RealTimeCapacity ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "current value"@en ;
+        rdfs:range        xsd:integer .
+
+mv:charger  a             owl:ObjectProperty , rdf:Property ;
+        rdfs:comment      "Describes the charger available at a charging point. A charging point can have more than one charger." ;
+        rdfs:domain       mv:ChargingPoint ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "charger"@en ;
+        rdfs:range        mv:Charger .
+
+mv:ParallelParking  a     mv:ArrangementPattern ;
+        rdfs:comment      "Bei der Längsaufstellung wird das Fahrzeug (gemäß § 12 StVO) parallel zur Fahrbahn geparkt. Diese Fahrzeugaufstellung ist die gängigste Aufstellungsart an Straßen."@de , "With parallel parking, vehicles are arranged in a line, with the front of one vehicle facing the back of an adjacent one. This is done parallel to a curb, when one is provided. Parallel parking is the most common mode of roadside parking for vehicles."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Längsaufstellung"@de , "Parallel parking"@en ;
+        skos:altLabel     "Parallelaufstellung"@de ;
+        skos:prefLabel    "Längsaufstellung"@de , "Parallel parking"@en .
+
+mv:ChargingPoint  a       owl:Class , rdfs:Class ;
+        rdfs:comment      "Civic structure that supplies electric energy for the recharging of electric vehicles." ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Ladestation"@de , "Charging point"@en ;
+        rdfs:subClassOf   s:CivicStructure .
+
+mv:freeOfCharge  a        owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Indicates that the usage of the civic structure is for free." ;
+        rdfs:domain       s:PriceSpecification ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "kostenlos"@de , "free of charge"@en ;
+        rdfs:range        xsd:boolean .
+
+mv:plug  a                owl:ObjectProperty , rdf:Property ;
+        rdfs:comment      "Indicates the plugs available at a charger." ;
+        rdfs:domain       mv:Charger ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "plug"@en ;
+        rdfs:range        mv:Plug .
+
+mv:Type2Plug  a           mv:PlugType ;
+        rdfs:comment      "Plug with Type 2 plug connection." ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Type 2 plug"@en ;
+        owl:sameAs        "http://en.wikipedia.org/wiki/IEC_62196#Type_2:_VDE-AR-E_2623-2-2" ;
+        foaf:depiction    <http://upload.wikimedia.org/wikipedia/commons/f/f3/VDE-AR-E_2623-2-2-plug.jpg> .
+
+mv:brand  a               owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Indicates the brand of a charger." ;
+        rdfs:domain       mv:Charger ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Marke"@de , "brand"@en ;
+        rdfs:range        xsd:string .
+
+mv:PlugType  a            owl:Class , rdfs:Class ;
+        rdfs:comment      "Type of a plug that is used to connect electric vehicles." ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Steckertyp"@de , "Plug type"@en .
+
+mv:Women  a               mv:UserGroup ;
+        rdfs:comment      "Female persons."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Frauen"@de , "Women"@en .
+
+mv:Allow  a               mv:Action ;
+        rdfs:comment      "Allow to do an action."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Erlauben"@de , "Allow"@en .
+
+mv:NoParkAndRideInformation
+        a                 mv:CivicStructureStatus ;
+        rdfs:comment      "No park and ride information will be available until the specified time." ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "No park and ride information"@en , "Keine P+R-Informationen"@de .
+
+gr:BusinessEntity  a      owl:class ;
+        rdfs:comment      "An instance of this class represents the legal agent making (or seeking) a particular offering. This can be a legal body or a person. A business entity has at least a primary mailing address and contact details. For this, typical address standards (vCard) and location data (geo, WGS84) can be attached. Note that the location of the business entity is not necessarily the location from which the product or service is being available."@en ;
+        rdfs:isDefinedBy  gr: ;
+        rdfs:label        "Juristische Person"@de , "Business entity"@en .
+
+mv:civicStructureStatus
+        a                 owl:ObjectProperty , rdf:Property ;
+        rdfs:comment      "Indicates the current status of the civil structure." ;
+        rdfs:domain       s:CivicStructure ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "hat Status der zivilen Struktur"@de , "civic structure status"@en ;
+        rdfs:range        mv:CivicStructureStatus .
+
+mv:     a                              owl:Ontology , voaf:Vocabulary ;
+        rdfs:comment                   "Our goal is to significantly improve the data mobility between all stakeholders by providing a standardized vocabulary using Semantic Web technologies and ontologies. For the open vocabulary covering various mobility aspects we use RDF (Resource Description Framework) - a recommended specification of the World Wide Web Consortium (W3C) and the so-called lingua franca for the integration of data and web. We invite everyone who is interested to join our MobiVoc initiative and to participate in the development of the Open Mobility Vocabulary." ;
+        rdfs:isDefinedBy               mv: ;
+        rdfs:label                     "MobiVoc: Open Mobility Vocabulary"@en ;
+        cc:license                     <http://creativecommons.org/licenses/by/4.0/> ;
+        dct:contributor                <http://purl.org/net/clange> ;
+        dct:creator                    ecc:aweilandt , ecc:mbruemmer ;
+        dct:modified                   "2017-05-15"^^xsd:date ;
+        dct:publisher                  ecc:eccenca-GmbH ;
+        vann:preferredNamespacePrefix  "mv" ;
+        vann:preferredNamespaceUri     "http://schema.mobivoc.org/" ;
+        void:vocabulary                vann: , foaf: ;
+        owl:versionInfo "v0.6.0-18-g01847b5" .
+
+vann:preferredNamespacePrefix
+        a                 owl:AnnotationProperty ;
+        rdfs:isDefinedBy  vann: .
+
+mv:ParkingUsageType  a    owl:Class , rdfs:Class ;
+        rdfs:comment      "A type of special purpose a parking space is designated for, like women's parking spaces."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Parking usage type"@en , "Stellplatz Nutzungsart"@de ;
+        owl:deprecated    true ;
+        skos:note         "Deprecated, use validForUserGroup [a UserGroup] instead." .
+
+ecc:mbruemmer  a   foaf:Person , dct:Agent ;
+        foaf:name  "Martin Brümmer" .
+
+mv:timeStartValue  a      owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Indicates the start value of a time period." ;
+        rdfs:domain       mv:TimeSpecification ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Anfangszeit"@de , "time start value"@en ;
+        rdfs:range        xsd:float .
+
+mv:powerInKW  a           owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Indicates the power of a charger or plug in kilowatts." ;
+        rdfs:domain       [ a            owl:Class ;
+                            owl:unionOf  ( mv:Plug mv:Charger )
+                          ] ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "power in kW"@en ;
+        rdfs:range        xsd:double .
+
+mv:CarsharingUsers  a     mv:UserGroup ;
+        rdfs:comment      "User of a car rental model where people rent cars for short periods of time."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Carsharing users"@en-us , "Car club users"@en-uk , "Carsharing-Nutzer"@de , "Utilisateurs de l'autopartage"@fr ;
+        skos:hiddenLabel  "Car-sharing users" , "Car sharing users" ;
+        skos:prefLabel    "Carsharing users"@en-us , "Carsharing-Nutzer"@de .
+
+mv:voltageInV  a          owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Indicates the voltage of a charger or plug in volt." ;
+        rdfs:domain       [ a            owl:Class ;
+                            owl:unionOf  ( mv:Plug mv:Charger )
+                          ] ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "voltage in V"@en ;
+        rdfs:range        xsd:double .
+
+mv:model  a               owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Indicates the charger model of the charging point." ;
+        rdfs:domain       mv:Charger ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Modell"@de , "model"@en ;
+        rdfs:range        xsd:string .
+
+mv:NormalParkingRestrictionsLifted
+        a                 mv:CivicStructureStatus ;
+        rdfs:comment      "The parking restrictions that normally apply in the specified location have been temporarily lifted." ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Normale Parkbeschränkungen aufgehoben"@de , "Normal parking restrictions lifted"@en .
+
+<http://creativecommons.org/licenses/by/4.0/>
+        rdfs:label  "Creative Commons Attribution 4.0 International" .
+
+mv:SpecialParkingRestrictionsInForce
+        a                 mv:CivicStructureStatus ;
+        rdfs:comment      "Parking restrictions, other than those that normally apply, are in force in a specified area." ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Special parking restrictions in force"@en , "Besondere Parkbeschränkungen in Kraft"@de .
+
+mv:Bicycle  a             s:Vehicle ;
+        rdfs:comment      "A human-or electric powered, pedal-driven, single-track vehicle, having two wheels attached to a frame, one behind the other."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Vélo"@fr , "Fahrrad"@de , "Bicycle"@en .
+
+mv:PerpendicularParking
+        a                 mv:ArrangementPattern ;
+        rdfs:comment      "Bei der Senkrechtaufstellung wird das Fahrzeug mit einem Aufstellwinkel von von 100 gon (90°) geparkt."@de , "With perpendicular parking, vehicles are parked side to side, perpendicular to an aisle, curb, or wall. This type of parking is commonly used in parking lots and parking facilities."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Senkrechtaufstellung"@de , "Perpendicular parking"@en ;
+        skos:altLabel     "Bay parking"@en ;
+        skos:prefLabel    "Perpendicular parking"@en .
+
+mv:numberOfParkingSpacesForDisabledPersons
+        a                 owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Indicates the number of parking spaces for disabled persons." ;
+        rdfs:domain       mv:ParkingFacility ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Anzahl Behindertenparkplätze"@de , "number of parking spaces for disabled persons"@en ;
+        rdfs:range        xsd:integer ;
+        owl:deprecated    true ;
+        skos:note         "Deprecated, use value of Capacity resource instead." .
+
+mv:Plug  a                owl:Class , rdfs:Class ;
+        rdfs:comment      "Component of a charger to connect an electric vehicle. There are different plug types used for charging electric vehicles." ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Plug"@en , "Anschluss"@de .
+
+mv:totalCapacity  a       owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Indicates the total number of parking spaces of a parking facility." ;
+        rdfs:domain       mv:ParkingFacility ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Gesamtkapazität"@de , "total capacity"@en ;
+        rdfs:range        xsd:integer .
+
+mv:ParkingLot  a          rdfs:Class , owl:Class ;
+        rdfs:comment      "Parking area on a single groundfloor level that is usually located outdoor." ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Parking lot"@en , "Parkplatz"@de ;
+        rdfs:subClassOf   mv:ParkingFacility ;
+        skos:altLabel     "car lot"@en , "Parkfläche"@de ;
+        skos:prefLabel    "Parking lot"@en-us , "Parkplatz"@de , "Car park"@en-uk .
+
+vann:preferredNamespaceUri
+        a                 owl:AnnotationProperty ;
+        rdfs:isDefinedBy  vann: .
+
+mv:queuingTime  a         owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "The current queuing time (duration) for entering the parking facility." ;
+        rdfs:domain       mv:ParkingFacility ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Wartezeit"@de , "queuing time"@en ;
+        rdfs:range        xsd:string .
+
+dct:date  a               owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "The date of the given real-time capacity."@en ;
+        rdfs:domain       mv:RealTimeCapacity ;
+        rdfs:isDefinedBy  dct: ;
+        rdfs:label        "date"@en ;
+        rdfs:range        xsd:datetime .
+
+mv:name  a                owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Name of the civic structure or facility." ;
+        rdfs:domain       s:CivicStructure ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "name"@en , "Name"@de ;
+        rdfs:range        xsd:string .
+
+mv:TaxiParkingSpace  a    mv:ParkingUsageType ;
+        rdfs:comment      "Parking space where only taxis are allowed to."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Taxi parking space"@en , "Taxi-Stellplatz"@de ;
+        owl:deprecated    true ;
+        skos:note         "Deprecated, use validForUserGroup [a UserGroup] instead." .
+
+mv:Action  a              owl:Class ;
+        rdfs:comment      "Action that is done."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Aktion"@de , "Action"@en .
+
+mv:AutomatedParkingGarage
+        a                 owl:Class , rdfs:Class ;
+        rdfs:comment      "Parking garage with an automated parking system that automatically moves cars to the available parking space somewhere in the garage."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Automatisches Parkhaus"@de , "Automated parking garage"@en ;
+        rdfs:subClassOf   mv:ParkingFacility .
+
+mv:ParkingFacilityExit
+        a                 owl:Class , rdfs:Class ;
+        rdfs:comment      "Exit of a parking facility where vehicles can leave the parking facility."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Exit"@en , "Ausfahrt"@de ;
+        rdfs:subClassOf   s:CivicStructure .
+
+s:openingHoursSpecification
+        a                 owl:ObjectProperty , rdf:Property ;
+        rdfs:comment      "Indicates the general opening hours for a business or civic structure."@en ;
+        rdfs:domain       s:CivicStructure ;
+        rdfs:isDefinedBy  s: ;
+        rdfs:label        "opening hours specification"@en ;
+        rdfs:range        s:OpeningHoursSpecification .
+
+mv:BikeAndRide  a         mv:ParkingFacilityConnection ;
+        rdfs:comment      "Parking facilities for bicycles with connection to public transport." ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Bike and Ride" .
+
+mv:ParkingFacility  a        owl:Class , rdfs:Class ;
+        rdfs:comment         "Any facility or area assigned for parking vehicles. A parking facility can provide one or more parking spaces."@en ;
+        rdfs:isDefinedBy     mv: ;
+        rdfs:label           "Parking facility"@en , "Parkeinrichtung"@de ;
+        rdfs:subClassOf      s:CivicStructure ;
+        owl:equivalentClass  s:ParkingFacility .
+
+s:acceptedPaymentMethod
+        a                 owl:ObjectProperty ;
+        rdfs:comment      "The payment method(s) accepted by seller for this offer."@en ;
+        rdfs:domain       s:CivicStructure ;
+        rdfs:isDefinedBy  s: ;
+        rdfs:label        "accepted payment method"@en ;
+        rdfs:range        s:PaymentMethod .
+
+mv:ParkAndRideServiceNotOperating
+        a                 mv:CivicStructureStatus ;
+        rdfs:comment      "Park and ride services are not operating until the specified time." ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Park and ride service not operating"@en , "Kein P+R-Service"@de .
+
+mv:timeUnit  a            owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Indicates the time unit a value is specified for." ;
+        rdfs:domain       mv:TimeSpecification ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Zeiteinheit"@de , "time unit"@en ;
+        rdfs:range        xsd:string .
+
+mv:WomensParkingSpace
+        a                 mv:ParkingUsageType ;
+        rdfs:comment      "Specially designated and identified parking space to be used by women."@en , "Gekennzeichneter und ausgewiesener Stellplatz für die Nutzung durch Frauen."@de ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Frauenparkplatz"@de , "Women's parking space"@en ;
+        owl:deprecated    true ;
+        skos:altLabel     "Damenparkplatz"@de-at , "Ladies' parking space"@en ;
+        skos:note         "Deprecated, use validForUserGroup [a UserGroup] instead." ;
+        skos:prefLabel    "Women's parking space"@en .
+
+mv:CarsharingParkingSpace
+        a                 mv:ParkingUsageType ;
+        rdfs:comment      "Specially designated and identified parking space reserved for carsharing vehicles."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Place de stationnement pour l'autopartage"@fr , "Carsharing parking space"@en , "Carsharing-Stellplatz"@de ;
+        owl:deprecated    true ;
+        skos:note         "Deprecated, use validForUserGroup [a UserGroup] instead." .
+
+s:PriceSpecification  a   owl:Class ;
+        rdfs:comment      "A structured value representing a price or price range for an item."@en ;
+        rdfs:isDefinedBy  s: ;
+        rdfs:label        "Preisspezifikation"@de , "Price specification"@en .
+
+mv:CivicStructureStatus
+        a                 owl:Class , rdfs:Class ;
+        rdfs:comment      "Status information of a civic structure." ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Status der Parkeinrichtung"@de , "Civic structure status"@en .
+
+mv:numberOfCarsharingParkingSpaces
+        a                 rdf:Property , owl:DatatypeProperty ;
+        rdfs:comment      "Indicates the number of parking spaces that are reserved for carsharing." ;
+        rdfs:domain       mv:ParkingFacility ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "number of carsharing spaces"@en , "Anzahl Carsharing-Parkplätze"@de ;
+        rdfs:range        xsd:integer ;
+        owl:deprecated    true ;
+        skos:note         "Deprecated, use value of Capacity resource instead." .
+
+mv:exit  a                owl:ObjectProperty , rdf:Property ;
+        rdfs:comment      "Describes the exit of a parking facility." ;
+        rdfs:domain       mv:ParkingFacility ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "hat Ausfahrt"@de , "exit"@en ;
+        rdfs:range        mv:ParkingFacilityExit .
+
+mv:TaxiDrivers  a         mv:UserGroup ;
+        rdfs:comment      "Drivers of a vehicle for hire, used by a single passenger or small group of passengers, often for a non-shared ride. Taxi drivers convey passengers between locations of their choice."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Taxifahrer"@de , "Taxi drivers"@en ;
+        skos:altLabel     "Taxicab drivers"@en , "Cabbies"@en-uk , "Cab drivers"@en ;
+        skos:prefLabel    "Taxi drivers"@en , "Taxifahrer"@de .
+
+mv:ParkAndFly  a          mv:ParkingFacilityConnection ;
+        rdfs:comment      "Connection to airport." ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Parken und Fliegen"@de , "Park & Fly" ;
+        skos:altLabel     "P+F" , "P&F" .
+
+mv:BusOrCoach  a          s:Vehicle ;
+        rdfs:comment      "A bus is a road vehicle designed to carry passengers. Coaches are luxury busses, usually in service for long distance travel."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Bus"@de , "Coach"@en .
+
+mv:ParkingFacilityConnection
+        a                 owl:Class , rdfs:Class ;
+        rdfs:comment      "Transport connections available at the parking facility (e.g. Park & Ride)." ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Parking facility connections"@en , "Anschlussmöglichkeiten der Parkeinrichtung"@de .
+
+mv:currentInA  a          owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Indicates the current of a charger or plug in ampere." ;
+        rdfs:domain       [ a            owl:Class ;
+                            owl:unionOf  ( mv:Plug mv:Charger )
+                          ] ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "current in A"@en ;
+        rdfs:range        xsd:double .
+
+mv:VideoSurveillance  a   mv:ParkingFacilityFeature ;
+        rdfs:comment      "The parking facility is surveilled by video."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Videoüberwachung"@de , "Video surveillance"@en .
+
+mv:numberOfOccupiedParkingSpaces
+        a                 owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Indicates the number of currently occupied parking spaces." ;
+        rdfs:domain       mv:ParkingFacility ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "number of occupied parking spaces"@en , "Anzahl belegter Stellplätze"@de ;
+        rdfs:range        xsd:integer ;
+        owl:deprecated    true ;
+        skos:note         "Deprecated, use value of Capacity resource instead." .
+
+geo:lat  a                owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Geographic latitude of a place."@en ;
+        rdfs:domain       s:Place ;
+        rdfs:isDefinedBy  geo: ;
+        rdfs:label        "latitude"@en ;
+        rdfs:range        xsd:string .
+
+mv:EUDomesticPlug  a      mv:PlugType ;
+        rdfs:comment      "Plug with EU domestic plug connection." ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "EU Domestic Plug"@en ;
+        owl:sameAs        dbpedia:Europlug .
+
+mv:Families  a            mv:UserGroup ;
+        rdfs:comment      "Parents with children."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Familien"@de , "Families"@en .
+
+mv:vehicleHeightLimitInM
+        a                 owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Indicates the height limit in meter for vehicles using the parking facility." ;
+        rdfs:domain       s:CivicStructure ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Höhenbegrenzung für Fahrzeuge"@de , "vechicle height limit"@en ;
+        rdfs:range        xsd:decimal .
+
+mv:Motorbike  a           s:Vehicle ;
+        rdfs:comment      "A single-track, two-wheeled motor vehicle."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Motorrad"@de , "Motorbike"@en ;
+        skos:altLabel     "Motorcycle"@en ;
+        skos:prefLabel    "Moto"@fr , "Motorrad"@de , "Motorbike"@en .
+
+mv:BicycleParkingStation
+        a                 owl:Class , rdfs:Class ;
+        rdfs:comment      "Building or structure designed for use as a bicycle parking facility."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Fahrradparkstation"@de , "Bicycle parking station"@en ;
+        rdfs:subClassOf   mv:ParkingFacility .
+
+mv:Car  a                 s:Vehicle ;
+        rdfs:comment      "A wheeled, self-powered motor vehicle used for transportation."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Voiture"@fr , "Car"@en , "Auto"@de ;
+        skos:altLabel     "Pkw"@de .
+
+mv:parkingSpace  a        owl:ObjectProperty , rdf:Property ;
+        rdfs:comment      "Relates the parking facility to a contained parking space."@en ;
+        rdfs:domain       mv:ParkingFacility ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "hat Stellplatz"@de , "parking space"@en ;
+        rdfs:range        mv:ParkingSpace .
+
+mv:capacity  a            owl:ObjectProperty , rdf:Property ;
+        rdfs:comment      "Relates the parking facility or parking space to its capacity."@en ;
+        rdfs:domain       [ a            owl:Class ;
+                            owl:unionOf  ( mv:ParkingFacility mv:ParkingSpace )
+                          ] ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "hat Kapazität"@de , "has capacity"@en ;
+        rdfs:range        mv:Capacity .
+
+mv:ParkingFacilityFeature
+        a                 owl:Class , rdfs:Class ;
+        rdfs:comment      "Features of the parking facility (e.g. parking for disabled people)." ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Parking facility feature"@en , "Ausstattung der Parkeinrichtung"@de .
+
+mv:Truck  a               s:Vehicle ;
+        rdfs:comment      "A motor vehicle designed to transport cargo."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Lkw"@de , "Truck"@en .
+
+mv:validForVehicle  a     owl:ObjectProperty , rdf:Property ;
+        rdfs:comment      "Indicates that an entity is valid for a specific type of vehicle."@en ;
+        rdfs:domain       [ a            owl:Class ;
+                            owl:unionOf  ( mv:AccessCondition s:PriceSpecification mv:Capacity )
+                          ] ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "gültig für Fahrzeug"@de , "valid for vehicle"@en ;
+        rdfs:range        s:Vehicle .
+
+mv:Restrict  a            mv:Action ;
+        rdfs:comment      "An action is restricted."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Beschränken"@de , "Restrict"@en .
+
+mv:Charger  a             owl:Class , rdfs:Class ;
+        rdfs:comment      "Component of a charging point used to charge electric vehicles. A charging point can have one or more chargers." ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Ladegerät"@de , "Charger"@en .
+
+mv:additionalInformation
+        a                 owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Further information about the civic structure or facility."@en ;
+        rdfs:domain       s:CivicStructure ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "zusätzliche Information"@de , "additional information"@en ;
+        rdfs:range        xsd:string .
+
+mv:ownedBy  a             owl:ObjectProperty , rdf:Property ;
+        rdfs:comment      "The owner of a civic structure or facility. Owner and operator can be different business entities."@en ;
+        rdfs:domain       s:CivicStructure ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "in Besitz von"@de , "owned by"@en ;
+        rdfs:range        gr:BusinessEntity .
+
+mv:id   a                 owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "ID of the entity." ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "ID"@en , "ID"@de ;
+        rdfs:range        xsd:string .
+
+dct:modified  a           owl:AnnotationProperty ;
+        rdfs:isDefinedBy  dct: .
+
+mv:ParkAndRail  a         mv:ParkingFacilityConnection ;
+        rdfs:comment      "Connection to railway station." ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Park and Rail" .
+
+mv:PayStation  a          mv:ParkingFacilityFeature ;
+        rdfs:comment      "The parking facility has a pay station."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Pay station"@en , "Kassenautomat"@de .
+
+dct:rights  a             owl:AnnotationProperty ;
+        rdfs:isDefinedBy  dct: .
+
+mv:OnlyAFewParkingSpacesAvailable
+        a                 mv:CivicStructureStatus ;
+        rdfs:comment      "The parking facility has 95% or greater occupancy." ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Only a few parking spaces available"@en , "Nur noch wenige Stellplätze frei"@de .
+
+mv:NoParkingInformationAvailable
+        a                 mv:CivicStructureStatus ;
+        rdfs:comment      "Parking information is not available until a specified time." ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "No parking information available"@en , "Keine Parkinformationen verfügbar"@de .
+
+mv:numberOfMotorbikeParkingSpaces
+        a                 owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Indicates the number of parking spaces for motorbikes." ;
+        rdfs:domain       mv:ParkingFacility ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "number of parking spaces for motorbikes"@en , "Anzahl Motorradparkplätze"@de ;
+        rdfs:range        xsd:integer ;
+        owl:deprecated    true ;
+        skos:note         "Deprecated, use value of Capacity resource instead." .
+
+<http://purl.org/net/clange>
+        a              dct:Agent ;
+        foaf:homepage  <http://langec.wordpress.com/about/> ;
+        foaf:name      "Christoph Lange" .
+
+mv:action  a              owl:ObjectProperty , rdf:Property ;
+        rdfs:comment      "Indicates which action is applied."@en ;
+        rdfs:domain       mv:AccessCondition ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "action"@en ;
+        rdfs:range        mv:Action .
+
+dct:creator  a            owl:AnnotationProperty ;
+        rdfs:isDefinedBy  dct: .
+
+mv:picture  a             owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "URL of the picture of a civic structure or facility."@en ;
+        rdfs:domain       s:CivicStructure ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Bild"@de , "picture"@en ;
+        rdfs:range        xsd:string .
+
+mv:TimeSpecification  a   owl:Class ;
+        rdfs:comment      "Specific time a price specification is due for."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Zeitspezifikation"@de , "Time specification"@en .
+
+mv:Full  a                mv:CivicStructureStatus ;
+        rdfs:comment      "The parking facility is completely occupied." ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Full"@en , "Belegt"@de .
+
+mv:ParkingSpace  a        rdfs:Class , owl:Class ;
+        rdfs:comment      "A parking space is a location that is designated for parking a vehicle. A parking space has a certain size, is sometimes marked and can be located at roadside or inside a parking facility. Depending on the location of the parking space, there can be regulations regarding the time allowed to park and a fee paid to use the parking space."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Parking space"@en , "Stellplatz"@de ;
+        rdfs:subClassOf   s:CivicStructure ;
+        skos:hiddenLabel  "Parkplatz"@de ;
+        skos:prefLabel    "Stellplatz"@de , "Parking space"@en .
+
+mv:unspecifiedCharge  a   owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Indicates that a charge has to be paid for the usage of the civic structure." ;
+        rdfs:domain       s:PriceSpecification ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "kostenpflichtig"@de , "unspecified charge"@en ;
+        rdfs:range        xsd:boolean .
+
+mv:currentType  a         owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Indicates the current type (AC/DC) of the plug." ;
+        rdfs:domain       [ a            owl:Class ;
+                            owl:unionOf  ( mv:Plug mv:Charger )
+                          ] ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "current type"@en ;
+        rdfs:range        xsd:string .
+
+mv:StatusUnknown  a       mv:CivicStructureStatus ;
+        rdfs:comment      "The status of the parking facility is unknown." ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Status unknown"@en , "Status unbekannt"@de .
+
+mv:EnoughParkingSpacesAvailable
+        a                 mv:CivicStructureStatus ;
+        rdfs:comment      "The parking facility has parking spaces available." ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Genügend Stellplätze frei"@de , "Enough parking spaces available"@en .
+
+mv:SurveillanceBySecurityGuards
+        a                 mv:ParkingFacilityFeature ;
+        rdfs:comment      "The parking facility is surveilled by security guards."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "surveillance by security guards"@en , "Bewacht durch Personal"@de .
+
+mv:ParkingFacilityEntrance
+        a                 owl:Class , rdfs:Class ;
+        rdfs:comment      "Entrance of a parking facility where vehicles can enter the parking facility."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Entrance"@en , "Einfahrt"@de ;
+        rdfs:subClassOf   s:CivicStructure .
+
+mv:RealTimeCapacity  a    owl:Class , rdfs:Class ;
+        rdfs:comment      "Real-time capacity of a parking facility or parking space."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Real time capacity"@en , "Echtzeit Kapazität"@de ;
+        rdfs:subClassOf   mv:Capacity .
+
+s:Vehicle  a              owl:Class ;
+        rdfs:comment      "A vehicle is a device that is designed or used to transport people or cargo over land, water, air, or through space."@en ;
+        rdfs:isDefinedBy  s: ;
+        rdfs:label        "Vehicle"@en , "Fahrzeug"@de .
+
+mv:Inhabitants  a         mv:UserGroup ;
+        rdfs:comment      "People living on the premises."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Anwohner"@de , "Inhabitants"@en .
+
+mv:CHAdeMOPlug  a         mv:PlugType ;
+        rdfs:comment      "Plug with CHAdeMO connection." ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "CHAdeMO"@en ;
+        owl:sameAs        dbpedia:CHAdeMO ;
+        foaf:depiction    <http://upload.wikimedia.org/wikipedia/commons/f/f3/VDE-AR-E_2623-2-2-plug.jpg> .
+
+mv:numberOfLevels  a      owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Indicates the total number of levels a parking facility has."@en ;
+        rdfs:domain       mv:ParkingFacility ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Anzahl Ebenen"@de , "number of levels"@en ;
+        rdfs:range        xsd:integer .
+
+mv:ParkingGarage  a       owl:Class , rdfs:Class ;
+        rdfs:comment      "A single level or multilevel parking building to park at." ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Parking garage"@en , "Parkhaus"@de ;
+        rdfs:subClassOf   mv:ParkingFacility ;
+        skos:altLabel     "Hochgarage"@de , "Parking structure"@en , "Car park"@en , "Parking building"@en ;
+        skos:prefLabel    "Parking garage"@en , "Parkhaus"@de .
+
+mv:rateOfOccupancy  a     owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Indicates the percentage value of parking spaces occupied in a parking facility." ;
+        rdfs:domain       mv:ParkingFacility ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Belegungsrate"@de , "rate of occupancy"@en ;
+        rdfs:range        xsd:string .
+
+mv:UserGroup  a           owl:Class ;
+        rdfs:comment      "A group of users having a common characteristic."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Nutzergruppe"@de , "User group"@en .
+
+mv:timeEndValue  a        owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Indicates the end value of a time period." ;
+        rdfs:domain       mv:TimeSpecification ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Endzeit"@de , "time end value"@en ;
+        rdfs:range        xsd:float .
+
+mv:fillRate  a            owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "The rate at which vehicles are entering the parking facility." ;
+        rdfs:domain       mv:ParkingFacility ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "fill rate"@en ;
+        rdfs:range        xsd:string .
+
+mv:exitRate  a            owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "The rate at which vehicles are exiting the parking facility." ;
+        rdfs:domain       mv:ParkingFacility ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "exit rate"@en ;
+        rdfs:range        xsd:string .
+
+mv:maximumValue  a        owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Indicates the maximum value of the capacity."@en ;
+        rdfs:domain       mv:Capacity ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "maximum value"@en ;
+        rdfs:range        xsd:integer .
+
+mv:parkingUsageType  a    owl:ObjectProperty , rdf:Property ;
+        rdfs:comment      "Relates the capacity of a parking facility to a specific designated usage type."@en ;
+        rdfs:domain       mv:Capacity ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "parking usage type"@en , "Nutzungsart"@de ;
+        rdfs:range        mv:ParkingUsageType ;
+        owl:deprecated    true ;
+        skos:note         "Deprecated, use validForUserGroup instead." .
+
+mv:numberOfBicycleParkingSpaces
+        a                 owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Indicates the number of parking spaces for bicycles." ;
+        rdfs:domain       mv:ParkingFacility ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "number of parking spaces for bicycles"@en , "Anzahl Fahrradparkplätze"@de ;
+        rdfs:range        xsd:integer ;
+        owl:deprecated    true ;
+        skos:note         "Deprecated, use value of Capacity resource instead." .
+
+mv:ArrangementPattern
+        a                 owl:Class , rdfs:Class ;
+        rdfs:comment      "Art und Weise, wie ein Fahrzeug auf einer Parkfläche aufgestellt wird."@de , "Pattern how parking spaces are arranged in a parking facility or at roadside."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Aufstellart"@de , "Arrangement pattern"@en .
+
+mv:employeeOf  a          owl:ObjectProperty , rdf:Property ;
+        rdfs:comment      "Indicates that a group is employee of a specific business entity."@en ;
+        rdfs:domain       mv:UserGroup ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Mitarbeiter von"@de , "employee of"@en ;
+        rdfs:range        gr:BusinessEntity .
+
+mv:PersonsWithDisabledParkingPermit
+        a                 mv:UserGroup ;
+        rdfs:comment      "Persons with disabilities having a special parking permit that gives the right to use parking spaces reserved for disabled people."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Personen mit Behindertenparkausweis"@de , "Persons with disabled parking permit"@en .
+
+geo:long  a               owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Geographic longitude of a place."@en ;
+        rdfs:domain       s:Place ;
+        rdfs:isDefinedBy  geo: ;
+        rdfs:label        "longitude"@en ;
+        rdfs:range        xsd:string .
+
+mv:AccessCondition  a     owl:Class ;
+        rdfs:comment      "A condition that has to be fullfilled to get access to a civic structure."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Zugangsbedingung"@de , "Access condition"@en .
+
+mv:validForUserGroup  a   owl:ObjectProperty , rdf:Property ;
+        rdfs:comment      "Indicates that an entity is valid for a specific group of users."@en ;
+        rdfs:domain       [ a            owl:Class ;
+                            owl:unionOf  ( mv:AccessCondition s:PriceSpecification mv:Capacity )
+                          ] ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "gültig für Nutzergruppe"@de , "valid for user group"@en ;
+        rdfs:range        mv:UserGroup .
+
+dct:publisher  a          owl:AnnotationProperty ;
+        rdfs:isDefinedBy  dct: .
+
+mv:energySource  a        owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Indicates the energy source used for the charging point i.e. renewable etc." ;
+        rdfs:domain       mv:ChargingPoint ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "energy source"@en ;
+        rdfs:range        xsd:string .
+
+mv:plugType  a            owl:ObjectProperty , rdf:Property ;
+        rdfs:comment      "Indicates the type of a plug." ;
+        rdfs:domain       mv:Plug ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "plug type"@en ;
+        rdfs:range        mv:PlugType .
+
+mv:NoParkingAllowed  a    mv:CivicStructureStatus ;
+        rdfs:comment      "No parking allowed until the specified time." ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Parken verboten"@de , "No parking allowed"@en .
+
+mv:overnight  a           owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Indicates that a time period overnight is possible." ;
+        rdfs:domain       mv:TimeSpecification ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "über Nacht"@de , "overnight"@en ;
+        rdfs:range        xsd:boolean .
+
+mv:Type3Plug  a           mv:PlugType ;
+        rdfs:comment      "Plug with Typ 3 plug connection." ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Type 3 plug"@en ;
+        skos:altLabel     "EV plug" .
+
+mv:SchukoPlug  a          mv:PlugType ;
+        rdfs:comment      "Plug with Schuko plug connection." ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Schuko plug"@en ;
+        owl:sameAs        dbpedia:Schuko ;
+        foaf:depiction    <http://upload.wikimedia.org/wikipedia/commons/e/ef/Schuko_plug_and_socket.png> .
+
+mv:vehicleLengthLimitInM
+        a                 owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Indicates the length limit in meter for vehicles using the parking facility." ;
+        rdfs:domain       s:CivicStructure ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Längenbegrenzung für Fahrzeuge"@de , "vehicle length limit"@en ;
+        rdfs:range        xsd:decimal .
+
+s:PaymentMethod  a        owl:Class ;
+        rdfs:comment      "A payment method is a standardized procedure for transferring the monetary amount for a purchase. Payment methods are characterized by the legal and technical structures used, and by the organization or group carrying out the transaction."@en ;
+        rdfs:isDefinedBy  s: ;
+        rdfs:label        "Zahlungsart"@de , "Payment method"@en .
+
+mv:DisabledParkingSpace
+        a                 mv:ParkingUsageType ;
+        rdfs:comment      "Specially designated and identified parking space reserved for persons with disabilities, or in some situations, permission to park in a time-limited space for longer time, or to park at a meter without payment."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Disabled parking space"@en , "Behindertenstellplatz"@de ;
+        owl:deprecated    true ;
+        skos:note         "Deprecated, use validForUserGroup [a UserGroup] instead." .
+
+mv:AllParkingFacilitiesFull
+        a                 mv:CivicStructureStatus ;
+        rdfs:comment      "All parking facilities within a specified area are completely occupied."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Alle Parkmöglichkeiten belegt"@de , "All parking facilities full"@en .
+
+mv:AngleParking  a        mv:ArrangementPattern ;
+        rdfs:comment      "Bei der Schrägaufstellung wird das Fahrzeug mit einem Aufstellwinkel zwischen 50 und 90 gon (45° und ca. 81°) geparkt. Das Fahrzeug kann vorwärts in den Parkstand einfahren, muss zum Ausparken jedoch wieder rückwärts herausfahren. Diese Aufstellung wird oft bei Parkplätzen verwendet, da sie schmalere Fahrwege als die Senkrechtaufstellung und bessere Platzausnutzung als Parallelaufstellung ermöglicht."@de , "Parking where the parking spaces are arranged at an acute angle to the direction of approach, allowing the driver to enter a space easily and later reverse back out."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Schrägaufstellung"@de , "Angle parking"@en ;
+        skos:altLabel     "Echelon parking"@en-uk .
+
+mv:Capacity  a            owl:Class , rdfs:Class ;
+        rdfs:comment      "Capacity of a parking facility or a parking space."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Capacity"@en , "Kapazität"@de .
+
+mv:threePhasedCurrentAvailable
+        a                 owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Indicates whether three-phased current is available." ;
+        rdfs:domain       [ a            owl:Class ;
+                            owl:unionOf  ( mv:Plug mv:Charger )
+                          ] ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "three-phased current available"@en ;
+        rdfs:range        xsd:boolean .
+
+mv:cableAvailable  a      owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Indicates whether the plug has a cable." ;
+        rdfs:domain       mv:Plug ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Kabel verfügbar"@de , "cable available"@en ;
+        rdfs:range        xsd:boolean .
+
+mv:customerOf  a          owl:ObjectProperty , rdf:Property ;
+        rdfs:comment      "Indicates that a group is customer of a specific business entity."@en ;
+        rdfs:domain       mv:UserGroup ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Kunde von"@de , "customer of"@en ;
+        rdfs:range        gr:BusinessEntity .
+
+dct:issued  a             owl:AnnotationProperty ;
+        rdfs:isDefinedBy  dct: .
+
+mv:ParkingBarrier  a      mv:ParkingFacilityFeature ;
+        rdfs:comment      "The parking facility has a parking barrier."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Parkschranke"@de , "Parking barrier"@en .
+
+s:OpeningHoursSpecification
+        a                 owl:Class ;
+        rdfs:comment      "A structured value providing information about the opening hours of a place or a certain service inside a place."@en ;
+        rdfs:isDefinedBy  s: ;
+        rdfs:label        "Öffnungszeiten"@de , "Opening hours specification"@en .
+
+mv:connectedTo  a         owl:ObjectProperty , rdf:Property ;
+        rdfs:comment      "Indicates the transport connections available." ;
+        rdfs:domain       mv:ParkingFacility ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "connected to" ;
+        rdfs:range        mv:ParkingFacilityConnection .
+
+mv:arrangement  a         owl:ObjectProperty , rdf:Property ;
+        rdfs:comment      "Indicates in which pattern a parking space is arranged." ;
+        rdfs:domain       mv:ParkingFacility , mv:ParkingSpace ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Anordnung"@de , "arrangement pattern"@en ;
+        rdfs:range        mv:ArrangementPattern .
+
+s:CivicStructure  a       owl:Class ;
+        rdfs:comment      "A public structure, such as a town hall or concert hall, parking facility or charging point."@en ;
+        rdfs:isDefinedBy  s: ;
+        rdfs:label        "Zivile Struktur"@de , "Civic structure"@en ;
+        rdfs:subClassOf   s:Place .
+
+mv:feature  a             owl:ObjectProperty , rdf:Property ;
+        rdfs:comment      "Indicates which feature the parking facility provides." ;
+        rdfs:domain       mv:ParkingFacility ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "feature"@en ;
+        rdfs:range        mv:ParkingFacilityFeature .
+
+mv:numberOfWomensParkingSpaces
+        a                 rdf:Property , owl:DatatypeProperty ;
+        rdfs:comment      "Indicates the number of women's parking spaces." ;
+        rdfs:domain       mv:ParkingFacility ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Anzahl Frauenparkplätze"@de , "number of women's parking spaces"@en ;
+        rdfs:range        xsd:integer ;
+        owl:deprecated    true ;
+        skos:note         "Deprecated, use value of Capacity resource instead." .
+
+mv:Closed  a              mv:CivicStructureStatus ;
+        rdfs:comment      "The parking facility is closed." ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Geschlossen"@de , "Closed"@en .
+
+s:PostalAddress  a        owl:Class ;
+        rdfs:comment      "The mailing address."@en ;
+        rdfs:isDefinedBy  s: ;
+        rdfs:label        "Postal address"@en .
+
+mv:numberOfVacantParkingSpaces
+        a                 rdf:Property , owl:DatatypeProperty ;
+        rdfs:comment      "Indicates the number of vacant parking spaces available." ;
+        rdfs:domain       mv:ParkingFacility ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Anzahl freier Stellplätze"@de , "number of vacant parking spaces"@en ;
+        rdfs:range        xsd:integer ;
+        owl:deprecated    true ;
+        skos:note         "Deprecated, use value of Capacity resource instead." .
