@@ -465,3 +465,9 @@ mv:StatusUnknown
     rdfs:comment "The status of the parking facility is unknown." ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "Status unbekannt"@de, "Status unknown"@en .
+
+mv:Operational
+    a mv:CivicStructureStatus ;
+    rdfs:comment "The facility is operational." ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Status in Betrieb"@de, "Status operational"@en .
