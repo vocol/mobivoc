@@ -6,10 +6,9 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 ## [Unreleased]
 
 ### Added
-- add instances of UserGroups: TaxiDrivers, Women, PersonsWithDisabledParkingPermit, CarsharingUsers, Families
-- add common plug types
-- add example OpenChargeMap dataset
-- Inhabitants user group
+- new instances of UserGroups: TaxiDrivers, Women, PersonsWithDisabledParkingPermit, CarsharingUsers, Families, Inhabitants
+- common plug types of charging stations
+- example OpenChargeMap dataset
 
 ### Changed
 - deprecate ParkingUsageType class and instances
