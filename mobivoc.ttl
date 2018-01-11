@@ -54,17 +54,17 @@ s:Place  a                owl:Class ;
         rdfs:isDefinedBy  s: ;
         rdfs:label        "Place"@en .
 
-mv:Faulty  a              mv:CivicStructureStatus ;
-        rdfs:comment      "The parking facility is not operating normally." ;
-        rdfs:isDefinedBy  mv: ;
-        rdfs:label        "Faulty"@en , "Defekt"@de .
-
 mv:level  a               owl:DatatypeProperty , rdf:Property ;
         rdfs:comment      "Indicates the level of a parking facility the parking space is located in."@en ;
         rdfs:domain       mv:ParkingSpace ;
         rdfs:isDefinedBy  mv: ;
         rdfs:label        "Ebene"@de , "level"@en ;
         rdfs:range        xsd:integer .
+
+mv:Faulty  a              mv:CivicStructureStatus ;
+        rdfs:comment      "The parking facility is not operating normally." ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Faulty"@en , "Defekt"@de .
 
 mv:RecreationalVehicle
         a                 s:Vehicle ;
@@ -242,14 +242,14 @@ mv:     a                              owl:Ontology , voaf:Vocabulary ;
         rdfs:isDefinedBy               mv: ;
         rdfs:label                     "MobiVoc: Open Mobility Vocabulary"@en ;
         cc:license                     <http://creativecommons.org/licenses/by/4.0/> ;
-        dct:contributor                ecc:mbruemmer ;
-        dct:creator                    <http://purl.org/net/clange> , ecc:aweilandt ;
+        dct:contributor                <http://purl.org/net/clange> ;
+        dct:creator                    ecc:aweilandt , ecc:mbruemmer ;
         dct:modified                   "2017-05-15"^^xsd:date ;
         dct:publisher                  ecc:eccenca-GmbH ;
         vann:preferredNamespacePrefix  "mv" ;
         vann:preferredNamespaceUri     "http://schema.mobivoc.org/" ;
         void:vocabulary                vann: , foaf: ;
-        owl:versionInfo "v0.6.0-14-gc51e0ad-dirty" .
+        owl:versionInfo "v0.6.0-18-g01847b5" .
 
 vann:preferredNamespacePrefix
         a                 owl:AnnotationProperty ;
@@ -524,11 +524,6 @@ mv:ParkingFacilityConnection
         rdfs:isDefinedBy  mv: ;
         rdfs:label        "Parking facility connections"@en , "Anschlussmöglichkeiten der Parkeinrichtung"@de .
 
-mv:VideoSurveillance  a   mv:ParkingFacilityFeature ;
-        rdfs:comment      "The parking facility is surveilled by video."@en ;
-        rdfs:isDefinedBy  mv: ;
-        rdfs:label        "Videoüberwachung"@de , "Video surveillance"@en .
-
 mv:currentInA  a          owl:DatatypeProperty , rdf:Property ;
         rdfs:comment      "Indicates the current of a charger or plug in ampere." ;
         rdfs:domain       [ a            owl:Class ;
@@ -537,6 +532,11 @@ mv:currentInA  a          owl:DatatypeProperty , rdf:Property ;
         rdfs:isDefinedBy  mv: ;
         rdfs:label        "current in A"@en ;
         rdfs:range        xsd:double .
+
+mv:VideoSurveillance  a   mv:ParkingFacilityFeature ;
+        rdfs:comment      "The parking facility is surveilled by video."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Videoüberwachung"@de , "Video surveillance"@en .
 
 mv:numberOfOccupiedParkingSpaces
         a                 owl:DatatypeProperty , rdf:Property ;
@@ -622,7 +622,7 @@ mv:Truck  a               s:Vehicle ;
         rdfs:label        "Lkw"@de , "Truck"@en .
 
 mv:validForVehicle  a     owl:ObjectProperty , rdf:Property ;
-        rdfs:comment      "Indicates that an entity for a specific type of vehicle."@en ;
+        rdfs:comment      "Indicates that an entity is valid for a specific type of vehicle."@en ;
         rdfs:domain       [ a            owl:Class ;
                             owl:unionOf  ( mv:AccessCondition s:PriceSpecification mv:Capacity )
                           ] ;
@@ -714,17 +714,17 @@ mv:action  a              owl:ObjectProperty , rdf:Property ;
 dct:creator  a            owl:AnnotationProperty ;
         rdfs:isDefinedBy  dct: .
 
-mv:TimeSpecification  a   owl:Class ;
-        rdfs:comment      "Specific time a price specification is due for."@en ;
-        rdfs:isDefinedBy  mv: ;
-        rdfs:label        "Zeitspezifikation"@de , "Time specification"@en .
-
 mv:picture  a             owl:DatatypeProperty , rdf:Property ;
         rdfs:comment      "URL of the picture of a civic structure or facility."@en ;
         rdfs:domain       s:CivicStructure ;
         rdfs:isDefinedBy  mv: ;
         rdfs:label        "Bild"@de , "picture"@en ;
         rdfs:range        xsd:string .
+
+mv:TimeSpecification  a   owl:Class ;
+        rdfs:comment      "Specific time a price specification is due for."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Zeitspezifikation"@de , "Time specification"@en .
 
 mv:Full  a                mv:CivicStructureStatus ;
         rdfs:comment      "The parking facility is completely occupied." ;
@@ -850,6 +850,13 @@ mv:exitRate  a            owl:DatatypeProperty , rdf:Property ;
         rdfs:label        "exit rate"@en ;
         rdfs:range        xsd:string .
 
+mv:maximumValue  a        owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Indicates the maximum value of the capacity."@en ;
+        rdfs:domain       mv:Capacity ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "maximum value"@en ;
+        rdfs:range        xsd:integer .
+
 mv:parkingUsageType  a    owl:ObjectProperty , rdf:Property ;
         rdfs:comment      "Relates the capacity of a parking facility to a specific designated usage type."@en ;
         rdfs:domain       mv:Capacity ;
@@ -868,13 +875,6 @@ mv:numberOfBicycleParkingSpaces
         rdfs:range        xsd:integer ;
         owl:deprecated    true ;
         skos:note         "Deprecated, use value of Capacity resource instead." .
-
-mv:maximumValue  a        owl:DatatypeProperty , rdf:Property ;
-        rdfs:comment      "Indicates the maximum value of the capacity."@en ;
-        rdfs:domain       mv:Capacity ;
-        rdfs:isDefinedBy  mv: ;
-        rdfs:label        "maximum value"@en ;
-        rdfs:range        xsd:integer .
 
 mv:ArrangementPattern
         a                 owl:Class , rdfs:Class ;
