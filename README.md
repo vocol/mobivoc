@@ -29,9 +29,9 @@ The API call used to retrieve the individual datasets is:
 * [index.ttl](index.ttl) - The core of the ontology
 * [index-head.ttl](index-head.ttl) - Ontology metadata
 * [Parking.ttl](Parking.ttl) - Extensions for parking facilities and parking places
-* [Charging.ttl](Charging.ttl) - Extensions for chargin stations
+* [Charging.ttl](Charging.ttl) - Extensions for charging stations
 * [mobivoc.ttl](mobivoc.ttl) - The complete, combined ontology
-* [OpenChargeMap_Mobivoc.ttl](OpenChargeMap_Mobivoc.ttl) - example instances for charging stations
+* [OpenChargeMap_Mobivoc.ttl](OpenChargeMap_Mobivoc.ttl) - Example instances for charging stations
 
 ## Further links:
 
