@@ -155,7 +155,7 @@ mv:AccessCondition
 
 mv:validForVehicle
     a rdf:Property, owl:ObjectProperty ;
-    rdfs:comment "Indicates that an entity for a specific type of vehicle."@en ;
+    rdfs:comment "Indicates that an entity is valid for a specific type of vehicle."@en ;
     rdfs:domain [
           a owl:Class ;
           owl:unionOf (mv:AccessCondition s:PriceSpecification mv:Capacity)
