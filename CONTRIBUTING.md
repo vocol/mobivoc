@@ -1,10 +1,13 @@
 # Contribution Guide
 
-- respect the Git Working Policy
-- esp. use [Semantic Versioning](http://semver.org/)
-- use [Keep A Changelog's Format](http://keepachangelog.com/)
+tl;dr
 
-# Guidelines for ontology creation
+- use [Semantic Versioning](http://semver.org/)
+- use the [Keep A Changelog's Format](http://keepachangelog.com/)
+- respect the Ontology Modelling Guidelines (see below)
+- respect the Git Working Policy (see below)
+
+# Ontology Modelling Guidelines
 
 ## Do not use construction with auxiliary verbs to form properties
 
