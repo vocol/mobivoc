@@ -402,24 +402,6 @@ mv:parkingSpace
     rdfs:label "parking space"@en, "hat Stellplatz"@de ;
     rdfs:range mv:ParkingSpace .
 
-mv:Capacity
-    a rdfs:Class, owl:Class ;
-    rdfs:comment "Capacity of a parking facility or a parking space."@en ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "Kapazität"@de, "Capacity"@en ;
-    .
-
-mv:capacity
-    a rdf:Property, owl:ObjectProperty ;
-    rdfs:comment "Relates the parking facility or parking space to its capacity."@en ;
-    rdfs:domain [
-          a owl:Class ;
-          owl:unionOf (mv:ParkingFacility mv:ParkingSpace)
-        ];
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "has capacity"@en, "hat Kapazität"@de ;
-    rdfs:range mv:Capacity .
-
 mv:RealTimeCapacity
     a rdfs:Class, owl:Class ;
     rdfs:subClassOf mv:Capacity;

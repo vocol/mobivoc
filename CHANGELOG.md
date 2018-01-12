@@ -20,6 +20,7 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 - add working policy to CONTRIBUTING.md
 - make ParkingFacility equivalent to schema.org ParkingFacility
 - move vehicles to index.ttl
+- move Capacity / RealTimeCapacity / capacity to core, attach to CivicStructure
 
 ## [0.6.0] 2017-06-29
 

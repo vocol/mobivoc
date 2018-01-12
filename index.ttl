@@ -109,6 +109,29 @@ s:Vehicle
     rdfs:isDefinedBy <http://schema.org/> ;
     rdfs:label "Fahrzeug"@de, "Vehicle"@en .
 
+mv:Capacity
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "Capacity of a civic structure."@en ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Kapazität"@de, "Capacity"@en ;
+    .
+
+mv:capacity
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "Relates the civic structure to its capacity."@en ;
+    rdfs:domain s:CivicStructure ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "has capacity"@en, "hat Kapazität"@de ;
+    rdfs:range mv:Capacity .
+
+mv:RealTimeCapacity
+    a rdfs:Class, owl:Class ;
+    rdfs:subClassOf mv:Capacity;
+    rdfs:comment "Real-time capacity of a civic structure."@en ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Echtzeit Kapazität"@de, "Real time capacity"@en ;
+    .
+
 s:address
     a owl:ObjectProperty ;
     rdfs:comment "Physical address of the item."@en ;
