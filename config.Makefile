@@ -19,3 +19,4 @@ SCHEMASRC_PUBLISH_GRAPH=http://schema.mobivoc.org/
 REPOSITORY_NAME=schema.mobivoc.org
 
 ONTOLOGY_URI=http://schema.mobivoc.org/
+BUILDPREFIX=mobivoc
