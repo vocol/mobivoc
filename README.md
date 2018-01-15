@@ -32,6 +32,7 @@ The API call used to retrieve the individual datasets is:
 * [schema/Core.ttl](schema/Core.ttl) - core classes and properties
 * [schema/Parking.ttl](schema/Parking.ttl) - parking facilities and parking places
 * [schema/ChargingPoints.ttl](schema/ChargingPoints.ttl) - charging stations
+* [schema/Deprecated.ttl](schema/Deprecated.ttl) - deprecated resources, not included in the schema anymore (for documentation reasons only)
 
 ### Examples
 

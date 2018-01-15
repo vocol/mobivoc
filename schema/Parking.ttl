@@ -198,97 +198,6 @@ mv:fillRate
     rdfs:label "fill rate"@en ;
     rdfs:range xsd:string .
 
-mv:numberOfCarsharingParkingSpaces 
-    dct:created "2017-04-13"^^xsd:date ;
-    dct:modified "2018-01-12"^^xsd:date ;
-    vs:term_status "deprecated" ;
-    a rdf:Property, owl:DatatypeProperty ;
-    owl:deprecated "true"^^xsd:boolean ;
-    skos:note "Deprecated, use value of Capacity resource instead." ;
-    rdfs:comment "Indicates the number of parking spaces that are reserved for carsharing." ;
-    rdfs:domain mv:ParkingFacility ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "number of carsharing spaces"@en, "Anzahl Carsharing-Parkplätze"@de ;
-    rdfs:range xsd:integer .    
-
-mv:numberOfWomensParkingSpaces
-    dct:created "2017-04-13"^^xsd:date ;
-    dct:modified "2018-01-12"^^xsd:date ;
-    vs:term_status "deprecated" ;
-    a rdf:Property, owl:DatatypeProperty ;
-    owl:deprecated "true"^^xsd:boolean ;
-    skos:note "Deprecated, use value of Capacity resource instead." ;
-    rdfs:comment "Indicates the number of women's parking spaces." ;
-    rdfs:domain mv:ParkingFacility ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "number of women's parking spaces"@en, "Anzahl Frauenparkplätze"@de ;
-    rdfs:range xsd:integer .
-
-mv:numberOfMotorbikeParkingSpaces
-    dct:created "2017-04-13"^^xsd:date ;
-    dct:modified "2018-01-12"^^xsd:date ;
-    vs:term_status "deprecated" ;
-    a rdf:Property, owl:DatatypeProperty ;
-    owl:deprecated "true"^^xsd:boolean ;
-    skos:note "Deprecated, use value of Capacity resource instead." ;
-    rdfs:comment "Indicates the number of parking spaces for motorbikes." ;
-    rdfs:domain mv:ParkingFacility ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "number of parking spaces for motorbikes"@en, "Anzahl Motorradparkplätze"@de ;
-    rdfs:range xsd:integer .
-
-mv:numberOfBicycleParkingSpaces 
-    dct:created "2015-01-30"^^xsd:date ;
-    dct:modified "2018-01-12"^^xsd:date ;
-    vs:term_status "deprecated" ;
-    a rdf:Property, owl:DatatypeProperty ;
-    owl:deprecated "true"^^xsd:boolean ;
-    skos:note "Deprecated, use value of Capacity resource instead." ;
-    rdfs:comment "Indicates the number of parking spaces for bicycles." ;
-    rdfs:domain mv:ParkingFacility ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "number of parking spaces for bicycles"@en, "Anzahl Fahrradparkplätze"@de ;
-    rdfs:range xsd:integer .
-
-mv:numberOfOccupiedParkingSpaces
-    dct:created "2015-01-30"^^xsd:date ;
-    dct:modified "2018-01-12"^^xsd:date ;
-    vs:term_status "deprecated" ;
-    a rdf:Property, owl:DatatypeProperty ;
-    owl:deprecated "true"^^xsd:boolean ;
-    skos:note "Deprecated, use value of Capacity resource instead." ;
-    rdfs:comment "Indicates the number of currently occupied parking spaces." ;
-    rdfs:domain mv:ParkingFacility ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "number of occupied parking spaces"@en, "Anzahl belegter Stellplätze"@de ;
-    rdfs:range xsd:integer .
-
-mv:numberOfParkingSpacesForDisabledPersons
-    dct:created "2015-01-30"^^xsd:date ;
-    dct:modified "2018-01-12"^^xsd:date ;
-    vs:term_status "deprecated" ;
-    a rdf:Property, owl:DatatypeProperty ;
-    owl:deprecated "true"^^xsd:boolean ;
-    skos:note "Deprecated, use value of Capacity resource instead." ;
-    rdfs:comment "Indicates the number of parking spaces for disabled persons." ;
-    rdfs:domain mv:ParkingFacility ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "number of parking spaces for disabled persons"@en, "Anzahl Behindertenparkplätze"@de ;
-    rdfs:range xsd:integer .
-
-mv:numberOfVacantParkingSpaces
-    dct:created "2017-05-10"^^xsd:date ;
-    dct:modified "2018-01-12"^^xsd:date ;
-    vs:term_status "deprecated" ;
-    a rdf:Property, owl:DatatypeProperty ;
-    owl:deprecated "true"^^xsd:boolean ;
-    rdfs:comment "Indicates the number of vacant parking spaces available." ;
-    skos:note "Deprecated, use value of Capacity resource instead." ;
-    rdfs:domain mv:ParkingFacility ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "number of vacant parking spaces"@en, "Anzahl freier Stellplätze"@de ;
-    rdfs:range xsd:integer .
-
 mv:queuingTime
     dct:created "2017-05-15"^^xsd:date ;
     dct:modified "2018-01-12"^^xsd:date ;
@@ -344,52 +253,6 @@ mv:ParkingSpace
     skos:prefLabel "Stellplatz"@de, "Parking space"@en ;
     skos:hiddenLabel "Parkplatz"@de ;
     rdfs:subClassOf s:CivicStructure .
-
-mv:ParkingUsageType
-    dct:created "2017-05-15"^^xsd:date ;
-    dct:modified "2018-01-12"^^xsd:date ;
-    vs:term_status "deprecated" ;
-    a rdfs:Class, owl:Class ;
-    owl:deprecated "true"^^xsd:boolean ;
-    skos:note "Deprecated, use validForUserGroup [a UserGroup] instead." ;
-    rdfs:comment "A type of special purpose a parking space is designated for, like women's parking spaces."@en ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "Stellplatz Nutzungsart"@de, "Parking usage type"@en ;
-    .
-
-mv:CarsharingParkingSpace
-    rdfs:comment "Specially designated and identified parking space reserved for carsharing vehicles."@en ;
-    owl:deprecated "true"^^xsd:boolean ;
-    skos:note "Deprecated, use validForUserGroup [a UserGroup] instead." ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "Carsharing-Stellplatz"@de , "Carsharing parking space"@en , "Place de stationnement pour l'autopartage"@fr ; 
-    a mv:ParkingUsageType .
-
-mv:DisabledParkingSpace 
-    rdfs:comment "Specially designated and identified parking space reserved for persons with disabilities, or in some situations, permission to park in a time-limited space for longer time, or to park at a meter without payment."@en ;
-    owl:deprecated "true"^^xsd:boolean ;
-    skos:note "Deprecated, use validForUserGroup [a UserGroup] instead." ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "Behindertenstellplatz"@de , "Disabled parking space"@en ;
-    a mv:ParkingUsageType .
-
-mv:TaxiParkingSpace
-    rdfs:comment "Parking space where only taxis are allowed to."@en ;
-    owl:deprecated "true"^^xsd:boolean ;
-    skos:note "Deprecated, use validForUserGroup [a UserGroup] instead." ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "Taxi-Stellplatz"@de , "Taxi parking space"@en ;
-    a mv:ParkingUsageType .
-
-mv:WomensParkingSpace
-    rdfs:comment "Specially designated and identified parking space to be used by women."@en , "Gekennzeichneter und ausgewiesener Stellplatz für die Nutzung durch Frauen."@de ;
-    owl:deprecated "true"^^xsd:boolean ;
-    skos:note "Deprecated, use validForUserGroup [a UserGroup] instead." ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "Women's parking space"@en , "Frauenparkplatz"@de ;
-    skos:prefLabel "Women's parking space"@en ;
-    skos:altLabel "Ladies' parking space"@en, "Damenparkplatz"@de-at ;
-    a mv:ParkingUsageType .
 
 mv:arrangement
     dct:created "2017-05-10"^^xsd:date ;
@@ -485,20 +348,6 @@ mv:entrance
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "entrance"@en, "hat Einfahrt"@de ;
     rdfs:range mv:ParkingFacilityEntrance .
-
-
-mv:parkingUsageType
-    dct:created "2017-05-15"^^xsd:date ;
-    dct:modified "2018-01-12"^^xsd:date ;
-    vs:term_status "deprecated" ;
-    a rdf:Property, owl:ObjectProperty ;
-    rdfs:comment "Relates the capacity of a parking facility to a specific designated usage type."@en ;
-    owl:deprecated "true"^^xsd:boolean ;
-    skos:note "Deprecated, use validForUserGroup instead." ;
-    rdfs:domain mv:Capacity ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "parking usage type"@en, "Nutzungsart"@de ;
-    rdfs:range mv:ParkingUsageType .
 
 mv:parkingSpace
     dct:created "2017-05-15"^^xsd:date ;
