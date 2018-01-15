@@ -32,7 +32,7 @@ We invite everyone who is interested to join our MobiVoc initiative and to parti
 
 ## Class diagram
 
-![Class diagram](diagrams/mobivoc.png "Mobivoc class diagram")
+![Class diagram](https://github.com/vocol/mobivoc/releases/download/v1.0.0/mobivoc_v1.0.0.png "Mobivoc class diagram")
 
 Further diagrams can be found in the [diagrams folder](diagrams).
 
