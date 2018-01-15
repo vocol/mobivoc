@@ -14,11 +14,11 @@ We invite everyone who is interested to join our MobiVoc initiative and to parti
 
 ![Class diagram](diagrams/mobivoc.png "Mobivoc class diagram")
 
-Further diagrams can be found in the diagrams folder.
+Further diagrams can be found in the [diagrams folder](diagrams).
 
 ## Example data
 
-An example dataset on how to model Charging Points is given in [OpenChargeMap_Mobivoc.ttl](OpenChargeMap_Mobivoc.ttl). Data is taken from OpenChargeMap for the cities of Brussels, Lyon and Helsinki. The dataset is licensed CC BY-SA 4.0.
+An example dataset on how to represent charging points is given in [OpenChargeMap.ttl](examples/OpenChargeMap.ttl). Data is taken from OpenChargeMap for the cities of Brussels, Lyon and Helsinki. The dataset is licensed CC BY-SA 4.0.
 
 The API call used to retrieve the individual datasets is:
 
@@ -26,15 +26,20 @@ The API call used to retrieve the individual datasets is:
 
 ## Files
 
-* [index.ttl](index.ttl) - The core of the ontology
-* [index-head.ttl](index-head.ttl) - Ontology metadata
-* [Parking.ttl](Parking.ttl) - Extensions for parking facilities and parking places
-* [Charging.ttl](Charging.ttl) - Extensions for charging stations
-* [mobivoc.ttl](mobivoc.ttl) - The complete, combined ontology
-* [OpenChargeMap_Mobivoc.ttl](OpenChargeMap_Mobivoc.ttl) - Example instances for charging stations
+### Schema
+
+* [schema/Metadata.ttl](schema/Metadata.ttl) - ontology metadata
+* [schema/Core.ttl](schema/Core.ttl) - core classes and properties
+* [schema/Parking.ttl](schema/Parking.ttl) - parking facilities and parking places
+* [schema/ChargingPoints.ttl](schema/ChargingPoints.ttl) - charging stations
+
+### Examples
+
+* [examples/OpenChargeMap.ttl](examples/OpenChargeMap.ttl) - Example instances for charging stations
 
 ## Further links:
 
 * homepage: [http://mobivoc.org](http://mobivoc.org)
 * schema page and namespace: [http://schema.mobivoc.org/](http://schema.mobivoc.org/)
 * suggested prefix: `mv`
+
