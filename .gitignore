@@ -1,7 +1,3 @@
-.all.ttl
-.instances.ttl
-.manual.ttl
-.schema.ttl
 *.log
 yasgui-queries
 tests
@@ -12,3 +8,4 @@ pellet.log
 widoco/
 widoco.properties
 owl2vowl_logs/
+artifacts

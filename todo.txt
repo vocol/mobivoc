@@ -1,9 +1,0 @@
-Possible Extension:
-
-- public transport: bus, metro
-- aircraft 
-- railway
-- car sharing
-- bike sharing
-- watercraft 
-- infrastructure: road classification, tolls 

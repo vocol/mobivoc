@@ -11,10 +11,13 @@
 @prefix vcard: <http://www.w3.org/2001/vcard-rdf/3.0#> .
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#>.
 
 mv:additionalInformation
     a rdf:Property, owl:DatatypeProperty ;
+    dct:created "2017-04-07"^^xsd:date ;
+    dct:modified "2018-01-12"^^xsd:date ;
+    vs:term_status "stable" ;
     rdfs:comment "Further information about the civic structure or facility."@en ;
     rdfs:domain s:CivicStructure ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
@@ -22,6 +25,9 @@ mv:additionalInformation
     rdfs:range xsd:string .
 
 mv:operatedBy
+    dct:created "2017-06-07"^^xsd:date ;
+    dct:modified "2018-01-12"^^xsd:date ;
+    vs:term_status "stable" ;
     a rdf:Property, owl:ObjectProperty ;
     rdfs:comment "The operator of a civic structure or facility. Operator and owner can be different business entitites."@en ;
     rdfs:domain s:CivicStructure ;
@@ -30,14 +36,19 @@ mv:operatedBy
     rdfs:range gr:BusinessEntity .
 
 mv:id
+    dct:created "2017-05-11"^^xsd:date ;
+    dct:modified "2018-01-12"^^xsd:date ;
+    vs:term_status "stable" ;
     a rdf:Property, owl:DatatypeProperty ;
-    rdfs:comment "ID of the civic structure or facility." ;
-    rdfs:domain s:CivicStructure ;
+    rdfs:comment "ID of the entity." ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "ID"@de , "ID"@en ;
     rdfs:range xsd:string .
 
 mv:ownedBy
+    dct:created "2017-04-05"^^xsd:date ;
+    dct:modified "2018-01-12"^^xsd:date ;
+    vs:term_status "stable" ;
     a rdf:Property, owl:ObjectProperty ;
     rdfs:comment "The owner of a civic structure or facility. Owner and operator can be different business entities."@en ;
     rdfs:domain s:CivicStructure ;
@@ -46,6 +57,9 @@ mv:ownedBy
     rdfs:range gr:BusinessEntity .
 
 mv:name
+    dct:created "2017-04-13"^^xsd:date ;
+    dct:modified "2018-01-12"^^xsd:date ;
+    vs:term_status "stable" ;
     a rdf:Property, owl:DatatypeProperty ;
     rdfs:comment "Name of the civic structure or facility." ;
     rdfs:domain s:CivicStructure ;
@@ -54,6 +68,9 @@ mv:name
     rdfs:range xsd:string .
 
 mv:picture
+    dct:created "2017-06-07"^^xsd:date ;
+    dct:modified "2018-01-12"^^xsd:date ;
+    vs:term_status "stable" ;
     a rdf:Property, owl:DatatypeProperty ;
     rdfs:comment "URL of the picture of a civic structure or facility."@en ;
     rdfs:domain s:CivicStructure ;
@@ -62,6 +79,9 @@ mv:picture
     rdfs:range xsd:string .
 
 mv:vehicleWidthLimitInM
+    dct:created "2017-06-07"^^xsd:date ;
+    dct:modified "2018-01-12"^^xsd:date ;
+    vs:term_status "stable" ;
     a rdf:Property, owl:DatatypeProperty ;
     rdfs:comment "Indicates the width limit in meter for vehicles using the parking facility." ;
     rdfs:domain s:CivicStructure ;
@@ -70,6 +90,9 @@ mv:vehicleWidthLimitInM
     rdfs:range xsd:decimal .
 
 mv:vehicleHeightLimitInM
+    dct:created "2017-04-13"^^xsd:date ;
+    dct:modified "2018-01-12"^^xsd:date ;
+    vs:term_status "stable" ;
     a rdf:Property, owl:DatatypeProperty ;
     rdfs:comment "Indicates the height limit in meter for vehicles using the parking facility." ;
     rdfs:domain s:CivicStructure ;
@@ -78,6 +101,9 @@ mv:vehicleHeightLimitInM
     rdfs:range xsd:decimal .
 
 mv:vehicleLengthLimitInM
+    dct:created "2017-04-13"^^xsd:date ;
+    dct:modified "2018-01-12"^^xsd:date ;
+    vs:term_status "stable" ;
     a rdf:Property, owl:DatatypeProperty ;
     rdfs:comment "Indicates the length limit in meter for vehicles using the parking facility." ;
     rdfs:domain s:CivicStructure ;
@@ -110,6 +136,38 @@ s:Vehicle
     rdfs:isDefinedBy <http://schema.org/> ;
     rdfs:label "Fahrzeug"@de, "Vehicle"@en .
 
+mv:Capacity
+    dct:created "2017-04-13"^^xsd:date ;
+    dct:modified "2018-01-12"^^xsd:date ;
+    vs:term_status "stable" ;
+    a rdfs:Class, owl:Class ;
+    rdfs:comment "Capacity of a civic structure."@en ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Kapazität"@de, "Capacity"@en ;
+    .
+
+mv:capacity
+    dct:created "2017-04-13"^^xsd:date ;
+    dct:modified "2018-01-12"^^xsd:date ;
+    vs:term_status "stable" ;
+    a rdf:Property, owl:ObjectProperty ;
+    rdfs:comment "Relates the civic structure to its capacity."@en ;
+    rdfs:domain s:CivicStructure ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "has capacity"@en, "hat Kapazität"@de ;
+    rdfs:range mv:Capacity .
+
+mv:RealTimeCapacity
+    dct:created "2017-04-05"^^xsd:date ;
+    dct:modified "2018-01-12"^^xsd:date ;
+    vs:term_status "stable" ;
+    a rdfs:Class, owl:Class ;
+    rdfs:subClassOf mv:Capacity;
+    rdfs:comment "Real-time capacity of a civic structure."@en ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Echtzeit Kapazität"@de, "Real time capacity"@en ;
+    .
+
 s:address
     a owl:ObjectProperty ;
     rdfs:comment "Physical address of the item."@en ;
@@ -141,6 +199,9 @@ gr:BusinessEntity
    rdfs:label "Business entity"@en , "Juristische Person"@de .
 
 mv:access
+    dct:created "2017-06-07"^^xsd:date ;
+    dct:modified "2018-01-12"^^xsd:date ;
+    vs:term_status "stable" ;
     a rdf:Property, owl:ObjectProperty ;
     rdfs:comment "Indicates that a civic structure can only be accessed when certain conditions are fullfilled."@en ;
     rdfs:domain s:CivicStructure ;
@@ -149,50 +210,95 @@ mv:access
     rdfs:range mv:AccessCondition .
 
 mv:AccessCondition
+    dct:created "2017-08-29"^^xsd:date ;
+    dct:modified "2018-01-12"^^xsd:date ;
+    vs:term_status "stable" ;
     a owl:Class ;
     rdfs:comment "A condition that has to be fullfilled to get access to a civic structure."@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "Access condition"@en , "Zugangsbedingung"@de .
 
-mv:restrictedToVehicleType
+mv:validForVehicle
+    dct:created "2017-08-29"^^xsd:date ;
+    dct:modified "2018-01-12"^^xsd:date ;
+    vs:term_status "stable" ;
     a rdf:Property, owl:ObjectProperty ;
-    rdfs:comment "Indicates that a civic structure like a parking facility or charging station can only be accessed with a specific type of vehicle."@en ;
-    rdfs:domain mv:AccessCondition ;
+    rdfs:comment "Indicates that an entity is valid for a specific type of vehicle."@en ;
+    rdfs:domain [
+          a owl:Class ;
+          owl:unionOf (mv:AccessCondition s:PriceSpecification mv:Capacity)
+        ];
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "restricted to vehicle type"@en , "beschränkt auf Fahrzeugtyp"@de ;
+    rdfs:label "valid for vehicle"@en, "gültig für Fahrzeug"@de ;
     rdfs:range s:Vehicle .
 
-mv:restrictedToGroup
+mv:validForUserGroup
+    dct:created "2017-09-01"^^xsd:date ;
+    dct:modified "2018-01-12"^^xsd:date ;
+    vs:term_status "stable" ;
     a rdf:Property, owl:ObjectProperty ;
-    rdfs:comment "Indicates that a civic structure like a parking facility or charging station can only be accessed by a specific group of users."@en ;
-    rdfs:domain mv:AccessCondition ;
+    rdfs:comment "Indicates that an entity is valid for a specific group of users."@en ;
+    rdfs:domain [
+          a owl:Class ;
+          owl:unionOf (mv:AccessCondition s:PriceSpecification mv:Capacity)
+        ];
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "restricted to user group"@en , "beschränkt auf Nutzergruppe"@de ;
+    rdfs:label "valid for user group"@en , "gültig für Nutzergruppe"@de ;
     rdfs:range mv:UserGroup .
 
 mv:UserGroup
+    dct:created "2017-06-07"^^xsd:date ;
+    dct:modified "2018-01-12"^^xsd:date ;
+    vs:term_status "stable" ;
     a owl:Class ;
     rdfs:comment "A group of users having a common characteristic."@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "User group"@en , "Nutzergruppe"@de .
 
-mv:validForGroup
-    a rdf:Property, owl:ObjectProperty ;
-    rdfs:comment "Indicates that a price specification is valid for a specific group of users."@en ;
-    rdfs:domain s:PriceSpecification ;
+mv:PersonsWithDisabledParkingPermit
+    rdfs:comment "Persons with disabilities having a special parking permit that gives the right to use parking spaces reserved for disabled people."@en ;
+    rdfs:label "Persons with disabled parking permit"@en , "Personen mit Behindertenparkausweis"@de ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "valid for user group"@en , "gültig für Nutzergruppe"@de ;
-    rdfs:range mv:UserGroup .
+    a mv:UserGroup .
 
-mv:validForVehicle
-    a rdf:Property, owl:ObjectProperty ;
-    rdfs:comment "Indicates that a price specification is valid for a specific type of vehicle."@en ;
-    rdfs:domain s:PriceSpecification ;
+mv:Women
+    rdfs:comment "Female persons."@en ;
+    rdfs:label "Women"@en , "Frauen"@de ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "valid for vehicle"@en , "gültig für Fahrzeugtyp"@de ;
-    rdfs:range s:Vehicle .
+    a mv:UserGroup .
+
+mv:Families
+    rdfs:comment "Parents with children."@en ;
+    rdfs:label "Families"@en , "Familien"@de ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    a mv:UserGroup .
+
+mv:Inhabitants
+    rdfs:comment "People living on the premises."@en ;
+    rdfs:label "Inhabitants"@en , "Anwohner"@de ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    a mv:UserGroup .
+
+mv:TaxiDrivers
+    rdfs:comment "Drivers of a vehicle for hire, used by a single passenger or small group of passengers, often for a non-shared ride. Taxi drivers convey passengers between locations of their choice."@en ;
+    rdfs:label "Taxi drivers"@en , "Taxifahrer"@de ;
+    skos:prefLabel "Taxi drivers"@en , "Taxifahrer"@de ;
+    skos:altLabel "Taxicab drivers"@en , "Cab drivers"@en , "Cabbies"@en-uk ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    a mv:UserGroup .
+
+mv:CarsharingUsers
+    rdfs:comment "User of a car rental model where people rent cars for short periods of time."@en ;
+    rdfs:label "Carsharing users"@en-us , "Carsharing-Nutzer"@de , "Utilisateurs de l'autopartage"@fr , "Car club users"@en-uk ;
+    skos:prefLabel "Carsharing users"@en-us , "Carsharing-Nutzer"@de ;
+    skos:hiddenLabel "Car sharing users" , "Car-sharing users" ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    a mv:UserGroup .
 
 mv:price
+    dct:created "2017-06-07"^^xsd:date ;
+    dct:modified "2018-01-12"^^xsd:date ;
+    vs:term_status "stable" ;
     a rdf:Property, owl:ObjectProperty ;
     rdfs:comment "Indicates that a civic structure can be used for a specific price."@en ;
     rdfs:domain s:CivicStructure ;
@@ -207,6 +313,9 @@ s:PriceSpecification
     rdfs:label "Price specification"@en, "Preisspezifikation"@de .
 
 mv:freeOfCharge
+    dct:created "2017-06-07"^^xsd:date ;
+    dct:modified "2018-01-12"^^xsd:date ;
+    vs:term_status "stable" ;
     a rdf:Property, owl:DatatypeProperty ;
     rdfs:comment "Indicates that the usage of the civic structure is for free." ;
     rdfs:domain s:PriceSpecification ;
@@ -215,6 +324,9 @@ mv:freeOfCharge
     rdfs:range xsd:boolean .
 
 mv:unspecifiedCharge
+    dct:created "2017-06-07"^^xsd:date ;
+    dct:modified "2018-01-12"^^xsd:date ;
+    vs:term_status "stable" ;
     a rdf:Property, owl:DatatypeProperty ;
     rdfs:comment "Indicates that a charge has to be paid for the usage of the civic structure." ;
     rdfs:domain s:PriceSpecification ;
@@ -223,6 +335,9 @@ mv:unspecifiedCharge
     rdfs:range xsd:boolean .
 
 mv:dueForTime
+    dct:created "2017-06-07"^^xsd:date ;
+    dct:modified "2018-01-12"^^xsd:date ;
+    vs:term_status "stable" ;
     a rdf:Property, owl:ObjectProperty ;
     rdfs:comment "Indicates that a price specification is due for a certain time specification."@en ;
     rdfs:domain s:PriceSpecification ;
@@ -231,12 +346,18 @@ mv:dueForTime
     rdfs:range mv:TimeSpecification .
 
 mv:TimeSpecification
+    dct:created "2017-06-07"^^xsd:date ;
+    dct:modified "2018-01-12"^^xsd:date ;
+    vs:term_status "stable" ;
     a owl:Class ;
     rdfs:comment "Specific time a price specification is due for."@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "Time specification"@en, "Zeitspezifikation"@de .
 
 mv:overnight
+    dct:created "2017-06-07"^^xsd:date ;
+    dct:modified "2018-01-12"^^xsd:date ;
+    vs:term_status "stable" ;
     a rdf:Property, owl:DatatypeProperty ;
     rdfs:comment "Indicates that a time period overnight is possible." ;
     rdfs:domain mv:TimeSpecification ;
@@ -245,6 +366,9 @@ mv:overnight
     rdfs:range xsd:boolean .
 
 mv:timeUnit
+    dct:created "2017-06-07"^^xsd:date ;
+    dct:modified "2018-01-12"^^xsd:date ;
+    vs:term_status "stable" ;
     a rdf:Property, owl:DatatypeProperty ;
     rdfs:comment "Indicates the time unit a value is specified for." ;
     rdfs:domain mv:TimeSpecification ;
@@ -253,6 +377,9 @@ mv:timeUnit
     rdfs:range xsd:string .
 
 mv:timeStartValue
+    dct:created "2017-06-07"^^xsd:date ;
+    dct:modified "2018-01-12"^^xsd:date ;
+    vs:term_status "stable" ;
     a rdf:Property, owl:DatatypeProperty ;
     rdfs:comment "Indicates the start value of a time period." ;
     rdfs:domain mv:TimeSpecification ;
@@ -261,6 +388,9 @@ mv:timeStartValue
     rdfs:range xsd:float .
 
 mv:timeEndValue
+    dct:created "2017-06-07"^^xsd:date ;
+    dct:modified "2018-01-12"^^xsd:date ;
+    vs:term_status "stable" ;
     a rdf:Property, owl:DatatypeProperty ;
     rdfs:comment "Indicates the end value of a time period." ;
     rdfs:domain mv:TimeSpecification ;
@@ -283,6 +413,9 @@ s:PaymentMethod
     rdfs:label "Payment method"@en, "Zahlungsart"@de .
 
 mv:action
+    dct:created "2017-06-23"^^xsd:date ;
+    dct:modified "2018-01-12"^^xsd:date ;
+    vs:term_status "stable" ;
     a rdf:Property, owl:ObjectProperty ;
     rdfs:comment "Indicates which action is applied."@en ;
     rdfs:domain mv:AccessCondition ;
@@ -291,6 +424,9 @@ mv:action
     rdfs:range mv:Action .
 
 mv:Action
+    dct:created "2017-06-23"^^xsd:date ;
+    dct:modified "2018-01-12"^^xsd:date ;
+    vs:term_status "stable" ;
     a owl:Class ;
     rdfs:comment "Action that is done."@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
@@ -324,6 +460,9 @@ s:OpeningHoursSpecification
     rdfs:label "Opening hours specification"@en, "Öffnungszeiten"@de .
 
 mv:customerOf
+    dct:created "2017-06-23"^^xsd:date ;
+    dct:modified "2018-01-12"^^xsd:date ;
+    vs:term_status "stable" ;
     a rdf:Property, owl:ObjectProperty ;
     rdfs:comment "Indicates that a group is customer of a specific business entity."@en ;
     rdfs:domain mv:UserGroup ;
@@ -332,6 +471,9 @@ mv:customerOf
     rdfs:range gr:BusinessEntity .
 
 mv:employeeOf
+    dct:created "2017-06-23"^^xsd:date ;
+    dct:modified "2018-01-12"^^xsd:date ;
+    vs:term_status "stable" ;
     a rdf:Property, owl:ObjectProperty ;
     rdfs:comment "Indicates that a group is employee of a specific business entity."@en ;
     rdfs:domain mv:UserGroup ;
@@ -340,6 +482,9 @@ mv:employeeOf
     rdfs:range gr:BusinessEntity .
 
 mv:civicStructureStatus
+    dct:created "2017-06-23"^^xsd:date ;
+    dct:modified "2018-01-12"^^xsd:date ;
+    vs:term_status "stable" ;
     a rdf:Property, owl:ObjectProperty ;
     rdfs:comment "Indicates the current status of the civil structure." ;
     rdfs:domain s:CivicStructure ;
@@ -348,6 +493,9 @@ mv:civicStructureStatus
     rdfs:range mv:CivicStructureStatus .
 
 mv:CivicStructureStatus
+    dct:created "2018-01-11"^^xsd:date ;
+    dct:modified "2018-01-12"^^xsd:date ;
+    vs:term_status "stable" ;
     a rdfs:Class, owl:Class ;
     rdfs:comment "Status information of a civic structure." ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
@@ -436,3 +584,57 @@ mv:StatusUnknown
     rdfs:comment "The status of the parking facility is unknown." ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "Status unbekannt"@de, "Status unknown"@en .
+
+mv:Operational
+    a mv:CivicStructureStatus ;
+    rdfs:comment "The facility is operational." ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Status in Betrieb"@de, "Status operational"@en .
+
+mv:Bicycle
+    rdfs:comment "A human-or electric powered, pedal-driven, single-track vehicle, having two wheels attached to a frame, one behind the other."@en ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Bicycle"@en, "Fahrrad"@de, "Vélo"@fr ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    a s:Vehicle .
+
+mv:Car
+    rdfs:comment "A wheeled, self-powered motor vehicle used for transportation."@en ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Auto"@de, "Car"@en, "Voiture"@fr ;
+    a s:Vehicle ;
+    skos:altLabel "Pkw"@de .
+
+mv:ElectricVehicle
+    rdfs:comment "A wheeled, self-powered motor vehicle using an electric drivetrain."@en ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Elektrofahrzeug"@de, "Electric vehicle"@en, "Véhicule électrique"@fr ;
+    a s:Vehicle ;
+    .
+
+mv:BusOrCoach
+    rdfs:comment "A bus is a road vehicle designed to carry passengers. Coaches are luxury busses, usually in service for long distance travel."@en ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Coach"@en, "Bus"@de ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    a s:Vehicle .
+
+mv:Truck
+    rdfs:comment "A motor vehicle designed to transport cargo."@en ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Truck"@en, "Lkw"@de ;
+    a s:Vehicle .
+
+mv:Motorbike
+    rdfs:comment "A single-track, two-wheeled motor vehicle."@en ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Motorbike"@en, "Motorrad"@de ;
+    skos:prefLabel "Motorbike"@en, "Motorrad"@de, "Moto"@fr ;
+    skos:altLabel "Motorcycle"@en ;
+    a s:Vehicle .
+
+mv:RecreationalVehicle
+    rdfs:comment "A motor vehicle or trailer equipped with living space and amenities found in a home."@en ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Recreational vehicle"@en, "Wohnmobil"@de ;
+    a s:Vehicle .

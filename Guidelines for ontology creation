@@ -1,6 +1,0 @@
-Guidelines for ontology creation
-
-Do not use construction with auxiliary verbs to form properties.
-
-Wrong: mv:hasCapacity
-Correct: mv:capacity

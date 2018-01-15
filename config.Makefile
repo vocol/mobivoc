@@ -5,8 +5,9 @@
 #INSTANCESRC=test-test-cases.ttl
 ##include files which should be used for widoco generation
 ##DOCSRC=test-test-cases.ttl
-DOCSRC=index.ttl index-head.ttl ChargingPoints.ttl Parking.ttl vowl-viz.ttl
-SCHEMASRC=index.ttl index-head.ttl ChargingPoints.ttl Parking.ttl vowl-viz.ttl
+DOCSRC=$(wildcard schema/*.ttl)
+SCHEMASRC=$(wildcard schema/[^(Deprecated)]*.ttl)
+INSTANCESRC=$(wildcard examples/*.ttl)
 
 #disable manual and/or automatic tests. default: don't skip tests (=false)
 #SKIPAUTOTESTS=true
@@ -18,3 +19,5 @@ SCHEMASRC_PUBLISH_DP=https://vocab.eccenca.com/
 SCHEMASRC_PUBLISH_GRAPH=http://schema.mobivoc.org/
 REPOSITORY_NAME=schema.mobivoc.org
 
+ONTOLOGY_URI=http://schema.mobivoc.org/
+BUILDPREFIX=mobivoc
