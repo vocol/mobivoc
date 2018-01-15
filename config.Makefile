@@ -5,9 +5,12 @@
 #INSTANCESRC=test-test-cases.ttl
 ##include files which should be used for widoco generation
 ##DOCSRC=test-test-cases.ttl
-DOCSRC=index.ttl index-head.ttl ChargingPoints.ttl Parking.ttl
-SCHEMASRC=index.ttl index-head.ttl ChargingPoints.ttl Parking.ttl
-INSTANCESRC=OpenChargeMap_Mobivoc.ttl
+# DOCSRC=schema/ChargingPoints.ttl  schema/Core.ttl  schema/Metadata.ttl  schema/Parking.ttl
+DOCSRC=$(wildcard schema/*.ttl)
+# SCHEMASRC=schema/ChargingPoints.ttl  schema/Core.ttl  schema/Metadata.ttl  schema/Parking.ttl
+SCHEMASRC=$(wildcard schema/*.ttl)
+# INSTANCESRC=examples/OpenChargeMap.ttl
+INSTANCESRC=$(wildcard examples/*.ttl)
 #disable manual and/or automatic tests. default: don't skip tests (=false)
 #SKIPAUTOTESTS=true
 #SKIPMANUALTESTS=true
