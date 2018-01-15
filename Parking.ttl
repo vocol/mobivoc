@@ -201,7 +201,7 @@ mv:fillRate
 mv:numberOfCarsharingParkingSpaces 
     dct:created "2017-04-13"^^xsd:date ;
     dct:modified "2018-01-12"^^xsd:date ;
-    vs:term_status "stable" ;
+    vs:term_status "deprecated" ;
     a rdf:Property, owl:DatatypeProperty ;
     owl:deprecated "true"^^xsd:boolean ;
     skos:note "Deprecated, use value of Capacity resource instead." ;
@@ -214,7 +214,7 @@ mv:numberOfCarsharingParkingSpaces
 mv:numberOfWomensParkingSpaces
     dct:created "2017-04-13"^^xsd:date ;
     dct:modified "2018-01-12"^^xsd:date ;
-    vs:term_status "stable" ;
+    vs:term_status "deprecated" ;
     a rdf:Property, owl:DatatypeProperty ;
     owl:deprecated "true"^^xsd:boolean ;
     skos:note "Deprecated, use value of Capacity resource instead." ;
@@ -227,7 +227,7 @@ mv:numberOfWomensParkingSpaces
 mv:numberOfMotorbikeParkingSpaces
     dct:created "2017-04-13"^^xsd:date ;
     dct:modified "2018-01-12"^^xsd:date ;
-    vs:term_status "stable" ;
+    vs:term_status "deprecated" ;
     a rdf:Property, owl:DatatypeProperty ;
     owl:deprecated "true"^^xsd:boolean ;
     skos:note "Deprecated, use value of Capacity resource instead." ;
@@ -240,7 +240,7 @@ mv:numberOfMotorbikeParkingSpaces
 mv:numberOfBicycleParkingSpaces 
     dct:created "2015-01-30"^^xsd:date ;
     dct:modified "2018-01-12"^^xsd:date ;
-    vs:term_status "stable" ;
+    vs:term_status "deprecated" ;
     a rdf:Property, owl:DatatypeProperty ;
     owl:deprecated "true"^^xsd:boolean ;
     skos:note "Deprecated, use value of Capacity resource instead." ;
@@ -253,7 +253,7 @@ mv:numberOfBicycleParkingSpaces
 mv:numberOfOccupiedParkingSpaces
     dct:created "2015-01-30"^^xsd:date ;
     dct:modified "2018-01-12"^^xsd:date ;
-    vs:term_status "stable" ;
+    vs:term_status "deprecated" ;
     a rdf:Property, owl:DatatypeProperty ;
     owl:deprecated "true"^^xsd:boolean ;
     skos:note "Deprecated, use value of Capacity resource instead." ;
@@ -266,7 +266,7 @@ mv:numberOfOccupiedParkingSpaces
 mv:numberOfParkingSpacesForDisabledPersons
     dct:created "2015-01-30"^^xsd:date ;
     dct:modified "2018-01-12"^^xsd:date ;
-    vs:term_status "stable" ;
+    vs:term_status "deprecated" ;
     a rdf:Property, owl:DatatypeProperty ;
     owl:deprecated "true"^^xsd:boolean ;
     skos:note "Deprecated, use value of Capacity resource instead." ;
@@ -279,7 +279,7 @@ mv:numberOfParkingSpacesForDisabledPersons
 mv:numberOfVacantParkingSpaces
     dct:created "2017-05-10"^^xsd:date ;
     dct:modified "2018-01-12"^^xsd:date ;
-    vs:term_status "stable" ;
+    vs:term_status "deprecated" ;
     a rdf:Property, owl:DatatypeProperty ;
     owl:deprecated "true"^^xsd:boolean ;
     rdfs:comment "Indicates the number of vacant parking spaces available." ;
@@ -490,7 +490,7 @@ mv:entrance
 mv:parkingUsageType
     dct:created "2017-05-15"^^xsd:date ;
     dct:modified "2018-01-12"^^xsd:date ;
-    vs:term_status "stable" ;
+    vs:term_status "deprecated" ;
     a rdf:Property, owl:ObjectProperty ;
     rdfs:comment "Relates the capacity of a parking facility to a specific designated usage type."@en ;
     owl:deprecated "true"^^xsd:boolean ;
