@@ -27,8 +27,10 @@ We invite everyone who is interested to join our MobiVoc initiative and to parti
 ## Links
 
 * Homepage: [mobivoc.org](http://www.mobivoc.org/)
-* Schema page and namespace: [schema.mobivoc.org](http://schema.mobivoc.org/)
-* Suggested prefix: `mv`
+* Schema page and namespace: [schema.mobivoc.org](http://schema.mobivoc.org/) (suggested prefix: `mv`)
+* LOV entry: [@lov.okfn.org](http://lov.okfn.org/dataset/lov/vocabs/mv)
+* WebVOWL Visualization: [@visualdataweb.de](http://www.visualdataweb.de/webvowl/#iri=http://schema.mobivoc.org/)
+* oops Report: [@oops.linkeddata.es](http://oops.linkeddata.es/response.jsp?uri=http://schema.mobivoc.org/) (slow)
 
 ## Class diagram
 
