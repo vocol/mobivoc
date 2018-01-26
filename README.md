@@ -2,6 +2,8 @@
 
 MobiVoc is an open vocabulary for future-oriented mobility solutions.
 
+![logo](https://www.mobivoc.org/static/img/logo-www.mobivoc.org.png)
+
 New mobility concepts and better data networking are both crucial factors for
 global economic development. To invent innovative and sustainable mobility
 concepts, new data-based value-added services are required.
