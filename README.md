@@ -10,6 +10,8 @@ Our goal is to significantly improve the data mobility between all stakeholders 
 For the open vocabulary covering various mobility aspects we use RDF (Resource Description Framework) - a recommended specification of the World Wide Web Consortium (W3C) and the so-called lingua franca for the integration of data and web. 
 We invite everyone who is interested to join our MobiVoc initiative and to participate in the development of the Open Mobility Vocabulary.
 
+## Table of Contents
+
 * [Latest Release](#latest-release)
 * [Links](#links)
 * [Class diagram](#class-diagram)
