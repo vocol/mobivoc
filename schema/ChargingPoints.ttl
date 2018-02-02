@@ -426,8 +426,16 @@ mv:chargingLevel
     rdfs:comment "Indicates the percentage of charge left in the battery of an electric vehicle." ;
     rdfs:domain mv:ElectricVehicle ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "battery capacity in kW"@en, "Batteriekapazität in kW"@de ;
+    rdfs:label "charging level"@en, "Ladestand"@de ;
     rdfs:range xsd:double .
+
+mv:chargerQuantity
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "Indicates the number of chargers available" ;
+    rdfs:domain mv:Charger ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "charger quantity"@en, "Anzahl Ladegeräte"@de ;
+    rdfs:range xsd:integer .
 
 mv:chargingTimeRemainingInMin
     a rdf:Property, owl:DatatypeProperty ;

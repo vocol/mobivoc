@@ -703,21 +703,21 @@ mv:PluginHybridElectricVehicle
 mv:brand  
     a owl:DatatypeProperty , rdf:Property ;
     rdfs:comment "Indicates the brand of a product." ;
-    rdfs:isDefinedBy mv:<http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "brand"@en , "Marke"@de ;
     rdfs:range xsd:string .
 
 mv:model  
     a owl:DatatypeProperty , rdf:Property ;
     rdfs:comment "Indicates the model of a product." ;
-    rdfs:isDefinedBy mv:<http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "model"@en , "Modell"@de ;
     rdfs:range xsd:string .
 
 mv:maximumRangeElectricInKm  
     a owl:DatatypeProperty , rdf:Property ;
     rdfs:comment "Indicates the maximum range of an electric vehicle in km." ;
-    rdfs:isDefinedBy mv:<http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "maximum range in km"@en , "maximale Reichweite in km"@de ;
     rdfs:domain s:Vehicle ;
     rdfs:range xsd:double .
