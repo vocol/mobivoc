@@ -159,3 +159,9 @@ mv:parkingUsageType
     rdfs:label "parking usage type"@en, "Nutzungsart"@de ;
     rdfs:range mv:ParkingUsageType .
 
+mv:ChargingPoint  a       owl:Class , rdfs:Class ;
+        rdfs:comment      "Civic structure that supplies electric energy for the recharging of electric vehicles." ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Ladestation"@de , "Charging point"@en ;
+        rdfs:subClassOf   s:CivicStructure ;
+        owl:deprecated "true"^^xsd:boolean .
