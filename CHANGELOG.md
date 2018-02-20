@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 
 - new classes: ElectricVehicle, BatteryElectricVehicle, PluginHybridElectricVehicle
 - new instances of CivicStructureStatus: TemporarelyUnavailable, Gone
-- new datatype properties: model, maximumRangeElectricInKm, lengthInM, widthInM, heightInM, supportedChargingMode, chargingTimeRemainingInMin, chargingLevel, batteryCapacityinKW, totalNumberOfChargers, maximumParkingHours, isFree
+- new datatype properties: model, maximumRangeElectricInKm, lengthInM, widthInM, heightInM, supportedChargingMode, chargingTimeRemainingInMin, chargingLevel, batteryCapacityinKW, totalNumberOfChargers, maximumParkingHours, isOccupied
 
 ### Changed
 
