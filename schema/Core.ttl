@@ -316,12 +316,12 @@ mv:CarsharingUsers
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     a mv:UserGroup .
 
-mv:isFree
+mv:isOccupied
     a rdf:Property, owl:DatatypeProperty ;
-    rdfs:comment "Indicates that a civic structure like a parking space or a charger is not occupied." ;
+    rdfs:comment "Indicates that a civic structure like a parking space or a charger is occupied at the moment." ;
     rdfs:domain s:CivicStructure ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "is free"@en, "ist frei"@de ;
+    rdfs:label "is occupied"@en, "ist besetzt"@de ;
     rdfs:range xsd:boolean .
 
 mv:price
