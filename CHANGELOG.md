@@ -11,11 +11,11 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 - new instances of CivicStructureStatus: TemporarelyUnavailable, Gone
 - new datatype properties: model, maximumRangeElectricInKm, lengthInM, widthInM, heightInM, supportedChargingMode, chargingTimeRemainingInMin, chargingLevel, batteryCapacityinKW, totalNumberOfChargers, maximumParkingHours, isFree
 
-###Changed
+### Changed
 
 - multiple properties
 
-###Deprecated
+### Deprecated
 
 - Charging points: use Charger instead
 
