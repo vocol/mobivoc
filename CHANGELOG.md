@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Changelog's Format](http://keepachangelog.com/).
 
+## [1.1.0] 2018-02-21
+
+### Added
+
+- new classes: ElectricVehicle, BatteryElectricVehicle, PluginHybridElectricVehicle
+- new instances of CivicStructureStatus: TemporarelyUnavailable, Gone
+- new datatype properties: model, maximumRangeElectricInKm, lengthInM, widthInM, heightInM, supportedChargingMode, chargingTimeRemainingInMin, chargingLevel, batteryCapacityinKW, totalNumberOfChargers, maximumParkingHours, isOccupied
+
+### Changed
+
+- multiple properties
+
+### Deprecated
+
+- Charging points: use Charger instead
+
 ## [1.0.0] 2018-01-15
 
 ### Added
