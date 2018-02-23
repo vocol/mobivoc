@@ -5,17 +5,13 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 
 ## [Unreleased]
 
+TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security section
+
 ### Changed
 
 - forward ontology-includes
 
-## [1.1.1] 2018-02-21
-
-### Changed
-
-- forward ontology-includes (widoco version fix)
-
-## [1.1.0] 2018-02-21
+## [1.1.3] 2018-02-21
 
 ### Added
 
@@ -26,6 +22,8 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 ### Changed
 
 - multiple properties
+- forward ontology-includes (widoco version fix)
+
 
 ### Deprecated
 
