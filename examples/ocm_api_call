@@ -1,0 +1,15 @@
+20km um Leipzig
+
+https://api.openchargemap.io/v2/poi/?output=xml&countrycode=DE&maxresults=1000&opendata=true&latitude=51.343479&longitude=12.387772&distance=20&distanceunit=km
+
+20 km um Brüssel
+
+https://api.openchargemap.io/v2/poi/?output=json&maxresults=1000&opendata=true&latitude=50.8504500&longitude=4.3487800&distance=20&distanceunit=km
+
+20 km um Lyon
+
+https://api.openchargemap.io/v2/poi/?output=json&maxresults=1000&opendata=true&latitude=45.7484600&longitude=4.8467100&distance=20&distanceunit=km
+
+20 km um Helsinki
+
+https://api.openchargemap.io/v2/poi/?output=json&maxresults=1000&opendata=true&latitude=60.192059&longitude=24.945831&distance=20&distanceunit=km

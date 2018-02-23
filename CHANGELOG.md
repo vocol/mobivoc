@@ -5,6 +5,32 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 
 ## [Unreleased]
 
+TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security section
+
+### Changed
+
+- forward ontology-includes
+
+## [1.1.3] 2018-02-21
+
+### Added
+
+- new classes: ElectricVehicle, BatteryElectricVehicle, PluginHybridElectricVehicle
+- new instances of CivicStructureStatus: TemporarelyUnavailable, Gone
+- new datatype properties: model, maximumRangeElectricInKm, lengthInM, widthInM, heightInM, supportedChargingMode, chargingTimeRemainingInMin, chargingLevel, batteryCapacityinKW, totalNumberOfChargers, maximumParkingHours, isOccupied
+
+### Changed
+
+- multiple properties
+- forward ontology-includes (widoco version fix)
+
+
+### Deprecated
+
+- Charging points: use Charger instead
+
+## [1.0.0] 2018-01-15
+
 ### Added
 
 - new instances of UserGroups: TaxiDrivers, Women, PersonsWithDisabledParkingPermit, CarsharingUsers, Families, Inhabitants
