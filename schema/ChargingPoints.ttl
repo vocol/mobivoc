@@ -93,15 +93,10 @@ mv:CHAdeMO
 
 mv:Charger
     a rdfs:Class, owl:Class ;
-    rdfs:comment "Component of a charging point used to charge electric vehicles. A charging point can have one or more chargers." ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "Charger"@en, "Ladegerät"@de .
-
-mv:ChargingPoint
-    a rdfs:Class, owl:Class ;
     rdfs:comment "Civic structure that supplies electric energy for the recharging of electric vehicles." ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "Charging point"@en, "Ladestation"@de ;
+    rdfs:label "Charger"@en, "Ladegerät"@de ;
+    skos:altLabel "Charging point"@en, "Ladepunkt"@de ;
     rdfs:subClassOf s:CivicStructure .
 
 mv:IEC_60309_16A_2_E
@@ -218,13 +213,13 @@ All NEMA 6 devices are three-wire grounding devices (hot-hot-ground) used for 20
 
 mv:Plug
     a rdfs:Class, owl:Class ;
-    rdfs:comment "Component of a charger to connect an electric vehicle. There are different plug types used for charging electric vehicles." ;
+    rdfs:comment "Component of a charger and of an electric vehicle to connect each other. There are different plug types used for charging electric vehicles." ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "Anschluss"@de, "Plug"@en .
+    rdfs:label "Stecker"@de, "Plug"@en .
 
 mv:PlugType
     a rdfs:Class, owl:Class ;
-    rdfs:comment "Type of a plug that is used to connect electric vehicles." ;
+    rdfs:comment "Type of a plug that is used to connect electric vehicles to a charger." ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "Plug type"@en, "Steckertyp"@de .
 
@@ -293,27 +288,16 @@ mv:brand
 
 mv:cableAvailable
     a rdf:Property, owl:DatatypeProperty ;
-    rdfs:comment "Indicates whether the plug has a cable." ;
-    rdfs:domain mv:Plug ;
+    rdfs:comment "Indicates whether the plug or electric vehicle has a cable." ;
+    rdfs:domain [
+        a owl:Class ;
+        owl:unionOf (mv:Charger
+            mv:ElectricVehicle
+        )
+    ] ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "Kabel verfügbar"@de, "cable available"@en ;
     rdfs:range xsd:boolean .
-
-mv:charger
-    a rdf:Property, owl:ObjectProperty ;
-    rdfs:comment "Describes the charger available at a charging point. A charging point can have more than one charger." ;
-    rdfs:domain mv:ChargingPoint ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "charger"@en ;
-    rdfs:range mv:Charger .
-
-mv:chargerQuantity
-    a rdf:Property, owl:DatatypeProperty ;
-    rdfs:comment "Indicates the amount of chargers available at the charging point." ;
-    rdfs:domain mv:Charger ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "Anzahl Ladepunkte"@de, "charger quantity"@en ;
-    rdfs:range xsd:integer .
 
 mv:currentInA
     a rdf:Property, owl:DatatypeProperty ;
@@ -322,10 +306,11 @@ mv:currentInA
         a owl:Class ;
         owl:unionOf (mv:Plug
             mv:Charger
+            mv:ElectricVehicle
         )
     ] ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "current in A"@en ;
+    rdfs:label "current in A"@en, "Stromstärke in A"@de ;
     rdfs:range xsd:double .
 
 mv:currentType
@@ -335,6 +320,7 @@ mv:currentType
         a owl:Class ;
         owl:unionOf (mv:Plug
             mv:Charger
+            mv:ElectricVehicle
         )
     ] ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
@@ -343,10 +329,10 @@ mv:currentType
 
 mv:energySource
     a rdf:Property, owl:DatatypeProperty ;
-    rdfs:comment "Indicates the energy source used for the charging point i.e. renewable etc." ;
-    rdfs:domain mv:ChargingPoint ;
+    rdfs:comment "Indicates the energy source used for the charger i.e. renewable etc." ;
+    rdfs:domain mv:Charger ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "energy source"@en ;
+    rdfs:label "energy source"@en, "Energiequelle"@de ;
     rdfs:range xsd:string .
 
 mv:isFastChargeCapable
@@ -357,14 +343,6 @@ mv:isFastChargeCapable
     rdfs:label "erlaubt Schnellladen"@de, "is fast charge capable"@en ;
     rdfs:range xsd:boolean .
 
-mv:model
-    a rdf:Property, owl:DatatypeProperty ;
-    rdfs:comment "Indicates the charger model of the charging point." ;
-    rdfs:domain mv:Charger ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "Modell"@de, "model"@en ;
-    rdfs:range xsd:string .
-
 mv:ocmConnectionID
     a owl:AnnotationProperty ;
     rdfs:comment "The OpenChargeMap ID used for the Connection / Plug." ;
@@ -374,8 +352,13 @@ mv:ocmConnectionID
 
 mv:plug
     a rdf:Property, owl:ObjectProperty ;
-    rdfs:comment "Indicates the plugs available at a charger." ;
-    rdfs:domain mv:Charger ;
+    rdfs:comment "Indicates the plugs available at a charger or vehicle." ;
+    rdfs:domain [
+        a owl:Class ;
+        owl:unionOf (mv:ElectricVehicle
+            mv:Charger
+        )
+    ] ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "plug"@en ;
     rdfs:range mv:Plug .
@@ -395,10 +378,11 @@ mv:powerInKW
         a owl:Class ;
         owl:unionOf (mv:Plug
             mv:Charger
+            mv:ElectricVehicle
         )
     ] ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "power in kW"@en ;
+    rdfs:label "power in kW"@en, "Leistung in kW"@de ;
     rdfs:range xsd:double .
 
 mv:threePhasedCurrentAvailable
@@ -408,6 +392,7 @@ mv:threePhasedCurrentAvailable
         a owl:Class ;
         owl:unionOf (mv:Plug
             mv:Charger
+            mv:ElectricVehicle
         )
     ] ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
@@ -421,9 +406,55 @@ mv:voltageInV
         a owl:Class ;
         owl:unionOf (mv:Plug
             mv:Charger
+            mv:ElectricVehicle
         )
     ] ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "voltage in V"@en ;
+    rdfs:label "voltage in V"@en, "Spannung in V"@de ;
     rdfs:range xsd:double .
 
+mv:batteryCapacityinKW
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "Indicates the battery capacity of an electric vehicle in kW." ;
+    rdfs:domain mv:ElectricVehicle ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "battery capacity in kW"@en, "Batteriekapazität in kW"@de ;
+    rdfs:range xsd:double .
+
+mv:chargingLevel
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "Indicates the percentage of charge left in the battery of an electric vehicle." ;
+    rdfs:domain mv:ElectricVehicle ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "charging level"@en, "Ladestand"@de ;
+    rdfs:range xsd:double .
+
+mv:chargerQuantity
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "Indicates the number of chargers available" ;
+    rdfs:domain mv:Charger ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "charger quantity"@en, "Anzahl Ladegeräte"@de ;
+    rdfs:range xsd:integer .
+
+mv:chargingTimeRemainingInMin
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "Indicates the remaining charging time in minutes when an electric vehicle is being actively charged." ;
+    rdfs:domain mv:ElectricVehicle ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "Remaining charging time in min"@en, "Verbleibende Ladezeit in min"@de ;
+    rdfs:range xsd:double .
+
+mv:supportedChargingMode
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "Indicates which charging modes are supported by the electric vehicle or charger or plug." ;
+    rdfs:domain [
+        a owl:Class ;
+        owl:unionOf (mv:Plug
+            mv:Charger
+            mv:ElectricVehicle
+        )
+    ] ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "supported charging mode"@en, "unterstützter Lademodus"@de ;
+    rdfs:range xsd:string .

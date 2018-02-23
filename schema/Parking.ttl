@@ -131,7 +131,7 @@ mv:SurveillanceBySecurityGuards
     a mv:ParkingFacilityFeature ;
     rdfs:comment "The parking facility is surveilled by security guards."@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "Bewacht durch Personal"@de, "surveillance by security guards"@en .
+    rdfs:label "Bewacht durch Personal"@de, "Surveillance by security guards"@en .
 
 mv:UndergroundParkingGarage
     dct:created "2017-04-13"^^xsd:date ;
@@ -151,19 +151,16 @@ mv:VideoSurveillance
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "Video surveillance"@en, "Videoüberwachung"@de .
 
-mv:chargingPoint
+mv:charger
     dct:created "2017-04-13"^^xsd:date ;
     dct:modified "2018-01-12"^^xsd:date ;
     vs:term_status "stable" ;
     a rdf:Property, owl:ObjectProperty ;
-    rdfs:comment "Indicates whether charging points are available." ;
-    rdfs:domain [
-          a owl:Class ;
-          owl:unionOf (mv:ParkingFacility mv:ParkingSpace)
-        ];
+    rdfs:comment "Indicates whether chargers are available at the parking space." ;
+    rdfs:domain mv:ParkingSpace ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "has charging point"@en, "hat Ladestation"@de ;
-    rdfs:range mv:ChargingPoint .
+    rdfs:label "has charger"@en, "hat Ladegerät"@de ;
+    rdfs:range mv:Charger .
 
 mv:exitRate
     dct:created "2017-06-07"^^xsd:date ;
@@ -184,7 +181,7 @@ mv:feature
     rdfs:comment "Indicates which feature the parking facility provides." ;
     rdfs:domain mv:ParkingFacility ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "feature"@en ;
+    rdfs:label "feature"@en, "Ausstattung"@de ;
     rdfs:range mv:ParkingFacilityFeature .
 
 mv:fillRate
@@ -231,6 +228,14 @@ mv:totalCapacity
     rdfs:label "total capacity"@en, "Gesamtkapazität"@de ;
     rdfs:range xsd:integer .
 
+mv:totalNumberOfChargers
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "Indicates the total number of chargers available in a parking facility." ;
+    rdfs:domain mv:ParkingFacility ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "total number of chargers"@en, "Gesamtzahl an Ladegeräten"@de ;
+    rdfs:range xsd:integer .
+
 mv:connectedTo
     dct:created "2017-05-30"^^xsd:date ;
     dct:modified "2018-01-12"^^xsd:date ;
@@ -239,7 +244,7 @@ mv:connectedTo
     rdfs:comment "Indicates the transport connections available." ;
     rdfs:domain mv:ParkingFacility ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "connected to" ;
+    rdfs:label "connected to"@en, "Anschluss an"@de ;
     rdfs:range mv:ParkingFacilityConnection .
 
 mv:ParkingSpace
@@ -251,8 +256,19 @@ mv:ParkingSpace
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "Stellplatz"@de, "Parking space"@en ;
     skos:prefLabel "Stellplatz"@de, "Parking space"@en ;
+    skos:altLabel "Parking spot"@en ;
     skos:hiddenLabel "Parkplatz"@de ;
     rdfs:subClassOf s:CivicStructure .
+
+mv:maximumParkingHours
+    a rdf:Property, owl:DatatypeProperty ;
+    rdfs:comment "Indicates the maximum parking hours a vehicle is allowed to use a parking space or parking facility." ;
+    rdfs:domain [ a            owl:Class ;
+                            owl:unionOf  ( mv:ParkingFacility mv:ParkingSpace )
+                          ] ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:label "maximum parking hour"@en, "maximale Parkdauer"@de ;
+    rdfs:range xsd:string .
 
 mv:arrangement
     dct:created "2017-05-10"^^xsd:date ;
@@ -368,7 +384,7 @@ mv:RealTimeCapacity
     rdfs:subClassOf mv:Capacity;
     rdfs:comment "Real-time capacity of a parking facility or parking space."@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "Echtzeit Kapazität"@de, "Real time capacity"@en ;
+    rdfs:label "Echtzeit-Kapazität"@de, "Real time capacity"@en ;
     .
 
 mv:level
@@ -401,7 +417,7 @@ mv:maximumValue
     rdfs:comment "Indicates the maximum value of the capacity."@en ;
     rdfs:domain mv:Capacity ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "maximum value"@en ;
+    rdfs:label "maximum value"@en, "Maximalwert"@de ;
     rdfs:range xsd:integer .
 
 mv:currentValue
@@ -412,14 +428,14 @@ mv:currentValue
     rdfs:comment "Indicates the current value of the real-time capacity."@en ;
     rdfs:domain mv:RealTimeCapacity ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "current value"@en ;
+    rdfs:label "current value"@en, "aktueller Wert"@de, "valeur courante"@fr ;
     rdfs:range xsd:integer .
 
 dct:date
     a rdf:Property, owl:DatatypeProperty ;
     rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
     rdfs:comment "The date of the given real-time capacity."@en ;
-    rdfs:label "date"@en ;
+    rdfs:label "date"@en, "Datum"@de, "date"@fr ;
     rdfs:domain mv:RealTimeCapacity ;
     rdfs:range xsd:datetime ;
     .
