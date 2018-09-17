@@ -46,6 +46,7 @@ mv:location1 a mv:Location ;
 
 mv:linearExtension1 a mv:LinearExtension ; 
 					mv:roadNumber "A3" ; 
+					#http://dbpedia.org/page/Bundesautobahn_3
 					# lat & long, but not always there
 .
 
@@ -60,6 +61,7 @@ mv:alertCLocation1 a mv:AlertCLocation ;
 
 mv:primaryLocation1 a mv:PrimaryLocation ;
 					mv:locationName "Würzburg/Randersacker"@de ; 
+					#http://dbpedia.org/page/W%C3%BCrzburg
 					mv:specificLocation 10846 ; 
 .					
 
