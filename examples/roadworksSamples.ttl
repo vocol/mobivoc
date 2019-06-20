@@ -7,8 +7,9 @@
 @prefix olo:    <http://purl.org/ontology/olo/core#> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix datex:  <http://vocab.datex.org/terms#> .
-@prefix mv: 	<http://schema.mobivoc.org/> .
 @prefix geo:    <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+
+@prefix mv: 	<http://schema.mobivoc.org/#> .
 
 #################################################
 # Bayern Example 

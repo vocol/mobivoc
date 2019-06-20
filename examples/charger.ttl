@@ -6,7 +6,6 @@
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix voaf:  <http://purl.org/vocommons/voaf#> .
-@prefix mv:    <http://schema.mobivoc.org/> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
 @prefix dbpedia: <http://dbpedia.org/resource/> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
@@ -21,6 +20,9 @@
 @prefix vann:  <http://purl.org/vocab/vann/> .
 @prefix vs:    <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+@prefix mv: <http://schema.mobivoc.org/#> .
+
 
 mv:location2  a             mv:Location ;
         mv:alertCLocation   mv:alertCLocation2 ;
