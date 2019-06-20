@@ -1,0 +1,15 @@
+PREFIX mv: <http://purl.org/net/mobivoc/>
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX schema: <http://schema.org> 
+
+SELECT ?name ?openingHours ?streetAddress ?postCode ?city
+WHERE 
+{
+  ?station a mv:FillingStation .
+  ?station rdfs:label ?name .
+  ?station mv:hasOpeningHours ?openingHours .
+  ?station mv:isLocated ?location .
+  ?location schema:streetAddress ?streetAddress .
+  ?location schema:postalCode ?postCode .
+  ?location schema:addressLocality ?city .
+ }
