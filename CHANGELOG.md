@@ -7,6 +7,10 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 
 TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security section
 
+### Added
+
+- added language tags on strings missing language tags
+
 ### Changed
 
 - forward ontology-includes

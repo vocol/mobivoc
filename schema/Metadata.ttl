@@ -15,7 +15,7 @@
 <http://schema.mobivoc.org/>
     a voaf:Vocabulary, owl:Ontology ;
     rdfs:label "MobiVoc: Open Mobility Vocabulary"@en ;
-    rdfs:comment "Our goal is to significantly improve the data mobility between all stakeholders by providing a standardized vocabulary using Semantic Web technologies and ontologies. For the open vocabulary covering various mobility aspects we use RDF (Resource Description Framework) - a recommended specification of the World Wide Web Consortium (W3C) and the so-called lingua franca for the integration of data and web. We invite everyone who is interested to join our MobiVoc initiative and to participate in the development of the Open Mobility Vocabulary." ;
+    rdfs:comment "Our goal is to significantly improve the data mobility between all stakeholders by providing a standardized vocabulary using Semantic Web technologies and ontologies. For the open vocabulary covering various mobility aspects we use RDF (Resource Description Framework) - a recommended specification of the World Wide Web Consortium (W3C) and the so-called lingua franca for the integration of data and web. We invite everyone who is interested to join our MobiVoc initiative and to participate in the development of the Open Mobility Vocabulary."@en ;
     cc:license <http://creativecommons.org/licenses/by/4.0/> ;
     dct:creator ecc:aweilandt, ecc:mbruemmer ;
     dct:contributor <http://sebastian.tramp.name>, <http://purl.org/net/clange>, <http://np00.github.io/#i> ;
@@ -63,16 +63,16 @@ ecc:mbruemmer
 
 ecc:eccenca-GmbH
     a dct:Agent, foaf:Organization ;
-    foaf:name "eccenca GmbH" ;
+    foaf:name "eccenca GmbH"@en ;
 .
 
 <http://dbpedia.org/resource/University_of_Bonn>
     a dct:Agent, foaf:Organization ;
-    rdfs:label "University of Bonn";
+    rdfs:label "University of Bonn"@en;
 .
 
 <http://creativecommons.org/licenses/by/4.0/>
-    rdfs:label "Creative Commons Attribution 4.0 International" ;
+    rdfs:label "Creative Commons Attribution 4.0 International"@en ;
 .
 
 cc:license
