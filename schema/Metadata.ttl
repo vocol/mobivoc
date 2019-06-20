@@ -18,7 +18,7 @@
     rdfs:label "MobiVoc: Open Mobility Vocabulary"@en ;
     rdfs:comment "Our goal is to significantly improve the data mobility between all stakeholders by providing a standardized vocabulary using Semantic Web technologies and ontologies. For the open vocabulary covering various mobility aspects we use RDF (Resource Description Framework) - a recommended specification of the World Wide Web Consortium (W3C) and the so-called lingua franca for the integration of data and web. We invite everyone who is interested to join our MobiVoc initiative and to participate in the development of the Open Mobility Vocabulary."@en ;
     cc:license <http://creativecommons.org/licenses/by/4.0/> ;
-    dct:description "TBD - a neat description before the next release. @np00 June 2019"
+    dct:description "TBD - a neat description before the next release. @np00 June 2019"@en;
     dct:creator ecc:aweilandt, ecc:mbruemmer ;
     dct:contributor <http://sebastian.tramp.name>, <http://purl.org/net/clange>, <http://np00.github.io/#i> ;
     dct:created "2014-08-05"^^xsd:date ;
