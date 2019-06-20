@@ -18,7 +18,6 @@
 @prefix datex: <http://vocab.datex.org/terms#> .
 @prefix rlog:  <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#> .
 @prefix voaf:  <http://purl.org/vocommons/voaf#> .
-@prefix mv:    <http://schema.mobivoc.org/> .
 @prefix dbpedia: <http://dbpedia.org/resource/> .
 @prefix vcard: <http://www.w3.org/2001/vcard-rdf/3.0#> .
 @prefix gr:    <http://purl.org/goodrelations/v1#> .
@@ -29,6 +28,8 @@
 @prefix rutt:  <http://rdfunit.aksw.org/data/tests#> .
 @prefix vs:    <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+@prefix mv: <http://schema.mobivoc.org/#> .
 
 mv:location2  a             mv:Location ;
         mv:alertCLocation   mv:alertCLocation2 ;
