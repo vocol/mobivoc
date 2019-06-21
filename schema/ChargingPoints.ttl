@@ -24,7 +24,7 @@ mv:AS_3112_Type_I
     rdfs:label "AS 3112 Type I"@en ;
     rdfs:seeAlso <https://en.wikipedia.org/wiki/AS/NZS_3112> ;
     skos:altLabel "Type I"@en, "Type I/AS 3112/CPCS-CCC"@en ;
-    foaf:depiction <https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Aust_AC_plug.jpg/800px-Aust_AC_plug.jpg> .
+    foaf:depiction <https://upload.wikimedia.org/wikipedia/commons/2/20/Aust_AC_plug.jpg> .
 
 mv:BS1363
     mv:ocmConnectionID "3" ;
@@ -134,7 +134,7 @@ mv:IEC_62196_Type_3A
     rdfs:comment "The type 3A is derived from the Scame charging connectors adding the IEC 62196 pins which is suited for single-phase charging – the connector builds on the experience with the Scame connector for charging of light vehicles (electric motorcycles and scooters)."@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "SCAME Type 3A"@en ;
-    rdfs:seeAlso <https://en.wikipedia.org/wiki/IEC_62196#Type_3_(EV_Plug_Alliance_connector),_Scame> ;
+    rdfs:seeAlso <https://en.wikipedia.org/wiki/IEC_62196#Type_3> ;
     skos:altLabel "IEC 62196-2 Type 3A"@en .
 
 mv:IEC_62196_Type_3C
@@ -143,7 +143,7 @@ mv:IEC_62196_Type_3C
     rdfs:comment "The type 3A is derived from the Scame charging connectors adding the IEC 62196 pins which is suited for single-phase charging – the connector builds on the experience with the Scame connector for charging of light vehicles (electric motorcycles and scooters). The additional type 3C adds additional 2 pins for three-phase charging for usage at fast charge stations. Based on its origin the connector is sometimes referred to as the Scame type 3 connector."@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "SCAME Type 3C"@en ;
-    rdfs:seeAlso <https://en.wikipedia.org/wiki/IEC_62196#Type_3_(EV_Plug_Alliance_connector),_Scame> ;
+    rdfs:seeAlso <https://en.wikipedia.org/wiki/IEC_62196#Type_3> ;
     skos:altLabel "IEC 62196-2 Type 3C"@en .
 
 mv:Mennekes_Type_2
