@@ -14,16 +14,16 @@
 #################################################
 # Bayern Example 
 
-mv:1293_1_153474 a mv:RoadWorks ;
+mv:1293_1_153474 a mv:SituationRecord ;
 	mv:recordCreationTime "2017-08-07T17:00:20.148+02:00"^^xsd:dateTime ; 
 	mv:recordVersionTime "2017-08-07T17:00:20.148+02:00"^^xsd:dateTime ; 
 	mv:generalPublicComment "Anbau von Fahrstreifen"@de ; 
 	mv:constructionType "roadWideningWork" ;
 	mv:probabilityOfOccurence "certain" ;  
-	mv:temporarySpeedLimit "80.0" ; 
+	mv:temporarySpeedLimit 80.0 ; 
 	mv:validity mv:validity1 ; 
-	mv:impact mv:impact1 ; 
-	mv:location mv:location1 ; 
+	mv:impact mv:impact1  ;
+	mv:location mv:location1 ;  
 .
 
 mv:validity1 a mv:Validity ;
@@ -40,7 +40,7 @@ mv:impact1 a mv:Impact ;
 
 mv:location1 a mv:Location ;
 			 mv:affectedCarriagewayAndLanes "mainCarriageWay" ;
-			 mv:affectedRoadLength "1100.0" ; 
+			 mv:affectedRoadLength 1100.0 ; 
 			 mv:linearExtension mv:linearExtension1 ; 
 			 mv:alertCLocation mv:alertCLocation1 ; 
 . 
@@ -53,7 +53,7 @@ mv:linearExtension1 a mv:LinearExtension ;
 
 mv:alertCLocation1 a mv:AlertCLocation ; 
 				  mv:countryCode "de" ;
-				  mv:tableNumber "15" ; 
+				  mv:tableNumber 15 ; 
 				  mv:tableVersion "15.1.D-160122" ; 
 				  mv:directionCode "negative" ; 
 				  mv:primaryLocation mv:primaryLocation1 ; 
@@ -75,7 +75,7 @@ mv:secondaryLocation1 a mv:SecondaryLocation ;
 # Bremen example 
 
 
-mv:vis-vmz-hb-509 a mv:RoadWorks ;
+mv:vis-vmz-hb-509 a mv:SituationRecord ;
 	mv:recordCreationTime "2015-01-15T06:44:56+01:00"^^xsd:dateTime ; 
 	mv:recordVersionTime "2017-09-01T14:00:06+02:00"^^xsd:dateTime ; 
 	mv:generalPublicComment "Brückensanierung"@de ;
@@ -83,10 +83,10 @@ mv:vis-vmz-hb-509 a mv:RoadWorks ;
 	mv:generalPublicComment """zeitweise Sperrung von Fahrstreifen in beiden Richtungen; Verkürzung der Einfahrt von der Tankstelle bzw. der Ausfahrt von der B75 in FR Huchting; Geschwindigkeitsbegrenzung;  
 Fahrempfehlung: B75 in Höhe der Ausfahrt Huchting FR stadtauswärts: Nutzen Sie für die Zufahrt zur Kirchhuchtinger Landstraße die Anschlussstelle DEL-Stickgras 
 nächste Vollsperrung B75: vorauss. 29.09.2017, 20:00 Uhr bis 02.10.2017, 4:00 Uhr (Aushängen der Fußgängerbrücke) 
-Umleitungen: aus Richtung Bremen: über B75 Abfahrt Huchtinger Kreisel, Huchtinger Heerstraße; aus Richtung Delmenhorst: über A28 zum Autobahndreieck Stuhr und zur A1; aus Richtung Stuhr: über  Moordeicher Landstraße, zur A28"""@en ; 
+Umleitungen: aus Richtung Bremen: über B75 Abfahrt Huchtinger Kreisel, Huchtinger Heerstraße; aus Richtung Delmenhorst: über A28 zum Autobahndreieck Stuhr und zur A1; aus Richtung Stuhr: über  Moordeicher Landstraße, zur A28"""@de ; 
 	mv:constructionType "constructionWork" ; 
-	mv:recordUrl <http://vmz.bremen.de/baustellen/aktuell/?feature=vis-vmz-hb-509> ; 
-	mv:temporarySpeedLimit "60" ; 
+	mv:recordUrl "http://vmz.bremen.de/baustellen/aktuell/?feature=vis-vmz-hb-509" ; 
+	mv:temporarySpeedLimit 60 ; 
 	mv:probabilityOfOccurence "certain" ;  
 	mv:validity mv:validity2 ; 
 	mv:impact mv:impact2 ; 
@@ -194,85 +194,85 @@ mv:pointList1 a olo:OrderdList ;
 
 
 mv:point1 a geo:Point ; 
-	  geo:lat "8.7143889207106" ; 
-	  geo:long "53.049174751337" ; 
+	  geo:lat 8.7143889207106 ; 
+	  geo:long 53.049174751337 ; 
 .
 
 mv:point2 a geo:Point ; 
-	  geo:lat "8.678640438965" ; 
-	  geo:long "53.036828796659" ; 
+	  geo:lat 8.678640438965 ; 
+	  geo:long 53.036828796659 ; 
 .
 
 mv:point3 a geo:Point ; 
-	  geo:lat "8.6802497643738" ; 
-	  geo:long "53.038183541181" ; 
+	  geo:lat 8.6802497643738 ; 
+	  geo:long 53.038183541181 ; 
 .
 
 mv:point4 a geo:Point ; 
-	  geo:lat "8.6820092934873" ; 
-	  geo:long "53.039628555087" ; 
+	  geo:lat 8.6820092934873 ; 
+	  geo:long 53.039628555087 ; 
 .
 
 mv:point5 a geo:Point ; 
-	  geo:lat "8.6846056718134" ; 
-	  geo:long "53.041086421822" ; 
+	  geo:lat 8.6846056718134 ; 
+	  geo:long 53.041086421822 ; 
 .
 
 mv:point6 a geo:Point ; 
-	  geo:lat "8.6872878808278" ; 
-	  geo:long "53.042518437609" ; 
+	  geo:lat 8.6872878808278 ; 
+	  geo:long 53.042518437609 ; 
 .
 
 mv:point7 a geo:Point ; 
-	  geo:lat "8.6897555131213" ; 
-	  geo:long "53.043485988914" ; 
+	  geo:lat 8.6897555131213 ; 
+	  geo:long 53.043485988914 ; 
 .
 
 mv:point8 a geo:Point ; 
-	  geo:lat "8.6925450104963" ; 
-	  geo:long "53.044401917473" ; 
+	  geo:lat 8.6925450104963 ; 
+	  geo:long 53.044401917473 ; 
 .
 
 mv:point9 a geo:Point ; 
-	  geo:lat "8.6958709496744" ; 
-	  geo:long "53.045304926579" ; 
+	  geo:lat 8.6958709496744 ; 
+	  geo:long 53.045304926579 ; 
 .
 
 mv:point10 a geo:Point ; 
-	  geo:lat "8.6997977036716" ; 
-	  geo:long "53.046066019561" ; 
+	  geo:lat 8.6997977036716 ; 
+	  geo:long 53.046066019561 ; 
 .
 
 mv:point11 a geo:Point ; 
-	  geo:lat "8.7068787354699" ; 
-	  geo:long "53.046723902665" ; 
+	  geo:lat 8.7068787354699 ; 
+	  geo:long 53.046723902665 ; 
 .
 
 mv:point12 a geo:Point ; 
-	  geo:lat "8.7094107407796" ; 
-	  geo:long "53.047368876354" ; 
+	  geo:lat 8.7094107407796 ; 
+	  geo:long 53.047368876354 ; 
 .
 
 mv:point13 a geo:Point ; 
-	  geo:lat "8.7115994233355" ; 
-	  geo:long "53.047923546007" ; 
+	  geo:lat 8.7115994233355 ; 
+	  geo:long 53.047923546007 ; 
 .
 
 mv:point14 a geo:Point ; 
-	  geo:lat "8.71428163235" ; 
-	  geo:long "53.049097358246" ; 
+	  geo:lat 8.71428163235 ; 
+	  geo:long 53.049097358246 ; 
 .
 
 mv:point15 a geo:Point ; 
-	  geo:lat "8.7140670556288" ; 
-	  geo:long "53.048955470554" ; 
+	  geo:lat 8.7140670556288 ; 
+	  geo:long 53.048955470554 ; 
 .
 
 
 mv:alertCLocation2 a mv:AlertCLocation ; 
 				  mv:countryCode "D" ;
-				  mv:tableNumber "141128" ; 
-				  mv:tableVersion "14.0" ; 
+				  mv:tableNumber 141128 ; 
+				  mv:tableVersion 14.0 ; 
 				  mv:directionCode "positive" ; 
 				  mv:primaryLocation mv:primaryLocation2 ; 
 				  mv:secondaryLocation mv:seccondaryLocation2 ; 
@@ -290,14 +290,14 @@ mv:secondaryLocation2 a mv:SecondaryLocation ;
 #################################################	
 # Baden Württemberg Example 
 
-mv:1293_1_153474 a mv:RoadWorks ;
+mv:1293_1_153474 a mv:SituationRecord ;
 	mv:recordCreationTime "2014-06-16T04:16:00.395+02:00"^^xsd:dateTime ; 
 	mv:recordVersionTime "2016-12-01T08:19:43.698+01:00"^^xsd:dateTime ; 
 	mv:generalPublicComment "Baustelleneinrichtung"@de ; 
 	mv:generalPublicComment "Der Standstreifen wird als Verzögerungs- bzw. Beschleunigungsstreifen für die BS-AS-Nabern genutzt"@de ; 
 	mv:probabilityOfOccurence "certain" ;  
 	mv:internalRoadworkIdentifier "OK4" ; 
-	mv:temporarySpeedLimit "80.0" ; 
+	mv:temporarySpeedLimit 80.0 ; 
 	mv:validity mv:validity3 ; 
 	mv:impact mv:impact3 ; 
 	mv:location mv:location3 ; 
@@ -315,18 +315,18 @@ mv:impact3 a mv:Impact ;
 
 mv:location3 a mv:Location ;
 			 mv:affectedCarriagewayAndLanes "mainCarriageWay" ;
-			 mv:affectedRoadLength "1100.0" ; 
+			 mv:affectedRoadLength 1100.0 ; 
 			 mv:linearExtension mv:linearExtension3 ; 
 			 mv:alertCLocation mv:alertCLocation3 ; 
 . 
 
 mv:linearExtension3 a mv:LinearExtension ; 
-					mv:roadNumber "A8" ; 
+					mv:roadName "A8" ; 
 .
 
 mv:alertCLocation3 a mv:AlertCLocation ; 
 				  mv:countryCode "de" ;
-				  mv:tableNumber "15" ; 
+				  mv:tableNumber 15 ; 
 				  mv:tableVersion "15.1.D-160122" ; 
 				  mv:directionCode "positive" ; 
 				  mv:primaryLocation mv:primaryLocation3 ; 
@@ -347,7 +347,7 @@ mv:secondaryLocation3 a mv:SecondaryLocation ;
 #################################################	
 # Leipzig Example 
 
-mv:1293_1_153474 a mv:RoadWorks ;  
+mv:1293_1_153474 a mv:SituationRecord ;  
 	mv:generalPublicComment "Schäden im Gleisbereich"@de ; 
 	mv:generalPublicComment "Gleisbau"@de ; 
 	mv:location mv:location4 ; 
