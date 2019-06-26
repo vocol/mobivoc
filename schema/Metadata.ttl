@@ -10,6 +10,7 @@
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix voaf: <http://purl.org/vocommons/voaf#> .
 @prefix s: <http://schema.org/>.
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#>.
 
 @prefix mv: 	<http://schema.mobivoc.org/#> .
 
@@ -68,11 +69,12 @@ ecc:eccenca-GmbH
 .
 
 <http://dbpedia.org/resource/University_of_Bonn>
-    a dct:Agent, foaf:Organization ;
+    a dct:Agent, s:Organization ;
     rdfs:label "University of Bonn"@en;
 .
 
-<http://creativecommons.org/licenses/by/4.0/>
+<https://creativecommons.org/licenses/by/4.0/> 
+    a cc:License ; 
     rdfs:label "Creative Commons Attribution 4.0 International"@en ;
 .
 
@@ -116,3 +118,48 @@ vann:preferredNamespaceUri
     rdfs:isDefinedBy <http://purl.org/vocab/vann/> ;
 .
 
+dct:Agent
+    dct:description "Examples of Agent include person, organization, and software agent."@en ;
+    dct:hasVersion <http://dublincore.org/usage/terms/history/#Agent-001> ;
+    dct:issued "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> ;
+    a dct:AgentClass, rdfs:Class ;
+    rdfs:comment "A resource that acts or has the power to act."@en ;
+    rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+    rdfs:label "Agent"@en ;
+    .
+
+foaf:Person
+    a owl:Class ; 
+    rdfs:label "Person" ; 
+    rdfs:comment "A person."; 
+    vs:term_status "stable"; 
+    rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> ;
+    . 
+
+foaf:Organization
+    a owl:Class ; 
+    rdfs:label "Organization" ; 
+    rdfs:comment "An organization" ; 
+    vs:term_status "stable"; 
+    rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> ;
+    .
+
+s:Organization a rdfs:Class ;
+    rdfs:label "Organization" ;
+    rdfs:comment "An organization such as a school, NGO, corporation, club, etc." ;
+    .
+
+voaf:Vocabulary
+    a owl:Class ; 
+    rdfs:label "Vocabulary" ; 
+    rdfs:comment "A vocabulary used in the linked data cloud. An instance of voaf:Vocabulary relies on or is used by at least another instance of voaf:Vocabulary" ;
+    rdfs:isDefinedBy <http://purl.org/vocommons/voaf#> ;
+    .  
+
+
+cc:License
+    a rdfs:Class ; 
+    rdfs:label "License"; 
+    rdfs:comment "a set of requests/permissions to users of a Work, e.g. a copyright license, the public domain, information for distributors" ;
+    rdfs:isDefinedBy <https://creativecommons.org/ns#> ;
+. 

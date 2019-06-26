@@ -215,7 +215,7 @@ geo:long
     rdfs:range xsd:string .
 
 gr:BusinessEntity
-   a owl:class ;
+   a owl:Class ;
    rdfs:comment "An instance of this class represents the legal agent making (or seeking) a particular offering. This can be a legal body or a person. A business entity has at least a primary mailing address and contact details. For this, typical address standards (vCard) and location data (geo, WGS84) can be attached. Note that the location of the business entity is not necessarily the location from which the product or service is being available."@en ;
    rdfs:isDefinedBy <http://purl.org/goodrelations/v1#> ;
    rdfs:label "Business entity"@en , "Juristische Person"@de .

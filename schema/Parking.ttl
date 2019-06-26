@@ -10,6 +10,13 @@
 
 @prefix mv: 	<http://schema.mobivoc.org/#> .
 
+s:ParkingFacility a rdfs:Class ;
+    rdfs:label "ParkingFacility" ;
+    rdfs:comment "A parking lot or other parking facility." ;
+    rdfs:isDefinedBy <http://schema.org/> ;
+    .
+
+
 mv:BicycleParkingStation
     dct:created "2017-05-10"^^xsd:date ;
     dct:modified "2018-01-12"^^xsd:date ;
@@ -277,7 +284,9 @@ mv:arrangement
     vs:term_status "stable"@en ;
     a rdf:Property, owl:ObjectProperty ;
     rdfs:comment "Indicates in which pattern a parking space is arranged."@en ;
-    rdfs:domain mv:ParkingSpace , mv:ParkingFacility ;
+    rdfs:domain [ a            owl:Class ;
+                            owl:unionOf  ( mv:ParkingSpace mv:ParkingFacility )
+                          ] ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
     rdfs:label "arrangement pattern"@en, "Anordnung"@de ;
     rdfs:range mv:ArrangementPattern .
