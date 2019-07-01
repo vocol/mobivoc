@@ -240,7 +240,7 @@ mv:endTimeOverall
     a owl:DatatypeProperty ;
     rdfs:domain mv:Validity ; 
     rdfs:range xsd:dateTime ;
-    rdfs:comment "The overall start time of a situation record validity."@en ;
+    rdfs:comment "The overall end time of a situation record validity."@en ;
 	rdfs:label "endTimeOverall"@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     dct:creator <http://np00.github.io/#i> ;
@@ -361,7 +361,7 @@ mv:alertCLocation
     rdfs:domain mv:Location ; 
     rdfs:range mv:AlertCLocation ;
     rdfs:comment "The ALertC location description of a situation record."@en ;
-	rdfs:label "linearExtension"@en ;
+	rdfs:label "alertCLocation"@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     dct:creator <http://np00.github.io/#i> ;
     dct:conformsTo "https://datex2.eu/" ;
@@ -383,8 +383,8 @@ mv:alertCLocation
 # NP: I am sceptical about this class, but kept it for now
 mv:LinearExtension
     a owl:Class ;
-    rdfs:comment "Describes the location of a situation record."@en  ;
-    rdfs:label "LinearExtension"@en  ;
+    rdfs:comment "Describes the Linear extension of a situation record."@en  ;
+    rdfs:label "Linear Extension"@en  ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     vs:term_status "testing" ;
     dct:creator <http://np00.github.io/#i> ;
@@ -542,7 +542,7 @@ mv:primaryLocation
     rdfs:domain mv:AlertCLocation ; 
     rdfs:range mv:PrimaryLocation ;
     rdfs:comment "The primary location of an AlertCLocation description."@en ;
-	rdfs:label "primaryLocation"@en ;
+	rdfs:label "primary Location"@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     dct:creator <http://np00.github.io/#i> ;
     dct:conformsTo "https://datex2.eu/" ;
@@ -555,7 +555,7 @@ mv:secondaryLocation
     rdfs:domain mv:AlertCLocation ; 
     rdfs:range mv:SecondaryLocation ;
     rdfs:comment "The secondary location of an AlertCLocation description."@en ;
-	rdfs:label "secondaryLocation"@en ;
+	rdfs:label "secondary Location"@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     dct:creator <http://np00.github.io/#i> ;
     dct:conformsTo "https://datex2.eu/" ;
@@ -610,7 +610,7 @@ mv:specificLocation
 			)] ;
     rdfs:range xsd:integer ;
     rdfs:comment "The specific location of an Primary or Secondary AlertCLocation description."@en ;
-	rdfs:label "secondaryLocation"@en ;
+	rdfs:label "specificLocation"@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     dct:creator <http://np00.github.io/#i> ;
     dct:conformsTo "https://datex2.eu/" ;
