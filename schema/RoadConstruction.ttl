@@ -211,7 +211,7 @@ mv:Validity
 .
 
 mv:validityStatus
-    a owl:endTimeOverall ;
+    a owl:DatatypeProperty ;
     rdfs:domain mv:Validity ; 
     rdfs:range xsd:string ;
     rdfs:comment "The status of a validity."@en;
@@ -224,7 +224,7 @@ mv:validityStatus
 .
 
 mv:startTimeOverall
-    a owl:endTimeOverall ;
+    a owl:DatatypeProperty ;
     rdfs:domain mv:Validity ; 
     rdfs:range xsd:dateTime ;
     rdfs:comment "The overall start time of a situation record validity."@en ;
