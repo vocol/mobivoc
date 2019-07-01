@@ -53,7 +53,7 @@ mv:linearExtension1 a mv:LinearExtension ;
 
 mv:alertCLocation1 a mv:AlertCLocation ; 
 				  mv:countryCode "de" ;
-				  mv:tableNumber 15 ; 
+				  mv:tableNumber "15"^^xsd:integer ; 
 				  mv:tableVersion "15.1.D-160122" ; 
 				  mv:directionCode "negative" ; 
 				  mv:primaryLocation mv:primaryLocation1 ; 
@@ -85,7 +85,7 @@ Fahrempfehlung: B75 in Höhe der Ausfahrt Huchting FR stadtauswärts: Nutzen Sie
 nächste Vollsperrung B75: vorauss. 29.09.2017, 20:00 Uhr bis 02.10.2017, 4:00 Uhr (Aushängen der Fußgängerbrücke) 
 Umleitungen: aus Richtung Bremen: über B75 Abfahrt Huchtinger Kreisel, Huchtinger Heerstraße; aus Richtung Delmenhorst: über A28 zum Autobahndreieck Stuhr und zur A1; aus Richtung Stuhr: über  Moordeicher Landstraße, zur A28"""@de ; 
 	mv:constructionType "constructionWork" ; 
-	mv:recordUrl "http://vmz.bremen.de/baustellen/aktuell/?feature=vis-vmz-hb-509" ; 
+	mv:recordUrl "http://vmz.bremen.de/baustellen/aktuell/?feature=vis-vmz-hb-509"^^xsd:anyURI ; 
 	mv:temporarySpeedLimit 60 ; 
 	mv:probabilityOfOccurence "certain" ;  
 	mv:validity mv:validity2 ; 
@@ -271,7 +271,7 @@ mv:point15 a geo:Point ;
 
 mv:alertCLocation2 a mv:AlertCLocation ; 
 				  mv:countryCode "D" ;
-				  mv:tableNumber 141128 ; 
+				  mv:tableNumber "141128"^^xsd:integer ; 
 				  mv:tableVersion 14.0 ; 
 				  mv:directionCode "positive" ; 
 				  mv:primaryLocation mv:primaryLocation2 ; 
@@ -280,11 +280,11 @@ mv:alertCLocation2 a mv:AlertCLocation ;
 
 mv:primaryLocation2 a mv:PrimaryLocation ;
 					mv:locationName "in Höhe Heinrich-Plett-Allee"@de ; 
-					mv:specificLocation 25038 ; 
+					mv:specificLocation "25038"^^xsd:integer ; 
 .					
 
 mv:secondaryLocation2 a mv:SecondaryLocation ;
-					mv:specificLocation 25038 ; 
+					mv:specificLocation "25038"^^xsd:integer ; 
 .		
 
 #################################################	
@@ -326,7 +326,7 @@ mv:linearExtension3 a mv:LinearExtension ;
 
 mv:alertCLocation3 a mv:AlertCLocation ; 
 				  mv:countryCode "de" ;
-				  mv:tableNumber 15 ; 
+				  mv:tableNumber "15"^^xsd:integer ; 
 				  mv:tableVersion "15.1.D-160122" ; 
 				  mv:directionCode "positive" ; 
 				  mv:primaryLocation mv:primaryLocation3 ; 

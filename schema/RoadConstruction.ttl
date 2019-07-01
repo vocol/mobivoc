@@ -585,7 +585,7 @@ mv:PrimaryLocation
 .
 
 mv:locationName 
-	a owl:ObjectProperty ;
+	a owl:DatatypeProperty ;
 	rdfs:domain [rdf:type owl:Class ;
 	        owl:unionOf (
 	        mv:PrimaryLocation
@@ -602,7 +602,7 @@ mv:locationName
 .
 
 mv:specificLocation 
-	a owl:ObjectProperty ;
+	a owl:DatatypeProperty ;
 	rdfs:domain [rdf:type owl:Class ;
 	        owl:unionOf (
 	        mv:PrimaryLocation
