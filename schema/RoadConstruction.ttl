@@ -73,7 +73,7 @@ mv:recordVersionTime
 mv:recordUrl
     a owl:DatatypeProperty ;
     rdfs:domain mv:SituationRecord ; 
-    rdfs:range xsd:string ;
+    rdfs:range xsd:anyURI ;
     rdfs:comment "A website which describes the situation record."@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "recordUrl"@en ;
