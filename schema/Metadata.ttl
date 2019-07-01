@@ -13,7 +13,7 @@
 
 @prefix mv: 	<http://schema.mobivoc.org/#> .
 
-<http://schema.mobivoc.org/>
+<http://schema.mobivoc.org/#>
     a voaf:Vocabulary, owl:Ontology ;
     rdfs:label "MobiVoc: Open Mobility Vocabulary"@en ;
     rdfs:comment "Our goal is to significantly improve the data mobility between all stakeholders by providing a standardized vocabulary using Semantic Web technologies and ontologies. For the open vocabulary covering various mobility aspects we use RDF (Resource Description Framework) - a recommended specification of the World Wide Web Consortium (W3C) and the so-called lingua franca for the integration of data and web. We invite everyone who is interested to join our MobiVoc initiative and to participate in the development of the Open Mobility Vocabulary."@en ;
