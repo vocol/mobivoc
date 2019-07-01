@@ -398,7 +398,7 @@ mv:roadName
     rdfs:domain mv:LinearExtension ; 
     rdfs:range xsd:string;
     rdfs:comment "The affected road of a location."@en ;
-	rdfs:label "LinearExtension"@en ;
+	rdfs:label "roadName"@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     dct:creator <http://np00.github.io/#i> ;
     dct:conformsTo "https://datex2.eu/" ;
@@ -409,7 +409,7 @@ mv:roadName
 mv:roadNumber
     a owl:DatatypeProperty ;
     rdfs:domain mv:LinearExtension ; 
-    rdfs:range xsd:integer;
+    rdfs:range xsd:string;
     rdfs:comment "The name number of an affected road of a location."@en ;
 	rdfs:label "roadNumber"@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
@@ -426,19 +426,6 @@ mv:startlLatitude
     rdfs:range wgs:lat;
     rdfs:comment "The starting latitude of a situation record."@en ;
 	rdfs:label "startlLatitude"@en ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
-    dct:creator <http://np00.github.io/#i> ;
-    dct:conformsTo "https://datex2.eu/" ;
-    dct:created "2018-01-30"^^xsd:date ;
-    dct:modified "2018-01-30"^^xsd:date ;
-.
-
-mv:endLatitude
-    a owl:DatatypeProperty ;
-    rdfs:domain mv:LinearExtension ; 
-    rdfs:range wgs:long;
-    rdfs:comment "The ending latitude of a situation record."@en ;
-	rdfs:label "endLatitude"@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     dct:creator <http://np00.github.io/#i> ;
     dct:conformsTo "https://datex2.eu/" ;
@@ -542,7 +529,7 @@ mv:direction
     rdfs:domain mv:AlertCLocation ; 
     rdfs:range xsd:string;
     rdfs:comment "The direction of an AlertCLocation description."@en ;
-	rdfs:label "tableVersion"@en ;
+	rdfs:label "direction"@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     dct:creator <http://np00.github.io/#i> ;
     dct:conformsTo "https://datex2.eu/" ;
@@ -606,7 +593,7 @@ mv:locationName
 			)] ;
     rdfs:range xsd:string ;
     rdfs:comment "The location name of an Primary or Secondary AlertCLocation description."@en ;
-	rdfs:label "secondaryLocation"@en ;
+	rdfs:label "locationName"@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     dct:creator <http://np00.github.io/#i> ;
     dct:conformsTo "https://datex2.eu/" ;
@@ -641,7 +628,7 @@ mv:SecondaryLocation
     a owl:Class ;
     owl:equivalentClass datex:AlertCMethod2SecondaryPointLocation ; 
     rdfs:comment "The primary location of a AlertCLocation description."@en  ;
-    rdfs:label "AlertCLocation"@en  ;
+    rdfs:label "SecondaryLocation"@en  ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     vs:term_status "testing" ;
     dct:creator <http://np00.github.io/#i> ;
