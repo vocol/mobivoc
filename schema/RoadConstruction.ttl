@@ -287,7 +287,7 @@ mv:startOfPeriod
     a owl:DatatypeProperty ;
     rdfs:domain mv:Period ; 
     rdfs:range xsd:dateTime ;
-    rdfs:comment "The end time of a period."@en ;
+    rdfs:comment "The start time of a period."@en ;
 	rdfs:label "startOfPeriod"@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     dct:creator <http://np00.github.io/#i> ;
@@ -574,7 +574,7 @@ mv:secondaryLocation
 mv:PrimaryLocation
     a owl:Class ;
     owl:equivalentClass datex:AlertCMethod2PrimaryPointLocation ; 
-    rdfs:comment "The primary location of a AlertCLocation description."@en  ;
+    rdfs:comment "The primary location of an AlertC location describing roadworks."@en  ;
     rdfs:label "PrimaryLocation"@en  ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     vs:term_status "testing" ;
@@ -627,7 +627,7 @@ mv:specificLocation
 mv:SecondaryLocation
     a owl:Class ;
     owl:equivalentClass datex:AlertCMethod2SecondaryPointLocation ; 
-    rdfs:comment "The primary location of a AlertCLocation description."@en  ;
+    rdfs:comment "The secondary location of an AlertC location describing roadworks."@en  ;
     rdfs:label "SecondaryLocation"@en  ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     vs:term_status "testing" ;
