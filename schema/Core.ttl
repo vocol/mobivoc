@@ -193,7 +193,7 @@ mv:RealTimeCapacity
 s:address
     a owl:ObjectProperty ;
     rdfs:comment "Physical address of the item."@en ;
-    rdfs:domain s:Place ;
+    #rdfs:domain s:Place ; 
     rdfs:isDefinedBy <http://schema.org/> ;
     rdfs:label "address"@en ;
     rdfs:range s:PostalAddress .
