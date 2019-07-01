@@ -201,7 +201,6 @@ s:address
 geo:lat
     a rdf:Property, owl:DatatypeProperty ;
     rdfs:comment "Geographic latitude of a place."@en ;
-    rdfs:domain s:Place ;
     rdfs:isDefinedBy <http://www.w3.org/2003/01/geo/wgs84_pos#> ;
     rdfs:label "latitude"@en ;
     rdfs:range xsd:string .
@@ -209,10 +208,11 @@ geo:lat
 geo:long
     a rdf:Property, owl:DatatypeProperty ;
     rdfs:comment "Geographic longitude of a place."@en ;
-    rdfs:domain s:Place ;
     rdfs:isDefinedBy <http://www.w3.org/2003/01/geo/wgs84_pos#> ;
     rdfs:label "longitude"@en ;
     rdfs:range xsd:string .
+
+
 
 gr:BusinessEntity
    a owl:class ;
