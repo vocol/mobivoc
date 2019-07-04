@@ -44,7 +44,7 @@ Further diagrams can be found in the [diagrams folder](diagrams).
 
 ## Example data
 
-An example dataset on how to represent charging points is given in [OpenChargeMap.ttl](examples/OpenChargeMap.ttl). Data is taken from OpenChargeMap for the cities of Brussels, Lyon and Helsinki. The dataset is licensed CC BY-SA 4.0.
+An example dataset on how to represent charging points is given in [openchargemap.ttl](examples/openchargemap.ttl). Data is taken from [OpenChargeMap](https://openchargemap.org/) for the cities of Brussels, Lyon and Helsinki. The dataset is licensed CC BY-SA 4.0.
 
 The API call used to retrieve the individual datasets is:
 
