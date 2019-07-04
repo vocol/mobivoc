@@ -26,15 +26,19 @@ mv:additionalInformation
     rdfs:range xsd:string .
 
 mv:operatedBy
+    a rdf:Property, owl:ObjectProperty ;
     dct:created "2017-06-07"^^xsd:date ;
     dct:modified "2018-01-12"^^xsd:date ;
     vs:term_status "stable"@en ;
-    a rdf:Property, owl:ObjectProperty ;
     rdfs:comment "The operator of a civic structure or facility. Operator and owner can be different business entitites."@en ;
     rdfs:domain s:CivicStructure ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "operated by"@en , "betrieben von"@de ;
-    rdfs:range gr:BusinessEntity .
+    rdfs:range [
+          a owl:Class ;
+          owl:unionOf (gr:BusinessEntity s:Organization)
+        ];
+    . 
 
 mv:id
     dct:created "2017-05-11"^^xsd:date ;
