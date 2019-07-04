@@ -40,7 +40,7 @@ ex:price
 
 #entrance, exit
 ex:entrance
-    a mv:Entrance ;
+    a mv:ParkingFacilityEntrance ;
     rdfs:label "Avenue de Verdun"^^xsd:string ;
     schema:address ex:entranceAdress ;
     .
@@ -54,7 +54,7 @@ ex:entranceAdress
 .
 
 ex:exit
-    a mv:Exit ;
+    a mv:ParkingFacilityExit ;
     rdfs:label "Avenue de Verdun"^^xsd:string ;
     schema:address ex:exitAdress ;
     .

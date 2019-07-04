@@ -20,17 +20,17 @@ mv:AS_3112_Type_I
     mv:ocmConnectionID "29" ;
     a mv:PlugType ;
     rdfs:comment "AS/NZS 3112 are the harmonised Australian and New Zealand standards for AC Plugs and Socket-Outlets."@en ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "AS 3112 Type I"@en ;
     rdfs:seeAlso <https://en.wikipedia.org/wiki/AS/NZS_3112> ;
     skos:altLabel "Type I"@en, "Type I/AS 3112/CPCS-CCC"@en ;
-    foaf:depiction <https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Aust_AC_plug.jpg/800px-Aust_AC_plug.jpg> .
+    foaf:depiction <https://upload.wikimedia.org/wikipedia/commons/2/20/Aust_AC_plug.jpg> .
 
 mv:BS1363
     mv:ocmConnectionID "3" ;
     a mv:PlugType ;
     rdfs:comment "13 A plugs socket-outlets adaptors and connection units is a British Standard which specifies the most common type of single-phase AC power plugs and sockets that are used in the United Kingdom."@en ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "BS1363"@en ;
     rdfs:seeAlso <https://en.wikipedia.org/wiki/AC_power_plugs_and_sockets:_British_and_related_types#International_usage_of_Type_G> ;
     skos:altLabel "Type G"@en ;
@@ -40,7 +40,7 @@ mv:CCS_Type2
     mv:ocmConnectionID "33" ;
     a mv:PlugType ;
     rdfs:comment "The Combined Charging System is a quick charging method for battery electric vehicles delivering high-voltage direct current via a special electrical connector derived from the  IEC Type 2 connector. As the plug is a combination of an AC connector with a DC option the resulting connector is also called Combo Coupler and the variant with Type 2 is abbreviated as Combo2."@en ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "CCS Type2"@en ;
     rdfs:seeAlso <https://en.wikipedia.org/wiki/Combined_Charging_System> ;
     skos:altLabel "Combo2"@en ;
@@ -50,14 +50,14 @@ mv:CEE_7-Pin
     mv:ocmConnectionID "18" ;
     a mv:PlugType ;
     rdfs:comment "CEE 7-Pin 32A / 400V Socket."@en ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "CEE 7-Pin"@en .
 
 mv:CEE_7_16
     mv:ocmConnectionID "13" ;
     a mv:PlugType ;
     rdfs:comment "The CEE 7/16 standard sheet appears in Supplement 2 (June 1962) to the 1951 edition of CEE 7. The CEE 7/16 unearthed plug is used for low power Class II applications, it has two round 4 by 19 mm (0.157 by 0.748 in) pins, rated at 2.5 A. There are two variants."@en ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "CEE 7/16"@en ;
     rdfs:seeAlso <https://en.wikipedia.org/wiki/AC_power_plugs_and_sockets#CEE_7/16_plugs> ;
     skos:altLabel "Europlug"@en ;
@@ -67,7 +67,7 @@ mv:CEE_7_4
     mv:ocmConnectionID "28" ;
     a mv:PlugType ;
     rdfs:comment "The CEE 7/3 socket and CEE 7/4 plug are commonly called Schuko. The socket (which is often, in error, also referred to as CEE 7/4) has a predominantly circular recess which is 17.5 mm (0.689 in) deep with two symmetrical round apertures and two earthing clips on the sides of the socket positioned to ensure that the earth is always engaged before live pin contact is made. The plug pins are 4.8 by 19 mm (0.189 by 0.748 in)."@en ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "CEE 7/4"@en ;
     rdfs:seeAlso <https://en.wikipedia.org/wiki/AC_power_plugs_and_sockets#CEE_7/5_socket_and_CEE_7/6_plug_(French;_Type_E)> ;
     skos:altLabel "Schuko"@de, "Type F"@en ;
@@ -77,7 +77,7 @@ mv:CEE_7_5
     mv:ocmConnectionID "23" ;
     a mv:PlugType ;
     rdfs:comment "The CEE 7/5 socket and CEE 7/6 plug are defined in French standard NF C 61-314 \"Plugs and socket-outlets for household and similar purposes\" (which also includes CEE 7/7, 7/16 and 7/17 plugs) The socket has a predominantly circular recess which is 15 mm (0.591 in) deep with two symmetrical round apertures and a round 4.8 mm (0.189 in) earth pin projecting from the socket such that the tip is 23 mm (0.906 in) beyond the live contacts, to ensure that the earth is always engaged before live pin contact is made. The earth pin is centred between the apertures, offset by 10 mm (0.394 in). The plug (which is often, in error, also referred to as CEE 7/5) has two round pins measuring 4.8 by 19 mm (0.189 by 0.748 in), spaced 19 mm (0.748 in) apart and with an aperture for the socket's projecting earth pin. This standard is also used in Belgium, Poland, the Czech Republic, Slovakia and some other countries."@en ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "CEE 7/5"@en ;
     rdfs:seeAlso <https://en.wikipedia.org/wiki/AC_power_plugs_and_sockets#CEE_7/5_socket_and_CEE_7/6_plug_(French;_Type_E)> ;
     skos:altLabel "Type E"@en ;
@@ -87,7 +87,7 @@ mv:CHAdeMO
     mv:ocmConnectionID "2" ;
     a mv:PlugType ;
     rdfs:comment "CHAdeMO is the trade name of a quick charging method for battery electric vehicles delivering up to 62.5 kW of direct current (500 V, 125 A[1]) via a special electrical connector."@en ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "CHAdeMO"@en ;
     rdfs:seeAlso <https://en.wikipedia.org/wiki/CHAdeMO> ;
     owl:sameAs dbpedia:CHAdeMO ;
@@ -96,7 +96,7 @@ mv:CHAdeMO
 mv:Charger
     a rdfs:Class, owl:Class ;
     rdfs:comment "Civic structure that supplies electric energy for the recharging of electric vehicles."@en ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "Charger"@en, "Ladegerät"@de ;
     skos:altLabel "Charging point"@en, "Ladepunkt"@de ;
     rdfs:subClassOf s:CivicStructure .
@@ -105,7 +105,7 @@ mv:IEC_60309_16A_2_E
     mv:ocmConnectionID "4" ;
     a mv:PlugType ;
     rdfs:comment "IEC 60309 (formerly IEC 309 and CEE 17, also published by CENELEC as EN 60309) is an international standard from the International Electrotechnical Commission (IEC) for \"plugs, socket-outlets and couplers for industrial purposes\". The blue P+N+E, 6h (180°) plug is a single phase connector. In particular this smallest (16 A) variant has become especially common in camping vehicles and sockets found in caravan parks and marinas throughout Europe."@en ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "IEC_60309 16A 2+E"@en ;
     rdfs:seeAlso <https://en.wikipedia.org/wiki/IEC_60309> ;
     skos:altLabel "Blue Commando (2P+E)"@en ;
@@ -115,7 +115,7 @@ mv:IEC_60309_3-pin
     mv:ocmConnectionID "16", "34" ;
     a mv:PlugType ;
     rdfs:comment "IEC 60309 (formerly IEC 309 and CEE 17, also published by CENELEC as EN 60309) is an international standard from the International Electrotechnical Commission (IEC) for \"plugs, socket-outlets and couplers for industrial purposes\". 3-Pin connector."@en ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "IEC_60309 3-pin"@en ;
     rdfs:seeAlso <https://en.wikipedia.org/wiki/IEC_60309> .
 
@@ -123,7 +123,7 @@ mv:IEC_60309_5-pin
     mv:ocmConnectionID "17" ;
     a mv:PlugType ;
     rdfs:comment "IEC 60309 (formerly IEC 309 and CEE 17, also published by CENELEC as EN 60309) is an international standard from the International Electrotechnical Commission (IEC) for \"plugs, socket-outlets and couplers for industrial purposes\". 5-Pin connector."@en ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "IEC_60309 5-pin"@en ;
     rdfs:seeAlso <https://en.wikipedia.org/wiki/IEC_60309> ;
     foaf:depiction <https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/CEE-Stecker.jpg/1280px-CEE-Stecker.jpg> .
@@ -132,25 +132,25 @@ mv:IEC_62196_Type_3A
     mv:ocmConnectionID "36" ;
     a mv:PlugType ;
     rdfs:comment "The type 3A is derived from the Scame charging connectors adding the IEC 62196 pins which is suited for single-phase charging – the connector builds on the experience with the Scame connector for charging of light vehicles (electric motorcycles and scooters)."@en ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "SCAME Type 3A"@en ;
-    rdfs:seeAlso <https://en.wikipedia.org/wiki/IEC_62196#Type_3_(EV_Plug_Alliance_connector),_Scame> ;
+    rdfs:seeAlso <https://en.wikipedia.org/wiki/IEC_62196#Type_3> ;
     skos:altLabel "IEC 62196-2 Type 3A"@en .
 
 mv:IEC_62196_Type_3C
     mv:ocmConnectionID "26" ;
     a mv:PlugType ;
     rdfs:comment "The type 3A is derived from the Scame charging connectors adding the IEC 62196 pins which is suited for single-phase charging – the connector builds on the experience with the Scame connector for charging of light vehicles (electric motorcycles and scooters). The additional type 3C adds additional 2 pins for three-phase charging for usage at fast charge stations. Based on its origin the connector is sometimes referred to as the Scame type 3 connector."@en ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "SCAME Type 3C"@en ;
-    rdfs:seeAlso <https://en.wikipedia.org/wiki/IEC_62196#Type_3_(EV_Plug_Alliance_connector),_Scame> ;
+    rdfs:seeAlso <https://en.wikipedia.org/wiki/IEC_62196#Type_3> ;
     skos:altLabel "IEC 62196-2 Type 3C"@en .
 
 mv:Mennekes_Type_2
     mv:ocmConnectionID "1036", "25" ;
     a mv:PlugType ;
     rdfs:comment "The IEC 62196 Type 2 connector (commonly referred to as Mennekes) is used for charging electric cars within Europe. The connector is circular in shape, with a flattened top edge and originally specified for charging battery electric vehicles at 3–120 kilowatts."@en ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "Mennekes (Type 2)"@en ;
     rdfs:seeAlso <https://en.wikipedia.org/wiki/Type_2_connector> ;
     skos:altLabel "IEC_62196 Type 2"@en ;
@@ -160,7 +160,7 @@ mv:NEMA_14-30
     mv:ocmConnectionID "10" ;
     a mv:PlugType ;
     rdfs:comment "NEMA connectors are power plugs and receptacles used for AC mains electricity in North America and other countries that use the standards set by the US National Electrical Manufacturers Association. The NEMA 14 devices are four-wire grounding devices (hot-hot-neutral-ground) available in ratings from 15 to 60 A. The voltage rating is 250 V. Rated for 30A."@en ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "NEMA 14-30"@en ;
     rdfs:seeAlso <https://en.wikipedia.org/wiki/NEMA_connector#NEMA_14> ;
     foaf:depiction <https://upload.wikimedia.org/wikipedia/commons/d/d3/220sb.svg> .
@@ -169,7 +169,7 @@ mv:NEMA_14-50
     mv:ocmConnectionID "11" ;
     a mv:PlugType ;
     rdfs:comment "NEMA connectors are power plugs and receptacles used for AC mains electricity in North America and other countries that use the standards set by the US National Electrical Manufacturers Association. The NEMA 14 devices are four-wire grounding devices (hot-hot-neutral-ground) available in ratings from 15 to 60 A. The voltage rating is 250 V. Rated for 60A."@en ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "NEMA 14-50"@en ;
     rdfs:seeAlso <https://en.wikipedia.org/wiki/NEMA_connector#NEMA_14> ;
     foaf:depiction <https://upload.wikimedia.org/wikipedia/commons/d/d3/220sb.svg> .
@@ -179,7 +179,7 @@ mv:NEMA_5-15R
     a mv:PlugType ;
     rdfs:comment """NEMA connectors are power plugs and receptacles used for AC mains electricity in North America and other countries that use the standards set by the US National Electrical Manufacturers Association. All NEMA 5 devices are three-wire grounding devices (hot-neutral-ground) rated for 125 V maximum.
    The 5-15R is by far the most common electrical receptacle in North America in buildings built since the mid-twentieth century. It is usually installed in a duplex configuration; two receptacles may share a common circuit or may each be wired separately, sometimes to a switch."""@en ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "NEMA 5-15R"@en ;
     rdfs:seeAlso <https://en.wikipedia.org/wiki/NEMA_connector#NEMA_5> ;
     foaf:depiction <https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/NEMA_simplified_pins.svg/765px-NEMA_simplified_pins.svg.png> .
@@ -188,7 +188,7 @@ mv:NEMA_5-20R
     mv:ocmConnectionID "9" ;
     a mv:PlugType ;
     rdfs:comment "NEMA connectors are power plugs and receptacles used for AC mains electricity in North America and other countries that use the standards set by the US National Electrical Manufacturers Association. All NEMA 5 devices are three-wire grounding devices (hot-neutral-ground) rated for 125 V maximum."@en ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "NEMA 5-20R"@en ;
     rdfs:seeAlso <https://en.wikipedia.org/wiki/NEMA_connector#NEMA_5> ;
     foaf:depiction <https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Electrical_outlet_with_label.jpg/1280px-Electrical_outlet_with_label.jpg> .
@@ -198,7 +198,7 @@ mv:NEMA_6-15
     a mv:PlugType ;
     rdfs:comment """NEMA connectors are power plugs and receptacles used for AC mains electricity in North America and other countries that use the standards set by the US National Electrical Manufacturers Association.
 All NEMA 6 devices are three-wire grounding devices (hot-hot-ground) used for 208 and 240 V circuits and rated for 250 V maximum. The 6-15 resembles the 5-15, but with collinear horizontal pins"""@en ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "NEMA 6-15"@en ;
     rdfs:seeAlso <https://en.wikipedia.org/wiki/NEMA_connector#NEMA_6> ;
     foaf:depiction <https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Nema_6-15.svg/346px-Nema_6-15.svg.png> .
@@ -208,7 +208,7 @@ mv:NEMA_6-20
     a mv:PlugType ;
     rdfs:comment """NEMA connectors are power plugs and receptacles used for AC mains electricity in North America and other countries that use the standards set by the US National Electrical Manufacturers Association.
 All NEMA 6 devices are three-wire grounding devices (hot-hot-ground) used for 208 and 240 V circuits and rated for 250 V maximum. The 20 A plug has a blade rotated 90°."""@en ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "NEMA 6-20"@en ;
     rdfs:seeAlso <https://en.wikipedia.org/wiki/NEMA_connector#NEMA_6> ;
     foaf:depiction <https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/NEMA_simplified_pins.svg/765px-NEMA_simplified_pins.svg.png> .
@@ -216,20 +216,20 @@ All NEMA 6 devices are three-wire grounding devices (hot-hot-ground) used for 20
 mv:Plug
     a rdfs:Class, owl:Class ;
     rdfs:comment "Component of a charger and of an electric vehicle to connect each other. There are different plug types used for charging electric vehicles."@en ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "Stecker"@de, "Plug"@en .
 
 mv:PlugType
     a rdfs:Class, owl:Class ;
     rdfs:comment "Type of a plug that is used to connect electric vehicles to a charger."@en ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "Plug type"@en, "Steckertyp"@de .
 
 mv:SAE_Combo
     mv:ocmConnectionID "32" ;
     a mv:PlugType ;
     rdfs:comment "The Combined Charging System is a quick charging method for battery electric vehicles delivering high-voltage direct current via a special electrical connector derived from the SAE J1772 (IEC Type 1)."@en ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "SAE Combo (DC Fast Charge J1772)"@en ;
     rdfs:seeAlso <https://en.wikipedia.org/wiki/Combined_Charging_System> ;
     foaf:depiction <https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/CCSCombo2.svg/1052px-CCSCombo2.svg.png> .
@@ -238,7 +238,7 @@ mv:SAE_J1772-2001
     mv:ocmConnectionID "7" ;
     a mv:PlugType ;
     rdfs:comment "SAE J1772 (IEC Type 1) is a North American standard for electrical connectors for electric vehicles maintained by the SAE International and has the formal title \"SAE Surface Vehicle Recommended Practice J1772, SAE Electric Vehicle Conductive Charge Coupler\"."@en ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "J1772"@en ;
     rdfs:seeAlso <https://en.wikipedia.org/wiki/SAE_J1772> .
 
@@ -247,7 +247,7 @@ mv:SAE_J1772-2009
     a mv:PlugType ;
     rdfs:comment """SAE J1772 (IEC Type 1) is a North American standard for electrical connectors for electric vehicles maintained by the SAE International and has the formal title \"SAE Surface Vehicle Recommended Practice J1772, SAE Electric Vehicle Conductive Charge Coupler\". 
     The SAE J1772-2009 connector specification has been added to the international IEC 62196-2 standard."""@en ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "J1772 2009"@en ;
     rdfs:seeAlso <https://en.wikipedia.org/wiki/IEC_62196#Type_1_(SAE_J1772-2009),_Yazaki> ;
     skos:altLabel "IEC 62196 Type 1"@en ;
@@ -257,7 +257,7 @@ mv:SEV1011_Type_J
     mv:ocmConnectionID "1037" ;
     a mv:PlugType ;
     rdfs:comment "The Swiss standard, also used in Liechtenstein, is SN SEV 1011:2009 Plugs and socket-outlets for household and similar purposes. The standard defines a hierarchical system of plugs and sockets with two, three and five pins, and 10 A or 16 A ratings. Sockets will accept plugs with the same or fewer pins and the same or lower ratings."@en ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "SEV1011 Type J"@en ;
     rdfs:seeAlso <https://en.wikipedia.org/wiki/AC_power_plugs_and_sockets#10_A_plugs_and_sockets_(Type_J)> ;
     skos:altLabel "Swiss domestic 3-pin"@en, "Type J"@en ;
@@ -267,7 +267,7 @@ mv:Tesla_Supercharger
     mv:ocmConnectionID "27", "30" ;
     a mv:PlugType ;
     rdfs:comment "The Tesla Supercharger network is a system of 480-volt DC fast-charging stations built by American vehicle manufacturer Tesla Inc. to allow longer journeys for their all-electric manufactured vehicles (Model S, 3 and X), through quick charging of the vehicle's battery packs."@en ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "Tesla Supercharger"@en ;
     rdfs:seeAlso <https://en.wikipedia.org/wiki/Tesla_Supercharger> ;
     foaf:depiction <https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Tesla-type-2-model-s-charge-port-inlet-0996.jpg/1280px-Tesla-type-2-model-s-charge-port-inlet-0996.jpg> .
@@ -276,7 +276,7 @@ mv:XLR4
     mv:ocmConnectionID "21" ;
     a mv:PlugType ;
     rdfs:comment "The XLR connector is a style of electrical connector, primarily found on professional audio, video, and stage lighting equipment. The connectors are circular in design and have between 3 and 7 pins. They are most commonly associated with balanced audio interconnection, including AES3 digital audio, but are also used for lighting control, low-voltage power supplies, and other applications. XLR connectors are available from a number of manufacturers and are covered by an international standard for dimensions, IEC 61076-2-103.[1] They are superficially similar to the older and smaller DIN connector range, but are not physically compatible with them."@en ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "XLR 4-Pin"@en ;
     rdfs:seeAlso <https://en.wikipedia.org/wiki/XLR_connector#Four-pin_(XLR4)> .
 
@@ -284,7 +284,7 @@ mv:brand
     a rdf:Property, owl:DatatypeProperty ;
     rdfs:comment "Indicates the brand of a charger."@en ;
     rdfs:domain mv:Charger ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "Marke"@de, "brand"@en ;
     rdfs:range xsd:string .
 
@@ -297,7 +297,7 @@ mv:cableAvailable
             mv:ElectricVehicle
         )
     ] ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "Kabel verfügbar"@de, "cable available"@en ;
     rdfs:range xsd:boolean .
 
@@ -311,7 +311,7 @@ mv:currentInA
             mv:ElectricVehicle
         )
     ] ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "current in A"@en, "Stromstärke in A"@de ;
     rdfs:range xsd:double .
 
@@ -325,7 +325,7 @@ mv:currentType
             mv:ElectricVehicle
         )
     ] ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "current type"@en ;
     rdfs:range xsd:string .
 
@@ -333,7 +333,7 @@ mv:energySource
     a rdf:Property, owl:DatatypeProperty ;
     rdfs:comment "Indicates the energy source used for the charger i.e. renewable etc."@en ;
     rdfs:domain mv:Charger ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "energy source"@en, "Energiequelle"@de ;
     rdfs:range xsd:string .
 
@@ -341,14 +341,14 @@ mv:isFastChargeCapable
     a rdf:Property, owl:DatatypeProperty ;
     rdfs:comment "Indicates that the charger is able to fast charge."@en ;
     rdfs:domain mv:Charger ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "erlaubt Schnellladen"@de, "is fast charge capable"@en ;
     rdfs:range xsd:boolean .
 
 mv:ocmConnectionID
     a owl:AnnotationProperty ;
     rdfs:comment "The OpenChargeMap ID used for the Connection / Plug."@en ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "ocm connection ID"@en ;
     rdfs:range xsd:string .
 
@@ -361,7 +361,7 @@ mv:plug
             mv:Charger
         )
     ] ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "plug"@en ;
     rdfs:range mv:Plug .
 
@@ -369,7 +369,7 @@ mv:plugType
     a rdf:Property, owl:ObjectProperty ;
     rdfs:comment "Indicates the type of a plug."@en ;
     rdfs:domain mv:Plug ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "plug type"@en ;
     rdfs:range mv:PlugType .
 
@@ -383,7 +383,7 @@ mv:powerInKW
             mv:ElectricVehicle
         )
     ] ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "power in kW"@en, "Leistung in kW"@de ;
     rdfs:range xsd:double .
 
@@ -397,7 +397,7 @@ mv:threePhasedCurrentAvailable
             mv:ElectricVehicle
         )
     ] ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "three-phased current available"@en ;
     rdfs:range xsd:boolean .
 
@@ -411,7 +411,7 @@ mv:voltageInV
             mv:ElectricVehicle
         )
     ] ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "voltage in V"@en, "Spannung in V"@de ;
     rdfs:range xsd:double .
 
@@ -419,7 +419,7 @@ mv:batteryCapacityinKW
     a rdf:Property, owl:DatatypeProperty ;
     rdfs:comment "Indicates the battery capacity of an electric vehicle in kW."@en ;
     rdfs:domain mv:ElectricVehicle ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "battery capacity in kW"@en, "Batteriekapazität in kW"@de ;
     rdfs:range xsd:double .
 
@@ -427,7 +427,7 @@ mv:chargingLevel
     a rdf:Property, owl:DatatypeProperty ;
     rdfs:comment "Indicates the percentage of charge left in the battery of an electric vehicle."@en ;
     rdfs:domain mv:ElectricVehicle ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "charging level"@en, "Ladestand"@de ;
     rdfs:range xsd:double .
 
@@ -435,7 +435,7 @@ mv:chargerQuantity
     a rdf:Property, owl:DatatypeProperty ;
     rdfs:comment "Indicates the number of chargers available"@en ;
     rdfs:domain mv:Charger ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "charger quantity"@en, "Anzahl Ladegeräte"@de ;
     rdfs:range xsd:integer .
 
@@ -443,7 +443,7 @@ mv:chargingTimeRemainingInMin
     a rdf:Property, owl:DatatypeProperty ;
     rdfs:comment "Indicates the remaining charging time in minutes when an electric vehicle is being actively charged."@en ;
     rdfs:domain mv:ElectricVehicle ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "Remaining charging time in min"@en, "Verbleibende Ladezeit in min"@de ;
     rdfs:range xsd:double .
 
@@ -457,6 +457,6 @@ mv:supportedChargingMode
             mv:ElectricVehicle
         )
     ] ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "supported charging mode"@en, "unterstützter Lademodus"@de ;
     rdfs:range xsd:string .

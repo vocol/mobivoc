@@ -16,8 +16,8 @@ INSTANCESRC=$(wildcard examples/*.ttl)
 # the dataplatform where "make publish" will publish the schema graph
 SCHEMASRC_PUBLISH_DP=https://vocab.eccenca.com/
 # the graph into which "make publish" will publish the schema graph
-SCHEMASRC_PUBLISH_GRAPH=http://schema.mobivoc.org/
+SCHEMASRC_PUBLISH_GRAPH=http://schema.mobivoc.org/#
 REPOSITORY_NAME=schema.mobivoc.org
 
-ONTOLOGY_URI=http://schema.mobivoc.org/
+ONTOLOGY_URI=http://schema.mobivoc.org/#
 BUILDPREFIX=mobivoc
