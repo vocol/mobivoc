@@ -14,7 +14,7 @@
 
 @prefix mv: 	<http://schema.mobivoc.org/#> .
 
-<http://schema.mobivoc.org/>
+<http://schema.mobivoc.org/#>
     a voaf:Vocabulary, owl:Ontology ;
     rdfs:label "MobiVoc: Open Mobility Vocabulary"@en ;
     rdfs:comment "Our goal is to significantly improve the data mobility between all stakeholders by providing a standardized vocabulary using Semantic Web technologies and ontologies. For the open vocabulary covering various mobility aspects we use RDF (Resource Description Framework) - a recommended specification of the World Wide Web Consortium (W3C) and the so-called lingua franca for the integration of data and web. We invite everyone who is interested to join our MobiVoc initiative and to participate in the development of the Open Mobility Vocabulary."@en ;
@@ -25,9 +25,9 @@
     dct:modified "2018-01-12"^^xsd:date ;
     dct:publisher ecc:eccenca-GmbH ;
     vann:preferredNamespacePrefix "mv" ;
-    vann:preferredNamespaceUri "http://schema.mobivoc.org/" ;
+    vann:preferredNamespaceUri "http://schema.mobivoc.org/#" ;
     void:vocabulary <http://purl.org/vocab/vann/>, <http://xmlns.com/foaf/0.1/> ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     owl:versionInfo "SNAPSHOT" ;
 .
 
