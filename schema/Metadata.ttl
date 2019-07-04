@@ -26,7 +26,7 @@
     vann:preferredNamespacePrefix "mv" ;
     vann:preferredNamespaceUri "http://schema.mobivoc.org/#" ;
     void:vocabulary <http://purl.org/vocab/vann/>, <http://xmlns.com/foaf/0.1/> ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     owl:versionInfo "SNAPSHOT" ;
 .
 
