@@ -17,13 +17,15 @@ s:ParkingFacility a rdfs:Class ;
     rdfs:isDefinedBy <http://schema.org/> ;
     .
 
-dct:date
-    a rdf:Property, owl:DatatypeProperty ;
+dct:date 
+    a rdf:Property ;
+    dct:description "Date may be used to express temporal information at any level of granularity.  Recommended best practice is to use an encoding scheme, such as the W3CDTF profile of ISO 8601 [W3CDTF]."@en ;
+    dct:issued "2008-01-14"^^xsd:date ;
+    dct:modified "2008-01-14"^^xsd:date ;
+    rdfs:comment "A point or period of time associated with an event in the lifecycle of the resource."@en ;
     rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
-    rdfs:comment "The date of the given real-time capacity."@en ;
-    rdfs:label "date"@en, "Datum"@de, "date"@fr ;
-    rdfs:domain mv:RealTimeCapacity ;
-    rdfs:range xsd:datetime ;
+    rdfs:label "Date"@en ;
+    rdfs:range rdfs:Literal ;
     .
 
 mv:BicycleParkingStation
