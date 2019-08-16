@@ -48,7 +48,7 @@ mv:recordCreationTime
     rdfs:domain mv:SituationRecord ; 
     rdfs:range xsd:dateTime ;
     rdfs:comment "The creation time of a Situation Record."@en ;
-    rdfs:label "recordCreationTime"@en ;
+    rdfs:label "record creation time"@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     dct:creator <http://np00.github.io/#i> ;
     dct:conformsTo "https://datex2.eu/" ; 
@@ -62,7 +62,7 @@ mv:recordVersionTime
     rdfs:domain mv:SituationRecord ; 
     rdfs:range xsd:dateTime ;
     rdfs:comment "The version time of a Situation Record."@en ;
-    rdfs:label "recordVersionTime"@en ;
+    rdfs:label "record version time"@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     dct:creator <http://np00.github.io/#i> ;
     dct:conformsTo "https://datex2.eu/" ; 
@@ -76,12 +76,27 @@ mv:recordUrl
     rdfs:range xsd:anyURI ;
     rdfs:comment "A website which describes the situation record."@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
-    rdfs:label "recordUrl"@en ;
+    rdfs:label "record URL"@en ;
     dct:creator <http://np00.github.io/#i> ;
     dct:conformsTo "https://datex2.eu/" ; 
     dct:created "2018-01-30"^^xsd:date ;
     dct:modified "2018-01-30"^^xsd:date ;
 . 
+
+mv:probabilityOfOccurence
+    a owl:DatatypeProperty ;
+    rdfs:domain mv:SituationRecord ; 
+    rdfs:range xsd:anyURI ;
+    rdfs:comment "The probabily of occurence of a situation record."@en ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
+    rdfs:label "probability of occurence"@en ;
+    dct:creator <http://np00.github.io/#i> ;
+    dct:conformsTo "https://datex2.eu/" ; 
+    dct:created "2018-01-30"^^xsd:date ;
+    dct:modified "2018-01-30"^^xsd:date ;
+. 
+
+
 
 mv:generalPublicComment
     a owl:DatatypeProperty ;
@@ -89,7 +104,7 @@ mv:generalPublicComment
     rdfs:domain mv:SituationRecord ; 
     rdfs:range xsd:string ;
     rdfs:comment "A general public comment about a situation record."@en ;
-    rdfs:label "generalPublicComment"@en ;
+    rdfs:label "general public comment"@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     dct:creator <http://np00.github.io/#i> ;
     dct:conformsTo "https://datex2.eu/" ; 
@@ -102,7 +117,7 @@ mv:situationSpeedLimit
     rdfs:domain mv:SituationRecord ; 
     rdfs:range xsd:integer ;
     rdfs:comment "The speedlimit of the road where the situation takes place."@en ;
-	rdfs:label "situationSpeedLimit"@en ;
+	rdfs:label "situation speed limit"@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     dct:creator <http://np00.github.io/#i> ;
     dct:conformsTo "https://datex2.eu/" ; 
@@ -115,7 +130,7 @@ mv:situationSubject
     rdfs:domain mv:SituationRecord ; 
     rdfs:range xsd:integer ;
     rdfs:comment "The speedlimit subject of a situation."@en ;
-	rdfs:label "situationSubject"@en ;
+	rdfs:label "situation subject"@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     dct:creator <http://np00.github.io/#i> ;
     dct:conformsTo "https://datex2.eu/" ; 
@@ -128,7 +143,7 @@ mv:internalRoadworkIdentifier
     rdfs:domain mv:SituationRecord ; 
     rdfs:range xsd:string ;
     rdfs:comment "The internal roadworks identifier of a situation."@en ;
-	rdfs:label "internalRoadworkIdentifier"@en ;
+	rdfs:label "internal roadwork identifier"@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     dct:creator <http://np00.github.io/#i> ;
     dct:conformsTo "https://datex2.eu/" ; 
@@ -141,7 +156,7 @@ mv:constructionType
     rdfs:domain mv:SituationRecord ; 
     rdfs:range xsd:string ;
     rdfs:comment "The construction type of a situation."@en ;
-	rdfs:label "constructionType"@en ;
+	rdfs:label "construction type"@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     dct:creator <http://np00.github.io/#i> ;
     dct:conformsTo "https://datex2.eu/" ;
@@ -154,7 +169,7 @@ mv:impactedRoad
     rdfs:domain mv:SituationRecord ; 
     rdfs:range xsd:string ;
     rdfs:comment "The impacted road of a situation."@en ;
-	rdfs:label "impactedRoad"@en ;
+	rdfs:label "impacted road"@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     dct:creator <http://np00.github.io/#i> ;
     dct:conformsTo "https://datex2.eu/" ;
@@ -180,13 +195,86 @@ mv:location
     a owl:ObjectProperty ;
     rdfs:domain mv:SituationRecord ; 
     rdfs:range mv:Location ;
-    rdfs:comment "The location description of a situation."@en ;
+    rdfs:comment "The location description of a situation record."@en ;
 	rdfs:label "location"@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     dct:creator <http://np00.github.io/#i> ;
     dct:conformsTo "https://datex2.eu/" ;
     dct:created "2018-01-30"^^xsd:date ;
     dct:modified "2018-01-30"^^xsd:date ;
+.
+
+mv:impact
+    a owl:ObjectProperty ;
+    rdfs:domain mv:SituationRecord ; 
+    rdfs:range mv:Impact ;
+    rdfs:comment "The road impact description of a situation record."@en ;
+    rdfs:label "impact"@en ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
+    dct:creator <http://np00.github.io/#i> ;
+    dct:conformsTo "https://datex2.eu/" ;
+    dct:created "2019-08-16"^^xsd:date ;
+    dct:modified "2019-08-16"^^xsd:date ;
+.
+
+#########################################################################
+# Impact
+#- status (xsd:string)
+#- startTimeOverall (xsd:dateTime)
+#- endTimeOverall (xsd:dateTime)
+#- period Period (xsd:dateTime)
+
+
+mv:Impact
+    a owl:Class ;
+    owl:equivalentClass datex:Impact ;
+    rdfs:comment "The impact of a situation record."@en  ;
+    rdfs:label "Impact"@en  ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
+    vs:term_status "testing" ;
+    dct:creator <http://np00.github.io/#i> ;
+    dct:conformsTo "https://datex2.eu/" ;
+    dct:created "2019-08-16"^^xsd:date ;
+    dct:modified "2019-08-16"^^xsd:date ;
+.
+
+mv:impactOnRoadLayout
+    a owl:DatatypeProperty ;
+    rdfs:domain mv:Impact ; 
+    rdfs:range xsd:string ;
+    rdfs:comment "The impact on the road layout of a situation record."@en;
+    rdfs:label "impact on road layout"@en ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
+    dct:creator <http://np00.github.io/#i> ;
+    dct:conformsTo "https://datex2.eu/" ;
+    dct:created "2019-08-16"^^xsd:date ;
+    dct:modified "2019-08-16"^^xsd:date ;
+.
+
+mv:trackCrossSection
+    a owl:DatatypeProperty ;
+    rdfs:domain mv:Impact ; 
+    rdfs:range xsd:string ;
+    rdfs:comment "The track cross section definition of an impacted road in a situation record."@en;
+    rdfs:label "track cross section"@en ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
+    dct:creator <http://np00.github.io/#i> ;
+    dct:conformsTo "https://datex2.eu/" ;
+    dct:created "2019-08-16"^^xsd:date ;
+    dct:modified "2019-08-16"^^xsd:date ;
+.
+
+mv:trafficConstrictitionType
+    a owl:DatatypeProperty ;
+    rdfs:domain mv:Impact ; 
+    rdfs:range xsd:string ;
+    rdfs:comment "The traffic constriction type of an impacted road in a situation record."@en;
+    rdfs:label "traffic constrictition type"@en ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
+    dct:creator <http://np00.github.io/#i> ;
+    dct:conformsTo "https://datex2.eu/" ;
+    dct:created "2019-08-16"^^xsd:date ;
+    dct:modified "2019-08-16"^^xsd:date ;
 .
 
 
@@ -215,7 +303,7 @@ mv:validityStatus
     rdfs:domain mv:Validity ; 
     rdfs:range xsd:string ;
     rdfs:comment "The status of a validity."@en;
-	rdfs:label "validityStatus"@en ;
+	rdfs:label "validity status"@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     dct:creator <http://np00.github.io/#i> ;
     dct:conformsTo "https://datex2.eu/" ;
@@ -228,7 +316,7 @@ mv:startTimeOverall
     rdfs:domain mv:Validity ; 
     rdfs:range xsd:dateTime ;
     rdfs:comment "The overall start time of a situation record validity."@en ;
-	rdfs:label "startTimeOverall"@en ;
+	rdfs:label "start time overall"@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     dct:creator <http://np00.github.io/#i> ;
     dct:conformsTo "https://datex2.eu/" ;
@@ -241,7 +329,7 @@ mv:endTimeOverall
     rdfs:domain mv:Validity ; 
     rdfs:range xsd:dateTime ;
     rdfs:comment "The overall end time of a situation record validity."@en ;
-	rdfs:label "endTimeOverall"@en ;
+	rdfs:label "end time overall"@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     dct:creator <http://np00.github.io/#i> ;
     dct:conformsTo "https://datex2.eu/" ;
@@ -255,7 +343,7 @@ mv:validityPeriod
     rdfs:domain mv:Validity ; 
     rdfs:range mv:Period ;
     rdfs:comment "A period from when to when a situation record valid."@en ;
-	rdfs:label "validityPeriod"@en ;
+	rdfs:label "validity period"@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     dct:creator <http://np00.github.io/#i> ;
     dct:conformsTo "https://datex2.eu/" ;
@@ -288,7 +376,7 @@ mv:startOfPeriod
     rdfs:domain mv:Period ; 
     rdfs:range xsd:dateTime ;
     rdfs:comment "The start time of a period."@en ;
-	rdfs:label "startOfPeriod"@en ;
+	rdfs:label "start of period"@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     dct:creator <http://np00.github.io/#i> ;
     dct:conformsTo "https://datex2.eu/" ;
@@ -301,7 +389,7 @@ mv:endOfPeriod
     rdfs:domain mv:Period ; 
     rdfs:range xsd:dateTime ;
     rdfs:comment "The end time of a period."@en ;
-	rdfs:label "endOfPeriod"@en ;
+	rdfs:label "end of period"@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     dct:creator <http://np00.github.io/#i> ;
     dct:conformsTo "https://datex2.eu/" ;
@@ -314,7 +402,7 @@ mv:recurringWeekday
     rdfs:domain mv:Period ; 
     rdfs:range xsd:string ;
     rdfs:comment "The reccurring day of a week in which the period is valid."@en ;
-	rdfs:label "recurringWeekday"@en ;
+	rdfs:label "recurring week day"@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     dct:creator <http://np00.github.io/#i> ;
     dct:conformsTo "https://datex2.eu/" ;
@@ -342,13 +430,12 @@ mv:Location
 .
 
 
-# NP: I don't like the name, but I took it over from the standard for now.
 mv:linearExtension
     a owl:ObjectProperty ;
     rdfs:domain mv:Location ; 
     rdfs:range mv:LinearExtension ;
     rdfs:comment "The spatial description of a situation record."@en ;
-	rdfs:label "linearExtension"@en ;
+	rdfs:label "linear extension"@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     dct:creator <http://np00.github.io/#i> ;
     dct:conformsTo "https://datex2.eu/" ;
@@ -368,6 +455,34 @@ mv:alertCLocation
     dct:created "2018-01-30"^^xsd:date ;
     dct:modified "2018-01-30"^^xsd:date ;
 .
+
+
+mv:affectedCarriagewayAndLanes
+    a owl:DatatypeProperty ;
+    rdfs:domain mv:Location ; 
+    rdfs:range xsd:string;
+    rdfs:comment "The affected carriage way and lanes a location."@en ;
+    rdfs:label "affected carriage way and lanes"@en ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
+    dct:creator <http://np00.github.io/#i> ;
+    dct:conformsTo "https://datex2.eu/" ;
+    dct:created "2019-08-16"^^xsd:date ;
+    dct:modified "2019-08-16"^^xsd:date ;
+.
+
+mv:affectedRoadLength
+    a owl:DatatypeProperty ;
+    rdfs:domain mv:Location ; 
+    rdfs:range xsd:string;
+    rdfs:comment "The affected road length of a location."@en ;
+    rdfs:label "affected road length"@en ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
+    dct:creator <http://np00.github.io/#i> ;
+    dct:conformsTo "https://datex2.eu/" ;
+    dct:created "2019-08-16"^^xsd:date ;
+    dct:modified "2019-08-16"^^xsd:date ;
+.
+
 
 #########################################################################
 #LinearExtension
@@ -398,7 +513,7 @@ mv:roadName
     rdfs:domain mv:LinearExtension ; 
     rdfs:range xsd:string;
     rdfs:comment "The affected road of a location."@en ;
-	rdfs:label "roadName"@en ;
+	rdfs:label "road name"@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     dct:creator <http://np00.github.io/#i> ;
     dct:conformsTo "https://datex2.eu/" ;
@@ -411,7 +526,7 @@ mv:roadNumber
     rdfs:domain mv:LinearExtension ; 
     rdfs:range xsd:string;
     rdfs:comment "The name number of an affected road of a location."@en ;
-	rdfs:label "roadNumber"@en ;
+	rdfs:label "road number"@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     dct:creator <http://np00.github.io/#i> ;
     dct:conformsTo "https://datex2.eu/" ;
@@ -425,7 +540,7 @@ mv:startlLatitude
     rdfs:domain mv:LinearExtension ; 
     rdfs:range wgs:lat;
     rdfs:comment "The starting latitude of a situation record."@en ;
-	rdfs:label "startlLatitude"@en ;
+	rdfs:label "start latitude"@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     dct:creator <http://np00.github.io/#i> ;
     dct:conformsTo "https://datex2.eu/" ;
@@ -438,7 +553,7 @@ mv:endLatitude
     rdfs:domain mv:LinearExtension ; 
     rdfs:range wgs:long;
     rdfs:comment "The ending latitude of a situation record."@en ;
-	rdfs:label "endLatitude"@en ;
+	rdfs:label "end latitude"@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     dct:creator <http://np00.github.io/#i> ;
     dct:conformsTo "https://datex2.eu/" ;
@@ -451,7 +566,7 @@ mv:intermediatePointList
     rdfs:domain mv:LinearExtension ; 
     rdfs:range olo:OrderedList;
     rdfs:comment "An ordered list of intermediate geospatial points to where the situation record takes place."@en ;
-	rdfs:label "intermediatePointList"@en ;
+	rdfs:label "intermediate point list"@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     dct:creator <http://np00.github.io/#i> ;
     dct:conformsTo "https://datex2.eu/" ;
@@ -490,7 +605,7 @@ mv:countryCode
     rdfs:domain mv:AlertCLocation ; 
     rdfs:range xsd:string;
     rdfs:comment "The country code where the situation record takes place."@en ;
-	rdfs:label "countryCode"@en ;
+	rdfs:label "country code"@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     dct:creator <http://np00.github.io/#i> ;
     dct:conformsTo "https://datex2.eu/" ;
@@ -503,7 +618,7 @@ mv:tableNumber
     rdfs:domain mv:AlertCLocation ; 
     rdfs:range xsd:integer;
     rdfs:comment "The table number of an AlertCLocation description."@en ;
-	rdfs:label "tableNumber"@en ;
+	rdfs:label "table number"@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     dct:creator <http://np00.github.io/#i> ;
     dct:conformsTo "https://datex2.eu/" ;
@@ -516,7 +631,7 @@ mv:tableVersion
     rdfs:domain mv:AlertCLocation ; 
     rdfs:range xsd:string;
     rdfs:comment "The table version of an AlertCLocation description."@en ;
-	rdfs:label "tableVersion"@en ;
+	rdfs:label "table version"@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     dct:creator <http://np00.github.io/#i> ;
     dct:conformsTo "https://datex2.eu/" ;
@@ -592,8 +707,8 @@ mv:locationName
 	        mv:SecondaryLocation
 			)] ;
     rdfs:range xsd:string ;
-    rdfs:comment "The location name of an Primary or Secondary AlertCLocation description."@en ;
-	rdfs:label "locationName"@en ;
+    rdfs:comment "The location name of a Primary or Secondary AlertCLocation description."@en ;
+	rdfs:label "location name"@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     dct:creator <http://np00.github.io/#i> ;
     dct:conformsTo "https://datex2.eu/" ;
@@ -609,14 +724,33 @@ mv:specificLocation
 	        mv:SecondaryLocation
 			)] ;
     rdfs:range xsd:integer ;
-    rdfs:comment "The specific location of an Primary or Secondary AlertCLocation description."@en ;
-	rdfs:label "specificLocation"@en ;
+    rdfs:comment "The specific location of a Primary or Secondary AlertCLocation description."@en ;
+	rdfs:label "specific location"@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     dct:creator <http://np00.github.io/#i> ;
     dct:conformsTo "https://datex2.eu/" ;
     dct:created "2018-01-30"^^xsd:date ;
     dct:modified "2018-01-30"^^xsd:date ;
 .
+
+mv:directionCode  
+    a owl:DatatypeProperty ;
+    rdfs:domain [rdf:type owl:Class ;
+            owl:unionOf (
+            mv:PrimaryLocation
+            mv:SecondaryLocation
+            )] ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The direction code of a Primary or Secondary AlertCLocation description."@en ;
+    rdfs:label "direction code"@en ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
+    dct:creator <http://np00.github.io/#i> ;
+    dct:conformsTo "https://datex2.eu/" ;
+    dct:created "2019-08-16"^^xsd:date ;
+    dct:modified "2019-08-16"^^xsd:date ;
+.
+
+
 
 #########################################################################
 

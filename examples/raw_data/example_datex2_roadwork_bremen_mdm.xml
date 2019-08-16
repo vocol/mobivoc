@@ -1,0 +1,1528 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<d2LogicalModel extensionName="MDM-BIS" extensionVersion="02-00-00" modelBaseVersion="2" xmlns="http://datex2.eu/schema/2/2_0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://datex2.eu/schema/2/2_0 http://bast.s3.amazonaws.com/schema/1358258738363/MDM_Profile_BIS.xsd">
+	<exchange>
+		<supplierIdentification>
+			<country>de</country>
+			<nationalIdentifier>DE-MDM-Verkehrsmanagementzentrale Bremen</nationalIdentifier>
+		</supplierIdentification>
+	</exchange>
+	<payloadPublication lang="de" xsi:type="SituationPublication">
+		<publicationTime>2017-09-04T23:32:15+02:00</publicationTime>
+		<publicationCreator>
+			<country>de</country>
+			<nationalIdentifier>DE-MDM-Verkehrsmanagementzentrale Bremen</nationalIdentifier>
+		</publicationCreator>
+		<situation id="vis-vmz-hb-509" version="1504267206">
+			<headerInformation>
+				<confidentiality>noRestriction</confidentiality>
+				<informationStatus>technicalExercise</informationStatus>
+			</headerInformation>
+			<situationRecord id="vis-vmz-hb-509" version="1504267206" xsi:type="ConstructionWorks">
+				<situationRecordCreationTime>2015-01-15T06:44:56+01:00</situationRecordCreationTime>
+				<situationRecordVersionTime>2017-09-01T14:00:06+02:00</situationRecordVersionTime>
+				<probabilityOfOccurrence>certain</probabilityOfOccurrence>
+				<validity>
+					<validityStatus>definedByValidityTimeSpec</validityStatus>
+					<validityTimeSpecification>
+						<overallStartTime>2016-01-18T07:00:00+01:00</overallStartTime>
+						<overallEndTime>2017-12-31T17:00:00+01:00</overallEndTime>
+						<validPeriod>
+							<startOfPeriod>2016-01-18T07:00:00+01:00</startOfPeriod>
+							<endOfPeriod>2017-12-31T17:00:00+01:00</endOfPeriod>
+							<recurringDayWeekMonthPeriod>
+								<applicableDay>monday</applicableDay>
+								<applicableDay>tuesday</applicableDay>
+								<applicableDay>wednesday</applicableDay>
+								<applicableDay>thursday</applicableDay>
+								<applicableDay>friday</applicableDay>
+								<applicableDay>saturday</applicableDay>
+								<applicableDay>sunday</applicableDay>
+							</recurringDayWeekMonthPeriod>
+						</validPeriod>
+					</validityTimeSpecification>
+				</validity>
+				<impact>
+					<impactExtension>
+						<impactExtended>
+							<impactOnRoadLayout>D III/1</impactOnRoadLayout>
+						</impactExtended>
+					</impactExtension>
+				</impact>
+				<generalPublicComment>
+					<comment>
+						<values>
+							<value lang="de">Brückenneubau</value>
+						</values>
+					</comment>
+				</generalPublicComment>
+				<generalPublicComment>
+					<comment>
+						<values>
+							<value lang="de">Brückensanierung</value>
+						</values>
+					</comment>
+				</generalPublicComment>
+				<generalPublicComment>
+					<comment>
+						<values>
+							<value lang="de">zeitweise Sperrung von Fahrstreifen in beiden Richtungen; Verkürzung der Einfahrt von der Tankstelle bzw. der Ausfahrt von der B75 in FR Huchting; Geschwindigkeitsbegrenzung;  
+Fahrempfehlung: B75 in Höhe der Ausfahrt Huchting FR stadtauswärts: Nutzen Sie für die Zufahrt zur Kirchhuchtinger Landstraße die Anschlussstelle DEL-Stickgras 
+nächste Vollsperrung B75: vorauss. 29.09.2017, 20:00 Uhr bis 02.10.2017, 4:00 Uhr (Aushängen der Fußgängerbrücke) 
+Umleitungen: aus Richtung Bremen: über B75 Abfahrt Huchtinger Kreisel, Huchtinger Heerstraße; aus Richtung Delmenhorst: über A28 zum Autobahndreieck Stuhr und zur A1; aus Richtung Stuhr: über  Moordeicher Landstraße, zur A28</value>
+						</values>
+					</comment>
+				</generalPublicComment>
+				<urlLink>
+					<urlLinkAddress>http://vmz.bremen.de/baustellen/aktuell/?feature=vis-vmz-hb-509</urlLinkAddress>
+				</urlLink>
+				<groupOfLocations xsi:type="Linear">
+					<alertCLinear xsi:type="AlertCMethod2Linear">
+						<alertCLocationCountryCode>D</alertCLocationCountryCode>
+						<alertCLocationTableNumber>141128</alertCLocationTableNumber>
+						<alertCLocationTableVersion>14.0</alertCLocationTableVersion>
+						<alertCDirection>
+							<alertCDirectionCoded>positive</alertCDirectionCoded>
+						</alertCDirection>
+						<alertCMethod2PrimaryPointLocation>
+							<alertCLocation>
+								<alertCLocationName>
+									<values>
+										<value>in Höhe Heinrich-Plett-Allee</value>
+									</values>
+								</alertCLocationName>
+								<specificLocation>25038</specificLocation>
+							</alertCLocation>
+						</alertCMethod2PrimaryPointLocation>
+						<alertCMethod2SecondaryPointLocation>
+							<alertCLocation>
+								<specificLocation>25038</specificLocation>
+							</alertCLocation>
+						</alertCMethod2SecondaryPointLocation>
+					</alertCLinear>
+					<linearExtension>
+						<extendedLinear>
+							<linearByCoordinates>
+								<roadName>
+									<values>
+										<value lang="de">Oldenburger Straße in Höhe Heinrich-Plett-Allee</value>
+									</values>
+								</roadName>
+								<roadNumber>B75</roadNumber>
+								<start>
+									<latitude>8.7143889207106</latitude>
+									<longitude>53.049174751337</longitude>
+								</start>
+								<intermediate index="0">
+									<pointCoordinates>
+										<latitude>8.678640438965</latitude>
+										<longitude>53.036828796659</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="1">
+									<pointCoordinates>
+										<latitude>8.6802497643738</latitude>
+										<longitude>53.038183541181</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="2">
+									<pointCoordinates>
+										<latitude>8.6820092934873</latitude>
+										<longitude>53.039628555087</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="3">
+									<pointCoordinates>
+										<latitude>8.6846056718134</latitude>
+										<longitude>53.041086421822</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="4">
+									<pointCoordinates>
+										<latitude>8.6872878808278</latitude>
+										<longitude>53.042518437609</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="5">
+									<pointCoordinates>
+										<latitude>8.6897555131213</latitude>
+										<longitude>53.043485988914</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="6">
+									<pointCoordinates>
+										<latitude>8.6925450104963</latitude>
+										<longitude>53.044401917473</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="7">
+									<pointCoordinates>
+										<latitude>8.6958709496744</latitude>
+										<longitude>53.045304926579</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="8">
+									<pointCoordinates>
+										<latitude>8.6997977036716</latitude>
+										<longitude>53.046066019561</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="9">
+									<pointCoordinates>
+										<latitude>8.7068787354699</latitude>
+										<longitude>53.046723902665</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="10">
+									<pointCoordinates>
+										<latitude>8.7094107407796</latitude>
+										<longitude>53.047368876354</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="11">
+									<pointCoordinates>
+										<latitude>8.7115994233355</latitude>
+										<longitude>53.047923546007</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="12">
+									<pointCoordinates>
+										<latitude>8.71428163235</latitude>
+										<longitude>53.049097358246</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<end>
+									<latitude>8.7140670556288</latitude>
+									<longitude>53.048955470554</longitude>
+								</end>
+							</linearByCoordinates>
+						</extendedLinear>
+					</linearExtension>
+				</groupOfLocations>
+				<operatorActionExtension>
+					<operatorActionExtended>
+						<temporarySpeedLimit>60</temporarySpeedLimit>
+					</operatorActionExtended>
+				</operatorActionExtension>
+				<subjects>
+					<subjectTypeOfWorks>bridge</subjectTypeOfWorks>
+				</subjects>
+				<roadworksExtension>
+					<roadworksExtended>
+						<internalRoadworksIdentifier>RP23</internalRoadworksIdentifier>
+					</roadworksExtended>
+				</roadworksExtension>
+				<constructionWorkType>constructionWork</constructionWorkType>
+			</situationRecord>
+		</situation>
+		<situation id="vis-vmz-hb-4417" version="1498820497">
+			<headerInformation>
+				<confidentiality>noRestriction</confidentiality>
+				<informationStatus>technicalExercise</informationStatus>
+			</headerInformation>
+			<situationRecord id="vis-vmz-hb-4417" version="1498820497" xsi:type="MaintenanceWorks">
+				<situationRecordCreationTime>2016-03-17T10:49:11+01:00</situationRecordCreationTime>
+				<situationRecordVersionTime>2017-06-30T13:01:37+02:00</situationRecordVersionTime>
+				<probabilityOfOccurrence>certain</probabilityOfOccurrence>
+				<validity>
+					<validityStatus>definedByValidityTimeSpec</validityStatus>
+					<validityTimeSpecification>
+						<overallStartTime>2017-03-13T07:00:00+01:00</overallStartTime>
+						<overallEndTime>2017-09-30T17:00:00+02:00</overallEndTime>
+						<validPeriod>
+							<startOfPeriod>2017-03-13T07:00:00+01:00</startOfPeriod>
+							<endOfPeriod>2017-09-30T17:00:00+02:00</endOfPeriod>
+							<recurringDayWeekMonthPeriod>
+								<applicableDay>monday</applicableDay>
+								<applicableDay>tuesday</applicableDay>
+								<applicableDay>wednesday</applicableDay>
+								<applicableDay>thursday</applicableDay>
+								<applicableDay>friday</applicableDay>
+								<applicableDay>saturday</applicableDay>
+								<applicableDay>sunday</applicableDay>
+							</recurringDayWeekMonthPeriod>
+						</validPeriod>
+					</validityTimeSpecification>
+				</validity>
+				<impact>
+					<residualRoadWidth>3.25</residualRoadWidth>
+					<impactExtension>
+						<impactExtended>
+							<impactOnRoadLayout>D II/3a</impactOnRoadLayout>
+						</impactExtended>
+					</impactExtension>
+				</impact>
+				<generalPublicComment>
+					<comment>
+						<values>
+							<value lang="de">Brückeninstandsetzungsarbeiten</value>
+						</values>
+					</comment>
+				</generalPublicComment>
+				<generalPublicComment>
+					<comment>
+						<values>
+							<value lang="de">Straßenbau  				 - Erneuerung des Fahrbahnbelages</value>
+						</values>
+					</comment>
+				</generalPublicComment>
+				<generalPublicComment>
+					<comment>
+						<values>
+							<value lang="de">wechselweise   				 Sperrung der jeweiligen Fahrtrichtungen, der Verkehr wird jeweils einspurig auf der Gegenseite geführt (2+0-Verkehr);  					Geschwindigkeitsbegrenzung</value>
+						</values>
+					</comment>
+				</generalPublicComment>
+				<urlLink>
+					<urlLinkAddress>http://vmz.bremen.de/baustellen/aktuell/?feature=vis-vmz-hb-4417</urlLinkAddress>
+				</urlLink>
+				<groupOfLocations xsi:type="Linear">
+					<alertCLinear xsi:type="AlertCMethod2Linear">
+						<alertCLocationCountryCode>D</alertCLocationCountryCode>
+						<alertCLocationTableNumber>141128</alertCLocationTableNumber>
+						<alertCLocationTableVersion>14.0</alertCLocationTableVersion>
+						<alertCDirection>
+							<alertCDirectionCoded>both</alertCDirectionCoded>
+						</alertCDirection>
+						<alertCMethod2PrimaryPointLocation>
+							<alertCLocation>
+								<alertCLocationName>
+									<values>
+										<value>Verkehrsknoten HB-Nord</value>
+									</values>
+								</alertCLocationName>
+								<specificLocation>34509</specificLocation>
+							</alertCLocation>
+						</alertCMethod2PrimaryPointLocation>
+						<alertCMethod2SecondaryPointLocation>
+							<alertCLocation>
+								<alertCLocationName>
+									<values>
+										<value>AS HB-Lesum, in Höhe Am Heidbergstift</value>
+									</values>
+								</alertCLocationName>
+								<specificLocation>34573</specificLocation>
+							</alertCLocation>
+						</alertCMethod2SecondaryPointLocation>
+					</alertCLinear>
+					<linearExtension>
+						<extendedLinear>
+							<linearByCoordinates>
+								<roadName>
+									<values>
+										<value lang="de">zwischen Verkehrsknoten HB-Nord und AS HB-Lesum - Trog Heidbergstift</value>
+									</values>
+								</roadName>
+								<roadNumber>A270</roadNumber>
+								<start>
+									<latitude>8.6863115567466</latitude>
+									<longitude>53.173189112668</longitude>
+								</start>
+								<intermediate index="0">
+									<pointCoordinates>
+										<latitude>8.6864885825415</latitude>
+										<longitude>53.173198758935</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="1">
+									<pointCoordinates>
+										<latitude>8.6902973193422</latitude>
+										<longitude>53.173488145932</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="2">
+									<pointCoordinates>
+										<latitude>8.6936554450283</latitude>
+										<longitude>53.173706792591</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="3">
+									<pointCoordinates>
+										<latitude>8.6975714701895</latitude>
+										<longitude>53.173964022528</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="4">
+									<pointCoordinates>
+										<latitude>8.6995348471881</latitude>
+										<longitude>53.174124790456</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="5">
+									<pointCoordinates>
+										<latitude>8.7003073233843</latitude>
+										<longitude>53.174246973678</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="6">
+									<pointCoordinates>
+										<latitude>8.7018844622849</latitude>
+										<longitude>53.174594229356</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="7">
+									<pointCoordinates>
+										<latitude>8.7036118048902</latitude>
+										<longitude>53.175256579616</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="8">
+									<pointCoordinates>
+										<latitude>8.7057683009379</latitude>
+										<longitude>53.17659411013</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<end>
+									<latitude>8.7057683009379</latitude>
+									<longitude>53.17659411013</longitude>
+								</end>
+							</linearByCoordinates>
+						</extendedLinear>
+					</linearExtension>
+				</groupOfLocations>
+				<operatorActionExtension>
+					<operatorActionExtended>
+						<temporarySpeedLimit>50</temporarySpeedLimit>
+					</operatorActionExtended>
+				</operatorActionExtension>
+				<subjects>
+					<subjectTypeOfWorks>bridge</subjectTypeOfWorks>
+				</subjects>
+				<roadworksExtension>
+					<roadworksExtended>
+						<internalRoadworksIdentifier>RP3</internalRoadworksIdentifier>
+					</roadworksExtended>
+				</roadworksExtension>
+				<roadMaintenanceType>repairWork</roadMaintenanceType>
+			</situationRecord>
+		</situation>
+		<situation id="vis-vmz-hb-8939" version="1504267206">
+			<headerInformation>
+				<confidentiality>noRestriction</confidentiality>
+				<informationStatus>technicalExercise</informationStatus>
+			</headerInformation>
+			<situationRecord id="vis-vmz-hb-8939" version="1504267206" xsi:type="MaintenanceWorks">
+				<situationRecordCreationTime>2017-06-29T10:46:59+02:00</situationRecordCreationTime>
+				<situationRecordVersionTime>2017-09-01T14:00:06+02:00</situationRecordVersionTime>
+				<probabilityOfOccurrence>certain</probabilityOfOccurrence>
+				<validity>
+					<validityStatus>definedByValidityTimeSpec</validityStatus>
+					<validityTimeSpecification>
+						<overallStartTime>2017-07-15T07:00:00+02:00</overallStartTime>
+						<overallEndTime>2017-09-30T20:00:00+02:00</overallEndTime>
+						<validPeriod>
+							<startOfPeriod>2017-07-15T07:00:00+02:00</startOfPeriod>
+							<endOfPeriod>2017-09-30T20:00:00+02:00</endOfPeriod>
+							<recurringTimePeriodOfDay xsi:type="TimePeriodByHour">
+								<startTimeOfPeriod>07:00:00</startTimeOfPeriod>
+								<endTimeOfPeriod>20:00:00</endTimeOfPeriod>
+							</recurringTimePeriodOfDay>
+							<recurringDayWeekMonthPeriod>
+								<applicableDay>monday</applicableDay>
+								<applicableDay>tuesday</applicableDay>
+								<applicableDay>wednesday</applicableDay>
+								<applicableDay>thursday</applicableDay>
+								<applicableDay>friday</applicableDay>
+								<applicableDay>saturday</applicableDay>
+								<applicableDay>sunday</applicableDay>
+							</recurringDayWeekMonthPeriod>
+						</validPeriod>
+					</validityTimeSpecification>
+				</validity>
+				<generalPublicComment>
+					<comment>
+						<values>
+							<value lang="de">Fahrbahninstandsetzung</value>
+						</values>
+					</comment>
+				</generalPublicComment>
+				<generalPublicComment>
+					<comment>
+						<values>
+							<value lang="de">Instandsetzungen an der Fahrbahn</value>
+						</values>
+					</comment>
+				</generalPublicComment>
+				<generalPublicComment>
+					<comment>
+						<values>
+							<value lang="de">wechselweise   				  					Sperrung eines Fahrstreifens in diversen Abschnitten;  					Sperrung des Standstreifens;  				  					verkürzte Auffahrt;   				  					verkürzte Abfahrt;   				 Sperrung der Auffahrt bzw. Abfahrt</value>
+						</values>
+					</comment>
+				</generalPublicComment>
+				<urlLink>
+					<urlLinkAddress>http://vmz.bremen.de/baustellen/aktuell/?feature=vis-vmz-hb-8939</urlLinkAddress>
+				</urlLink>
+				<groupOfLocations xsi:type="Linear">
+					<alertCLinear xsi:type="AlertCMethod2Linear">
+						<alertCLocationCountryCode>D</alertCLocationCountryCode>
+						<alertCLocationTableNumber>141128</alertCLocationTableNumber>
+						<alertCLocationTableVersion>14.0</alertCLocationTableVersion>
+						<alertCDirection>
+							<alertCDirectionCoded>both</alertCDirectionCoded>
+						</alertCDirection>
+						<alertCMethod2PrimaryPointLocation>
+							<alertCLocation>
+								<alertCLocationName>
+									<values>
+										<value>Schwanewede</value>
+									</values>
+								</alertCLocationName>
+								<specificLocation>10718</specificLocation>
+							</alertCLocation>
+						</alertCMethod2PrimaryPointLocation>
+						<alertCMethod2SecondaryPointLocation>
+							<alertCLocation>
+								<alertCLocationName>
+									<values>
+										<value>Uthlede</value>
+									</values>
+								</alertCLocationName>
+								<specificLocation>10719</specificLocation>
+							</alertCLocation>
+						</alertCMethod2SecondaryPointLocation>
+					</alertCLinear>
+					<linearExtension>
+						<extendedLinear>
+							<linearByCoordinates>
+								<roadName>
+									<values>
+										<value lang="de">zwischen AS Uthlede und AS Schwanewede</value>
+									</values>
+								</roadName>
+								<roadNumber>A27</roadNumber>
+								<start>
+									<latitude>8.6429574133349</latitude>
+									<longitude>53.228363818174</longitude>
+								</start>
+								<intermediate index="0">
+									<pointCoordinates>
+										<latitude>8.6417152310011</latitude>
+										<longitude>53.229868859456</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="1">
+									<pointCoordinates>
+										<latitude>8.6385103055502</latitude>
+										<longitude>53.235211918393</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="2">
+									<pointCoordinates>
+										<latitude>8.636450369027</latitude>
+										<longitude>53.244252499087</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="3">
+									<pointCoordinates>
+										<latitude>8.6350770780115</latitude>
+										<longitude>53.25055306812</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="4">
+									<pointCoordinates>
+										<latitude>8.6355354214317</latitude>
+										<longitude>53.259863550067</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="5">
+									<pointCoordinates>
+										<latitude>8.6357637235193</latitude>
+										<longitude>53.266298367273</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="6">
+									<pointCoordinates>
+										<latitude>8.6353071088666</latitude>
+										<longitude>53.272047506039</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="7">
+									<pointCoordinates>
+										<latitude>8.6343904325038</latitude>
+										<longitude>53.277248785185</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="8">
+									<pointCoordinates>
+										<latitude>8.6311872358204</latitude>
+										<longitude>53.282858927432</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="9">
+									<pointCoordinates>
+										<latitude>8.6261506864113</latitude>
+										<longitude>53.28901630338</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="10">
+									<pointCoordinates>
+										<latitude>8.622489156785</latitude>
+										<longitude>53.293805100397</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="11">
+									<pointCoordinates>
+										<latitude>8.6204292202619</latitude>
+										<longitude>53.297772614023</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="12">
+									<pointCoordinates>
+										<latitude>8.6188276166815</latitude>
+										<longitude>53.30351751995</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<end>
+									<latitude>8.6190559292464</latitude>
+									<longitude>53.30844111073</longitude>
+								</end>
+							</linearByCoordinates>
+						</extendedLinear>
+					</linearExtension>
+				</groupOfLocations>
+				<operatorActionExtension>
+					<operatorActionExtended>
+						<temporarySpeedLimit>60</temporarySpeedLimit>
+					</operatorActionExtended>
+				</operatorActionExtension>
+				<subjects>
+					<subjectTypeOfWorks>road</subjectTypeOfWorks>
+				</subjects>
+				<roadworksExtension>
+					<roadworksExtended>
+						<internalRoadworksIdentifier>RP6</internalRoadworksIdentifier>
+					</roadworksExtended>
+				</roadworksExtension>
+				<roadMaintenanceType>repairWork</roadMaintenanceType>
+			</situationRecord>
+		</situation>
+		<situation id="vis-vmz-hb-9157" version="1503665670">
+			<headerInformation>
+				<confidentiality>noRestriction</confidentiality>
+				<informationStatus>technicalExercise</informationStatus>
+			</headerInformation>
+			<situationRecord id="vis-vmz-hb-9157" version="1503665670" xsi:type="MaintenanceWorks">
+				<situationRecordCreationTime>2017-07-21T10:30:28+02:00</situationRecordCreationTime>
+				<situationRecordVersionTime>2017-08-25T14:54:30+02:00</situationRecordVersionTime>
+				<probabilityOfOccurrence>certain</probabilityOfOccurrence>
+				<validity>
+					<validityStatus>definedByValidityTimeSpec</validityStatus>
+					<validityTimeSpecification>
+						<overallStartTime>2017-08-02T07:00:00+02:00</overallStartTime>
+						<overallEndTime>2017-09-30T17:00:00+02:00</overallEndTime>
+						<validPeriod>
+							<startOfPeriod>2017-08-02T07:00:00+02:00</startOfPeriod>
+							<endOfPeriod>2017-09-30T17:00:00+02:00</endOfPeriod>
+							<recurringTimePeriodOfDay xsi:type="TimePeriodByHour">
+								<startTimeOfPeriod>09:00:00</startTimeOfPeriod>
+								<endTimeOfPeriod>16:00:00</endTimeOfPeriod>
+							</recurringTimePeriodOfDay>
+							<recurringDayWeekMonthPeriod>
+								<applicableDay>monday</applicableDay>
+								<applicableDay>tuesday</applicableDay>
+								<applicableDay>wednesday</applicableDay>
+								<applicableDay>thursday</applicableDay>
+								<applicableDay>friday</applicableDay>
+								<applicableDay>saturday</applicableDay>
+								<applicableDay>sunday</applicableDay>
+							</recurringDayWeekMonthPeriod>
+						</validPeriod>
+					</validityTimeSpecification>
+				</validity>
+				<impact>
+					<impactExtension>
+						<impactExtended>
+							<impactOnRoadLayout>D III/1</impactOnRoadLayout>
+						</impactExtended>
+					</impactExtension>
+				</impact>
+				<generalPublicComment>
+					<comment>
+						<values>
+							<value lang="de">null situation type</value>
+						</values>
+					</comment>
+				</generalPublicComment>
+				<generalPublicComment>
+					<comment>
+						<values>
+							<value lang="de">Reinigungsarbeiten</value>
+						</values>
+					</comment>
+				</generalPublicComment>
+				<generalPublicComment>
+					<comment>
+						<values>
+							<value lang="de">vom Verkehrsknoten Bremen-Nord, km 0,000, bis AS Vegesack-Mitte, km 7,000, in Fahrtrichtung Elsfleth Mo bis Do bis 15:00 Uhr und freitags bis 13:00 Uhr  von AS Vegesack-Mitte, km 7 ,000, bis Verkehrsknoten Bremen-Nord, km 0,000, in Fahrtrichtung BAB A 27 ab 09:00 Uhr:  					wechselweise   				  					Sperrung eines Fahrstreifens;</value>
+						</values>
+					</comment>
+				</generalPublicComment>
+				<urlLink>
+					<urlLinkAddress>http://vmz.bremen.de/baustellen/aktuell/?feature=vis-vmz-hb-9157</urlLinkAddress>
+				</urlLink>
+				<groupOfLocations xsi:type="Linear">
+					<alertCLinear xsi:type="AlertCMethod2Linear">
+						<alertCLocationCountryCode>D</alertCLocationCountryCode>
+						<alertCLocationTableNumber>141128</alertCLocationTableNumber>
+						<alertCLocationTableVersion>14.0</alertCLocationTableVersion>
+						<alertCDirection>
+							<alertCDirectionCoded>both</alertCDirectionCoded>
+						</alertCDirection>
+						<alertCMethod2PrimaryPointLocation>
+							<alertCLocation>
+								<alertCLocationName>
+									<values>
+										<value>Verkehrsknoten Bremen-Nord</value>
+									</values>
+								</alertCLocationName>
+								<specificLocation>34573</specificLocation>
+							</alertCLocation>
+						</alertCMethod2PrimaryPointLocation>
+						<alertCMethod2SecondaryPointLocation>
+							<alertCLocation>
+								<alertCLocationName>
+									<values>
+										<value>Kreinsloger</value>
+									</values>
+								</alertCLocationName>
+								<specificLocation>34532</specificLocation>
+							</alertCLocation>
+						</alertCMethod2SecondaryPointLocation>
+					</alertCLinear>
+					<linearExtension>
+						<extendedLinear>
+							<linearByCoordinates>
+								<roadName>
+									<values>
+										<value lang="de">zwischen Verkehrsknoten Bremen-Nord und Kreinsloger</value>
+									</values>
+								</roadName>
+								<roadNumber>A270</roadNumber>
+								<start>
+									<latitude>8.7094758985601</latitude>
+									<longitude>53.17910549552</longitude>
+								</start>
+								<intermediate index="0">
+									<pointCoordinates>
+										<latitude>8.7088464398964</latitude>
+										<longitude>53.178771136377</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="1">
+									<pointCoordinates>
+										<latitude>8.7048411500858</latitude>
+										<longitude>53.175821718299</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="2">
+									<pointCoordinates>
+										<latitude>8.7024378908088</latitude>
+										<longitude>53.174689944047</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="3">
+									<pointCoordinates>
+										<latitude>8.699519647401</latitude>
+										<longitude>53.174141280357</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="4">
+									<pointCoordinates>
+										<latitude>8.6929535997334</latitude>
+										<longitude>53.173686755546</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="5">
+									<pointCoordinates>
+										<latitude>8.6885474820746</latitude>
+										<longitude>53.173378077441</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="6">
+									<pointCoordinates>
+										<latitude>8.6836838853793</latitude>
+										<longitude>53.172966503181</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="7">
+									<pointCoordinates>
+										<latitude>8.6808227201127</latitude>
+										<longitude>53.173035185256</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="8">
+									<pointCoordinates>
+										<latitude>8.676989091679</latitude>
+										<longitude>53.173069397116</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="9">
+									<pointCoordinates>
+										<latitude>8.6757299543267</latitude>
+										<longitude>53.173069397116</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="10">
+									<pointCoordinates>
+										<latitude>8.6746429105433</latitude>
+										<longitude>53.172966503181</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="11">
+									<pointCoordinates>
+										<latitude>8.6735558641405</latitude>
+										<longitude>53.172692032841</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="12">
+									<pointCoordinates>
+										<latitude>8.6698363919893</latitude>
+										<longitude>53.17186886721</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="13">
+									<pointCoordinates>
+										<latitude>8.66811977822</latitude>
+										<longitude>53.171834653607</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="14">
+									<pointCoordinates>
+										<latitude>8.6656019357073</latitude>
+										<longitude>53.171971763777</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="15">
+									<pointCoordinates>
+										<latitude>8.6570188655512</latitude>
+										<longitude>53.172486242914</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="16">
+									<pointCoordinates>
+										<latitude>8.6531852384271</latitude>
+										<longitude>53.173138079026</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="17">
+									<pointCoordinates>
+										<latitude>8.6495803495116</latitude>
+										<longitude>53.173961219522</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="18">
+									<pointCoordinates>
+										<latitude>8.6470625043795</latitude>
+										<longitude>53.174475674803</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="19">
+									<pointCoordinates>
+										<latitude>8.6453458906103</latitude>
+										<longitude>53.17478434501</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="20">
+									<pointCoordinates>
+										<latitude>8.6409972806652</latitude>
+										<longitude>53.174887234586</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="21">
+									<pointCoordinates>
+										<latitude>8.6394523282728</latitude>
+										<longitude>53.174887234586</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="22">
+									<pointCoordinates>
+										<latitude>8.6384223600112</latitude>
+										<longitude>53.175024335002</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="23">
+									<pointCoordinates>
+										<latitude>8.6373353136084</latitude>
+										<longitude>53.175367212075</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="24">
+									<pointCoordinates>
+										<latitude>8.6362478402523</latitude>
+										<longitude>53.175675875868</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="25">
+									<pointCoordinates>
+										<latitude>8.6280080928501</latitude>
+										<longitude>53.179551217581</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="26">
+									<pointCoordinates>
+										<latitude>8.6270356309927</latitude>
+										<longitude>53.179894058473</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="27">
+									<pointCoordinates>
+										<latitude>8.6248040337474</latitude>
+										<longitude>53.180340029782</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="28">
+									<pointCoordinates>
+										<latitude>8.623058666776</latitude>
+										<longitude>53.180425673933</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="29">
+									<pointCoordinates>
+										<latitude>8.6079524656062</latitude>
+										<longitude>53.181042926507</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="30">
+									<pointCoordinates>
+										<latitude>8.6049771440572</latitude>
+										<longitude>53.18087138306</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="31">
+									<pointCoordinates>
+										<latitude>8.6034321916649</latitude>
+										<longitude>53.18087138306</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="32">
+									<pointCoordinates>
+										<latitude>8.6015439165186</latitude>
+										<longitude>53.180940051695</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="33">
+									<pointCoordinates>
+										<latitude>8.6001706255032</latitude>
+										<longitude>53.181042926507</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="34">
+									<pointCoordinates>
+										<latitude>8.5989114894606</latitude>
+										<longitude>53.181077132767</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="35">
+									<pointCoordinates>
+										<latitude>8.5977098598221</latitude>
+										<longitude>53.180940051695</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="36">
+									<pointCoordinates>
+										<latitude>8.5950778623366</latitude>
+										<longitude>53.181274393932</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="37">
+									<pointCoordinates>
+										<latitude>8.5927316785815</latitude>
+										<longitude>53.18172009424</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="38">
+									<pointCoordinates>
+										<latitude>8.5901567579275</latitude>
+										<longitude>53.182371789275</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="39">
+									<pointCoordinates>
+										<latitude>8.5870097776209</latitude>
+										<longitude>53.183160292966</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="40">
+									<pointCoordinates>
+										<latitude>8.5828899045746</latitude>
+										<longitude>53.184634903385</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="41">
+									<pointCoordinates>
+										<latitude>8.581859936313</latitude>
+										<longitude>53.185149230668</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="42">
+									<pointCoordinates>
+										<latitude>8.5801433225437</latitude>
+										<longitude>53.186554855762</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="43">
+									<pointCoordinates>
+										<latitude>8.5791133542821</latitude>
+										<longitude>53.187240678679</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="44">
+									<pointCoordinates>
+										<latitude>8.577225079136</latitude>
+										<longitude>53.188166407095</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="45">
+									<pointCoordinates>
+										<latitude>8.5744214189638</latitude>
+										<longitude>53.188955060857</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="46">
+									<pointCoordinates>
+										<latitude>8.5712885988349</latitude>
+										<longitude>53.189546477902</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="47">
+									<pointCoordinates>
+										<latitude>8.5692286623117</latitude>
+										<longitude>53.190266451904</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="48">
+									<pointCoordinates>
+										<latitude>8.5673974653067</latitude>
+										<longitude>53.191192113432</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="49">
+									<pointCoordinates>
+										<latitude>8.5661958356682</latitude>
+										<longitude>53.192186151371</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<end>
+									<latitude>8.5648796214844</latitude>
+									<longitude>53.193180422061</longitude>
+								</end>
+							</linearByCoordinates>
+						</extendedLinear>
+					</linearExtension>
+				</groupOfLocations>
+				<roadworksExtension>
+					<roadworksExtended>
+						<internalRoadworksIdentifier/>
+					</roadworksExtended>
+				</roadworksExtension>
+				<roadMaintenanceType>roadworks</roadMaintenanceType>
+			</situationRecord>
+		</situation>
+		<situation id="vis-vmz-hb-9226" version="1503056965">
+			<headerInformation>
+				<confidentiality>noRestriction</confidentiality>
+				<informationStatus>technicalExercise</informationStatus>
+			</headerInformation>
+			<situationRecord id="vis-vmz-hb-9226" version="1503056965" xsi:type="MaintenanceWorks">
+				<situationRecordCreationTime>2017-07-27T13:59:36+02:00</situationRecordCreationTime>
+				<situationRecordVersionTime>2017-08-18T13:49:25+02:00</situationRecordVersionTime>
+				<probabilityOfOccurrence>certain</probabilityOfOccurrence>
+				<validity>
+					<validityStatus>definedByValidityTimeSpec</validityStatus>
+					<validityTimeSpecification>
+						<overallStartTime>2017-09-17T09:00:00+02:00</overallStartTime>
+						<overallEndTime>2017-09-17T19:00:00+02:00</overallEndTime>
+						<validPeriod>
+							<startOfPeriod>2017-09-17T09:00:00+02:00</startOfPeriod>
+							<endOfPeriod>2017-09-17T19:00:00+02:00</endOfPeriod>
+							<recurringTimePeriodOfDay xsi:type="TimePeriodByHour">
+								<startTimeOfPeriod>09:00:00</startTimeOfPeriod>
+								<endTimeOfPeriod>19:00:00</endTimeOfPeriod>
+							</recurringTimePeriodOfDay>
+							<recurringDayWeekMonthPeriod>
+								<applicableDay>monday</applicableDay>
+								<applicableDay>tuesday</applicableDay>
+								<applicableDay>wednesday</applicableDay>
+								<applicableDay>thursday</applicableDay>
+								<applicableDay>friday</applicableDay>
+								<applicableDay>saturday</applicableDay>
+								<applicableDay>sunday</applicableDay>
+							</recurringDayWeekMonthPeriod>
+						</validPeriod>
+					</validityTimeSpecification>
+				</validity>
+				<impact>
+					<impactExtension>
+						<impactExtended>
+							<impactOnRoadLayout>D III/1</impactOnRoadLayout>
+						</impactExtended>
+					</impactExtension>
+				</impact>
+				<generalPublicComment>
+					<comment>
+						<values>
+							<value lang="de">Fahrbahninstandsetzung</value>
+						</values>
+					</comment>
+				</generalPublicComment>
+				<generalPublicComment>
+					<comment>
+						<values>
+							<value lang="de">Veranstaltung   					Straßenfest</value>
+						</values>
+					</comment>
+				</generalPublicComment>
+				<generalPublicComment>
+					<comment>
+						<values>
+							<value lang="de">Vollsperrung;</value>
+						</values>
+					</comment>
+				</generalPublicComment>
+				<urlLink>
+					<urlLinkAddress>http://vmz.bremen.de/baustellen/aktuell/?feature=vis-vmz-hb-9226</urlLinkAddress>
+				</urlLink>
+				<groupOfLocations xsi:type="Linear">
+					<alertCLinear xsi:type="AlertCMethod2Linear">
+						<alertCLocationCountryCode>D</alertCLocationCountryCode>
+						<alertCLocationTableNumber>141128</alertCLocationTableNumber>
+						<alertCLocationTableVersion>14.0</alertCLocationTableVersion>
+						<alertCDirection>
+							<alertCDirectionCoded>positive</alertCDirectionCoded>
+						</alertCDirection>
+						<alertCMethod2PrimaryPointLocation>
+							<alertCLocation>
+								<alertCLocationName>
+									<values>
+										<value>Gastfeldstraße</value>
+									</values>
+								</alertCLocationName>
+								<specificLocation>24545</specificLocation>
+							</alertCLocation>
+						</alertCMethod2PrimaryPointLocation>
+						<alertCMethod2SecondaryPointLocation>
+							<alertCLocation>
+								<alertCLocationName>
+									<values>
+										<value>Kornstraße</value>
+									</values>
+								</alertCLocationName>
+								<specificLocation>43220</specificLocation>
+							</alertCLocation>
+						</alertCMethod2SecondaryPointLocation>
+					</alertCLinear>
+					<linearExtension>
+						<extendedLinear>
+							<linearByCoordinates>
+								<roadName>
+									<values>
+										<value lang="de">zwischen Georg-Wulff-Straße und Friedrich-Ebert-Straße</value>
+									</values>
+								</roadName>
+								<roadNumber>B6 Neuenlander Straße</roadNumber>
+								<start>
+									<latitude>8.8067067270883</latitude>
+									<longitude>53.060436441982</longitude>
+								</start>
+								<intermediate index="0">
+									<pointCoordinates>
+										<latitude>8.8065161023104</latitude>
+										<longitude>53.060348591531</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="1">
+									<pointCoordinates>
+										<latitude>8.804519385637</latitude>
+										<longitude>53.059300014048</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<end>
+									<latitude>8.804519385637</latitude>
+									<longitude>53.059300014048</longitude>
+								</end>
+							</linearByCoordinates>
+						</extendedLinear>
+					</linearExtension>
+				</groupOfLocations>
+				<subjects>
+					<subjectTypeOfWorks>road</subjectTypeOfWorks>
+				</subjects>
+				<roadworksExtension>
+					<roadworksExtended>
+						<internalRoadworksIdentifier>RP6</internalRoadworksIdentifier>
+					</roadworksExtended>
+				</roadworksExtension>
+				<roadMaintenanceType>repairWork</roadMaintenanceType>
+			</situationRecord>
+		</situation>
+		<situation id="vis-vmz-hb-9295" version="1504266435">
+			<headerInformation>
+				<confidentiality>noRestriction</confidentiality>
+				<informationStatus>technicalExercise</informationStatus>
+			</headerInformation>
+			<situationRecord id="vis-vmz-hb-9295" version="1504266435" xsi:type="MaintenanceWorks">
+				<situationRecordCreationTime>2017-08-04T16:47:06+02:00</situationRecordCreationTime>
+				<situationRecordVersionTime>2017-09-01T13:47:15+02:00</situationRecordVersionTime>
+				<probabilityOfOccurrence>certain</probabilityOfOccurrence>
+				<validity>
+					<validityStatus>definedByValidityTimeSpec</validityStatus>
+					<validityTimeSpecification>
+						<overallStartTime>2017-09-08T09:00:00+02:00</overallStartTime>
+						<overallEndTime>2017-09-08T14:00:00+02:00</overallEndTime>
+						<validPeriod>
+							<startOfPeriod>2017-09-08T09:00:00+02:00</startOfPeriod>
+							<endOfPeriod>2017-09-08T14:00:00+02:00</endOfPeriod>
+							<recurringTimePeriodOfDay xsi:type="TimePeriodByHour">
+								<startTimeOfPeriod>09:00:00</startTimeOfPeriod>
+								<endTimeOfPeriod>14:00:00</endTimeOfPeriod>
+							</recurringTimePeriodOfDay>
+							<recurringDayWeekMonthPeriod>
+								<applicableDay>monday</applicableDay>
+								<applicableDay>tuesday</applicableDay>
+								<applicableDay>wednesday</applicableDay>
+								<applicableDay>thursday</applicableDay>
+								<applicableDay>friday</applicableDay>
+								<applicableDay>saturday</applicableDay>
+								<applicableDay>sunday</applicableDay>
+							</recurringDayWeekMonthPeriod>
+						</validPeriod>
+					</validityTimeSpecification>
+				</validity>
+				<impact>
+					<impactExtension>
+						<impactExtended>
+							<impactOnRoadLayout>D III/2a</impactOnRoadLayout>
+						</impactExtended>
+					</impactExtension>
+				</impact>
+				<generalPublicComment>
+					<comment>
+						<values>
+							<value lang="de">Brückenprüfung</value>
+						</values>
+					</comment>
+				</generalPublicComment>
+				<generalPublicComment>
+					<comment>
+						<values>
+							<value lang="de">Brückeninspektion</value>
+						</values>
+					</comment>
+				</generalPublicComment>
+				<generalPublicComment>
+					<comment>
+						<values>
+							<value lang="de">Sperrung des rechten Fahrstreifens</value>
+						</values>
+					</comment>
+				</generalPublicComment>
+				<urlLink>
+					<urlLinkAddress>http://vmz.bremen.de/baustellen/aktuell/?feature=vis-vmz-hb-9295</urlLinkAddress>
+				</urlLink>
+				<groupOfLocations xsi:type="Linear">
+					<alertCLinear xsi:type="AlertCMethod2Linear">
+						<alertCLocationCountryCode>D</alertCLocationCountryCode>
+						<alertCLocationTableNumber>141128</alertCLocationTableNumber>
+						<alertCLocationTableVersion>14.0</alertCLocationTableVersion>
+						<alertCDirection>
+							<alertCDirectionCoded>positive</alertCDirectionCoded>
+						</alertCDirection>
+						<alertCMethod2PrimaryPointLocation>
+							<alertCLocation>
+								<alertCLocationName>
+									<values>
+										<value>AS  Lüssum</value>
+									</values>
+								</alertCLocationName>
+								<specificLocation>34539</specificLocation>
+							</alertCLocation>
+						</alertCMethod2PrimaryPointLocation>
+						<alertCMethod2SecondaryPointLocation>
+							<alertCLocation>
+								<alertCLocationName>
+									<values>
+										<value>AS Blumenthal</value>
+									</values>
+								</alertCLocationName>
+								<specificLocation>34502</specificLocation>
+							</alertCLocation>
+						</alertCMethod2SecondaryPointLocation>
+					</alertCLinear>
+					<linearExtension>
+						<extendedLinear>
+							<linearByCoordinates>
+								<roadName>
+									<values>
+										<value lang="de">zwischen AS Lüssum und AS Blumenthal</value>
+									</values>
+								</roadName>
+								<roadNumber>A270</roadNumber>
+								<start>
+									<latitude>8.58818180809</latitude>
+									<longitude>53.182866497978</longitude>
+								</start>
+								<intermediate index="0">
+									<pointCoordinates>
+										<latitude>8.5786472085589</latitude>
+										<longitude>53.187546841915</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="1">
+									<pointCoordinates>
+										<latitude>8.5880027536017</latitude>
+										<longitude>53.182892215549</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="2">
+									<pointCoordinates>
+										<latitude>8.5833678964245</latitude>
+										<longitude>53.184383808285</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="3">
+									<pointCoordinates>
+										<latitude>8.5818873170486</latitude>
+										<longitude>53.185091010849</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="4">
+									<pointCoordinates>
+										<latitude>8.5809217218033</latitude>
+										<longitude>53.185708196285</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="5">
+									<pointCoordinates>
+										<latitude>8.5798917535417</latitude>
+										<longitude>53.186582527114</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<intermediate index="6">
+									<pointCoordinates>
+										<latitude>8.5790549043292</latitude>
+										<longitude>53.187212548573</longitude>
+									</pointCoordinates>
+								</intermediate>
+								<end>
+									<latitude>8.5786686662311</latitude>
+									<longitude>53.187521127135</longitude>
+								</end>
+							</linearByCoordinates>
+						</extendedLinear>
+					</linearExtension>
+				</groupOfLocations>
+				<subjects>
+					<subjectTypeOfWorks>bridge</subjectTypeOfWorks>
+				</subjects>
+				<roadworksExtension>
+					<roadworksExtended>
+						<internalRoadworksIdentifier>RP18</internalRoadworksIdentifier>
+					</roadworksExtended>
+				</roadworksExtension>
+				<roadMaintenanceType>other</roadMaintenanceType>
+			</situationRecord>
+		</situation>
+		<situation id="vis-vmz-hb-9514" version="1503658702">
+			<headerInformation>
+				<confidentiality>noRestriction</confidentiality>
+				<informationStatus>technicalExercise</informationStatus>
+			</headerInformation>
+			<situationRecord id="vis-vmz-hb-9514" version="1503658702" xsi:type="MaintenanceWorks">
+				<situationRecordCreationTime>2017-08-25T12:55:26+02:00</situationRecordCreationTime>
+				<situationRecordVersionTime>2017-08-25T12:58:22+02:00</situationRecordVersionTime>
+				<probabilityOfOccurrence>certain</probabilityOfOccurrence>
+				<validity>
+					<validityStatus>definedByValidityTimeSpec</validityStatus>
+					<validityTimeSpecification>
+						<overallStartTime>2017-10-02T09:00:00+02:00</overallStartTime>
+						<overallEndTime>2017-10-13T12:00:00+02:00</overallEndTime>
+						<validPeriod>
+							<startOfPeriod>2017-10-02T09:00:00+02:00</startOfPeriod>
+							<endOfPeriod>2017-10-13T12:00:00+02:00</endOfPeriod>
+							<recurringTimePeriodOfDay xsi:type="TimePeriodByHour">
+								<startTimeOfPeriod>00:00:00</startTimeOfPeriod>
+								<endTimeOfPeriod>00:00:00</endTimeOfPeriod>
+							</recurringTimePeriodOfDay>
+							<recurringDayWeekMonthPeriod>
+								<applicableDay>monday</applicableDay>
+								<applicableDay>tuesday</applicableDay>
+								<applicableDay>wednesday</applicableDay>
+								<applicableDay>thursday</applicableDay>
+								<applicableDay>friday</applicableDay>
+								<applicableDay>saturday</applicableDay>
+								<applicableDay>sunday</applicableDay>
+							</recurringDayWeekMonthPeriod>
+						</validPeriod>
+					</validityTimeSpecification>
+				</validity>
+				<impact>
+					<impactExtension>
+						<impactExtended>
+							<impactOnRoadLayout>D III/1</impactOnRoadLayout>
+						</impactExtended>
+					</impactExtension>
+				</impact>
+				<generalPublicComment>
+					<comment>
+						<values>
+							<value lang="de">Grünpflege</value>
+						</values>
+					</comment>
+				</generalPublicComment>
+				<generalPublicComment>
+					<comment>
+						<values>
+							<value lang="de">Grünpflege</value>
+						</values>
+					</comment>
+				</generalPublicComment>
+				<generalPublicComment>
+					<comment>
+						<values>
+							<value lang="de">Mo - Do   				  					09:00 - 14:00 Uhr;  				  					 					Fr   				 09:00 - 12:00 Uhr:  				 wechselweise   				 Sperrung eines Fahrstreifens;</value>
+						</values>
+					</comment>
+				</generalPublicComment>
+				<urlLink>
+					<urlLinkAddress>http://vmz.bremen.de/baustellen/aktuell/?feature=vis-vmz-hb-9514</urlLinkAddress>
+				</urlLink>
+				<groupOfLocations xsi:type="Linear">
+					<alertCLinear xsi:type="AlertCMethod2Linear">
+						<alertCLocationCountryCode>D</alertCLocationCountryCode>
+						<alertCLocationTableNumber>141128</alertCLocationTableNumber>
+						<alertCLocationTableVersion>14.0</alertCLocationTableVersion>
+						<alertCDirection>
+							<alertCDirectionCoded>positive</alertCDirectionCoded>
+						</alertCDirection>
+						<alertCMethod2PrimaryPointLocation>
+							<alertCLocation>
+								<alertCLocationName>
+									<values>
+										<value>Landesgrenze</value>
+									</values>
+								</alertCLocationName>
+								<specificLocation>34582</specificLocation>
+							</alertCLocation>
+						</alertCMethod2PrimaryPointLocation>
+						<alertCMethod2SecondaryPointLocation>
+							<alertCLocation>
+								<alertCLocationName>
+									<values>
+										<value>A27</value>
+									</values>
+								</alertCLocationName>
+								<specificLocation>34917</specificLocation>
+							</alertCLocation>
+						</alertCMethod2SecondaryPointLocation>
+					</alertCLinear>
+				</groupOfLocations>
+				<roadworksExtension>
+					<roadworksExtended>
+						<internalRoadworksIdentifier>RP7</internalRoadworksIdentifier>
+					</roadworksExtended>
+				</roadworksExtension>
+				<roadMaintenanceType>grassCuttingWork</roadMaintenanceType>
+			</situationRecord>
+		</situation>
+		<situation id="vis-vmz-hb-9620" version="1504267206">
+			<headerInformation>
+				<confidentiality>noRestriction</confidentiality>
+				<informationStatus>technicalExercise</informationStatus>
+			</headerInformation>
+			<situationRecord id="vis-vmz-hb-9620" version="1504267206" xsi:type="MaintenanceWorks">
+				<situationRecordCreationTime>2017-08-31T14:11:12+02:00</situationRecordCreationTime>
+				<situationRecordVersionTime>2017-09-01T14:00:06+02:00</situationRecordVersionTime>
+				<probabilityOfOccurrence>certain</probabilityOfOccurrence>
+				<validity>
+					<validityStatus>definedByValidityTimeSpec</validityStatus>
+					<validityTimeSpecification>
+						<overallStartTime>2017-09-19T09:00:00+02:00</overallStartTime>
+						<overallEndTime>2017-09-20T15:00:00+02:00</overallEndTime>
+						<validPeriod>
+							<startOfPeriod>2017-09-19T09:00:00+02:00</startOfPeriod>
+							<endOfPeriod>2017-09-20T15:00:00+02:00</endOfPeriod>
+							<recurringTimePeriodOfDay xsi:type="TimePeriodByHour">
+								<startTimeOfPeriod>09:00:00</startTimeOfPeriod>
+								<endTimeOfPeriod>15:00:00</endTimeOfPeriod>
+							</recurringTimePeriodOfDay>
+							<recurringDayWeekMonthPeriod>
+								<applicableDay>monday</applicableDay>
+								<applicableDay>tuesday</applicableDay>
+								<applicableDay>wednesday</applicableDay>
+								<applicableDay>thursday</applicableDay>
+								<applicableDay>friday</applicableDay>
+								<applicableDay>saturday</applicableDay>
+								<applicableDay>sunday</applicableDay>
+							</recurringDayWeekMonthPeriod>
+						</validPeriod>
+					</validityTimeSpecification>
+				</validity>
+				<impact>
+					<impactExtension>
+						<impactExtended>
+							<impactOnRoadLayout>D III/1</impactOnRoadLayout>
+						</impactExtended>
+					</impactExtension>
+				</impact>
+				<generalPublicComment>
+					<comment>
+						<values>
+							<value lang="de">Fahrbahninstandsetzung</value>
+						</values>
+					</comment>
+				</generalPublicComment>
+				<generalPublicComment>
+					<comment>
+						<values>
+							<value lang="de">Einbau von Induktionsschleifen</value>
+						</values>
+					</comment>
+				</generalPublicComment>
+				<generalPublicComment>
+					<comment>
+						<values>
+							<value lang="de">Einengung der Fahrbahn;  				  					Einengung des Geh-/Radweges;  				  					Halteverbot;</value>
+						</values>
+					</comment>
+				</generalPublicComment>
+				<urlLink>
+					<urlLinkAddress>http://vmz.bremen.de/baustellen/aktuell/?feature=vis-vmz-hb-9620</urlLinkAddress>
+				</urlLink>
+				<groupOfLocations xsi:type="Linear">
+					<alertCLinear xsi:type="AlertCMethod2Linear">
+						<alertCLocationCountryCode>D</alertCLocationCountryCode>
+						<alertCLocationTableNumber>141128</alertCLocationTableNumber>
+						<alertCLocationTableVersion>14.0</alertCLocationTableVersion>
+						<alertCDirection>
+							<alertCDirectionCoded>positive</alertCDirectionCoded>
+						</alertCDirection>
+						<alertCMethod2PrimaryPointLocation>
+							<alertCLocation>
+								<alertCLocationName>
+									<values>
+										<value>in Höhe Haus-Nr. 75</value>
+									</values>
+								</alertCLocationName>
+								<specificLocation>24545</specificLocation>
+							</alertCLocation>
+						</alertCMethod2PrimaryPointLocation>
+						<alertCMethod2SecondaryPointLocation>
+							<alertCLocation>
+								<specificLocation>43220</specificLocation>
+							</alertCLocation>
+						</alertCMethod2SecondaryPointLocation>
+					</alertCLinear>
+				</groupOfLocations>
+				<subjects>
+					<subjectTypeOfWorks>road</subjectTypeOfWorks>
+				</subjects>
+				<roadworksExtension>
+					<roadworksExtended>
+						<internalRoadworksIdentifier>RP6</internalRoadworksIdentifier>
+					</roadworksExtended>
+				</roadworksExtension>
+				<roadMaintenanceType>repairWork</roadMaintenanceType>
+			</situationRecord>
+		</situation>
+	</payloadPublication>
+</d2LogicalModel>

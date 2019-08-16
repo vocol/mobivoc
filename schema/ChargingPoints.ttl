@@ -15,7 +15,6 @@
 
 @prefix mv: <http://schema.mobivoc.org/#> .
 
-
 mv:AS_3112_Type_I
     mv:ocmConnectionID "29" ;
     a mv:PlugType ;
@@ -212,6 +211,7 @@ All NEMA 6 devices are three-wire grounding devices (hot-hot-ground) used for 20
     rdfs:label "NEMA 6-20"@en ;
     rdfs:seeAlso <https://en.wikipedia.org/wiki/NEMA_connector#NEMA_6> ;
     foaf:depiction <https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/NEMA_simplified_pins.svg/765px-NEMA_simplified_pins.svg.png> .
+
 
 mv:Plug
     a rdfs:Class, owl:Class ;

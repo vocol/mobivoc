@@ -69,29 +69,29 @@ ex:exitAdress
 
 #capacite
 ex:capacity
-    mv:intendedForVehicle mv:Car ;
+    mv:validForVehicle mv:Car ;
     mv:totalCapacity 5 ;
     a mv:Capacity .
 
 ex:bicycleCapacity
-    mv:intendedForVehicle mv:Bicycle ;
+    mv:validForVehicle mv:Bicycle ;
     mv:totalCapacity 3 ;
     a mv:Capacity .
 
 ex:carSharingCapacity
-    mv:intendedForVehicle mv:Car ;
-    mv:parkingUsageType mv:CarsharingParkingSpace ;
+    mv:validForVehicle mv:Car ;
+ #   mv:parkingUsageType mv:CarsharingParkingSpace ;
     mv:totalCapacity 0 ;
     a mv:Capacity .
 
 ex:disabledCapacity
-    mv:intendedForVehicle mv:Car ;
-    mv:parkingUsageType mv:DisabledParkingSpace ;
+    mv:validForVehicle mv:Car ;
+  #  mv:parkingUsageType mv:DisabledParkingSpace ;
     mv:totalCapacity 1 ;
     a mv:Capacity .
 
 ex:motorbikeCapacity
-    mv:intendedForVehicle mv:Motorbike ;
+    mv:validForVehicle mv:Motorbike ;
     mv:totalCapacity 0 ;
     a mv:Capacity .
 
