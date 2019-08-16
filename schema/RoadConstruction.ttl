@@ -86,7 +86,7 @@ mv:recordUrl
 mv:probabilityOfOccurence
     a owl:DatatypeProperty ;
     rdfs:domain mv:SituationRecord ; 
-    rdfs:range xsd:anyURI ;
+    rdfs:range xsd:string ;
     rdfs:comment "The probabily of occurence of a situation record."@en ;
     rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "probability of occurence"@en ;
@@ -562,7 +562,7 @@ mv:endLatitude
 .
 
 mv:intermediatePointList
-	a owl:DatatypeProperty ;
+	a owl:ObjectProperty ;
     rdfs:domain mv:LinearExtension ; 
     rdfs:range olo:OrderedList;
     rdfs:comment "An ordered list of intermediate geospatial points to where the situation record takes place."@en ;
