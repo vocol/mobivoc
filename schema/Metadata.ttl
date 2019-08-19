@@ -19,10 +19,10 @@
     rdfs:label "MobiVoc: Open Mobility Vocabulary"@en ;
     rdfs:comment "MobiVoc is a standardized vocabulary (also known as 'schema', 'Data Dictionary' or 'ontology') for mobility data. Currently, the following topics are covered: Electric Charging Points, Parking Facilities, Highway Roadworks sites (Datex II)"@en ;
     cc:license <http://creativecommons.org/licenses/by/4.0/> ;
-    dct:creator ecc:aweilandt, ecc:mbruemmer ;
-    dct:contributor <http://sebastian.tramp.name>, <http://purl.org/net/clange>, <http://np00.github.io/#i> ;
+    dct:creator ecc:aweilandt, ecc:mbruemmer, <http://np00.github.io/#i>  ;
+    dct:contributor <http://sebastian.tramp.name>, <http://purl.org/net/clange>;
     dct:created "2014-08-05"^^xsd:date ;
-    dct:modified "2019-07-04"^^xsd:date ;
+    dct:modified "2019-08-19"^^xsd:date ;
     dct:publisher ecc:eccenca-GmbH ;
     vann:preferredNamespacePrefix "mv" ;
     vann:preferredNamespaceUri "http://schema.mobivoc.org/#" ;

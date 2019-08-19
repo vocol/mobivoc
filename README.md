@@ -64,6 +64,5 @@ The API call used to retrieve the individual datasets is:
 ### Examples
 
 * [examples/openchargemap.ttl](examples/openchargemap.ttl) - Example instances for charging stations
-* [examples/fuelstation.ttl](examples/fuelstation.ttl) - Example instances for fuel stations
 * [examples/parkingfacility.ttl](examples/parkingfacility.ttl) - Example instances for parking facilities
 * [examples/roadworks.ttl](examples/roadworks.ttl) - Example instances for highway roadworks

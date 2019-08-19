@@ -10,6 +10,8 @@ TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security se
 ### Added
 
 - added language tags on strings missing language tags
+- added DATEX2 highway roadworks concepts and properties 
+- added instances of example roadworks 
 
 ### Changed
 
