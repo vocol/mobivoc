@@ -17,12 +17,12 @@
 <http://schema.mobivoc.org/#>
     a voaf:Vocabulary, owl:Ontology ;
     rdfs:label "MobiVoc: Open Mobility Vocabulary"@en ;
-    rdfs:comment "MobiVoc is a standardized vocabulary (also known as 'schema', 'Data Dictionary' or 'ontology') for mobility data. Currently, the following topics are covered: Electric Charging Points, Parking Facilities, Highway Roadworks sites (Datex II)"@en ;
-    cc:license <http://creativecommons.org/licenses/by/4.0/> ;
+    rdfs:comment """MobiVoc is a standardized vocabulary (also known as 'schema', 'Data Dictionary' or 'ontology') for mobility data. Currently, the following topics are covered: Electric Charging Points, Parking Facilities, Highway Roadworks sites (Datex II)"""@en ;
+    cc:license <https://creativecommons.org/licenses/by/4.0/> ;
     dct:creator ecc:aweilandt, ecc:mbruemmer, <http://np00.github.io/#i>  ;
     dct:contributor <http://sebastian.tramp.name>, <http://purl.org/net/clange>;
     dct:created "2014-08-05"^^xsd:date ;
-    dct:modified "2019-08-19"^^xsd:date ;
+    dct:modified "2019-08-20"^^xsd:date ;
     dct:publisher ecc:eccenca-GmbH ;
     vann:preferredNamespacePrefix "mv" ;
     vann:preferredNamespaceUri "http://schema.mobivoc.org/#" ;
@@ -54,12 +54,12 @@ ecc:mbruemmer
     a dct:Agent, foaf:Person ;
     foaf:homepage <http://langec.wordpress.com/about/> ;
     s:affiliation <http://dbpedia.org/resource/University_of_Bonn>;
-    foaf:name "Christop Lange" ;
+    foaf:name "Christoph Lange" ;
 .
 
-<http://eis.iai.uni-bonn.de/NiklasPetersen>
+<http://np00.github.io/#i>
     a dct:Agent, foaf:Person ;
-    s:affiliation <http://dbpedia.org/resource/University_of_Bonn>;
+    s:affiliation ecc:eccenca-GmbH;
     foaf:name "Niklas Petersen" ;
 .
 
