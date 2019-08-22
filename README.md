@@ -24,9 +24,9 @@ MobiVoc was extended in the following research projects: [LIMBO](https://www.lim
 
 ## Latest Release
 
-* [mobivoc_v1.0.0.ttl](https://github.com/vocol/mobivoc/releases/download/v1.0.0/mobivoc_v1.0.0.ttl) - Ontology (Turtle document)
-* [mobivoc_v1.0.0.png](https://github.com/vocol/mobivoc/releases/download/v1.0.0/mobivoc_v1.0.0.png) - Class diagramm (PNG)
-* [mobivoc_v1.0.0.svg](https://github.com/vocol/mobivoc/releases/download/v1.0.0/mobivoc_v1.0.0.svg) - Class diagramm (SVG)
+* [mobivoc_v1.1.4.ttl](diagrams/mobivoc_v1.1.4.ttl) - Ontology (Turtle document)
+* [mobivoc_v1.1.4.png](diagrams/mobivoc_v1.1.4.png) - Class diagramm (PNG)
+* [mobivoc_v1.1.4.svg](diagrams/mobivoc_v1.1.4.svg) - Class diagramm (SVG)
 
 ## Links
 
@@ -38,7 +38,7 @@ MobiVoc was extended in the following research projects: [LIMBO](https://www.lim
 
 ## Class diagram
 
-![Class diagram](diagrams/mobivoc.png "Mobivoc class diagram")
+![Class diagram](diagrams/mobivoc_v1.1.4.png "Mobivoc class diagram")
 
 Further diagrams can be found in the [diagrams folder](diagrams).
 
