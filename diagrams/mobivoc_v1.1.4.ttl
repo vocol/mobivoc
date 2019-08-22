@@ -1,0 +1,2100 @@
+@prefix cc:    <http://creativecommons.org/ns#> .
+@prefix wgs:   <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix void:  <http://rdfs.org/ns/void#> .
+@prefix ecc:   <https://ns.eccenca.com/> .
+@prefix datex: <http://vocab.datex.org/terms#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix mv:    <http://schema.mobivoc.org/#> .
+@prefix voaf:  <http://purl.org/vocommons/voaf#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix dbpedia: <http://dbpedia.org/resource/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/2001/vcard-rdf/3.0#> .
+@prefix gr:    <http://purl.org/goodrelations/v1#> .
+@prefix geo:   <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix dbo:   <http://dbpedia.org/> .
+@prefix olo:   <http://purl.org/ontology/olo/core#> .
+@prefix s:     <http://schema.org/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix vann:  <http://purl.org/vocab/vann/> .
+@prefix vs:    <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+mv:Action  a              owl:Class ;
+        rdfs:comment      "Action that is done."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Aktion"@de , "Action"@en ;
+        dct:created       "2017-06-23"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en .
+
+mv:vehicleHeightLimitInM
+        a                 rdf:Property , owl:DatatypeProperty ;
+        rdfs:comment      "Indicates the height limit in meter for vehicles using the parking facility."@en ;
+        rdfs:domain       s:CivicStructure ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Höhenbegrenzung für Fahrzeuge"@de , "vechicle height limit"@en ;
+        rdfs:range        xsd:decimal ;
+        dct:created       "2017-04-13"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en .
+
+mv:Charger  a             owl:Class , rdfs:Class ;
+        rdfs:comment      "Civic structure that supplies electric energy for the recharging of electric vehicles."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Ladegerät"@de , "Charger"@en ;
+        rdfs:subClassOf   s:CivicStructure ;
+        skos:altLabel     "Ladepunkt"@de , "Charging point"@en .
+
+mv:ownedBy  a             rdf:Property , owl:ObjectProperty ;
+        rdfs:comment      "The owner of a civic structure or facility. Owner and operator can be different business entities."@en ;
+        rdfs:domain       s:CivicStructure ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "in Besitz von"@de , "owned by"@en ;
+        rdfs:range        gr:BusinessEntity ;
+        dct:created       "2017-04-05"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en .
+
+mv:startTimeOverall  a    owl:DatatypeProperty ;
+        rdfs:comment      "The overall start time of a situation record validity."@en ;
+        rdfs:domain       mv:Validity ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "start time overall"@en ;
+        rdfs:range        xsd:dateTime ;
+        dct:conformsTo    "https://datex2.eu/" ;
+        dct:created       "2018-01-30"^^xsd:date ;
+        dct:creator       <http://np00.github.io/#i> ;
+        dct:modified      "2018-01-30"^^xsd:date .
+
+mv:batteryCapacityinKW
+        a                 owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Indicates the battery capacity of an electric vehicle in kW."@en ;
+        rdfs:domain       mv:ElectricVehicle ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Batteriekapazität in kW"@de , "battery capacity in kW"@en ;
+        rdfs:range        xsd:double .
+
+mv:Carpooling  a          mv:ParkingFacilityConnection ;
+        rdfs:comment      "Parking facility used for carpooling or ridesharing."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Parken und Mitfahren"@de , "Carpooling" ;
+        skos:altLabel     "Parken und Mitnehmen"@de , "Park & Drive" , "P+M" , "P&M" .
+
+mv:Location  a               owl:Class ;
+        rdfs:comment         "Describes the location of a situation record."@en ;
+        rdfs:isDefinedBy     mv: ;
+        rdfs:label           "Location"@en ;
+        dct:conformsTo       "https://datex2.eu/" ;
+        dct:created          "2018-01-30"^^xsd:date ;
+        dct:creator          <http://np00.github.io/#i> ;
+        dct:modified         "2018-01-30"^^xsd:date ;
+        owl:equivalentClass  datex:Location ;
+        vs:term_status       "testing" .
+
+mv:id   a                 owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "ID of the entity."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "ID"@en , "ID"@de ;
+        rdfs:range        xsd:string ;
+        dct:created       "2017-05-11"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en .
+
+s:Place  a                owl:Class ;
+        rdfs:comment      "Entities that have a somewhat fixed, physical extension."@en ;
+        rdfs:isDefinedBy  s: ;
+        rdfs:label        "Ort"@de , "Place"@en .
+
+mv:SecondaryLocation  a      owl:Class ;
+        rdfs:comment         "The secondary location of an AlertC location describing roadworks."@en ;
+        rdfs:isDefinedBy     mv: ;
+        rdfs:label           "SecondaryLocation"@en ;
+        dct:conformsTo       "https://datex2.eu/" ;
+        dct:created          "2018-01-30"^^xsd:date ;
+        dct:creator          <http://np00.github.io/#i> ;
+        dct:modified         "2018-01-30"^^xsd:date ;
+        owl:equivalentClass  datex:AlertCMethod2SecondaryPointLocation ;
+        vs:term_status       "testing" .
+
+mv:countryCode  a         owl:DatatypeProperty ;
+        rdfs:comment      "The country code where the situation record takes place."@en ;
+        rdfs:domain       mv:AlertCLocation ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "country code"@en ;
+        rdfs:range        xsd:string ;
+        dct:conformsTo    "https://datex2.eu/" ;
+        dct:created       "2018-01-30"^^xsd:date ;
+        dct:creator       <http://np00.github.io/#i> ;
+        dct:modified      "2018-01-30"^^xsd:date .
+
+ecc:aweilandt  a       foaf:Person , dct:Agent ;
+        s:affiliation  ecc:eccenca-GmbH ;
+        foaf:name      "Annette Weilandt" .
+
+mv:probabilityOfOccurence
+        a                 owl:DatatypeProperty ;
+        rdfs:comment      "The probabily of occurence of a situation record."@en ;
+        rdfs:domain       mv:SituationRecord ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "probability of occurence"@en ;
+        rdfs:range        xsd:string ;
+        dct:conformsTo    "https://datex2.eu/" ;
+        dct:created       "2018-01-30"^^xsd:date ;
+        dct:creator       <http://np00.github.io/#i> ;
+        dct:modified      "2018-01-30"^^xsd:date .
+
+s:address  a              owl:ObjectProperty ;
+        rdfs:comment      "Physical address of the item."@en ;
+        rdfs:isDefinedBy  s: ;
+        rdfs:label        "address"@en ;
+        rdfs:range        s:PostalAddress .
+
+mv:startOfPeriod  a       owl:DatatypeProperty ;
+        rdfs:comment      "The start time of a period."@en ;
+        rdfs:domain       mv:Period ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "start of period"@en ;
+        rdfs:range        xsd:dateTime ;
+        dct:conformsTo    "https://datex2.eu/" ;
+        dct:created       "2018-01-30"^^xsd:date ;
+        dct:creator       <http://np00.github.io/#i> ;
+        dct:modified      "2018-01-30"^^xsd:date .
+
+mv:model  a               rdf:Property , owl:DatatypeProperty ;
+        rdfs:comment      "Indicates the model of a product."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Modell"@de , "model"@en ;
+        rdfs:range        xsd:string .
+
+mv:PerpendicularParking
+        a                 mv:ArrangementPattern ;
+        rdfs:comment      "With perpendicular parking, vehicles are parked side to side, perpendicular to an aisle, curb, or wall. This type of parking is commonly used in parking lots and parking facilities."@en , "Bei der Senkrechtaufstellung wird das Fahrzeug mit einem Aufstellwinkel von von 100 gon (90°) geparkt."@de ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Senkrechtaufstellung"@de , "Perpendicular parking"@en ;
+        dct:created       "2017-05-10"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en ;
+        skos:altLabel     "Bay parking"@en ;
+        skos:prefLabel    "Perpendicular parking"@en .
+
+mv:lengthInM  a           owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Indicates the length of an object in meter."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Länge in m"@de , "length in m"@en ;
+        rdfs:range        xsd:double .
+
+mv:picture  a             rdf:Property , owl:DatatypeProperty ;
+        rdfs:comment      "URL of the picture of a civic structure or facility."@en ;
+        rdfs:domain       s:CivicStructure ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Bild"@de , "picture"@en ;
+        rdfs:range        xsd:string ;
+        dct:created       "2017-06-07"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en .
+
+mv:AutomatedParkingGarage
+        a                 owl:Class , rdfs:Class ;
+        rdfs:comment      "Parking garage with an automated parking system that automatically moves cars to the available parking space somewhere in the garage."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Automated parking garage"@en , "Automatisches Parkhaus"@de ;
+        rdfs:subClassOf   mv:ParkingFacility ;
+        dct:created       "2017-04-13"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en .
+
+mv:endLatitude  a         owl:DatatypeProperty ;
+        rdfs:comment      "The ending latitude of a situation record."@en ;
+        rdfs:domain       mv:LinearExtension ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "end latitude"@en ;
+        rdfs:range        geo:long ;
+        dct:conformsTo    "https://datex2.eu/" ;
+        dct:created       "2018-01-30"^^xsd:date ;
+        dct:creator       <http://np00.github.io/#i> ;
+        dct:modified      "2018-01-30"^^xsd:date .
+
+cc:license  a             owl:AnnotationProperty ;
+        rdfs:isDefinedBy  <http://creativecommons.org/ns> .
+
+mv:linearExtension  a     owl:ObjectProperty ;
+        rdfs:comment      "The spatial description of a situation record."@en ;
+        rdfs:domain       mv:Location ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "linear extension"@en ;
+        rdfs:range        mv:LinearExtension ;
+        dct:conformsTo    "https://datex2.eu/" ;
+        dct:created       "2018-01-30"^^xsd:date ;
+        dct:creator       <http://np00.github.io/#i> ;
+        dct:modified      "2018-01-30"^^xsd:date .
+
+cc:License  a             rdfs:Class ;
+        rdfs:comment      "a set of requests/permissions to users of a Work, e.g. a copyright license, the public domain, information for distributors" ;
+        rdfs:isDefinedBy  <https://creativecommons.org/ns#> ;
+        rdfs:label        "License" .
+
+mv:SEV1011_Type_J  a        mv:PlugType ;
+        rdfs:comment        "The Swiss standard, also used in Liechtenstein, is SN SEV 1011:2009 Plugs and socket-outlets for household and similar purposes. The standard defines a hierarchical system of plugs and sockets with two, three and five pins, and 10 A or 16 A ratings. Sockets will accept plugs with the same or fewer pins and the same or lower ratings."@en ;
+        rdfs:isDefinedBy    mv: ;
+        rdfs:label          "SEV1011 Type J"@en ;
+        rdfs:seeAlso        <https://en.wikipedia.org/wiki/AC_power_plugs_and_sockets#10_A_plugs_and_sockets_(Type_J)> ;
+        mv:ocmConnectionID  "1037" ;
+        skos:altLabel       "Type J"@en , "Swiss domestic 3-pin"@en ;
+        foaf:depiction      <https://upload.wikimedia.org/wikipedia/commons/d/da/AC_Power_Plug_Type_J.jpg> .
+
+mv:SAE_J1772-2001  a        mv:PlugType ;
+        rdfs:comment        "SAE J1772 (IEC Type 1) is a North American standard for electrical connectors for electric vehicles maintained by the SAE International and has the formal title \"SAE Surface Vehicle Recommended Practice J1772, SAE Electric Vehicle Conductive Charge Coupler\"."@en ;
+        rdfs:isDefinedBy    mv: ;
+        rdfs:label          "J1772"@en ;
+        rdfs:seeAlso        <https://en.wikipedia.org/wiki/SAE_J1772> ;
+        mv:ocmConnectionID  "7" .
+
+mv:TaxiDrivers  a         mv:UserGroup ;
+        rdfs:comment      "Drivers of a vehicle for hire, used by a single passenger or small group of passengers, often for a non-shared ride. Taxi drivers convey passengers between locations of their choice."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Taxi drivers"@en , "Taxifahrer"@de ;
+        skos:altLabel     "Taxicab drivers"@en , "Cab drivers"@en , "Cabbies"@en-uk ;
+        skos:prefLabel    "Taxifahrer"@de , "Taxi drivers"@en .
+
+mv:roadName  a            owl:DatatypeProperty ;
+        rdfs:comment      "The affected road of a location."@en ;
+        rdfs:domain       mv:LinearExtension ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "road name"@en ;
+        rdfs:range        xsd:string ;
+        dct:conformsTo    "https://datex2.eu/" ;
+        dct:created       "2018-01-30"^^xsd:date ;
+        dct:creator       <http://np00.github.io/#i> ;
+        dct:modified      "2018-01-30"^^xsd:date .
+
+mv:arrangement  a         owl:ObjectProperty , rdf:Property ;
+        rdfs:comment      "Indicates in which pattern a parking space is arranged."@en ;
+        rdfs:domain       [ a            owl:Class ;
+                            owl:unionOf  ( mv:ParkingSpace mv:ParkingFacility )
+                          ] ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Anordnung"@de , "arrangement pattern"@en ;
+        rdfs:range        mv:ArrangementPattern ;
+        dct:created       "2017-05-10"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en .
+
+mv:AllParkingFacilitiesFull
+        a                 mv:CivicStructureStatus ;
+        rdfs:comment      "All parking facilities within a specified area are completely occupied."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Alle Parkmöglichkeiten belegt"@de , "All parking facilities full"@en .
+
+mv:validForUserGroup  a   owl:ObjectProperty , rdf:Property ;
+        rdfs:comment      "Indicates that an entity is valid for a specific group of users."@en ;
+        rdfs:domain       [ a            owl:Class ;
+                            owl:unionOf  ( mv:AccessCondition s:PriceSpecification mv:Capacity )
+                          ] ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "valid for user group"@en , "gültig für Nutzergruppe"@de ;
+        rdfs:range        mv:UserGroup ;
+        dct:created       "2017-09-01"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en .
+
+ecc:eccenca-GmbH  a  foaf:Organization , dct:Agent ;
+        foaf:name  "eccenca GmbH"@en .
+
+mv:rateOfOccupancy  a     rdf:Property , owl:DatatypeProperty ;
+        rdfs:comment      "Indicates the percentage value of parking spaces occupied in a parking facility."@en ;
+        rdfs:domain       mv:ParkingFacility ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Belegungsrate"@de , "rate of occupancy"@en ;
+        rdfs:range        xsd:string ;
+        dct:created       "2017-05-10"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en .
+
+mv:SAE_J1772-2009  a        mv:PlugType ;
+        rdfs:comment        "SAE J1772 (IEC Type 1) is a North American standard for electrical connectors for electric vehicles maintained by the SAE International and has the formal title \"SAE Surface Vehicle Recommended Practice J1772, SAE Electric Vehicle Conductive Charge Coupler\". \n    The SAE J1772-2009 connector specification has been added to the international IEC 62196-2 standard."@en ;
+        rdfs:isDefinedBy    mv: ;
+        rdfs:label          "J1772 2009"@en ;
+        rdfs:seeAlso        <https://en.wikipedia.org/wiki/IEC_62196#Type_1_(SAE_J1772-2009),_Yazaki> ;
+        mv:ocmConnectionID  "1" ;
+        skos:altLabel       "IEC 62196 Type 1"@en ;
+        foaf:depiction      <https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/SAE_J1772_7058855567.jpg/1280px-SAE_J1772_7058855567.jpg> .
+
+mv:heightInM  a           owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Indicates the height of an object in meter."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Höhe in m"@de , "height in m"@en ;
+        rdfs:range        xsd:double .
+
+mv:RealTimeCapacity  a    rdfs:Class , owl:Class ;
+        rdfs:comment      "Real-time capacity of a civic structure."@en , "Real-time capacity of a parking facility or parking space."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Real time capacity"@en , "Echtzeit-Kapazität"@de ;
+        rdfs:subClassOf   mv:Capacity ;
+        dct:created       "2017-04-05"^^xsd:date , "2017-05-15"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en .
+
+mv:ParkingFacilityEntrance
+        a                 rdfs:Class , owl:Class ;
+        rdfs:comment      "Entrance of a parking facility where vehicles can enter the parking facility."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Entrance"@en , "Einfahrt"@de ;
+        rdfs:subClassOf   s:CivicStructure ;
+        dct:created       "2017-05-10"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en .
+
+mv:situationSubject  a    owl:DatatypeProperty ;
+        rdfs:comment      "The speedlimit subject of a situation."@en ;
+        rdfs:domain       mv:SituationRecord ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "situation subject"@en ;
+        rdfs:range        xsd:integer ;
+        dct:conformsTo    "https://datex2.eu/" ;
+        dct:created       "2018-01-30"^^xsd:date ;
+        dct:creator       <http://np00.github.io/#i> ;
+        dct:modified      "2018-01-30"^^xsd:date .
+
+mv:ParkAndRideServiceOperating
+        a                 mv:CivicStructureStatus ;
+        rdfs:comment      "Park and ride services are operating until the specified time."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Park and ride service operating"@en , "P+R-Service vorhanden"@de .
+
+mv:Faulty  a              mv:CivicStructureStatus ;
+        rdfs:comment      "The civic structure is not operating normally."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Faulty"@en , "Defekt"@de .
+
+mv:generalPublicComment
+        a                       owl:DatatypeProperty ;
+        rdfs:comment            "A general public comment about a situation record."@en ;
+        rdfs:domain             mv:SituationRecord ;
+        rdfs:isDefinedBy        mv: ;
+        rdfs:label              "general public comment"@en ;
+        rdfs:range              xsd:string ;
+        dct:conformsTo          "https://datex2.eu/" ;
+        dct:created             "2018-01-30"^^xsd:date ;
+        dct:creator             <http://np00.github.io/#i> ;
+        dct:modified            "2018-01-30"^^xsd:date ;
+        owl:equivalentProperty  datex:generalPublicComment .
+
+s:Organization  a     rdfs:Class ;
+        rdfs:comment  "An organization such as a school, NGO, corporation, club, etc." ;
+        rdfs:label    "Organization" .
+
+mv:AccessCondition  a     owl:Class ;
+        rdfs:comment      "A condition that has to be fullfilled to get access to a civic structure."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Zugangsbedingung"@de , "Access condition"@en ;
+        dct:created       "2017-08-29"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en .
+
+mv:trafficConstrictitionType
+        a                 owl:DatatypeProperty ;
+        rdfs:comment      "The traffic constriction type of an impacted road in a situation record."@en ;
+        rdfs:domain       mv:Impact ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "traffic constrictition type"@en ;
+        rdfs:range        xsd:string ;
+        dct:conformsTo    "https://datex2.eu/" ;
+        dct:created       "2019-08-16"^^xsd:date ;
+        dct:creator       <http://np00.github.io/#i> ;
+        dct:modified      "2019-08-16"^^xsd:date .
+
+mv:parkingSpace  a        owl:ObjectProperty , rdf:Property ;
+        rdfs:comment      "Relates the parking facility to a contained parking space."@en ;
+        rdfs:domain       mv:ParkingFacility ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "hat Stellplatz"@de , "parking space"@en ;
+        rdfs:range        mv:ParkingSpace ;
+        dct:created       "2017-05-15"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en .
+
+mv:cableAvailable  a      owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Indicates whether the plug or electric vehicle has a cable."@en ;
+        rdfs:domain       [ a            owl:Class ;
+                            owl:unionOf  ( mv:Charger mv:ElectricVehicle )
+                          ] ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "cable available"@en , "Kabel verfügbar"@de ;
+        rdfs:range        xsd:boolean .
+
+mv:fillRate  a            owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "The rate at which vehicles are entering the parking facility."@en ;
+        rdfs:domain       mv:ParkingFacility ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "fill rate"@en ;
+        rdfs:range        xsd:string ;
+        dct:created       "2017-05-10"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en .
+
+mv:exitRate  a            owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "The rate at which vehicles are exiting the parking facility."@en ;
+        rdfs:domain       mv:ParkingFacility ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "exit rate"@en ;
+        rdfs:range        xsd:string ;
+        dct:created       "2017-06-07"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en .
+
+mv:BatteryElectricVehicle
+        a                 rdfs:Class , owl:Class ;
+        rdfs:comment      "Electric vehicle that uses chemical energy stored in rechargeable battery packs. Battery electric vehicles use electric motors and motor controllers instead of internal combustion engines for propulsion. They derive all power from battery packs and thus have no internal combustion engine, fuel cell, or fuel tank."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Battery Electric Vehicle"@en , "Batteriebetriebenes Fahrzeug"@de ;
+        rdfs:subClassOf   mv:ElectricVehicle ;
+        skos:altLabel     "FEV"@en , "Battery-only electric vehicle"@en , "All-electric vehicle"@en , "BEV"@en , "Full electric vehicle"@en , "BOEV"@en ;
+        skos:prefLabel    "Battery Electric Vehicle"@en , "Elektrofahrzeug"@de .
+
+mv:specificLocation  a    owl:DatatypeProperty ;
+        rdfs:comment      "The specific location of a Primary or Secondary AlertCLocation description."@en ;
+        rdfs:domain       [ a            owl:Class ;
+                            owl:unionOf  ( mv:PrimaryLocation mv:SecondaryLocation )
+                          ] ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "specific location"@en ;
+        rdfs:range        xsd:integer ;
+        dct:conformsTo    "https://datex2.eu/" ;
+        dct:created       "2018-01-30"^^xsd:date ;
+        dct:creator       <http://np00.github.io/#i> ;
+        dct:modified      "2018-01-30"^^xsd:date .
+
+mv:ParkingBarrier  a      mv:ParkingFacilityFeature ;
+        rdfs:comment      "The parking facility has a parking barrier."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Parkschranke"@de , "Parking barrier"@en .
+
+mv:voltageInV  a          owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Indicates the voltage of a charger or plug in volt."@en ;
+        rdfs:domain       [ a            owl:Class ;
+                            owl:unionOf  ( mv:Plug mv:Charger mv:ElectricVehicle )
+                          ] ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Spannung in V"@de , "voltage in V"@en ;
+        rdfs:range        xsd:double .
+
+mv:endOfPeriod  a         owl:DatatypeProperty ;
+        rdfs:comment      "The end time of a period."@en ;
+        rdfs:domain       mv:Period ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "end of period"@en ;
+        rdfs:range        xsd:dateTime ;
+        dct:conformsTo    "https://datex2.eu/" ;
+        dct:created       "2018-01-30"^^xsd:date ;
+        dct:creator       <http://np00.github.io/#i> ;
+        dct:modified      "2018-01-30"^^xsd:date .
+
+mv:UndergroundParkingGarage
+        a                 owl:Class , rdfs:Class ;
+        rdfs:comment      "Parking facility with one or more levels below the surface and none above ground."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Tiefgarage"@de , "Underground parking garage"@en ;
+        rdfs:subClassOf   mv:ParkingFacility ;
+        dct:created       "2017-04-13"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en ;
+        skos:altLabel     "Rampengarage"@de ;
+        skos:prefLabel    "Underground parking garage"@en , "Tiefgarage"@de .
+
+mv:action  a              owl:ObjectProperty , rdf:Property ;
+        rdfs:comment      "Indicates which action is applied."@en ;
+        rdfs:domain       mv:AccessCondition ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "action"@en ;
+        rdfs:range        mv:Action ;
+        dct:created       "2017-06-23"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en .
+
+mv:BS1363  a                mv:PlugType ;
+        rdfs:comment        "13 A plugs socket-outlets adaptors and connection units is a British Standard which specifies the most common type of single-phase AC power plugs and sockets that are used in the United Kingdom."@en ;
+        rdfs:isDefinedBy    mv: ;
+        rdfs:label          "BS1363"@en ;
+        rdfs:seeAlso        <https://en.wikipedia.org/wiki/AC_power_plugs_and_sockets:_British_and_related_types#International_usage_of_Type_G> ;
+        mv:ocmConnectionID  "3" ;
+        skos:altLabel       "Type G"@en ;
+        foaf:depiction      <https://upload.wikimedia.org/wikipedia/commons/0/00/British_plug.jpg> .
+
+mv:ParkAndRide  a         mv:ParkingFacilityConnection ;
+        rdfs:comment      "Connection to public transport."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Parken und Reisen"@de , "Park & Ride"@en ;
+        skos:altLabel     "P+R"@en , "P&R"@en .
+
+mv:Gone  a                mv:CivicStructureStatus ;
+        rdfs:comment      "The civic structure is not available anymore."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Gone"@en , "nicht mehr verfügbar"@de .
+
+mv:IEC_62196_Type_3C  a     mv:PlugType ;
+        rdfs:comment        "The type 3A is derived from the Scame charging connectors adding the IEC 62196 pins which is suited for single-phase charging – the connector builds on the experience with the Scame connector for charging of light vehicles (electric motorcycles and scooters). The additional type 3C adds additional 2 pins for three-phase charging for usage at fast charge stations. Based on its origin the connector is sometimes referred to as the Scame type 3 connector."@en ;
+        rdfs:isDefinedBy    mv: ;
+        rdfs:label          "SCAME Type 3C"@en ;
+        rdfs:seeAlso        <https://en.wikipedia.org/wiki/IEC_62196#Type_3> ;
+        mv:ocmConnectionID  "26" ;
+        skos:altLabel       "IEC 62196-2 Type 3C"@en .
+
+mv:plugType  a            owl:ObjectProperty , rdf:Property ;
+        rdfs:comment      "Indicates the type of a plug."@en ;
+        rdfs:domain       mv:Plug ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "plug type"@en ;
+        rdfs:range        mv:PlugType .
+
+mv:CEE_7-Pin  a             mv:PlugType ;
+        rdfs:comment        "CEE 7-Pin 32A / 400V Socket."@en ;
+        rdfs:isDefinedBy    mv: ;
+        rdfs:label          "CEE 7-Pin"@en ;
+        mv:ocmConnectionID  "18" .
+
+mv:StatusUnknown  a       mv:CivicStructureStatus ;
+        rdfs:comment      "The status of the civic structure is unknown."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Status unknown"@en , "Status unbekannt"@de .
+
+mv:endTimeOverall  a      owl:DatatypeProperty ;
+        rdfs:comment      "The overall end time of a situation record validity."@en ;
+        rdfs:domain       mv:Validity ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "end time overall"@en ;
+        rdfs:range        xsd:dateTime ;
+        dct:conformsTo    "https://datex2.eu/" ;
+        dct:created       "2018-01-30"^^xsd:date ;
+        dct:creator       <http://np00.github.io/#i> ;
+        dct:modified      "2018-01-30"^^xsd:date .
+
+mv:location  a            owl:ObjectProperty ;
+        rdfs:comment      "The location description of a situation record."@en ;
+        rdfs:domain       mv:SituationRecord ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "location"@en ;
+        rdfs:range        mv:Location ;
+        dct:conformsTo    "https://datex2.eu/" ;
+        dct:created       "2018-01-30"^^xsd:date ;
+        dct:creator       <http://np00.github.io/#i> ;
+        dct:modified      "2018-01-30"^^xsd:date .
+
+mv:impactedRoad  a        owl:DatatypeProperty ;
+        rdfs:comment      "The impacted road of a situation."@en ;
+        rdfs:domain       mv:SituationRecord ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "impacted road"@en ;
+        rdfs:range        xsd:string ;
+        dct:conformsTo    "https://datex2.eu/" ;
+        dct:created       "2018-01-30"^^xsd:date ;
+        dct:creator       <http://np00.github.io/#i> ;
+        dct:modified      "2018-01-30"^^xsd:date .
+
+gr:BusinessEntity  a      owl:Class ;
+        rdfs:comment      "An instance of this class represents the legal agent making (or seeking) a particular offering. This can be a legal body or a person. A business entity has at least a primary mailing address and contact details. For this, typical address standards (vCard) and location data (geo, WGS84) can be attached. Note that the location of the business entity is not necessarily the location from which the product or service is being available."@en ;
+        rdfs:isDefinedBy  gr: ;
+        rdfs:label        "Juristische Person"@de , "Business entity"@en .
+
+mv:LinearExtension  a     owl:Class ;
+        rdfs:comment      "Describes the Linear extension of a situation record."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Linear Extension"@en ;
+        dct:conformsTo    "https://datex2.eu/" ;
+        dct:created       "2018-01-30"^^xsd:date ;
+        dct:creator       <http://np00.github.io/#i> ;
+        dct:modified      "2018-01-30"^^xsd:date ;
+        vs:term_status    "testing" .
+
+mv:CHAdeMO  a               mv:PlugType ;
+        rdfs:comment        "CHAdeMO is the trade name of a quick charging method for battery electric vehicles delivering up to 62.5 kW of direct current (500 V, 125 A[1]) via a special electrical connector."@en ;
+        rdfs:isDefinedBy    mv: ;
+        rdfs:label          "CHAdeMO"@en ;
+        rdfs:seeAlso        <https://en.wikipedia.org/wiki/CHAdeMO> ;
+        mv:ocmConnectionID  "2" ;
+        owl:sameAs          dbpedia:CHAdeMO ;
+        foaf:depiction      <https://upload.wikimedia.org/wikipedia/commons/d/d3/CHAdeMO_Plug_VacavilleDavisStDC2.jpg> .
+
+mv:ParkingLot  a          owl:Class , rdfs:Class ;
+        rdfs:comment      "Parking area on a single groundfloor level that is usually located outdoor."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Parking lot"@en , "Parkplatz"@de ;
+        rdfs:subClassOf   mv:ParkingFacility ;
+        dct:created       "2017-05-30"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en ;
+        skos:altLabel     "Parkfläche"@de , "car lot"@en ;
+        skos:prefLabel    "Car park"@en-uk , "Parking lot"@en-us , "Parkplatz"@de .
+
+mv:Car  a                 s:Vehicle ;
+        rdfs:comment      "A wheeled, self-powered motor vehicle used for transportation."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Voiture"@fr , "Car"@en , "Auto"@de ;
+        skos:altLabel     "Pkw"@de .
+
+mv:EnoughParkingSpacesAvailable
+        a                 mv:CivicStructureStatus ;
+        rdfs:comment      "The civic structure has parking spaces available."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Genügend Stellplätze frei"@de , "Enough parking spaces available"@en .
+
+mv:Capacity  a            owl:Class , rdfs:Class ;
+        rdfs:comment      "Capacity of a civic structure."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Capacity"@en , "Kapazität"@de ;
+        dct:created       "2017-04-13"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en .
+
+mv:ArrangementPattern
+        a                 rdfs:Class , owl:Class ;
+        rdfs:comment      "Pattern how parking spaces are arranged in a parking facility or at roadside."@en , "Art und Weise, wie ein Fahrzeug auf einer Parkfläche aufgestellt wird."@de ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Aufstellart"@de , "Arrangement pattern"@en ;
+        dct:created       "2017-05-10"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en .
+
+mv:SpecialParkingRestrictionsInForce
+        a                 mv:CivicStructureStatus ;
+        rdfs:comment      "Parking restrictions, other than those that normally apply, are in force in a specified area."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Special parking restrictions in force"@en , "Besondere Parkbeschränkungen in Kraft"@de .
+
+mv:tableVersion  a        owl:DatatypeProperty ;
+        rdfs:comment      "The table version of an AlertCLocation description."@en ;
+        rdfs:domain       mv:AlertCLocation ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "table version"@en ;
+        rdfs:range        xsd:string ;
+        dct:conformsTo    "https://datex2.eu/" ;
+        dct:created       "2018-01-30"^^xsd:date ;
+        dct:creator       <http://np00.github.io/#i> ;
+        dct:modified      "2018-01-30"^^xsd:date .
+
+vann:preferredNamespacePrefix
+        a                 owl:AnnotationProperty ;
+        rdfs:isDefinedBy  vann: .
+
+ecc:mbruemmer  a       foaf:Person , dct:Agent ;
+        s:affiliation  ecc:eccenca-GmbH ;
+        foaf:name      "Martin Brümmer" .
+
+mv:NEMA_14-50  a            mv:PlugType ;
+        rdfs:comment        "NEMA connectors are power plugs and receptacles used for AC mains electricity in North America and other countries that use the standards set by the US National Electrical Manufacturers Association. The NEMA 14 devices are four-wire grounding devices (hot-hot-neutral-ground) available in ratings from 15 to 60 A. The voltage rating is 250 V. Rated for 60A."@en ;
+        rdfs:isDefinedBy    mv: ;
+        rdfs:label          "NEMA 14-50"@en ;
+        rdfs:seeAlso        <https://en.wikipedia.org/wiki/NEMA_connector#NEMA_14> ;
+        mv:ocmConnectionID  "11" ;
+        foaf:depiction      <https://upload.wikimedia.org/wikipedia/commons/d/d3/220sb.svg> .
+
+foaf:Person  a            owl:Class ;
+        rdfs:comment      "A person." ;
+        rdfs:isDefinedBy  foaf: ;
+        rdfs:label        "Person" ;
+        vs:term_status    "stable" .
+
+mv:ParkingGarage  a       owl:Class , rdfs:Class ;
+        rdfs:comment      "A single level or multilevel parking building to park at."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Parkhaus"@de , "Parking garage"@en ;
+        rdfs:subClassOf   mv:ParkingFacility ;
+        dct:created       "2017-04-13"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en ;
+        skos:altLabel     "Car park"@en , "Parking building"@en , "Hochgarage"@de , "Parking structure"@en ;
+        skos:prefLabel    "Parking garage"@en , "Parkhaus"@de .
+
+mv:vehicleLengthLimitInM
+        a                 rdf:Property , owl:DatatypeProperty ;
+        rdfs:comment      "Indicates the length limit in meter for vehicles using the parking facility."@en ;
+        rdfs:domain       s:CivicStructure ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "vehicle length limit"@en , "Längenbegrenzung für Fahrzeuge"@de ;
+        rdfs:range        xsd:decimal ;
+        dct:created       "2017-04-13"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en .
+
+mv:level  a               rdf:Property , owl:DatatypeProperty ;
+        rdfs:comment      "Indicates the level of a parking facility the parking space is located in."@en ;
+        rdfs:domain       mv:ParkingSpace ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "level"@en , "Ebene"@de ;
+        rdfs:range        xsd:integer ;
+        dct:created       "2018-01-11"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en .
+
+mv:trackCrossSection  a   owl:DatatypeProperty ;
+        rdfs:comment      "The track cross section definition of an impacted road in a situation record."@en ;
+        rdfs:domain       mv:Impact ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "track cross section"@en ;
+        rdfs:range        xsd:string ;
+        dct:conformsTo    "https://datex2.eu/" ;
+        dct:created       "2019-08-16"^^xsd:date ;
+        dct:creator       <http://np00.github.io/#i> ;
+        dct:modified      "2019-08-16"^^xsd:date .
+
+mv:VideoSurveillance  a   mv:ParkingFacilityFeature ;
+        rdfs:comment      "The parking facility is surveilled by video."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Videoüberwachung"@de , "Video surveillance"@en .
+
+mv:feature  a             rdf:Property , owl:ObjectProperty ;
+        rdfs:comment      "Indicates which feature the parking facility provides."@en ;
+        rdfs:domain       mv:ParkingFacility ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "feature"@en , "Ausstattung"@de ;
+        rdfs:range        mv:ParkingFacilityFeature ;
+        dct:created       "2017-09-01"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en .
+
+mv:roadNumber  a          owl:DatatypeProperty ;
+        rdfs:comment      "The name number of an affected road of a location."@en ;
+        rdfs:domain       mv:LinearExtension ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "road number"@en ;
+        rdfs:range        xsd:string ;
+        dct:conformsTo    "https://datex2.eu/" ;
+        dct:created       "2018-01-30"^^xsd:date ;
+        dct:creator       <http://np00.github.io/#i> ;
+        dct:modified      "2018-01-30"^^xsd:date .
+
+mv:Motorbike  a           s:Vehicle ;
+        rdfs:comment      "A single-track, two-wheeled motor vehicle."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Motorrad"@de , "Motorbike"@en ;
+        skos:altLabel     "Motorcycle"@en ;
+        skos:prefLabel    "Moto"@fr , "Motorrad"@de , "Motorbike"@en .
+
+mv:widthInM  a            owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Indicates the width of an object in meter."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Breite in m"@de , "width in m"@en ;
+        rdfs:range        xsd:double .
+
+mv:chargingLevel  a       owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Indicates the percentage of charge left in the battery of an electric vehicle."@en ;
+        rdfs:domain       mv:ElectricVehicle ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Ladestand"@de , "charging level"@en ;
+        rdfs:range        xsd:double .
+
+mv:ParkAndFly  a          mv:ParkingFacilityConnection ;
+        rdfs:comment      "Connection to airport."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Parken und Fliegen"@de , "Park & Fly" ;
+        skos:altLabel     "P+F"@en , "P&F"@en .
+
+mv:AS_3112_Type_I  a        mv:PlugType ;
+        rdfs:comment        "AS/NZS 3112 are the harmonised Australian and New Zealand standards for AC Plugs and Socket-Outlets."@en ;
+        rdfs:isDefinedBy    mv: ;
+        rdfs:label          "AS 3112 Type I"@en ;
+        rdfs:seeAlso        <https://en.wikipedia.org/wiki/AS/NZS_3112> ;
+        mv:ocmConnectionID  "29" ;
+        skos:altLabel       "Type I/AS 3112/CPCS-CCC"@en , "Type I"@en ;
+        foaf:depiction      <https://upload.wikimedia.org/wikipedia/commons/2/20/Aust_AC_plug.jpg> .
+
+vann:preferredNamespaceUri
+        a                 owl:AnnotationProperty ;
+        rdfs:isDefinedBy  vann: .
+
+mv:isFastChargeCapable
+        a                 owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Indicates that the charger is able to fast charge."@en ;
+        rdfs:domain       mv:Charger ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "is fast charge capable"@en , "erlaubt Schnellladen"@de ;
+        rdfs:range        xsd:boolean .
+
+mv:civicStructureStatus
+        a                 owl:ObjectProperty , rdf:Property ;
+        rdfs:comment      "Indicates the current status of the civic structure."@en ;
+        rdfs:domain       s:CivicStructure ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "hat Status der zivilen Einrichtung"@de , "civic structure status"@en ;
+        rdfs:range        mv:CivicStructureStatus ;
+        dct:created       "2017-06-23"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en .
+
+mv:Operational  a         mv:CivicStructureStatus ;
+        rdfs:comment      "The civic structure is operational."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Operational"@en , "in Betrieb"@de .
+
+dct:date  a               rdf:Property ;
+        rdfs:comment      "A point or period of time associated with an event in the lifecycle of the resource."@en ;
+        rdfs:isDefinedBy  dct: ;
+        rdfs:label        "Date"@en ;
+        rdfs:range        rdfs:Literal ;
+        dct:description   "Date may be used to express temporal information at any level of granularity.  Recommended best practice is to use an encoding scheme, such as the W3CDTF profile of ISO 8601 [W3CDTF]."@en ;
+        dct:issued        "2008-01-14"^^xsd:date ;
+        dct:modified      "2008-01-14"^^xsd:date .
+
+mv:operatedBy  a          rdf:Property , owl:ObjectProperty ;
+        rdfs:comment      "The operator of a civic structure or facility. Operator and owner can be different business entitites."@en ;
+        rdfs:domain       s:CivicStructure ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "operated by"@en , "betrieben von"@de ;
+        rdfs:range        [ a            owl:Class ;
+                            owl:unionOf  ( gr:BusinessEntity s:Organization )
+                          ] ;
+        dct:created       "2017-06-07"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en .
+
+mv:CEE_7_4  a               mv:PlugType ;
+        rdfs:comment        "The CEE 7/3 socket and CEE 7/4 plug are commonly called Schuko. The socket (which is often, in error, also referred to as CEE 7/4) has a predominantly circular recess which is 17.5 mm (0.689 in) deep with two symmetrical round apertures and two earthing clips on the sides of the socket positioned to ensure that the earth is always engaged before live pin contact is made. The plug pins are 4.8 by 19 mm (0.189 by 0.748 in)."@en ;
+        rdfs:isDefinedBy    mv: ;
+        rdfs:label          "CEE 7/4"@en ;
+        rdfs:seeAlso        <https://en.wikipedia.org/wiki/AC_power_plugs_and_sockets#CEE_7/5_socket_and_CEE_7/6_plug_(French;_Type_E)> ;
+        mv:ocmConnectionID  "28" ;
+        skos:altLabel       "Type F"@en , "Schuko"@de ;
+        foaf:depiction      <https://upload.wikimedia.org/wikipedia/commons/e/ef/Schuko_plug_and_socket.png> .
+
+mv:timeEndValue  a        owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Indicates the end value of a time period."@en ;
+        rdfs:domain       mv:TimeSpecification ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "time end value"@en , "Endzeit"@de ;
+        rdfs:range        xsd:float ;
+        dct:created       "2017-06-07"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en .
+
+mv:currentInA  a          owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Indicates the current of a charger or plug in ampere."@en ;
+        rdfs:domain       [ a            owl:Class ;
+                            owl:unionOf  ( mv:Plug mv:Charger mv:ElectricVehicle )
+                          ] ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Stromstärke in A"@de , "current in A"@en ;
+        rdfs:range        xsd:double .
+
+mv:impactOnRoadLayout
+        a                 owl:DatatypeProperty ;
+        rdfs:comment      "The impact on the road layout of a situation record."@en ;
+        rdfs:domain       mv:Impact ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "impact on road layout"@en ;
+        rdfs:range        xsd:string ;
+        dct:conformsTo    "https://datex2.eu/" ;
+        dct:created       "2019-08-16"^^xsd:date ;
+        dct:creator       <http://np00.github.io/#i> ;
+        dct:modified      "2019-08-16"^^xsd:date .
+
+mv:IEC_60309_16A_2_E  a     mv:PlugType ;
+        rdfs:comment        "IEC 60309 (formerly IEC 309 and CEE 17, also published by CENELEC as EN 60309) is an international standard from the International Electrotechnical Commission (IEC) for \"plugs, socket-outlets and couplers for industrial purposes\". The blue P+N+E, 6h (180°) plug is a single phase connector. In particular this smallest (16 A) variant has become especially common in camping vehicles and sockets found in caravan parks and marinas throughout Europe."@en ;
+        rdfs:isDefinedBy    mv: ;
+        rdfs:label          "IEC_60309 16A 2+E"@en ;
+        rdfs:seeAlso        <https://en.wikipedia.org/wiki/IEC_60309> ;
+        mv:ocmConnectionID  "4" ;
+        skos:altLabel       "Blue Commando (2P+E)"@en ;
+        foaf:depiction      <https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/CEE_16A_230V_Wandsteckdose_Pinning.png/800px-CEE_16A_230V_Wandsteckdose_Pinning.png> .
+
+s:ParkingFacility  a      rdfs:Class ;
+        rdfs:comment      "A parking lot or other parking facility." ;
+        rdfs:isDefinedBy  s: ;
+        rdfs:label        "ParkingFacility" .
+
+mv:NoParkAndRideInformation
+        a                 mv:CivicStructureStatus ;
+        rdfs:comment      "No park and ride information will be available until the specified time."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "No park and ride information"@en , "Keine P+R-Informationen"@de .
+
+mv:NEMA_5-20R  a            mv:PlugType ;
+        rdfs:comment        "NEMA connectors are power plugs and receptacles used for AC mains electricity in North America and other countries that use the standards set by the US National Electrical Manufacturers Association. All NEMA 5 devices are three-wire grounding devices (hot-neutral-ground) rated for 125 V maximum."@en ;
+        rdfs:isDefinedBy    mv: ;
+        rdfs:label          "NEMA 5-20R"@en ;
+        rdfs:seeAlso        <https://en.wikipedia.org/wiki/NEMA_connector#NEMA_5> ;
+        mv:ocmConnectionID  "9" ;
+        foaf:depiction      <https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Electrical_outlet_with_label.jpg/1280px-Electrical_outlet_with_label.jpg> .
+
+s:openingHoursSpecification
+        a                 owl:ObjectProperty , rdf:Property ;
+        rdfs:comment      "Indicates the general opening hours for a business or civic structure."@en ;
+        rdfs:domain       s:CivicStructure ;
+        rdfs:isDefinedBy  s: ;
+        rdfs:label        "opening hours specification"@en ;
+        rdfs:range        s:OpeningHoursSpecification .
+
+mv:isOccupied  a          owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Indicates that a civic structure like a parking space or a charger is occupied at the moment."@en ;
+        rdfs:domain       s:CivicStructure ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "ist besetzt"@de , "is occupied"@en ;
+        rdfs:range        xsd:boolean .
+
+mv:Validity  a               owl:Class ;
+        rdfs:comment         "The validity of a situation record."@en ;
+        rdfs:isDefinedBy     mv: ;
+        rdfs:label           "Validity"@en ;
+        dct:conformsTo       "https://datex2.eu/" ;
+        dct:created          "2018-01-30"^^xsd:date ;
+        dct:creator          <http://np00.github.io/#i> ;
+        dct:modified         "2018-01-30"^^xsd:date ;
+        owl:equivalentClass  datex:Validity ;
+        vs:term_status       "testing" .
+
+mv:PrimaryLocation  a        owl:Class ;
+        rdfs:comment         "The primary location of an AlertC location describing roadworks."@en ;
+        rdfs:isDefinedBy     mv: ;
+        rdfs:label           "PrimaryLocation"@en ;
+        dct:conformsTo       "https://datex2.eu/" ;
+        dct:created          "2018-01-30"^^xsd:date ;
+        dct:creator          <http://np00.github.io/#i> ;
+        dct:modified         "2018-01-30"^^xsd:date ;
+        owl:equivalentClass  datex:AlertCMethod2PrimaryPointLocation ;
+        vs:term_status       "testing" .
+
+mv:NEMA_5-15R  a            mv:PlugType ;
+        rdfs:comment        "NEMA connectors are power plugs and receptacles used for AC mains electricity in North America and other countries that use the standards set by the US National Electrical Manufacturers Association. All NEMA 5 devices are three-wire grounding devices (hot-neutral-ground) rated for 125 V maximum.\n   The 5-15R is by far the most common electrical receptacle in North America in buildings built since the mid-twentieth century. It is usually installed in a duplex configuration; two receptacles may share a common circuit or may each be wired separately, sometimes to a switch."@en ;
+        rdfs:isDefinedBy    mv: ;
+        rdfs:label          "NEMA 5-15R"@en ;
+        rdfs:seeAlso        <https://en.wikipedia.org/wiki/NEMA_connector#NEMA_5> ;
+        mv:ocmConnectionID  "22" ;
+        foaf:depiction      <https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/NEMA_simplified_pins.svg/765px-NEMA_simplified_pins.svg.png> .
+
+mv:maximumValue  a        owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Indicates the maximum value of the capacity."@en ;
+        rdfs:domain       mv:Capacity ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Maximalwert"@de , "maximum value"@en ;
+        rdfs:range        xsd:integer ;
+        dct:created       "2015-05-15"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en .
+
+mv:chargingTimeRemainingInMin
+        a                 owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Indicates the remaining charging time in minutes when an electric vehicle is being actively charged."@en ;
+        rdfs:domain       mv:ElectricVehicle ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Verbleibende Ladezeit in min"@de , "Remaining charging time in min"@en ;
+        rdfs:range        xsd:double .
+
+mv:BicycleParkingStation
+        a                 rdfs:Class , owl:Class ;
+        rdfs:comment      "Building or structure designed for use as a bicycle parking facility."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Bicycle parking station"@en , "Fahrradparkstation"@de ;
+        rdfs:subClassOf   mv:ParkingFacility ;
+        dct:created       "2017-05-10"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en .
+
+mv:situationSpeedLimit
+        a                 owl:DatatypeProperty ;
+        rdfs:comment      "The speedlimit of the road where the situation takes place."@en ;
+        rdfs:domain       mv:SituationRecord ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "situation speed limit"@en ;
+        rdfs:range        xsd:integer ;
+        dct:conformsTo    "https://datex2.eu/" ;
+        dct:created       "2018-01-30"^^xsd:date ;
+        dct:creator       <http://np00.github.io/#i> ;
+        dct:modified      "2018-01-30"^^xsd:date .
+
+mv:IEC_62196_Type_3A  a     mv:PlugType ;
+        rdfs:comment        "The type 3A is derived from the Scame charging connectors adding the IEC 62196 pins which is suited for single-phase charging – the connector builds on the experience with the Scame connector for charging of light vehicles (electric motorcycles and scooters)."@en ;
+        rdfs:isDefinedBy    mv: ;
+        rdfs:label          "SCAME Type 3A"@en ;
+        rdfs:seeAlso        <https://en.wikipedia.org/wiki/IEC_62196#Type_3> ;
+        mv:ocmConnectionID  "36" ;
+        skos:altLabel       "IEC 62196-2 Type 3A"@en .
+
+mv:affectedCarriagewayAndLanes
+        a                 owl:DatatypeProperty ;
+        rdfs:comment      "The affected carriage way and lanes a location."@en ;
+        rdfs:domain       mv:Location ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "affected carriage way and lanes"@en ;
+        rdfs:range        xsd:string ;
+        dct:conformsTo    "https://datex2.eu/" ;
+        dct:created       "2019-08-16"^^xsd:date ;
+        dct:creator       <http://np00.github.io/#i> ;
+        dct:modified      "2019-08-16"^^xsd:date .
+
+s:acceptedPaymentMethod
+        a                 owl:ObjectProperty ;
+        rdfs:comment      "The payment method(s) accepted by seller for this offer."@en ;
+        rdfs:domain       s:CivicStructure ;
+        rdfs:isDefinedBy  s: ;
+        rdfs:label        "accepted payment method"@en ;
+        rdfs:range        s:PaymentMethod .
+
+mv:ElectricVehicle  a     rdfs:Class , owl:Class ;
+        rdfs:comment      "Vehicle that uses one or more electric motors or traction motors for propulsion."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Elektrofahrzeug"@de , "Electric Vehicle"@en ;
+        rdfs:subClassOf   s:Vehicle ;
+        skos:altLabel     "EV"@en ;
+        skos:prefLabel    "Electric Vehicle"@en , "Elektrofahrzeug"@de .
+
+mv:locationName  a        owl:DatatypeProperty ;
+        rdfs:comment      "The location name of a Primary or Secondary AlertCLocation description."@en ;
+        rdfs:domain       [ a            owl:Class ;
+                            owl:unionOf  ( mv:PrimaryLocation mv:SecondaryLocation )
+                          ] ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "location name"@en ;
+        rdfs:range        xsd:string ;
+        dct:conformsTo    "https://datex2.eu/" ;
+        dct:created       "2018-01-30"^^xsd:date ;
+        dct:creator       <http://np00.github.io/#i> ;
+        dct:modified      "2018-01-30"^^xsd:date .
+
+mv:numberOfLevels  a      owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Indicates the total number of levels a parking facility has."@en ;
+        rdfs:domain       mv:ParkingFacility ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Anzahl Ebenen"@de , "number of levels"@en ;
+        rdfs:range        xsd:integer ;
+        dct:created       "2018-01-11"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en .
+
+mv:energySource  a        owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Indicates the energy source used for the charger i.e. renewable etc."@en ;
+        rdfs:domain       mv:Charger ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Energiequelle"@de , "energy source"@en ;
+        rdfs:range        xsd:string .
+
+mv:ParallelParking  a     mv:ArrangementPattern ;
+        rdfs:comment      "Bei der Längsaufstellung wird das Fahrzeug (gemäß § 12 StVO) parallel zur Fahrbahn geparkt. Diese Fahrzeugaufstellung ist die gängigste Aufstellungsart an Straßen."@de , "With parallel parking, vehicles are arranged in a line, with the front of one vehicle facing the back of an adjacent one. This is done parallel to a curb, when one is provided. Parallel parking is the most common mode of roadside parking for vehicles."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Parallel parking"@en , "Längsaufstellung"@de ;
+        dct:created       "2017-05-10"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en ;
+        skos:altLabel     "Parallelaufstellung"@de ;
+        skos:prefLabel    "Längsaufstellung"@de , "Parallel parking"@en .
+
+mv:PersonsWithDisabledParkingPermit
+        a                 mv:UserGroup ;
+        rdfs:comment      "Persons with disabilities having a special parking permit that gives the right to use parking spaces reserved for disabled people."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Personen mit Behindertenparkausweis"@de , "Persons with disabled parking permit"@en .
+
+mv:additionalInformation
+        a                 owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Further information about the civic structure or facility."@en ;
+        rdfs:domain       s:CivicStructure ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "additional information"@en , "Zusätzliche Information"@de ;
+        rdfs:range        xsd:string ;
+        dct:created       "2017-04-07"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en .
+
+mv:validityPeriod  a      owl:ObjectProperty ;
+        rdfs:comment      "A period from when to when a situation record valid."@en ;
+        rdfs:domain       mv:Validity ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "validity period"@en ;
+        rdfs:range        mv:Period ;
+        dct:conformsTo    "https://datex2.eu/" ;
+        dct:created       "2018-01-30"^^xsd:date ;
+        dct:creator       <http://np00.github.io/#i> ;
+        dct:modified      "2018-01-30"^^xsd:date .
+
+s:PriceSpecification  a   owl:Class ;
+        rdfs:comment      "A structured value representing a price or price range for an item."@en ;
+        rdfs:isDefinedBy  s: ;
+        rdfs:label        "Preisspezifikation"@de , "Price specification"@en .
+
+mv:constructionType  a    owl:DatatypeProperty ;
+        rdfs:comment      "The construction type of a situation."@en ;
+        rdfs:domain       mv:SituationRecord ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "construction type"@en ;
+        rdfs:range        xsd:string ;
+        dct:conformsTo    "https://datex2.eu/" ;
+        dct:created       "2018-01-30"^^xsd:date ;
+        dct:creator       <http://np00.github.io/#i> ;
+        dct:modified      "2018-01-30"^^xsd:date .
+
+mv:PayStation  a          mv:ParkingFacilityFeature ;
+        rdfs:comment      "The parking facility has a pay station."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Pay station"@en , "Kassenautomat"@de .
+
+mv:Women  a               mv:UserGroup ;
+        rdfs:comment      "Female persons."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Frauen"@de , "Women"@en .
+
+mv:SituationRecord  a        owl:Class ;
+        rdfs:comment         "An identifiable instance of a single record/element within a situation."@en ;
+        rdfs:isDefinedBy     mv: ;
+        rdfs:label           "SituationRecord"@en ;
+        dct:conformsTo       "https://datex2.eu/" ;
+        dct:created          "2018-01-30"^^xsd:date ;
+        dct:creator          <http://np00.github.io/#i> ;
+        dct:modified         "2018-01-30"^^xsd:date ;
+        owl:equivalentClass  datex:SituationRecord ;
+        vs:term_status       "testing" .
+
+mv:maximumParkingHours
+        a                 owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Indicates the maximum parking hours a vehicle is allowed to use a parking space or parking facility."@en ;
+        rdfs:domain       [ a            owl:Class ;
+                            owl:unionOf  ( mv:ParkingFacility mv:ParkingSpace )
+                          ] ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "maximale Parkdauer"@de , "maximum parking hour"@en ;
+        rdfs:range        xsd:string .
+
+mv:queuingTime  a         owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "The current queuing time (duration) for entering the parking facility."@en ;
+        rdfs:domain       mv:ParkingFacility ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "queuing time"@en , "Wartezeit"@de ;
+        rdfs:range        xsd:string ;
+        dct:created       "2017-05-15"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en .
+
+mv:AngleParking  a        mv:ArrangementPattern ;
+        rdfs:comment      "Bei der Schrägaufstellung wird das Fahrzeug mit einem Aufstellwinkel zwischen 50 und 90 gon (45° und ca. 81°) geparkt. Das Fahrzeug kann vorwärts in den Parkstand einfahren, muss zum Ausparken jedoch wieder rückwärts herausfahren. Diese Aufstellung wird oft bei Parkplätzen verwendet, da sie schmalere Fahrwege als die Senkrechtaufstellung und bessere Platzausnutzung als Parallelaufstellung ermöglicht."@de , "Parking where the parking spaces are arranged at an acute angle to the direction of approach, allowing the driver to enter a space easily and later reverse back out."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Schrägaufstellung"@de , "Angle parking"@en ;
+        dct:created       "2017-05-31"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en ;
+        skos:altLabel     "Echelon parking"@en-uk .
+
+mv:recurringWeekday  a    owl:DatatypeProperty ;
+        rdfs:comment      "The reccurring day of a week in which the period is valid."@en ;
+        rdfs:domain       mv:Period ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "recurring week day"@en ;
+        rdfs:range        xsd:string ;
+        dct:conformsTo    "https://datex2.eu/" ;
+        dct:created       "2018-01-30"^^xsd:date ;
+        dct:creator       <http://np00.github.io/#i> ;
+        dct:modified      "2018-01-30"^^xsd:date .
+
+mv:connectedTo  a         owl:ObjectProperty , rdf:Property ;
+        rdfs:comment      "Indicates the transport connections available."@en ;
+        rdfs:domain       mv:ParkingFacility ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Anschluss an"@de , "connected to"@en ;
+        rdfs:range        mv:ParkingFacilityConnection ;
+        dct:created       "2017-05-30"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en .
+
+dct:Agent  a              rdfs:Class , dct:AgentClass ;
+        rdfs:comment      "A resource that acts or has the power to act."@en ;
+        rdfs:isDefinedBy  dct: ;
+        rdfs:label        "Agent"@en ;
+        dct:description   "Examples of Agent include person, organization, and software agent."@en ;
+        dct:hasVersion    <http://dublincore.org/usage/terms/history/#Agent-001> ;
+        dct:issued        "2008-01-14"^^xsd:date .
+
+mv:ParkingFacilityExit
+        a                 rdfs:Class , owl:Class ;
+        rdfs:comment      "Exit of a parking facility where vehicles can leave the parking facility."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Ausfahrt"@de , "Exit"@en ;
+        rdfs:subClassOf   s:CivicStructure ;
+        dct:created       "2017-05-10"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en .
+
+mv:Closed  a              mv:CivicStructureStatus ;
+        rdfs:comment      "The civic structure is closed."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Geschlossen"@de , "Closed"@en .
+
+dbpedia:University_of_Bonn
+        a           s:Organization , dct:Agent ;
+        rdfs:label  "University of Bonn"@en .
+
+<http://schema.mobivoc.org/#> a                              voaf:Vocabulary , owl:Ontology ;
+        rdfs:comment                   "MobiVoc is a standardized vocabulary (also known as 'schema', 'Data Dictionary' or 'ontology') for mobility data. Currently, the following topics are covered: Electric Charging Points, Parking Facilities, Highway Roadworks sites (Datex II)"@en ;
+        rdfs:isDefinedBy               mv: ;
+        rdfs:label                     "MobiVoc: Open Mobility Vocabulary"@en ;
+        cc:license                     <http://creativecommons.org/licenses/by/4.0/> ;
+        dct:contributor                <http://purl.org/net/clange> , <http://sebastian.tramp.name> ;
+        dct:created                    "2014-08-05"^^xsd:date ;
+        dct:creator                    ecc:aweilandt , <http://np00.github.io/#i> , ecc:mbruemmer ;
+        dct:modified                   "2019-08-19"^^xsd:date ;
+        dct:publisher                  ecc:eccenca-GmbH ;
+        vann:preferredNamespacePrefix  "mv" ;
+        vann:preferredNamespaceUri     "http://schema.mobivoc.org/#" ;
+        void:vocabulary                foaf: , vann: ;
+        owl:versionInfo "v1.1.4" .
+
+mv:timeStartValue  a      owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Indicates the start value of a time period."@en ;
+        rdfs:domain       mv:TimeSpecification ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Anfangszeit"@de , "time start value"@en ;
+        rdfs:range        xsd:float ;
+        dct:created       "2017-06-07"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en .
+
+mv:alertCLocation  a      owl:ObjectProperty ;
+        rdfs:comment      "The ALertC location description of a situation record."@en ;
+        rdfs:domain       mv:Location ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "alertCLocation"@en ;
+        rdfs:range        mv:AlertCLocation ;
+        dct:conformsTo    "https://datex2.eu/" ;
+        dct:created       "2018-01-30"^^xsd:date ;
+        dct:creator       <http://np00.github.io/#i> ;
+        dct:modified      "2018-01-30"^^xsd:date .
+
+mv:charger  a             owl:ObjectProperty , rdf:Property ;
+        rdfs:comment      "Indicates whether chargers are available at the parking space."@en ;
+        rdfs:domain       mv:ParkingSpace ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "hat Ladegerät"@de , "has charger"@en ;
+        rdfs:range        mv:Charger ;
+        dct:created       "2017-04-13"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en .
+
+geo:lat  a                owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Geographic latitude of a place."@en ;
+        rdfs:isDefinedBy  geo: ;
+        rdfs:label        "latitude"@en ;
+        rdfs:range        xsd:string .
+
+mv:PlugType  a            owl:Class , rdfs:Class ;
+        rdfs:comment      "Type of a plug that is used to connect electric vehicles to a charger."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Steckertyp"@de , "Plug type"@en .
+
+mv:maximumRangeElectricInKm
+        a                 rdf:Property , owl:DatatypeProperty ;
+        rdfs:comment      "Indicates the maximum range of an electric vehicle in km."@en ;
+        rdfs:domain       s:Vehicle ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "maximale Reichweite in km"@de , "maximum range in km"@en ;
+        rdfs:range        xsd:double .
+
+mv:supportedChargingMode
+        a                 owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Indicates which charging modes are supported by the electric vehicle or charger or plug."@en ;
+        rdfs:domain       [ a            owl:Class ;
+                            owl:unionOf  ( mv:Plug mv:Charger mv:ElectricVehicle )
+                          ] ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "unterstützter Lademodus"@de , "supported charging mode"@en ;
+        rdfs:range        xsd:string .
+
+mv:CEE_7_16  a              mv:PlugType ;
+        rdfs:comment        "The CEE 7/16 standard sheet appears in Supplement 2 (June 1962) to the 1951 edition of CEE 7. The CEE 7/16 unearthed plug is used for low power Class II applications, it has two round 4 by 19 mm (0.157 by 0.748 in) pins, rated at 2.5 A. There are two variants."@en ;
+        rdfs:isDefinedBy    mv: ;
+        rdfs:label          "CEE 7/16"@en ;
+        rdfs:seeAlso        <https://en.wikipedia.org/wiki/AC_power_plugs_and_sockets#CEE_7/16_plugs> ;
+        mv:ocmConnectionID  "13" ;
+        skos:altLabel       "Europlug"@en ;
+        foaf:depiction      <https://upload.wikimedia.org/wikipedia/commons/6/63/Euro-Flachstecker_2.jpg> .
+
+mv:exit  a                rdf:Property , owl:ObjectProperty ;
+        rdfs:comment      "Describes the exit of a parking facility."@en ;
+        rdfs:domain       mv:ParkingFacility ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "hat Ausfahrt"@de , "exit"@en ;
+        rdfs:range        mv:ParkingFacilityExit ;
+        dct:created       "2017-05-10"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en .
+
+mv:BikeAndRide  a         mv:ParkingFacilityConnection ;
+        rdfs:comment      "Parking facilities for bicycles with connection to public transport."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Bike and Ride"@en .
+
+mv:SAE_Combo  a             mv:PlugType ;
+        rdfs:comment        "The Combined Charging System is a quick charging method for battery electric vehicles delivering high-voltage direct current via a special electrical connector derived from the SAE J1772 (IEC Type 1)."@en ;
+        rdfs:isDefinedBy    mv: ;
+        rdfs:label          "SAE Combo (DC Fast Charge J1772)"@en ;
+        rdfs:seeAlso        <https://en.wikipedia.org/wiki/Combined_Charging_System> ;
+        mv:ocmConnectionID  "32" ;
+        foaf:depiction      <https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/CCSCombo2.svg/1052px-CCSCombo2.svg.png> .
+
+mv:direction  a           owl:DatatypeProperty ;
+        rdfs:comment      "The direction of an AlertCLocation description."@en ;
+        rdfs:domain       mv:AlertCLocation ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "direction"@en ;
+        rdfs:range        xsd:string ;
+        dct:conformsTo    "https://datex2.eu/" ;
+        dct:created       "2018-01-30"^^xsd:date ;
+        dct:creator       <http://np00.github.io/#i> ;
+        dct:modified      "2018-01-30"^^xsd:date .
+
+mv:UserGroup  a           owl:Class ;
+        rdfs:comment      "A group of users having a common characteristic."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Nutzergruppe"@de , "User group"@en ;
+        dct:created       "2017-06-07"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en .
+
+dct:modified  a           owl:AnnotationProperty ;
+        rdfs:isDefinedBy  dct: .
+
+mv:ParkingFacilityConnection
+        a                 owl:Class , rdfs:Class ;
+        rdfs:comment      "Transport connections available at the parking facility (e.g. Park & Ride)."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Parking facility connections"@en , "Anschlussmöglichkeiten der Parkeinrichtung"@de ;
+        dct:created       "2017-06-09"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en .
+
+mv:CarsharingUsers  a     mv:UserGroup ;
+        rdfs:comment      "User of a car rental model where people rent cars for short periods of time."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Utilisateurs de l'autopartage"@fr , "Car club users"@en-uk , "Carsharing-Nutzer"@de , "Carsharing users"@en-us ;
+        skos:hiddenLabel  "Car-sharing users"@en , "Car sharing users"@en ;
+        skos:prefLabel    "Carsharing-Nutzer"@de , "Carsharing users"@en-us .
+
+mv:CivicStructureStatus
+        a                 owl:Class , rdfs:Class ;
+        rdfs:comment      "Status information of a civic structure."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Status der zivilen Einrichtung"@de , "Civic structure status"@en ;
+        dct:created       "2018-01-11"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en .
+
+dct:rights  a             owl:AnnotationProperty ;
+        rdfs:isDefinedBy  dct: .
+
+mv:CCS_Type2  a             mv:PlugType ;
+        rdfs:comment        "The Combined Charging System is a quick charging method for battery electric vehicles delivering high-voltage direct current via a special electrical connector derived from the  IEC Type 2 connector. As the plug is a combination of an AC connector with a DC option the resulting connector is also called Combo Coupler and the variant with Type 2 is abbreviated as Combo2."@en ;
+        rdfs:isDefinedBy    mv: ;
+        rdfs:label          "CCS Type2"@en ;
+        rdfs:seeAlso        <https://en.wikipedia.org/wiki/Combined_Charging_System> ;
+        mv:ocmConnectionID  "33" ;
+        skos:altLabel       "Combo2"@en ;
+        foaf:depiction      <https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/CCSCombo2.svg/1052px-CCSCombo2.svg.png> .
+
+<https://creativecommons.org/licenses/by/4.0/>
+        a           cc:License ;
+        rdfs:label  "Creative Commons Attribution 4.0 International"@en .
+
+<http://purl.org/net/clange>
+        a              foaf:Person , dct:Agent ;
+        s:affiliation  dbpedia:University_of_Bonn ;
+        foaf:homepage  <http://langec.wordpress.com/about/> ;
+        foaf:name      "Christop Lange" .
+
+dct:creator  a            owl:AnnotationProperty ;
+        rdfs:isDefinedBy  dct: .
+
+mv:powerInKW  a           owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Indicates the power of a charger or plug in kilowatts."@en ;
+        rdfs:domain       [ a            owl:Class ;
+                            owl:unionOf  ( mv:Plug mv:Charger mv:ElectricVehicle )
+                          ] ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Leistung in kW"@de , "power in kW"@en ;
+        rdfs:range        xsd:double .
+
+mv:validityStatus  a      owl:DatatypeProperty ;
+        rdfs:comment      "The status of a validity."@en ;
+        rdfs:domain       mv:Validity ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "validity status"@en ;
+        rdfs:range        xsd:string ;
+        dct:conformsTo    "https://datex2.eu/" ;
+        dct:created       "2018-01-30"^^xsd:date ;
+        dct:creator       <http://np00.github.io/#i> ;
+        dct:modified      "2018-01-30"^^xsd:date .
+
+mv:validity  a            owl:ObjectProperty ;
+        rdfs:comment      "The validity of a situation."@en ;
+        rdfs:domain       mv:SituationRecord ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "validity"@en ;
+        rdfs:range        mv:Validity ;
+        dct:conformsTo    "https://datex2.eu/" ;
+        dct:created       "2018-01-30"^^xsd:date ;
+        dct:creator       <http://np00.github.io/#i> ;
+        dct:modified      "2018-01-30"^^xsd:date .
+
+mv:ParkingFacilityFeature
+        a                 owl:Class , rdfs:Class ;
+        rdfs:comment      "Features of the parking facility (e.g. parking for disabled people)."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Parking facility feature"@en , "Ausstattung der Parkeinrichtung"@de ;
+        dct:created       "2017-04-13"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en .
+
+mv:overnight  a           rdf:Property , owl:DatatypeProperty ;
+        rdfs:comment      "Indicates that a time period overnight is possible."@en ;
+        rdfs:domain       mv:TimeSpecification ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "über Nacht"@de , "overnight"@en ;
+        rdfs:range        xsd:boolean ;
+        dct:created       "2017-06-07"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en .
+
+mv:directionCode  a       owl:DatatypeProperty ;
+        rdfs:comment      "The direction code of a Primary or Secondary AlertCLocation description."@en ;
+        rdfs:domain       [ a            owl:Class ;
+                            owl:unionOf  ( mv:PrimaryLocation mv:SecondaryLocation )
+                          ] ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "direction code"@en ;
+        rdfs:range        xsd:string ;
+        dct:conformsTo    "https://datex2.eu/" ;
+        dct:created       "2019-08-16"^^xsd:date ;
+        dct:creator       <http://np00.github.io/#i> ;
+        dct:modified      "2019-08-16"^^xsd:date .
+
+mv:recordCreationTime
+        a                 owl:DatatypeProperty ;
+        rdfs:comment      "The creation time of a Situation Record."@en ;
+        rdfs:domain       mv:SituationRecord ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "record creation time"@en ;
+        rdfs:range        xsd:dateTime ;
+        dct:conformsTo    "https://datex2.eu/" ;
+        dct:created       "2018-01-30"^^xsd:date ;
+        dct:creator       <http://np00.github.io/#i> ;
+        dct:modified      "2018-01-30"^^xsd:date .
+
+mv:NEMA_14-30  a            mv:PlugType ;
+        rdfs:comment        "NEMA connectors are power plugs and receptacles used for AC mains electricity in North America and other countries that use the standards set by the US National Electrical Manufacturers Association. The NEMA 14 devices are four-wire grounding devices (hot-hot-neutral-ground) available in ratings from 15 to 60 A. The voltage rating is 250 V. Rated for 30A."@en ;
+        rdfs:isDefinedBy    mv: ;
+        rdfs:label          "NEMA 14-30"@en ;
+        rdfs:seeAlso        <https://en.wikipedia.org/wiki/NEMA_connector#NEMA_14> ;
+        mv:ocmConnectionID  "10" ;
+        foaf:depiction      <https://upload.wikimedia.org/wikipedia/commons/d/d3/220sb.svg> .
+
+mv:RecreationalVehicle
+        a                 s:Vehicle ;
+        rdfs:comment      "A motor vehicle or trailer equipped with living space and amenities found in a home."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Wohnmobil"@de , "Recreational vehicle"@en .
+
+mv:NormalParkingRestrictionsLifted
+        a                 mv:CivicStructureStatus ;
+        rdfs:comment      "The parking restrictions that normally apply in the specified location have been temporarily lifted."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Normale Parkbeschränkungen aufgehoben"@de , "Normal parking restrictions lifted"@en .
+
+mv:plug  a                owl:ObjectProperty , rdf:Property ;
+        rdfs:comment      "Indicates the plugs available at a charger or vehicle."@en ;
+        rdfs:domain       [ a            owl:Class ;
+                            owl:unionOf  ( mv:ElectricVehicle mv:Charger )
+                          ] ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "plug"@en ;
+        rdfs:range        mv:Plug .
+
+mv:primaryLocation  a     owl:ObjectProperty ;
+        rdfs:comment      "The primary location of an AlertCLocation description."@en ;
+        rdfs:domain       mv:AlertCLocation ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "primary Location"@en ;
+        rdfs:range        mv:PrimaryLocation ;
+        dct:conformsTo    "https://datex2.eu/" ;
+        dct:created       "2018-01-30"^^xsd:date ;
+        dct:creator       <http://np00.github.io/#i> ;
+        dct:modified      "2018-01-30"^^xsd:date .
+
+mv:chargerQuantity  a     owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Indicates the number of chargers available"@en ;
+        rdfs:domain       mv:Charger ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Anzahl Ladegeräte"@de , "charger quantity"@en ;
+        rdfs:range        xsd:integer .
+
+<http://eis.iai.uni-bonn.de/NiklasPetersen>
+        a              foaf:Person , dct:Agent ;
+        s:affiliation  dbpedia:University_of_Bonn ;
+        foaf:name      "Niklas Petersen" .
+
+mv:access  a              rdf:Property , owl:ObjectProperty ;
+        rdfs:comment      "Indicates that a civic structure can only be accessed when certain conditions are fullfilled."@en ;
+        rdfs:domain       s:CivicStructure ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "access"@en ;
+        rdfs:range        mv:AccessCondition ;
+        dct:created       "2017-06-07"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en .
+
+mv:Mennekes_Type_2  a       mv:PlugType ;
+        rdfs:comment        "The IEC 62196 Type 2 connector (commonly referred to as Mennekes) is used for charging electric cars within Europe. The connector is circular in shape, with a flattened top edge and originally specified for charging battery electric vehicles at 3–120 kilowatts."@en ;
+        rdfs:isDefinedBy    mv: ;
+        rdfs:label          "Mennekes (Type 2)"@en ;
+        rdfs:seeAlso        <https://en.wikipedia.org/wiki/Type_2_connector> ;
+        mv:ocmConnectionID  "25" , "1036" ;
+        skos:altLabel       "IEC_62196 Type 2"@en ;
+        foaf:depiction      <https://upload.wikimedia.org/wikipedia/commons/f/f3/VDE-AR-E_2623-2-2-plug.jpg> .
+
+mv:employeeOf  a          owl:ObjectProperty , rdf:Property ;
+        rdfs:comment      "Indicates that a group is employee of a specific business entity."@en ;
+        rdfs:domain       mv:UserGroup ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Mitarbeiter von"@de , "employee of"@en ;
+        rdfs:range        gr:BusinessEntity ;
+        dct:created       "2017-06-23"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en .
+
+mv:NoParkingAllowed  a    mv:CivicStructureStatus ;
+        rdfs:comment      "No parking allowed until the specified time."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Parken verboten"@de , "No parking allowed"@en .
+
+mv:IEC_60309_5-pin  a       mv:PlugType ;
+        rdfs:comment        "IEC 60309 (formerly IEC 309 and CEE 17, also published by CENELEC as EN 60309) is an international standard from the International Electrotechnical Commission (IEC) for \"plugs, socket-outlets and couplers for industrial purposes\". 5-Pin connector."@en ;
+        rdfs:isDefinedBy    mv: ;
+        rdfs:label          "IEC_60309 5-pin"@en ;
+        rdfs:seeAlso        <https://en.wikipedia.org/wiki/IEC_60309> ;
+        mv:ocmConnectionID  "17" ;
+        foaf:depiction      <https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/CEE-Stecker.jpg/1280px-CEE-Stecker.jpg> .
+
+s:Vehicle  a              owl:Class ;
+        rdfs:comment      "A vehicle is a device that is designed or used to transport people or cargo over land, water, air, or through space."@en ;
+        rdfs:isDefinedBy  s: ;
+        rdfs:label        "Vehicle"@en , "Fahrzeug"@de .
+
+mv:ParkAndRideServiceNotOperating
+        a                 mv:CivicStructureStatus ;
+        rdfs:comment      "Park and ride services are not operating until the specified time."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Park and ride service not operating"@en , "Kein P+R-Service"@de .
+
+mv:Full  a                mv:CivicStructureStatus ;
+        rdfs:comment      "The civic structure is completely occupied."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Full"@en , "Belegt"@de .
+
+mv:affectedRoadLength
+        a                 owl:DatatypeProperty ;
+        rdfs:comment      "The affected road length of a location."@en ;
+        rdfs:domain       mv:Location ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "affected road length"@en ;
+        rdfs:range        xsd:string ;
+        dct:conformsTo    "https://datex2.eu/" ;
+        dct:created       "2019-08-16"^^xsd:date ;
+        dct:creator       <http://np00.github.io/#i> ;
+        dct:modified      "2019-08-16"^^xsd:date .
+
+mv:ParkingSpace  a        owl:Class , rdfs:Class ;
+        rdfs:comment      "A parking space is a location that is designated for parking a vehicle. A parking space has a certain size, is sometimes marked and can be located at roadside or inside a parking facility. Depending on the location of the parking space, there can be regulations regarding the time allowed to park and a fee paid to use the parking space."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Parking space"@en , "Stellplatz"@de ;
+        rdfs:subClassOf   s:CivicStructure ;
+        dct:created       "2017-05-10"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en ;
+        skos:altLabel     "Parking spot"@en ;
+        skos:hiddenLabel  "Parkplatz"@de ;
+        skos:prefLabel    "Stellplatz"@de , "Parking space"@en .
+
+mv:ParkAndRail  a         mv:ParkingFacilityConnection ;
+        rdfs:comment      "Connection to railway station."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Park and Rail"@en .
+
+mv:currentValue  a        rdf:Property , owl:DatatypeProperty ;
+        rdfs:comment      "Indicates the current value of the real-time capacity."@en ;
+        rdfs:domain       mv:RealTimeCapacity ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "current value"@en , "aktueller Wert"@de , "valeur courante"@fr ;
+        rdfs:range        xsd:integer ;
+        dct:created       "2015-05-15"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en .
+
+mv:impact  a              owl:ObjectProperty ;
+        rdfs:comment      "The road impact description of a situation record."@en ;
+        rdfs:domain       mv:SituationRecord ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "impact"@en ;
+        rdfs:range        mv:Impact ;
+        dct:conformsTo    "https://datex2.eu/" ;
+        dct:created       "2019-08-16"^^xsd:date ;
+        dct:creator       <http://np00.github.io/#i> ;
+        dct:modified      "2019-08-16"^^xsd:date .
+
+mv:secondaryLocation  a   owl:ObjectProperty ;
+        rdfs:comment      "The secondary location of an AlertCLocation description."@en ;
+        rdfs:domain       mv:AlertCLocation ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "secondary Location"@en ;
+        rdfs:range        mv:SecondaryLocation ;
+        dct:conformsTo    "https://datex2.eu/" ;
+        dct:created       "2018-01-30"^^xsd:date ;
+        dct:creator       <http://np00.github.io/#i> ;
+        dct:modified      "2018-01-30"^^xsd:date .
+
+foaf:Organization  a      owl:Class ;
+        rdfs:comment      "An organization" ;
+        rdfs:isDefinedBy  foaf: ;
+        rdfs:label        "Organization" ;
+        vs:term_status    "stable" .
+
+mv:Bicycle  a             s:Vehicle ;
+        rdfs:comment      "A human-or electric powered, pedal-driven, single-track vehicle, having two wheels attached to a frame, one behind the other."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Vélo"@fr , "Fahrrad"@de , "Bicycle"@en .
+
+mv:XLR4  a                  mv:PlugType ;
+        rdfs:comment        "The XLR connector is a style of electrical connector, primarily found on professional audio, video, and stage lighting equipment. The connectors are circular in design and have between 3 and 7 pins. They are most commonly associated with balanced audio interconnection, including AES3 digital audio, but are also used for lighting control, low-voltage power supplies, and other applications. XLR connectors are available from a number of manufacturers and are covered by an international standard for dimensions, IEC 61076-2-103.[1] They are superficially similar to the older and smaller DIN connector range, but are not physically compatible with them."@en ;
+        rdfs:isDefinedBy    mv: ;
+        rdfs:label          "XLR 4-Pin"@en ;
+        rdfs:seeAlso        <https://en.wikipedia.org/wiki/XLR_connector#Four-pin_(XLR4)> ;
+        mv:ocmConnectionID  "21" .
+
+mv:freeOfCharge  a        rdf:Property , owl:DatatypeProperty ;
+        rdfs:comment      "Indicates that the usage of the civic structure is for free."@en ;
+        rdfs:domain       s:PriceSpecification ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "free of charge"@en , "kostenlos"@de ;
+        rdfs:range        xsd:boolean ;
+        dct:created       "2017-06-07"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en .
+
+mv:ParkingFacility  a        owl:Class , rdfs:Class ;
+        rdfs:comment         "Any facility or area assigned for parking vehicles. A parking facility can provide one or more parking spaces."@en ;
+        rdfs:isDefinedBy     mv: ;
+        rdfs:label           "Parking facility"@en , "Parkeinrichtung"@de ;
+        rdfs:subClassOf      s:CivicStructure ;
+        dct:created          "2014-10-16"^^xsd:date ;
+        dct:modified         "2018-01-12"^^xsd:date ;
+        owl:equivalentClass  s:ParkingFacility ;
+        vs:term_status       "stable"@en .
+
+mv:recordUrl  a           owl:DatatypeProperty ;
+        rdfs:comment      "A website which describes the situation record."@en ;
+        rdfs:domain       mv:SituationRecord ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "record URL"@en ;
+        rdfs:range        xsd:anyURI ;
+        dct:conformsTo    "https://datex2.eu/" ;
+        dct:created       "2018-01-30"^^xsd:date ;
+        dct:creator       <http://np00.github.io/#i> ;
+        dct:modified      "2018-01-30"^^xsd:date .
+
+mv:vehicleWidthLimitInM
+        a                 owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Indicates the width limit in meter for vehicles using the parking facility."@en ;
+        rdfs:domain       s:CivicStructure ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "vehicle width limit"@en , "Breitenbegrenzung für Fahrzeuge"@de ;
+        rdfs:range        xsd:decimal ;
+        dct:created       "2017-06-07"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en .
+
+mv:CEE_7_5  a               mv:PlugType ;
+        rdfs:comment        "The CEE 7/5 socket and CEE 7/6 plug are defined in French standard NF C 61-314 \"Plugs and socket-outlets for household and similar purposes\" (which also includes CEE 7/7, 7/16 and 7/17 plugs) The socket has a predominantly circular recess which is 15 mm (0.591 in) deep with two symmetrical round apertures and a round 4.8 mm (0.189 in) earth pin projecting from the socket such that the tip is 23 mm (0.906 in) beyond the live contacts, to ensure that the earth is always engaged before live pin contact is made. The earth pin is centred between the apertures, offset by 10 mm (0.394 in). The plug (which is often, in error, also referred to as CEE 7/5) has two round pins measuring 4.8 by 19 mm (0.189 by 0.748 in), spaced 19 mm (0.748 in) apart and with an aperture for the socket's projecting earth pin. This standard is also used in Belgium, Poland, the Czech Republic, Slovakia and some other countries."@en ;
+        rdfs:isDefinedBy    mv: ;
+        rdfs:label          "CEE 7/5"@en ;
+        rdfs:seeAlso        <https://en.wikipedia.org/wiki/AC_power_plugs_and_sockets#CEE_7/5_socket_and_CEE_7/6_plug_(French;_Type_E)> ;
+        mv:ocmConnectionID  "23" ;
+        skos:altLabel       "Type E"@en ;
+        foaf:depiction      <https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/E_plug_and_socket.jpg/1920px-E_plug_and_socket.jpg> .
+
+mv:intermediatePointList
+        a                 owl:ObjectProperty ;
+        rdfs:comment      "An ordered list of intermediate geospatial points to where the situation record takes place."@en ;
+        rdfs:domain       mv:LinearExtension ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "intermediate point list"@en ;
+        rdfs:range        olo:OrderedList ;
+        dct:conformsTo    "https://datex2.eu/" ;
+        dct:created       "2018-01-30"^^xsd:date ;
+        dct:creator       <http://np00.github.io/#i> ;
+        dct:modified      "2018-01-30"^^xsd:date .
+
+mv:Period  a                 owl:Class ;
+        rdfs:comment         "Describes the period from when to when a situation record valid."@en ;
+        rdfs:isDefinedBy     mv: ;
+        rdfs:label           "Period"@en ;
+        dct:conformsTo       "https://datex2.eu/" ;
+        dct:created          "2018-01-30"^^xsd:date ;
+        dct:creator          <http://np00.github.io/#i> ;
+        dct:modified         "2018-01-30"^^xsd:date ;
+        owl:equivalentClass  datex:Period ;
+        vs:term_status       "testing" .
+
+mv:customerOf  a          owl:ObjectProperty , rdf:Property ;
+        rdfs:comment      "Indicates that a group is customer of a specific business entity."@en ;
+        rdfs:domain       mv:UserGroup ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Kunde von"@de , "customer of"@en ;
+        rdfs:range        gr:BusinessEntity ;
+        dct:created       "2017-06-23"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en .
+
+mv:currentType  a         owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Indicates the current type (AC/DC) of the plug."@en ;
+        rdfs:domain       [ a            owl:Class ;
+                            owl:unionOf  ( mv:Plug mv:Charger mv:ElectricVehicle )
+                          ] ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "current type"@en ;
+        rdfs:range        xsd:string .
+
+mv:SurveillanceBySecurityGuards
+        a                 mv:ParkingFacilityFeature ;
+        rdfs:comment      "The parking facility is surveilled by security guards."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Surveillance by security guards"@en , "Bewacht durch Personal"@de .
+
+mv:timeUnit  a            owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Indicates the time unit a value is specified for."@en ;
+        rdfs:domain       mv:TimeSpecification ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Zeiteinheit"@de , "time unit"@en ;
+        rdfs:range        xsd:string ;
+        dct:created       "2017-06-07"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en .
+
+mv:BusOrCoach  a          s:Vehicle ;
+        rdfs:comment      "A bus is a road vehicle designed to carry passengers. Coaches are luxury busses, usually in service for long distance travel."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Bus"@de , "Coach"@en .
+
+voaf:Vocabulary  a        owl:Class ;
+        rdfs:comment      "A vocabulary used in the linked data cloud. An instance of voaf:Vocabulary relies on or is used by at least another instance of voaf:Vocabulary" ;
+        rdfs:isDefinedBy  voaf: ;
+        rdfs:label        "Vocabulary" .
+
+mv:price  a               owl:ObjectProperty , rdf:Property ;
+        rdfs:comment      "Indicates that a civic structure can be used for a specific price."@en ;
+        rdfs:domain       s:CivicStructure ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "price"@en , "Preis"@de ;
+        rdfs:range        s:PriceSpecification ;
+        dct:created       "2017-06-07"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en .
+
+geo:long  a               owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Geographic longitude of a place."@en ;
+        rdfs:isDefinedBy  geo: ;
+        rdfs:label        "longitude"@en ;
+        rdfs:range        xsd:string .
+
+mv:internalRoadworkIdentifier
+        a                 owl:DatatypeProperty ;
+        rdfs:comment      "The internal roadworks identifier of a situation."@en ;
+        rdfs:domain       mv:SituationRecord ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "internal roadwork identifier"@en ;
+        rdfs:range        xsd:string ;
+        dct:conformsTo    "https://datex2.eu/" ;
+        dct:created       "2018-01-30"^^xsd:date ;
+        dct:creator       <http://np00.github.io/#i> ;
+        dct:modified      "2018-01-30"^^xsd:date .
+
+mv:tableNumber  a         owl:DatatypeProperty ;
+        rdfs:comment      "The table number of an AlertCLocation description."@en ;
+        rdfs:domain       mv:AlertCLocation ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "table number"@en ;
+        rdfs:range        xsd:integer ;
+        dct:conformsTo    "https://datex2.eu/" ;
+        dct:created       "2018-01-30"^^xsd:date ;
+        dct:creator       <http://np00.github.io/#i> ;
+        dct:modified      "2018-01-30"^^xsd:date .
+
+dct:publisher  a          owl:AnnotationProperty ;
+        rdfs:isDefinedBy  dct: .
+
+mv:NEMA_6-20  a             mv:PlugType ;
+        rdfs:comment        "NEMA connectors are power plugs and receptacles used for AC mains electricity in North America and other countries that use the standards set by the US National Electrical Manufacturers Association.\nAll NEMA 6 devices are three-wire grounding devices (hot-hot-ground) used for 208 and 240 V circuits and rated for 250 V maximum. The 20 A plug has a blade rotated 90°."@en ;
+        rdfs:isDefinedBy    mv: ;
+        rdfs:label          "NEMA 6-20"@en ;
+        rdfs:seeAlso        <https://en.wikipedia.org/wiki/NEMA_connector#NEMA_6> ;
+        mv:ocmConnectionID  "14" ;
+        foaf:depiction      <https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/NEMA_simplified_pins.svg/765px-NEMA_simplified_pins.svg.png> .
+
+mv:ocmConnectionID  a     owl:AnnotationProperty ;
+        rdfs:comment      "The OpenChargeMap ID used for the Connection / Plug."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "ocm connection ID"@en ;
+        rdfs:range        xsd:string .
+
+mv:startlLatitude  a      owl:DatatypeProperty ;
+        rdfs:comment      "The starting latitude of a situation record."@en ;
+        rdfs:domain       mv:LinearExtension ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "start latitude"@en ;
+        rdfs:range        geo:lat ;
+        dct:conformsTo    "https://datex2.eu/" ;
+        dct:created       "2018-01-30"^^xsd:date ;
+        dct:creator       <http://np00.github.io/#i> ;
+        dct:modified      "2018-01-30"^^xsd:date .
+
+mv:AlertCLocation  a         owl:Class ;
+        rdfs:comment         "An AlertCLocation description of a situation record."@en ;
+        rdfs:isDefinedBy     mv: ;
+        rdfs:label           "AlertCLocation"@en ;
+        dct:conformsTo       "https://datex2.eu/" ;
+        dct:created          "2018-01-30"^^xsd:date ;
+        dct:creator          <http://np00.github.io/#i> ;
+        dct:modified         "2018-01-30"^^xsd:date ;
+        owl:equivalentClass  datex:AlertCLocation ;
+        vs:term_status       "testing" .
+
+mv:IEC_60309_3-pin  a       mv:PlugType ;
+        rdfs:comment        "IEC 60309 (formerly IEC 309 and CEE 17, also published by CENELEC as EN 60309) is an international standard from the International Electrotechnical Commission (IEC) for \"plugs, socket-outlets and couplers for industrial purposes\". 3-Pin connector."@en ;
+        rdfs:isDefinedBy    mv: ;
+        rdfs:label          "IEC_60309 3-pin"@en ;
+        rdfs:seeAlso        <https://en.wikipedia.org/wiki/IEC_60309> ;
+        mv:ocmConnectionID  "34" , "16" .
+
+s:PaymentMethod  a        owl:Class ;
+        rdfs:comment      "A payment method is a standardized procedure for transferring the monetary amount for a purchase. Payment methods are characterized by the legal and technical structures used, and by the organization or group carrying out the transaction."@en ;
+        rdfs:isDefinedBy  s: ;
+        rdfs:label        "Zahlungsart"@de , "Payment method"@en .
+
+mv:Truck  a               s:Vehicle ;
+        rdfs:comment      "A motor vehicle designed to transport cargo."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Lkw"@de , "Truck"@en .
+
+mv:Inhabitants  a         mv:UserGroup ;
+        rdfs:comment      "People living on the premises."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Anwohner"@de , "Inhabitants"@en .
+
+mv:Plug  a                owl:Class , rdfs:Class ;
+        rdfs:comment      "Component of a charger and of an electric vehicle to connect each other. There are different plug types used for charging electric vehicles."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Plug"@en , "Stecker"@de .
+
+mv:entrance  a            rdf:Property , owl:ObjectProperty ;
+        rdfs:comment      "Describes the entrance of a parking facility."@en ;
+        rdfs:domain       mv:ParkingFacility ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "hat Einfahrt"@de , "entrance"@en ;
+        rdfs:range        mv:ParkingFacilityEntrance ;
+        dct:created       "2017-05-15"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en .
+
+mv:PluginHybridElectricVehicle
+        a                 rdfs:Class , owl:Class ;
+        rdfs:comment      "Hybrid electric vehicle that can be recharged by plugging it in to an external source of electric power as well by its on-board engine and generator."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Plug-in-Hybrid"@de , "Plug-in hybrid electric vehicle"@en ;
+        rdfs:subClassOf   mv:ElectricVehicle ;
+        skos:altLabel     "PHEV"@en ;
+        skos:prefLabel    "Plug-in hybrid electric vehicle"@en , "Plug-in-Hybrid"@de .
+
+mv:Tesla_Supercharger
+        a                   mv:PlugType ;
+        rdfs:comment        "The Tesla Supercharger network is a system of 480-volt DC fast-charging stations built by American vehicle manufacturer Tesla Inc. to allow longer journeys for their all-electric manufactured vehicles (Model S, 3 and X), through quick charging of the vehicle's battery packs."@en ;
+        rdfs:isDefinedBy    mv: ;
+        rdfs:label          "Tesla Supercharger"@en ;
+        rdfs:seeAlso        <https://en.wikipedia.org/wiki/Tesla_Supercharger> ;
+        mv:ocmConnectionID  "30" , "27" ;
+        foaf:depiction      <https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Tesla-type-2-model-s-charge-port-inlet-0996.jpg/1280px-Tesla-type-2-model-s-charge-port-inlet-0996.jpg> .
+
+mv:Families  a            mv:UserGroup ;
+        rdfs:comment      "Parents with children."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Familien"@de , "Families"@en .
+
+mv:validForVehicle  a     rdf:Property , owl:ObjectProperty ;
+        rdfs:comment      "Indicates that an entity is valid for a specific type of vehicle."@en ;
+        rdfs:domain       [ a            owl:Class ;
+                            owl:unionOf  ( mv:AccessCondition s:PriceSpecification mv:Capacity )
+                          ] ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "valid for vehicle"@en , "gültig für Fahrzeug"@de ;
+        rdfs:range        s:Vehicle ;
+        dct:created       "2017-08-29"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en .
+
+mv:totalCapacity  a       rdf:Property , owl:DatatypeProperty ;
+        rdfs:comment      "Indicates the capacity of a resource. Ex: parking facility, car, bycycle etc."@en ;
+        rdfs:domain       mv:Capacity ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Gesamtkapazität"@de , "total capacity"@en ;
+        rdfs:range        xsd:integer ;
+        dct:created       "2017-05-10"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en .
+
+mv:TimeSpecification  a   owl:Class ;
+        rdfs:comment      "Specific time a price specification is due for."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Zeitspezifikation"@de , "Time specification"@en ;
+        dct:created       "2017-06-07"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en .
+
+mv:OnlyAFewParkingSpacesAvailable
+        a                 mv:CivicStructureStatus ;
+        rdfs:comment      "The civic structure has 95% or greater occupancy of parking spaces."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Only a few parking spaces available"@en , "Nur noch wenige Stellplätze frei"@de .
+
+mv:TemporarelyUnavailable
+        a                 mv:CivicStructureStatus ;
+        rdfs:comment      "The civic structure is temporarely not available."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Temporarely unavailable"@en , "vorübergehend nicht verfügbar"@de .
+
+mv:brand  a               owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Indicates the brand of a product."@en , "Indicates the brand of a charger."@en ;
+        rdfs:domain       mv:Charger ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "brand"@en , "Marke"@de ;
+        rdfs:range        xsd:string .
+
+<http://sebastian.tramp.name>
+        a              foaf:Person , dct:Agent ;
+        s:affiliation  ecc:eccenca-GmbH ;
+        owl:sameAs     <http://aksw.org/SebastianTramp> , ecc:stramp ;
+        foaf:name      "Sebastian Tramp" .
+
+mv:NoParkingInformationAvailable
+        a                 mv:CivicStructureStatus ;
+        rdfs:comment      "Parking information is not available until a specified time."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "No parking information available"@en , "Keine Parkinformationen verfügbar"@de .
+
+mv:unspecifiedCharge  a   rdf:Property , owl:DatatypeProperty ;
+        rdfs:comment      "Indicates that a charge has to be paid for the usage of the civic structure."@en ;
+        rdfs:domain       s:PriceSpecification ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "kostenpflichtig"@de , "unspecified charge"@en ;
+        rdfs:range        xsd:boolean ;
+        dct:created       "2017-06-07"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en .
+
+mv:name  a                rdf:Property , owl:DatatypeProperty ;
+        rdfs:comment      "Name of the civic structure or facility."@en ;
+        rdfs:domain       s:CivicStructure ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "name"@en , "Name"@de ;
+        rdfs:range        xsd:string ;
+        dct:created       "2017-04-13"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en .
+
+dct:issued  a             owl:AnnotationProperty ;
+        rdfs:isDefinedBy  dct: .
+
+s:OpeningHoursSpecification
+        a                 owl:Class ;
+        rdfs:comment      "A structured value providing information about the opening hours of a place or a certain service inside a place."@en ;
+        rdfs:isDefinedBy  s: ;
+        rdfs:label        "Öffnungszeiten"@de , "Opening hours specification"@en .
+
+mv:capacity  a            rdf:Property , owl:ObjectProperty ;
+        rdfs:comment      "Relates the civic structure to its capacity."@en ;
+        rdfs:domain       s:CivicStructure ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "has capacity"@en , "hat Kapazität"@de ;
+        rdfs:range        mv:Capacity ;
+        dct:created       "2017-04-13"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en .
+
+mv:Restrict  a            mv:Action ;
+        rdfs:comment      "An action is restricted."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Beschränken"@de , "Restrict"@en .
+
+mv:Allow  a               mv:Action ;
+        rdfs:comment      "Allow to do an action."@en ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Erlauben"@de , "Allow"@en .
+
+s:CivicStructure  a       owl:Class ;
+        rdfs:comment      "A public structure, such as a town hall or concert hall, parking facility or charger."@en ;
+        rdfs:isDefinedBy  s: ;
+        rdfs:label        "zivile Einrichtung"@de , "Civic structure"@en ;
+        rdfs:subClassOf   s:Place .
+
+mv:NEMA_6-15  a             mv:PlugType ;
+        rdfs:comment        "NEMA connectors are power plugs and receptacles used for AC mains electricity in North America and other countries that use the standards set by the US National Electrical Manufacturers Association.\nAll NEMA 6 devices are three-wire grounding devices (hot-hot-ground) used for 208 and 240 V circuits and rated for 250 V maximum. The 6-15 resembles the 5-15, but with collinear horizontal pins"@en ;
+        rdfs:isDefinedBy    mv: ;
+        rdfs:label          "NEMA 6-15"@en ;
+        rdfs:seeAlso        <https://en.wikipedia.org/wiki/NEMA_connector#NEMA_6> ;
+        mv:ocmConnectionID  "15" ;
+        foaf:depiction      <https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Nema_6-15.svg/346px-Nema_6-15.svg.png> .
+
+s:PostalAddress  a        owl:Class ;
+        rdfs:comment      "The mailing address."@en ;
+        rdfs:isDefinedBy  s: ;
+        rdfs:label        "Postanschrift"@de , "Postal address"@en .
+
+mv:dueForTime  a          rdf:Property , owl:ObjectProperty ;
+        rdfs:comment      "Indicates that a price specification is due for a certain time specification."@en ;
+        rdfs:domain       s:PriceSpecification ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "due for time"@en , "fällig für Zeitdauer"@de ;
+        rdfs:range        mv:TimeSpecification ;
+        dct:created       "2017-06-07"^^xsd:date ;
+        dct:modified      "2018-01-12"^^xsd:date ;
+        vs:term_status    "stable"@en .
+
+mv:Impact  a                 owl:Class ;
+        rdfs:comment         "The impact of a situation record."@en ;
+        rdfs:isDefinedBy     mv: ;
+        rdfs:label           "Impact"@en ;
+        dct:conformsTo       "https://datex2.eu/" ;
+        dct:created          "2019-08-16"^^xsd:date ;
+        dct:creator          <http://np00.github.io/#i> ;
+        dct:modified         "2019-08-16"^^xsd:date ;
+        owl:equivalentClass  datex:Impact ;
+        vs:term_status       "testing" .
+
+mv:threePhasedCurrentAvailable
+        a                 owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Indicates whether three-phased current is available."@en ;
+        rdfs:domain       [ a            owl:Class ;
+                            owl:unionOf  ( mv:Plug mv:Charger mv:ElectricVehicle )
+                          ] ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "three-phased current available"@en ;
+        rdfs:range        xsd:boolean .
+
+mv:recordVersionTime  a   owl:DatatypeProperty ;
+        rdfs:comment      "The version time of a Situation Record."@en ;
+        rdfs:domain       mv:SituationRecord ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "record version time"@en ;
+        rdfs:range        xsd:dateTime ;
+        dct:conformsTo    "https://datex2.eu/" ;
+        dct:created       "2018-01-30"^^xsd:date ;
+        dct:creator       <http://np00.github.io/#i> ;
+        dct:modified      "2018-01-30"^^xsd:date .
+
+mv:totalNumberOfChargers
+        a                 owl:DatatypeProperty , rdf:Property ;
+        rdfs:comment      "Indicates the total number of chargers available in a parking facility."@en ;
+        rdfs:domain       mv:ParkingFacility ;
+        rdfs:isDefinedBy  mv: ;
+        rdfs:label        "Gesamtzahl an Ladegeräten"@de , "total number of chargers"@en ;
+        rdfs:range        xsd:integer .
