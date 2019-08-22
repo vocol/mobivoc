@@ -38,7 +38,7 @@ MobiVoc was extended in the following research projects: [LIMBO](https://www.lim
 
 ## Class diagram
 
-![Class diagram](diagrams/_v1.1.4.png "Mobivoc class diagram")
+![Class diagram](diagrams/mobivoc_v1.1.4.png "Mobivoc class diagram")
 
 Further diagrams can be found in the [diagrams folder](diagrams).
 
