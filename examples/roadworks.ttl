@@ -1,0 +1,376 @@
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct:    <http://purl.org/dc/terms/> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix olo:    <http://purl.org/ontology/olo/core#> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix datex:  <http://vocab.datex.org/terms#> .
+@prefix geo:    <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+
+@prefix mv: 	<http://schema.mobivoc.org/#> .
+
+@prefix ex: 	<http://example.org/> .
+
+#################################################
+# Bayern Example 
+
+ex:1293_1_153474 a mv:SituationRecord ;
+	mv:recordCreationTime "2017-08-07T17:00:20.148+02:00"^^xsd:dateTime ; 
+	mv:recordVersionTime "2017-08-07T17:00:20.148+02:00"^^xsd:dateTime ; 
+	mv:generalPublicComment "Anbau von Fahrstreifen"@de ; 
+	mv:constructionType "roadWideningWork" ;
+	mv:probabilityOfOccurence "certain" ;  
+	mv:situationSpeedLimit 80 ; 
+	mv:validity ex:validity1 ; 
+	mv:impact ex:impact1  ;
+	mv:location ex:location1 ;  
+.
+
+ex:validity1 a mv:Validity ;
+			mv:validityStatus "definedByValidityTimeSpec" ; 
+			mv:startTimeOverall "2017-04-04T00:00:00.000+02:00"^^xsd:dateTime ;
+			mv:endTimeOverall "2017-12-20T23:59:00.000+01:00"^^xsd:dateTime ;
+		. 
+	
+ex:impact1 a mv:Impact ;
+		   mv:trafficConstrictitionType "lanesBlocked" ; 
+		   mv:impactOnRoadLayout "DI/7" ; 
+		   mv:trackCrossSection "suuu2xxoo" ; 
+. 
+
+ex:location1 a mv:Location ;
+			 mv:affectedCarriagewayAndLanes "mainCarriageWay" ;
+			 mv:affectedRoadLength 1100.0 ; 
+			 mv:linearExtension ex:linearExtension1 ; 
+			 mv:alertCLocation ex:alertCLocation1 ; 
+. 
+
+ex:linearExtension1 a mv:LinearExtension ; 
+					mv:roadNumber "A3" ; 
+					#http://dbpedia.org/page/Bundesautobahn_3
+					# lat & long, but not always there
+.
+
+ex:alertCLocation1 a mv:AlertCLocation ; 
+				  mv:countryCode "de" ;
+				  mv:tableNumber "15"^^xsd:integer ; 
+				  mv:tableVersion "15.1.D-160122" ; 
+				  mv:directionCode "negative" ; 
+				  ex:primaryLocation ex:primaryLocation1 ; 
+				  ex:secondaryLocation ex:seccondaryLocation1 ; 
+.
+
+ex:primaryLocation1 a mv:PrimaryLocation ;
+					mv:locationName "Würzburg/Randersacker"@de ; 
+					#http://dbpedia.org/page/W%C3%BCrzburg
+					mv:specificLocation 10846 ; 
+.					
+
+ex:secondaryLocation1 a mv:SecondaryLocation ;
+					mv:locationName "Würzburg/Heidingsfeld"@de ; 
+					mv:specificLocation 10848 ; 
+.		
+
+#################################################			
+# Bremen example 
+
+
+ex:vis-vmz-hb-509 a mv:SituationRecord ;
+	mv:recordCreationTime "2015-01-15T06:44:56+01:00"^^xsd:dateTime ; 
+	mv:recordVersionTime "2017-09-01T14:00:06+02:00"^^xsd:dateTime ; 
+	mv:generalPublicComment "Brückensanierung"@de ;
+	mv:generalPublicComment "Brückenneubau"@de ;
+	mv:generalPublicComment """zeitweise Sperrung von Fahrstreifen in beiden Richtungen; Verkürzung der Einfahrt von der Tankstelle bzw. der Ausfahrt von der B75 in FR Huchting; Geschwindigkeitsbegrenzung;  
+Fahrempfehlung: B75 in Höhe der Ausfahrt Huchting FR stadtauswärts: Nutzen Sie für die Zufahrt zur Kirchhuchtinger Landstraße die Anschlussstelle DEL-Stickgras 
+nächste Vollsperrung B75: vorauss. 29.09.2017, 20:00 Uhr bis 02.10.2017, 4:00 Uhr (Aushängen der Fußgängerbrücke) 
+Umleitungen: aus Richtung Bremen: über B75 Abfahrt Huchtinger Kreisel, Huchtinger Heerstraße; aus Richtung Delmenhorst: über A28 zum Autobahndreieck Stuhr und zur A1; aus Richtung Stuhr: über  Moordeicher Landstraße, zur A28"""@de ; 
+	mv:constructionType "constructionWork" ; 
+	mv:recordUrl "http://vmz.bremen.de/baustellen/aktuell/?feature=vis-vmz-hb-509"^^xsd:anyURI ; 
+	mv:situationSpeedLimit 60 ; 
+	mv:probabilityOfOccurence "certain" ;  
+	mv:validity ex:validity2 ; 
+	mv:impact ex:impact2 ; 
+	mv:location ex:location2 ;
+.
+
+ex:validity2 a mv:Validity ;
+			mv:validityStatus "definedByValidityTimeSpec" ; 
+			mv:startTimeOverall "2016-01-18T07:00:00+01:00"^^xsd:dateTime ;
+			mv:endTimeOverall "2017-12-31T17:00:00+01:00"^^xsd:dateTime ;
+			mv:validityPeriod ex:period2 ; 
+		. 
+
+ex:period2 a mv:Period ; 
+		   mv:startOfPeriod "2016-01-18T07:00:00+01:00"^^xsd:dateTime ; 
+		   mv:endOfPeriod "2017-12-31T17:00:00+01:00"^^xsd:dateTime ; 
+		   mv:recurringWeekday "monday" ,
+		   					   "tuesday" , 
+		   					   "wednesday" , 
+		   					   "thursday" , 
+		   					   "friday" , 
+		   					   "saturday" , 
+		   					   "sunday" ;
+.
+
+	
+ex:impact2 a mv:Impact ;
+		   mv:impactOnRoadLayout "D III/1" ;  
+.  
+
+ex:location2 a mv:Location ;
+			 mv:linearExtension ex:linearExtension2 ; 
+			 mv:alertCLocation ex:alertCLocation2 ; 
+. 
+
+ex:linearExtension2 a mv:LinearExtension ; 
+					mv:roadName "Oldenburger Straße in Höhe Heinrich-Plett-Allee" ; 
+					mv:roadNumber "B74" ;
+					mv:intermediatePointList ex:pointList1 ; 
+.
+
+ex:pointList1 a olo:OrderdList ; 
+	olo:length "..." ; 
+	olo:slot [
+		olo:index 1 ; 
+		olo:item geo:point1 ; 
+	];
+	olo:slot [
+		olo:index 2 ; 
+		olo:item geo:point2 ; 
+	];
+	olo:slot [
+		olo:index 3 ; 
+		olo:item geo:point3 ; 
+	];
+	olo:slot [
+		olo:index 4 ; 
+		olo:item geo:point4 ; 
+	];
+	olo:slot [
+		olo:index 5 ; 
+		olo:item geo:point5 ; 
+	];
+	olo:slot [
+		olo:index 6 ; 
+		olo:item geo:point6 ; 
+	];
+	olo:slot [
+		olo:index 7 ; 
+		olo:item geo:point7 ; 
+	];
+	olo:slot [
+		olo:index 8 ; 
+		olo:item geo:point8 ; 
+	];
+	olo:slot [
+		olo:index 9 ; 
+		olo:item geo:point9 ; 
+	];
+	olo:slot [
+		olo:index 10 ; 
+		olo:item geo:point10 ; 
+	];
+	olo:slot [
+		olo:index 11 ; 
+		olo:item geo:point11 ; 
+	];
+	olo:slot [
+		olo:index 12 ; 
+		olo:item geo:point12 ; 
+	];
+	olo:slot [
+		olo:index 13 ; 
+		olo:item geo:point13 ; 
+	];
+	olo:slot [
+		olo:index 14 ; 
+		olo:item geo:point14 ; 
+	];
+	olo:slot [
+		olo:index 15 ; 
+		olo:item geo:point15 ; 
+	];
+.
+
+
+ex:point1 a geo:Point ; 
+	  geo:lat 8.7143889207106 ; 
+	  geo:long 53.049174751337 ; 
+.
+
+ex:point2 a geo:Point ; 
+	  geo:lat 8.678640438965 ; 
+	  geo:long 53.036828796659 ; 
+.
+
+ex:point3 a geo:Point ; 
+	  geo:lat 8.6802497643738 ; 
+	  geo:long 53.038183541181 ; 
+.
+
+ex:point4 a geo:Point ; 
+	  geo:lat 8.6820092934873 ; 
+	  geo:long 53.039628555087 ; 
+.
+
+ex:point5 a geo:Point ; 
+	  geo:lat 8.6846056718134 ; 
+	  geo:long 53.041086421822 ; 
+.
+
+ex:point6 a geo:Point ; 
+	  geo:lat 8.6872878808278 ; 
+	  geo:long 53.042518437609 ; 
+.
+
+ex:point7 a geo:Point ; 
+	  geo:lat 8.6897555131213 ; 
+	  geo:long 53.043485988914 ; 
+.
+
+ex:point8 a geo:Point ; 
+	  geo:lat 8.6925450104963 ; 
+	  geo:long 53.044401917473 ; 
+.
+
+ex:point9 a geo:Point ; 
+	  geo:lat 8.6958709496744 ; 
+	  geo:long 53.045304926579 ; 
+.
+
+ex:point10 a geo:Point ; 
+	  geo:lat 8.6997977036716 ; 
+	  geo:long 53.046066019561 ; 
+.
+
+ex:point11 a geo:Point ; 
+	  geo:lat 8.7068787354699 ; 
+	  geo:long 53.046723902665 ; 
+.
+
+ex:point12 a geo:Point ; 
+	  geo:lat 8.7094107407796 ; 
+	  geo:long 53.047368876354 ; 
+.
+
+ex:point13 a geo:Point ; 
+	  geo:lat 8.7115994233355 ; 
+	  geo:long 53.047923546007 ; 
+.
+
+ex:point14 a geo:Point ; 
+	  geo:lat 8.71428163235 ; 
+	  geo:long 53.049097358246 ; 
+.
+
+ex:point15 a geo:Point ; 
+	  geo:lat 8.7140670556288 ; 
+	  geo:long 53.048955470554 ; 
+.
+
+
+ex:alertCLocation2 a mv:AlertCLocation ; 
+				  mv:countryCode "D" ;
+				  mv:tableNumber "141128"^^xsd:integer ; 
+				  mv:tableVersion 14.0 ; 
+				  mv:directionCode "positive" ; 
+				  mv:primaryLocation ex:primaryLocation2 ; 
+				  mv:secondaryLocation ex:seccondaryLocation2 ; 
+.
+
+ex:primaryLocation2 a mv:PrimaryLocation ;
+					mv:locationName "in Höhe Heinrich-Plett-Allee"@de ; 
+					mv:specificLocation "25038"^^xsd:integer ; 
+.					
+
+ex:secondaryLocation2 a mv:SecondaryLocation ;
+					mv:specificLocation "25038"^^xsd:integer ; 
+.		
+
+#################################################	
+# Baden Württemberg Example 
+
+ex:1293_1_153474 a mv:SituationRecord ;
+	mv:recordCreationTime "2014-06-16T04:16:00.395+02:00"^^xsd:dateTime ; 
+	mv:recordVersionTime "2016-12-01T08:19:43.698+01:00"^^xsd:dateTime ; 
+	mv:generalPublicComment "Baustelleneinrichtung"@de ; 
+	mv:generalPublicComment "Der Standstreifen wird als Verzögerungs- bzw. Beschleunigungsstreifen für die BS-AS-Nabern genutzt"@de ; 
+	mv:probabilityOfOccurence "certain" ;  
+	mv:internalRoadworkIdentifier "OK4" ; 
+	mv:situationSpeedLimit 80 ; 
+	mv:validity ex:validity3 ; 
+	mv:impact ex:impact3 ; 
+	mv:location ex:location3 ; 
+.
+
+ex:validity3 a mv:Validity ;
+			mv:validityStatus "definedByValidityTimeSpec" ; 
+			mv:startTimeOverall "2016-12-13T00:00:00.000+01:00"^^xsd:dateTime ;
+			mv:endTimeOverall "2020-05-01T00:00:00.000+02:00"^^xsd:dateTime ;
+		. 
+	
+ex:impact3 a mv:Impact ;
+		   mv:trackCrossSection "suu2oos" ; 
+. 
+
+ex:location3 a mv:Location ;
+			 mv:affectedCarriagewayAndLanes "mainCarriageWay" ;
+			 mv:affectedRoadLength 1100.0 ; 
+			 mv:linearExtension ex:linearExtension3 ; 
+			 mv:alertCLocation ex:alertCLocation3 ; 
+. 
+
+ex:linearExtension3 a mv:LinearExtension ; 
+					mv:roadName "A8" ; 
+.
+
+ex:alertCLocation3 a mv:AlertCLocation ; 
+				  mv:countryCode "de" ;
+				  mv:tableNumber "15"^^xsd:integer ; 
+				  mv:tableVersion "15.1.D-160122" ; 
+				  mv:directionCode "positive" ; 
+				  mv:primaryLocation ex:primaryLocation3 ; 
+				  mv:secondaryLocation ex:seccondaryLocation3 ; 
+.
+
+ex:primaryLocation3 a mv:PrimaryLocation ;
+					mv:locationName "Aichelberg"@de ; 
+					mv:specificLocation 12534 ; 
+.					
+
+ex:secondaryLocation3 a mv:SecondaryLocation ;
+					mv:locationName "Kirchheim (Teck)-Ost"@de ; 
+					mv:specificLocation 125333 ; 
+.		
+
+
+#################################################	
+# Leipzig Example 
+
+ex:1293_1_153474 a mv:SituationRecord ;  
+	mv:generalPublicComment "Schäden im Gleisbereich"@de ; 
+	mv:generalPublicComment "Gleisbau"@de ; 
+	mv:location ex:location4 ; 
+	mv:validity ex:validity4 ; 
+.
+
+ex:validity4 a mv:Validity ;
+			ex:validityStatus "definedByValidityTimeSpec" ; 
+			ex:startTimeOverall "2011-11-09T00:00:00.000+01:00"^^xsd:dateTime ;
+			ex:endTimeOverall "2016-12-31T00:00:00.000+01:00"^^xsd:dateTime ;
+.
+
+ex:location4 a mv:Location ;
+			 mv:linearExtension ex:linearExtension4 ; 
+			 mv:alertCLocation ex:alertCLocation4 ; 
+. 
+
+ex:primaryLocation4 a mv:PrimaryLocation ;
+					mv:locationName "Torgauer Straße"@de ; 
+.					
+
+ex:seccondaryLocation4 a mv:SecondaryLocation ;
+					mv:locationName "Wodanstraße"@de ; 
+.		

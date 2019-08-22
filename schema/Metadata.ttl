@@ -1,6 +1,5 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix cc: <http://creativecommons.org/ns#> .
-@prefix mv: <http://schema.mobivoc.org/> .
 @prefix ecc: <https://ns.eccenca.com/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -11,21 +10,24 @@
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix voaf: <http://purl.org/vocommons/voaf#> .
 @prefix s: <http://schema.org/>.
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#>.
 
-<http://schema.mobivoc.org/>
+@prefix mv: 	<http://schema.mobivoc.org/#> .
+
+<http://schema.mobivoc.org/#>
     a voaf:Vocabulary, owl:Ontology ;
     rdfs:label "MobiVoc: Open Mobility Vocabulary"@en ;
-    rdfs:comment "Our goal is to significantly improve the data mobility between all stakeholders by providing a standardized vocabulary using Semantic Web technologies and ontologies. For the open vocabulary covering various mobility aspects we use RDF (Resource Description Framework) - a recommended specification of the World Wide Web Consortium (W3C) and the so-called lingua franca for the integration of data and web. We invite everyone who is interested to join our MobiVoc initiative and to participate in the development of the Open Mobility Vocabulary." ;
-    cc:license <http://creativecommons.org/licenses/by/4.0/> ;
-    dct:creator ecc:aweilandt, ecc:mbruemmer ;
-    dct:contributor <http://sebastian.tramp.name>, <http://purl.org/net/clange>, <http://eis.iai.uni-bonn.de/NiklasPetersen> ;
+    rdfs:comment """MobiVoc is a standardized vocabulary (also known as 'schema', 'Data Dictionary' or 'ontology') for mobility data. Currently, the following topics are covered: Electric Charging Points, Parking Facilities, Highway Roadworks sites (Datex II)"""@en ;
+    cc:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dct:creator ecc:aweilandt, ecc:mbruemmer, <http://np00.github.io/#i>  ;
+    dct:contributor <http://sebastian.tramp.name>, <http://purl.org/net/clange>;
     dct:created "2014-08-05"^^xsd:date ;
-    dct:modified "2018-01-12"^^xsd:date ;
+    dct:modified "2019-08-20"^^xsd:date ;
     dct:publisher ecc:eccenca-GmbH ;
     vann:preferredNamespacePrefix "mv" ;
-    vann:preferredNamespaceUri "http://schema.mobivoc.org/" ;
+    vann:preferredNamespaceUri "http://schema.mobivoc.org/#" ;
     void:vocabulary <http://purl.org/vocab/vann/>, <http://xmlns.com/foaf/0.1/> ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     owl:versionInfo "SNAPSHOT" ;
 .
 
@@ -52,27 +54,28 @@ ecc:mbruemmer
     a dct:Agent, foaf:Person ;
     foaf:homepage <http://langec.wordpress.com/about/> ;
     s:affiliation <http://dbpedia.org/resource/University_of_Bonn>;
-    foaf:name "Christop Lange" ;
+    foaf:name "Christoph Lange" ;
 .
 
-<http://eis.iai.uni-bonn.de/NiklasPetersen>
+<http://np00.github.io/#i>
     a dct:Agent, foaf:Person ;
-    s:affiliation <http://dbpedia.org/resource/University_of_Bonn>;
+    s:affiliation ecc:eccenca-GmbH;
     foaf:name "Niklas Petersen" ;
 .
 
 ecc:eccenca-GmbH
     a dct:Agent, foaf:Organization ;
-    foaf:name "eccenca GmbH" ;
+    foaf:name "eccenca GmbH"@en ;
 .
 
 <http://dbpedia.org/resource/University_of_Bonn>
-    a dct:Agent, foaf:Organization ;
-    rdfs:label "University of Bonn";
+    a dct:Agent, s:Organization ;
+    rdfs:label "University of Bonn"@en;
 .
 
-<http://creativecommons.org/licenses/by/4.0/>
-    rdfs:label "Creative Commons Attribution 4.0 International" ;
+<https://creativecommons.org/licenses/by/4.0/> 
+    a cc:License ; 
+    rdfs:label "Creative Commons Attribution 4.0 International"@en ;
 .
 
 cc:license
@@ -115,3 +118,48 @@ vann:preferredNamespaceUri
     rdfs:isDefinedBy <http://purl.org/vocab/vann/> ;
 .
 
+dct:Agent
+    dct:description "Examples of Agent include person, organization, and software agent."@en ;
+    dct:hasVersion <http://dublincore.org/usage/terms/history/#Agent-001> ;
+    dct:issued "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> ;
+    a dct:AgentClass, rdfs:Class ;
+    rdfs:comment "A resource that acts or has the power to act."@en ;
+    rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+    rdfs:label "Agent"@en ;
+    .
+
+foaf:Person
+    a owl:Class ; 
+    rdfs:label "Person" ; 
+    rdfs:comment "A person."; 
+    vs:term_status "stable"; 
+    rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> ;
+    . 
+
+foaf:Organization
+    a owl:Class ; 
+    rdfs:label "Organization" ; 
+    rdfs:comment "An organization" ; 
+    vs:term_status "stable"; 
+    rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/> ;
+    .
+
+s:Organization a rdfs:Class ;
+    rdfs:label "Organization" ;
+    rdfs:comment "An organization such as a school, NGO, corporation, club, etc." ;
+    .
+
+voaf:Vocabulary
+    a owl:Class ; 
+    rdfs:label "Vocabulary" ; 
+    rdfs:comment "A vocabulary used in the linked data cloud. An instance of voaf:Vocabulary relies on or is used by at least another instance of voaf:Vocabulary" ;
+    rdfs:isDefinedBy <http://purl.org/vocommons/voaf#> ;
+    .  
+
+
+cc:License
+    a rdfs:Class ; 
+    rdfs:label "License"; 
+    rdfs:comment "a set of requests/permissions to users of a Work, e.g. a copyright license, the public domain, information for distributors" ;
+    rdfs:isDefinedBy <https://creativecommons.org/ns#> ;
+. 

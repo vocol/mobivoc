@@ -1,5 +1,4 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix mv: <http://schema.mobivoc.org/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -9,72 +8,92 @@
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#>.
 
+@prefix mv: 	<http://schema.mobivoc.org/#> .
+
+
+s:ParkingFacility a rdfs:Class ;
+    rdfs:label "ParkingFacility" ;
+    rdfs:comment "A parking lot or other parking facility." ;
+    rdfs:isDefinedBy <http://schema.org/> ;
+    .
+
+dct:date 
+    a rdf:Property ;
+    dct:description "Date may be used to express temporal information at any level of granularity.  Recommended best practice is to use an encoding scheme, such as the W3CDTF profile of ISO 8601 [W3CDTF]."@en ;
+    dct:issued "2008-01-14"^^xsd:date ;
+    dct:modified "2008-01-14"^^xsd:date ;
+    rdfs:comment "A point or period of time associated with an event in the lifecycle of the resource."@en ;
+    rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+    rdfs:label "Date"@en ;
+    rdfs:range rdfs:Literal ;
+    .
+
 mv:BicycleParkingStation
     dct:created "2017-05-10"^^xsd:date ;
     dct:modified "2018-01-12"^^xsd:date ;
-    vs:term_status "stable" ;
+    vs:term_status "stable"@en ;
     a rdfs:Class, owl:Class ;
     rdfs:comment "Building or structure designed for use as a bicycle parking facility."@en ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "Bicycle parking station"@en, "Fahrradparkstation"@de ;
     rdfs:subClassOf mv:ParkingFacility .
 
 mv:AutomatedParkingGarage
     dct:created "2017-04-13"^^xsd:date ;
     dct:modified "2018-01-12"^^xsd:date ;
-    vs:term_status "stable" ;
+    vs:term_status "stable"@en ;
     a rdfs:Class, owl:Class ;
     rdfs:comment "Parking garage with an automated parking system that automatically moves cars to the available parking space somewhere in the garage."@en ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "Automated parking garage"@en, "Automatisches Parkhaus"@de ;
     rdfs:subClassOf mv:ParkingFacility .
 
 mv:BikeAndRide
     a mv:ParkingFacilityConnection ; 
-    rdfs:comment "Parking facilities for bicycles with connection to public transport." ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "Bike and Ride" .
+    rdfs:comment "Parking facilities for bicycles with connection to public transport."@en ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
+    rdfs:label "Bike and Ride"@en .
 
 mv:Carpooling
     a mv:ParkingFacilityConnection ;
-    rdfs:comment "Parking facility used for carpooling or ridesharing." ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:comment "Parking facility used for carpooling or ridesharing."@en ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "Carpooling" , "Parken und Mitfahren"@de ;
     skos:altLabel "P&M" , "P+M" , "Park & Drive" , "Parken und Mitnehmen"@de .
 
 mv:ParkAndFly
     a mv:ParkingFacilityConnection ;
-    rdfs:comment "Connection to airport." ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:comment "Connection to airport."@en ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "Park & Fly", "Parken und Fliegen"@de ;
-    skos:altLabel "P&F", "P+F" .
+    skos:altLabel "P&F"@en, "P+F"@en .
 
 mv:ParkAndRail
     a mv:ParkingFacilityConnection ;
-    rdfs:comment "Connection to railway station." ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
-    rdfs:label "Park and Rail" .
+    rdfs:comment "Connection to railway station."@en ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
+    rdfs:label "Park and Rail"@en .
 
 mv:ParkAndRide
     a mv:ParkingFacilityConnection ;
-    rdfs:comment "Connection to public transport." ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:comment "Connection to public transport."@en ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "Park & Ride"@en, "Parken und Reisen"@de ;
-    skos:altLabel "P&R", "P+R" .
+    skos:altLabel "P&R"@en, "P+R"@en .
 
 mv:ParkingBarrier
     a mv:ParkingFacilityFeature ;
     rdfs:comment "The parking facility has a parking barrier."@en ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "Parking barrier"@en, "Parkschranke"@de .
 
 mv:ParkingFacility
     dct:created "2014-10-16"^^xsd:date ;
     dct:modified "2018-01-12"^^xsd:date ;
-    vs:term_status "stable" ;
+    vs:term_status "stable"@en ;
     a rdfs:Class, owl:Class ;
     rdfs:comment "Any facility or area assigned for parking vehicles. A parking facility can provide one or more parking spaces."@en ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     owl:equivalentClass s:ParkingFacility ;
     rdfs:label "Parkeinrichtung"@de, "Parking facility"@en ;
     rdfs:subClassOf s:CivicStructure .
@@ -82,28 +101,28 @@ mv:ParkingFacility
 mv:ParkingFacilityConnection
     dct:created "2017-06-09"^^xsd:date ;
     dct:modified "2018-01-12"^^xsd:date ;
-    vs:term_status "stable" ;
+    vs:term_status "stable"@en ;
     a rdfs:Class, owl:Class ;
-    rdfs:comment "Transport connections available at the parking facility (e.g. Park & Ride)." ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:comment "Transport connections available at the parking facility (e.g. Park & Ride)."@en ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "Anschlussmöglichkeiten der Parkeinrichtung"@de, "Parking facility connections"@en .
 
 mv:ParkingFacilityFeature
     dct:created "2017-04-13"^^xsd:date ;
     dct:modified "2018-01-12"^^xsd:date ;
-    vs:term_status "stable" ;
+    vs:term_status "stable"@en ;
     a rdfs:Class, owl:Class ;
-    rdfs:comment "Features of the parking facility (e.g. parking for disabled people)." ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:comment "Features of the parking facility (e.g. parking for disabled people)."@en ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "Ausstattung der Parkeinrichtung"@de, "Parking facility feature"@en .
 
 mv:ParkingGarage
     dct:created "2017-04-13"^^xsd:date ;
     dct:modified "2018-01-12"^^xsd:date ;
-    vs:term_status "stable" ;
+    vs:term_status "stable"@en ;
     a rdfs:Class, owl:Class ;
-    rdfs:comment "A single level or multilevel parking building to park at." ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:comment "A single level or multilevel parking building to park at."@en ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "Parkhaus"@de, "Parking garage"@en ;
     rdfs:subClassOf mv:ParkingFacility ;
     skos:altLabel "Car park"@en, "Hochgarage"@de, "Parking building"@en, "Parking structure"@en ;
@@ -112,10 +131,10 @@ mv:ParkingGarage
 mv:ParkingLot
     dct:created "2017-05-30"^^xsd:date ;
     dct:modified "2018-01-12"^^xsd:date ;
-    vs:term_status "stable" ;
+    vs:term_status "stable"@en ;
     a rdfs:Class, owl:Class ;
-    rdfs:comment "Parking area on a single groundfloor level that is usually located outdoor." ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:comment "Parking area on a single groundfloor level that is usually located outdoor."@en ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "Parking lot"@en, "Parkplatz"@de ;
     rdfs:subClassOf mv:ParkingFacility ;
     skos:altLabel "Parkfläche"@de, "car lot"@en ;
@@ -124,22 +143,22 @@ mv:ParkingLot
 mv:PayStation
     a mv:ParkingFacilityFeature ;
     rdfs:comment "The parking facility has a pay station."@en ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "Kassenautomat"@de, "Pay station"@en .
 
 mv:SurveillanceBySecurityGuards
     a mv:ParkingFacilityFeature ;
     rdfs:comment "The parking facility is surveilled by security guards."@en ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "Bewacht durch Personal"@de, "Surveillance by security guards"@en .
 
 mv:UndergroundParkingGarage
     dct:created "2017-04-13"^^xsd:date ;
     dct:modified "2018-01-12"^^xsd:date ;
-    vs:term_status "stable" ;
+    vs:term_status "stable"@en ;
     a rdfs:Class, owl:Class ;
-    rdfs:comment "Parking facility with one or more levels below the surface and none above ground." ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:comment "Parking facility with one or more levels below the surface and none above ground."@en ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "Tiefgarage"@de, "Underground parking garage"@en ;
     rdfs:subClassOf mv:ParkingFacility ;
     skos:altLabel "Rampengarage"@de ;
@@ -148,112 +167,112 @@ mv:UndergroundParkingGarage
 mv:VideoSurveillance
     a mv:ParkingFacilityFeature ;
     rdfs:comment "The parking facility is surveilled by video."@en ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "Video surveillance"@en, "Videoüberwachung"@de .
 
 mv:charger
     dct:created "2017-04-13"^^xsd:date ;
     dct:modified "2018-01-12"^^xsd:date ;
-    vs:term_status "stable" ;
+    vs:term_status "stable"@en ;
     a rdf:Property, owl:ObjectProperty ;
-    rdfs:comment "Indicates whether chargers are available at the parking space." ;
+    rdfs:comment "Indicates whether chargers are available at the parking space."@en ;
     rdfs:domain mv:ParkingSpace ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "has charger"@en, "hat Ladegerät"@de ;
     rdfs:range mv:Charger .
 
 mv:exitRate
     dct:created "2017-06-07"^^xsd:date ;
     dct:modified "2018-01-12"^^xsd:date ;
-    vs:term_status "stable" ;
+    vs:term_status "stable"@en ;
     a rdf:Property, owl:DatatypeProperty ;
-    rdfs:comment "The rate at which vehicles are exiting the parking facility." ;
+    rdfs:comment "The rate at which vehicles are exiting the parking facility."@en ;
     rdfs:domain mv:ParkingFacility ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "exit rate"@en ;
     rdfs:range xsd:string .
 
 mv:feature
     dct:created "2017-09-01"^^xsd:date ;
     dct:modified "2018-01-12"^^xsd:date ;
-    vs:term_status "stable" ;
+    vs:term_status "stable"@en ;
     a rdf:Property, owl:ObjectProperty ;
-    rdfs:comment "Indicates which feature the parking facility provides." ;
+    rdfs:comment "Indicates which feature the parking facility provides."@en ;
     rdfs:domain mv:ParkingFacility ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "feature"@en, "Ausstattung"@de ;
     rdfs:range mv:ParkingFacilityFeature .
 
 mv:fillRate
     dct:created "2017-05-10"^^xsd:date ;
     dct:modified "2018-01-12"^^xsd:date ;
-    vs:term_status "stable" ;
+    vs:term_status "stable"@en ;
     a rdf:Property, owl:DatatypeProperty ;
-    rdfs:comment "The rate at which vehicles are entering the parking facility." ;
+    rdfs:comment "The rate at which vehicles are entering the parking facility."@en ;
     rdfs:domain mv:ParkingFacility ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "fill rate"@en ;
     rdfs:range xsd:string .
 
 mv:queuingTime
     dct:created "2017-05-15"^^xsd:date ;
     dct:modified "2018-01-12"^^xsd:date ;
-    vs:term_status "stable" ;
+    vs:term_status "stable"@en ;
     a rdf:Property, owl:DatatypeProperty ;
-    rdfs:comment "The current queuing time (duration) for entering the parking facility." ;
+    rdfs:comment "The current queuing time (duration) for entering the parking facility."@en ;
     rdfs:domain mv:ParkingFacility ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "queuing time"@en, "Wartezeit"@de ;
     rdfs:range xsd:string .
 
 mv:rateOfOccupancy
     dct:created "2017-05-10"^^xsd:date ;
     dct:modified "2018-01-12"^^xsd:date ;
-    vs:term_status "stable" ;
+    vs:term_status "stable"@en ;
     a rdf:Property, owl:DatatypeProperty ;
-    rdfs:comment "Indicates the percentage value of parking spaces occupied in a parking facility." ;
+    rdfs:comment "Indicates the percentage value of parking spaces occupied in a parking facility."@en ;
     rdfs:domain mv:ParkingFacility ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "rate of occupancy"@en, "Belegungsrate"@de ;
     rdfs:range xsd:string .
 
 mv:totalCapacity
     dct:created "2017-05-10"^^xsd:date ;
     dct:modified "2018-01-12"^^xsd:date ;
-    vs:term_status "stable" ;
+    vs:term_status "stable"@en ;
     a rdf:Property, owl:DatatypeProperty ;
-    rdfs:comment "Indicates the total number of parking spaces of a parking facility." ;
-    rdfs:domain mv:ParkingFacility ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:comment "Indicates the capacity of a resource. Ex: parking facility, car, bycycle etc."@en ;
+    rdfs:domain mv:Capacity ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "total capacity"@en, "Gesamtkapazität"@de ;
     rdfs:range xsd:integer .
 
 mv:totalNumberOfChargers
     a rdf:Property, owl:DatatypeProperty ;
-    rdfs:comment "Indicates the total number of chargers available in a parking facility." ;
+    rdfs:comment "Indicates the total number of chargers available in a parking facility."@en ;
     rdfs:domain mv:ParkingFacility ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "total number of chargers"@en, "Gesamtzahl an Ladegeräten"@de ;
     rdfs:range xsd:integer .
 
 mv:connectedTo
     dct:created "2017-05-30"^^xsd:date ;
     dct:modified "2018-01-12"^^xsd:date ;
-    vs:term_status "stable" ;
+    vs:term_status "stable"@en ;
     a rdf:Property, owl:ObjectProperty ;
-    rdfs:comment "Indicates the transport connections available." ;
+    rdfs:comment "Indicates the transport connections available."@en ;
     rdfs:domain mv:ParkingFacility ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "connected to"@en, "Anschluss an"@de ;
     rdfs:range mv:ParkingFacilityConnection .
 
 mv:ParkingSpace
     dct:created "2017-05-10"^^xsd:date ;
     dct:modified "2018-01-12"^^xsd:date ;
-    vs:term_status "stable" ;
+    vs:term_status "stable"@en ;
     a rdfs:Class, owl:Class ;
     rdfs:comment "A parking space is a location that is designated for parking a vehicle. A parking space has a certain size, is sometimes marked and can be located at roadside or inside a parking facility. Depending on the location of the parking space, there can be regulations regarding the time allowed to park and a fee paid to use the parking space."@en ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "Stellplatz"@de, "Parking space"@en ;
     skos:prefLabel "Stellplatz"@de, "Parking space"@en ;
     skos:altLabel "Parking spot"@en ;
@@ -262,41 +281,43 @@ mv:ParkingSpace
 
 mv:maximumParkingHours
     a rdf:Property, owl:DatatypeProperty ;
-    rdfs:comment "Indicates the maximum parking hours a vehicle is allowed to use a parking space or parking facility." ;
+    rdfs:comment "Indicates the maximum parking hours a vehicle is allowed to use a parking space or parking facility."@en ;
     rdfs:domain [ a            owl:Class ;
                             owl:unionOf  ( mv:ParkingFacility mv:ParkingSpace )
                           ] ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "maximum parking hour"@en, "maximale Parkdauer"@de ;
     rdfs:range xsd:string .
 
 mv:arrangement
     dct:created "2017-05-10"^^xsd:date ;
     dct:modified "2018-01-12"^^xsd:date ;
-    vs:term_status "stable" ;
+    vs:term_status "stable"@en ;
     a rdf:Property, owl:ObjectProperty ;
-    rdfs:comment "Indicates in which pattern a parking space is arranged." ;
-    rdfs:domain mv:ParkingSpace , mv:ParkingFacility ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:comment "Indicates in which pattern a parking space is arranged."@en ;
+    rdfs:domain [ a            owl:Class ;
+                            owl:unionOf  ( mv:ParkingSpace mv:ParkingFacility )
+                          ] ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "arrangement pattern"@en, "Anordnung"@de ;
     rdfs:range mv:ArrangementPattern .
 
 mv:ArrangementPattern
     dct:created "2017-05-10"^^xsd:date ;
     dct:modified "2018-01-12"^^xsd:date ;
-    vs:term_status "stable" ;
+    vs:term_status "stable"@en ;
     a rdfs:Class, owl:Class ;
     rdfs:comment "Pattern how parking spaces are arranged in a parking facility or at roadside."@en , "Art und Weise, wie ein Fahrzeug auf einer Parkfläche aufgestellt wird."@de ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "Arrangement pattern"@en, "Aufstellart"@de . 
 
 mv:ParallelParking
     dct:created "2017-05-10"^^xsd:date ;
     dct:modified "2018-01-12"^^xsd:date ;
-    vs:term_status "stable" ;
+    vs:term_status "stable"@en ;
     a mv:ArrangementPattern ;
     rdfs:comment "With parallel parking, vehicles are arranged in a line, with the front of one vehicle facing the back of an adjacent one. This is done parallel to a curb, when one is provided. Parallel parking is the most common mode of roadside parking for vehicles."@en , "Bei der Längsaufstellung wird das Fahrzeug (gemäß § 12 StVO) parallel zur Fahrbahn geparkt. Diese Fahrzeugaufstellung ist die gängigste Aufstellungsart an Straßen."@de ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "Parallel parking"@en , "Längsaufstellung"@de ;
     skos:prefLabel "Parallel parking"@en , "Längsaufstellung"@de ;
     skos:altLabel "Parallelaufstellung"@de .
@@ -304,10 +325,10 @@ mv:ParallelParking
 mv:PerpendicularParking
     dct:created "2017-05-10"^^xsd:date ;
     dct:modified "2018-01-12"^^xsd:date ;
-    vs:term_status "stable" ;
+    vs:term_status "stable"@en ;
     a mv:ArrangementPattern ;
     rdfs:comment "With perpendicular parking, vehicles are parked side to side, perpendicular to an aisle, curb, or wall. This type of parking is commonly used in parking lots and parking facilities."@en , "Bei der Senkrechtaufstellung wird das Fahrzeug mit einem Aufstellwinkel von von 100 gon (90°) geparkt."@de ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "Perpendicular parking"@en , "Senkrechtaufstellung"@de ;
     skos:prefLabel "Perpendicular parking"@en ;
     skos:altLabel "Bay parking"@en .
@@ -315,10 +336,10 @@ mv:PerpendicularParking
 mv:AngleParking
     dct:created "2017-05-31"^^xsd:date ;
     dct:modified "2018-01-12"^^xsd:date ;
-    vs:term_status "stable" ;
+    vs:term_status "stable"@en ;
     a mv:ArrangementPattern ;
     rdfs:comment "Parking where the parking spaces are arranged at an acute angle to the direction of approach, allowing the driver to enter a space easily and later reverse back out."@en , "Bei der Schrägaufstellung wird das Fahrzeug mit einem Aufstellwinkel zwischen 50 und 90 gon (45° und ca. 81°) geparkt. Das Fahrzeug kann vorwärts in den Parkstand einfahren, muss zum Ausparken jedoch wieder rückwärts herausfahren. Diese Aufstellung wird oft bei Parkplätzen verwendet, da sie schmalere Fahrwege als die Senkrechtaufstellung und bessere Platzausnutzung als Parallelaufstellung ermöglicht."@de ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "Angle parking"@en , "Schrägaufstellung"@de ;
     skos:altLabel "Echelon parking"@en-uk ;
     .
@@ -326,116 +347,107 @@ mv:AngleParking
 mv:ParkingFacilityExit
     dct:created "2017-05-10"^^xsd:date ;
     dct:modified "2018-01-12"^^xsd:date ;
-    vs:term_status "stable" ;
+    vs:term_status "stable"@en ;
     a rdfs:Class, owl:Class ;
     rdfs:comment "Exit of a parking facility where vehicles can leave the parking facility."@en ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "Ausfahrt"@de, "Exit"@en ;
     rdfs:subClassOf s:CivicStructure . 
 
 mv:exit
     dct:created "2017-05-10"^^xsd:date ;
     dct:modified "2018-01-12"^^xsd:date ;
-    vs:term_status "stable" ;
+    vs:term_status "stable"@en ;
     a rdf:Property, owl:ObjectProperty ;
-    rdfs:comment "Describes the exit of a parking facility." ;
+    rdfs:comment "Describes the exit of a parking facility."@en ;
     rdfs:domain mv:ParkingFacility ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "exit"@en, "hat Ausfahrt"@de ;
     rdfs:range mv:ParkingFacilityExit .
 
 mv:ParkingFacilityEntrance
     dct:created "2017-05-10"^^xsd:date ;
     dct:modified "2018-01-12"^^xsd:date ;
-    vs:term_status "stable" ;
+    vs:term_status "stable"@en ;
     a rdfs:Class, owl:Class ;
     rdfs:comment "Entrance of a parking facility where vehicles can enter the parking facility."@en ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "Einfahrt"@de, "Entrance"@en ;
     rdfs:subClassOf s:CivicStructure .
 
 mv:entrance
     dct:created "2017-05-15"^^xsd:date ;
     dct:modified "2018-01-12"^^xsd:date ;
-    vs:term_status "stable" ;
+    vs:term_status "stable"@en ;
     a rdf:Property, owl:ObjectProperty ;
     rdfs:comment "Describes the entrance of a parking facility."@en ;
     rdfs:domain mv:ParkingFacility ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "entrance"@en, "hat Einfahrt"@de ;
     rdfs:range mv:ParkingFacilityEntrance .
 
 mv:parkingSpace
     dct:created "2017-05-15"^^xsd:date ;
     dct:modified "2018-01-12"^^xsd:date ;
-    vs:term_status "stable" ;
+    vs:term_status "stable"@en ;
     a rdf:Property, owl:ObjectProperty ;
     rdfs:comment "Relates the parking facility to a contained parking space."@en ;
     rdfs:domain mv:ParkingFacility ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "parking space"@en, "hat Stellplatz"@de ;
     rdfs:range mv:ParkingSpace .
 
 mv:RealTimeCapacity
     dct:created "2017-05-15"^^xsd:date ;
     dct:modified "2018-01-12"^^xsd:date ;
-    vs:term_status "stable" ;
+    vs:term_status "stable"@en ;
     a rdfs:Class, owl:Class ;
     rdfs:subClassOf mv:Capacity;
     rdfs:comment "Real-time capacity of a parking facility or parking space."@en ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "Echtzeit-Kapazität"@de, "Real time capacity"@en ;
     .
 
 mv:level
     dct:created "2018-01-11"^^xsd:date ;
     dct:modified "2018-01-12"^^xsd:date ;
-    vs:term_status "stable" ;
+    vs:term_status "stable"@en ;
     a rdf:Property, owl:DatatypeProperty ;
     rdfs:comment "Indicates the level of a parking facility the parking space is located in."@en ;
     rdfs:domain mv:ParkingSpace ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "level"@en, "Ebene"@de ;
     rdfs:range xsd:integer .
 
 mv:numberOfLevels
     dct:created "2018-01-11"^^xsd:date ;
     dct:modified "2018-01-12"^^xsd:date ;
-    vs:term_status "stable" ;
+    vs:term_status "stable"@en ;
     a rdf:Property, owl:DatatypeProperty ;
     rdfs:comment "Indicates the total number of levels a parking facility has."@en ;
     rdfs:domain mv:ParkingFacility ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "number of levels"@en, "Anzahl Ebenen"@de ;
     rdfs:range xsd:integer .
 
 mv:maximumValue
     dct:created "2015-05-15"^^xsd:date ;
     dct:modified "2018-01-12"^^xsd:date ;
-    vs:term_status "stable" ;
+    vs:term_status "stable"@en ;
     a rdf:Property, owl:DatatypeProperty ;
     rdfs:comment "Indicates the maximum value of the capacity."@en ;
     rdfs:domain mv:Capacity ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "maximum value"@en, "Maximalwert"@de ;
     rdfs:range xsd:integer .
 
 mv:currentValue
     dct:created "2015-05-15"^^xsd:date ;
     dct:modified "2018-01-12"^^xsd:date ;
-    vs:term_status "stable" ;
+    vs:term_status "stable"@en ;
     a rdf:Property, owl:DatatypeProperty ;
     rdfs:comment "Indicates the current value of the real-time capacity."@en ;
     rdfs:domain mv:RealTimeCapacity ;
-    rdfs:isDefinedBy <http://schema.mobivoc.org/> ;
+    rdfs:isDefinedBy <http://schema.mobivoc.org/#> ;
     rdfs:label "current value"@en, "aktueller Wert"@de, "valeur courante"@fr ;
     rdfs:range xsd:integer .
-
-dct:date
-    a rdf:Property, owl:DatatypeProperty ;
-    rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
-    rdfs:comment "The date of the given real-time capacity."@en ;
-    rdfs:label "date"@en, "Datum"@de, "date"@fr ;
-    rdfs:domain mv:RealTimeCapacity ;
-    rdfs:range xsd:datetime ;
-    .

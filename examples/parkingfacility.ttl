@@ -1,0 +1,104 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix schema: <http://schema.org/> .
+@prefix wgs84: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/parkingfacility/grandlyon/P578/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix mv: <http://schema.mobivoc.org/#> .
+
+
+ex:Gendarmerie
+    a mv:ParkingFacility ;
+    rdfs:label "Gendarmerie" ;
+    mv:capacity ex:capacity, 
+                ex:bicycleCapacity, 
+                ex:carSharingCapacity, 
+                ex:disabledCapacity ,
+                ex:motorbikeCapacity ;
+    mv:name "Gendarmerie" ;
+    schema:address ex:address ;
+    mv:price ex:price ;
+    mv:entrance ex:entrance ;
+    mv:exit ex:exit ;
+    schema:openingHoursSpecification ex:openingHours ;
+    wgs84:lat 45.81385676152648 ;
+    wgs84:long 4.750940328299037 .
+
+ex:address
+    a schema:PostalAddress ;
+    schema:addressLocality "Dardilly" ;
+    schema:adressRegion "Grand Lyon" ;
+    schema:country <http://dbpedia.org/resource/France> ;
+    rdfs:label "Dardilly, Grand Lyon" .
+
+#reglementation: Gratuit
+ex:price
+    a schema:PriceSpecification ;
+    mv:freeOfCharge "true"^^xsd:boolean ;
+    .
+
+#entrance, exit
+ex:entrance
+    a mv:ParkingFacilityEntrance ;
+    rdfs:label "Avenue de Verdun"^^xsd:string ;
+    schema:address ex:entranceAdress ;
+    .
+
+ex:entranceAdress
+    a schema:PostalAddress ;
+    schema:streetAddress "Avenue de Verdun"^^xsd:string ;
+    schema:addressLocality "Dardilly" ;
+    schema:country <http://dbpedia.org/resource/France> ;
+    rdfs:label "Avenue de Verdun, Dardilly"^^xsd:string ;
+.
+
+ex:exit
+    a mv:ParkingFacilityExit ;
+    rdfs:label "Avenue de Verdun"^^xsd:string ;
+    schema:address ex:exitAdress ;
+    .
+
+ex:exitAdress
+    a schema:PostalAddress ;
+    schema:streetAddress "Avenue de Verdun"^^xsd:string ;
+    schema:addressLocality "Dardilly" ;
+    schema:country <http://dbpedia.org/resource/France> ;
+    rdfs:label "Avenue de Verdun, Dardilly"^^xsd:string ;
+.
+
+#capacite
+ex:capacity
+    mv:validForVehicle mv:Car ;
+    mv:totalCapacity 5 ;
+    a mv:Capacity .
+
+ex:bicycleCapacity
+    mv:validForVehicle mv:Bicycle ;
+    mv:totalCapacity 3 ;
+    a mv:Capacity .
+
+ex:carSharingCapacity
+    mv:validForVehicle mv:Car ;
+ #   mv:parkingUsageType mv:CarsharingParkingSpace ;
+    mv:totalCapacity 0 ;
+    a mv:Capacity .
+
+ex:disabledCapacity
+    mv:validForVehicle mv:Car ;
+  #  mv:parkingUsageType mv:DisabledParkingSpace ;
+    mv:totalCapacity 1 ;
+    a mv:Capacity .
+
+ex:motorbikeCapacity
+    mv:validForVehicle mv:Motorbike ;
+    mv:totalCapacity 0 ;
+    a mv:Capacity .
+
+#fermeture
+ex:openingHours
+    schema:closes "23:59" ;
+    schema:opens "00:00" ;
+    a schema:OpeningHoursSpecification ;
+    rdfs:label "Ouvert 24h/24h" .
+
